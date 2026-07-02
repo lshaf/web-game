@@ -1,0 +1,76 @@
+:root {
+  /* Desert Dusk Arcade palette */
+  --night: #171228;
+  --dusk: #3b2350;
+  --horizon: #ff8a4c;
+  --glow: #ffd27a;
+  --sand: #f0e6d2;
+  --ink: #120e1f;
+  --muted: #b9a9d6;
+
+  --font-display: "Bungee", "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "Cascadia Code", monospace;
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--night);
+  color: var(--sand);
+  font-family: var(--font-body);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--glow);
+  outline-offset: 3px;
+}
+
+/* The shared signature: a dusk desert sky with a low sun + horizon band.
+   Used behind the menu hero and as the game's playfield backdrop. */
+.sky {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--night) 0%,
+    var(--dusk) 52%,
+    #6b3a5a 74%,
+    var(--horizon) 96%
+  );
+}
+
+.sky__sun {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  width: 190px;
+  height: 190px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--glow) 0%, #ff9d54 60%, rgba(255, 138, 76, 0) 72%);
+  filter: saturate(1.1);
+  pointer-events: none;
+}
