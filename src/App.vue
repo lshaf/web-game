@@ -55,6 +55,16 @@ function backToMenu() {
   align-items: center;
 }
 
+/* On mobile the play view is exactly one screen tall (a definite height), so a
+   full-height game fills it and its overflow is clipped rather than growing the
+   page. */
+@media (max-width: 560px) {
+  .play-view {
+    height: 100vh;
+    height: 100dvh;
+  }
+}
+
 .play-bar {
   width: 100%;
   display: flex;

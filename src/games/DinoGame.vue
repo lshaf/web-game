@@ -2,11 +2,13 @@
 import { ref, reactive, onMounted, onBeforeUnmount, computed } from 'vue'
 import DinoSprite from '../components/DinoSprite.vue'
 
-// Fixed logical playfield — the whole board scales to fit its container so
-// all game math stays in these coordinates regardless of screen size.
+// Logical playfield. Width is fixed so horizontal game distance (and reaction
+// time) never changes; height grows to fill the container, so the board is
+// full-height on mobile — the ground stays pinned near the bottom and the extra
+// space becomes sky above.
 const W = 900
-const H = 340
-const GROUND = 300 // y of the ground line (baseline for feet)
+const H = 340 // default height (kept on desktop's wide aspect)
+const GROUND_MARGIN = 40 // gap from the baseline to the bottom edge
 const DINO_W = 50
 const DINO_H = 56
 const DINO_X = 96
@@ -16,16 +18,21 @@ const JUMP_V = -900 // px/s
 const START_SPEED = 380 // px/s
 const MAX_SPEED = 900
 
+const FPS = 30
+const FRAME = 1 / FPS // fixed simulation step
+
 const STATE = { READY: 'ready', RUNNING: 'running', DEAD: 'dead' }
 
 const phase = ref(STATE.READY)
 const score = ref(0)
 const best = ref(0)
-const dinoTop = ref(GROUND - DINO_H) // y of dino's top edge
-const obstacles = reactive([]) // { id, x, w, h }
 const scale = ref(1)
+const stageH = ref(H) // logical board height, grown to fill the container
+const groundY = computed(() => stageH.value - GROUND_MARGIN) // feet baseline
+const dinoTop = ref(H - GROUND_MARGIN - DINO_H) // y of dino's top edge
+const obstacles = reactive([]) // { id, x, w, h }
 
-const board = ref(null)
+const viewport = ref(null)
 
 let velY = 0
 let speed = START_SPEED
@@ -33,16 +40,19 @@ let spawnIn = 0 // px of travel until next spawn
 let nextId = 1
 let rafId = 0
 let lastT = 0
+let acc = 0 // banked real time for the 30 fps step
+let ro = null
 
 const bestKey = 'dusk-dino-best'
-const isJumping = computed(() => dinoTop.value < GROUND - DINO_H - 0.5)
+const isJumping = computed(() => dinoTop.value < groundY.value - DINO_H - 0.5)
 
 function resetGame() {
   obstacles.splice(0, obstacles.length)
-  dinoTop.value = GROUND - DINO_H
+  dinoTop.value = groundY.value - DINO_H
   velY = 0
   speed = START_SPEED
   spawnIn = 260
+  acc = 0
   score.value = 0
   phase.value = STATE.READY
 }
@@ -81,14 +91,9 @@ function seededSpread() {
   return spreadSeed / 233280
 }
 
-function tick(t) {
-  rafId = requestAnimationFrame(tick)
-  if (!lastT) lastT = t
-  let dt = (t - lastT) / 1000
-  lastT = t
-  if (dt > 0.05) dt = 0.05 // clamp after tab switch / hitch
-
-  if (phase.value !== STATE.RUNNING) return
+// One fixed simulation slice (dt is always FRAME).
+function step(dt) {
+  const ground = groundY.value
 
   // difficulty ramps with score
   speed = Math.min(MAX_SPEED, START_SPEED + score.value * 0.6)
@@ -96,8 +101,8 @@ function tick(t) {
   // dino physics
   velY += GRAVITY * dt
   let top = dinoTop.value + velY * dt
-  if (top >= GROUND - DINO_H) {
-    top = GROUND - DINO_H
+  if (top >= ground - DINO_H) {
+    top = ground - DINO_H
     velY = 0
   }
   dinoTop.value = top
@@ -127,14 +132,40 @@ function tick(t) {
   const dBottom = top + DINO_H
   const dTop = top + pad
   for (const o of obstacles) {
-    const oTop = GROUND - o.h
+    const oTop = ground - o.h
     if (
       dRight > o.x + 4 &&
       dLeft < o.x + o.w - 4 &&
       dBottom > oTop + 4 &&
-      dTop < GROUND
+      dTop < ground
     ) {
       gameOver()
+      break
+    }
+  }
+}
+
+function tick(t) {
+  rafId = requestAnimationFrame(tick)
+  if (!lastT) lastT = t
+  let frameDt = (t - lastT) / 1000
+  lastT = t
+  if (frameDt > 0.1) frameDt = 0.1 // clamp after a tab switch / hitch
+
+  if (phase.value !== STATE.RUNNING) {
+    acc = 0
+    return
+  }
+
+  // Fixed 30 fps simulation: bank real time and advance in constant slices, so
+  // the game runs at 30 updates/sec regardless of the display's refresh rate.
+  acc += frameDt
+  let budget = 5 // cap catch-up so a long hitch can't spiral
+  while (acc >= FRAME && budget-- > 0) {
+    step(FRAME)
+    acc -= FRAME
+    if (phase.value !== STATE.RUNNING) {
+      acc = 0
       break
     }
   }
@@ -164,10 +195,16 @@ function onPointer() {
 }
 
 function fitScale() {
-  const el = board.value
+  const el = viewport.value
   if (!el) return
-  const avail = el.clientWidth
-  scale.value = Math.min(1, avail / W)
+  const w = el.clientWidth
+  const h = el.clientHeight
+  if (!w || !h) return
+  const prevGround = groundY.value
+  scale.value = w / W
+  stageH.value = h / scale.value
+  // Keep the dino the same height above the ground when the board resizes.
+  dinoTop.value += groundY.value - prevGround
 }
 
 onMounted(() => {
@@ -178,7 +215,10 @@ onMounted(() => {
   }
   resetGame()
   window.addEventListener('keydown', onKey, { passive: false })
-  window.addEventListener('resize', fitScale)
+  // Track the container's actual box so the board fills it (and re-fits when the
+  // mobile URL bar shows/hides or the device rotates).
+  ro = new ResizeObserver(fitScale)
+  if (viewport.value) ro.observe(viewport.value)
   fitScale()
   rafId = requestAnimationFrame(tick)
 })
@@ -186,18 +226,18 @@ onMounted(() => {
 onBeforeUnmount(() => {
   cancelAnimationFrame(rafId)
   window.removeEventListener('keydown', onKey)
-  window.removeEventListener('resize', fitScale)
+  if (ro) ro.disconnect()
 })
 
 const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
 </script>
 
 <template>
-  <div class="dino-game" ref="board">
-    <div class="viewport" :style="{ height: H * scale + 'px' }">
+  <div class="dino-game">
+    <div class="viewport" ref="viewport">
     <div
       class="stage"
-      :style="{ width: W + 'px', height: H + 'px', transform: `scale(${scale})` }"
+      :style="{ width: W + 'px', height: stageH + 'px', transform: `scale(${scale})` }"
       @pointerdown.prevent="onPointer"
     >
       <div class="sky field">
@@ -210,7 +250,7 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
         </div>
 
         <!-- ground -->
-        <div class="ground" :style="{ top: GROUND + 'px' }" />
+        <div class="ground" :style="{ top: groundY + 'px' }" />
 
         <!-- obstacles -->
         <div
@@ -219,7 +259,7 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
           class="cactus"
           :style="{
             left: o.x + 'px',
-            top: GROUND - o.h + 'px',
+            top: groundY - o.h + 'px',
             width: o.w + 'px',
             height: o.h + 'px',
           }"
@@ -263,22 +303,39 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
   margin: 0 auto;
   padding: 0 max(12px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom))
     max(12px, env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
   /* Rapid tapping to jump must never select text or pop a callout. */
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
 }
 
-/* The stage is scaled as a whole; the viewport reserves the scaled height
-   and clips overflow so the fixed-width board never spills on mobile. */
+/* The stage is scaled as a whole; the viewport clips overflow so the
+   fixed-width board never spills. Its box sets the board size — a wide aspect
+   on desktop, and the full available height on mobile (see below). */
 .viewport {
   width: 100%;
+  aspect-ratio: 900 / 340;
+  min-height: 0;
   overflow: hidden;
   /* Frame lives here (unscaled) so the cartoon outline stays chunky on mobile
      even as the stage inside scales down. */
   border: var(--line) solid var(--ink);
   border-radius: 20px;
   box-shadow: var(--pop);
+}
+
+/* Mobile: fill the whole screen height with the playfield. */
+@media (max-width: 560px) {
+  .dino-game {
+    flex: 1;
+    min-height: 0;
+  }
+  .viewport {
+    flex: 1;
+    aspect-ratio: auto;
+  }
 }
 
 .stage {
