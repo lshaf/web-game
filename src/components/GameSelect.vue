@@ -11,12 +11,16 @@ defineEmits(['select'])
 
 <template>
   <div class="select">
-    <!-- Hero: a sunny cartoon sky ruled by a very happy sun. -->
-    <section class="sky hero" aria-hidden="true">
-      <span class="cloud cloud--a" />
-      <span class="cloud cloud--b" />
+    <!-- Hero: the arcade sign over a sunny cartoon sky. -->
+    <header class="hero sky">
+      <span class="cloud cloud--a" aria-hidden="true" />
+      <span class="cloud cloud--b" aria-hidden="true" />
 
-      <svg class="sun-face" viewBox="0 0 120 120">
+      <h1 class="hero__title">
+        <span class="hero__title-a">DUSK</span><span class="hero__title-b">ARCADE</span>
+      </h1>
+
+      <svg class="sun-face" viewBox="0 0 120 120" aria-hidden="true">
         <g class="sun-face__rays">
           <polygon points="54,25 66,25 60,11" transform="rotate(0 60 60)" />
           <polygon points="54,25 66,25 60,11" transform="rotate(45 60 60)" />
@@ -35,14 +39,8 @@ defineEmits(['select'])
         <path class="sun-face__smile" d="M49 66 Q60 79 71 66" />
       </svg>
 
-      <div class="hero__ground" />
-      <div class="hero__runner"><DinoSprite run /></div>
-    </section>
-
-    <header class="masthead">
-      <p class="eyebrow">INSERT COIN</p>
-      <h1 class="wordmark"><span class="wordmark__a">DUSK</span><span class="wordmark__b">ARCADE</span></h1>
-      <p class="lede">Two little games. One extremely happy sun.</p>
+      <div class="hero__ground" aria-hidden="true" />
+      <div class="hero__runner" aria-hidden="true"><DinoSprite run /></div>
     </header>
 
     <ul class="cabinets">
@@ -99,10 +97,37 @@ defineEmits(['select'])
 
 /* ---- Hero ---- */
 .hero {
-  height: 260px;
+  height: 300px;
   border: var(--line) solid var(--ink);
   border-radius: 26px;
   box-shadow: var(--pop);
+}
+
+/* The arcade sign, sitting in the sky above the sun. */
+.hero__title {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 10vw, 62px);
+  line-height: 0.85;
+  letter-spacing: 0.01em;
+}
+.hero__title span {
+  display: block;
+  -webkit-text-stroke: 3px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: var(--pop);
+}
+.hero__title-a {
+  color: var(--sun);
+}
+.hero__title-b {
+  color: var(--aqua);
 }
 
 .cloud {
@@ -113,26 +138,26 @@ defineEmits(['select'])
   box-shadow: inset 0 -6px 0 rgba(44, 19, 56, 0.06);
 }
 .cloud--a {
-  top: 34px;
-  left: 34px;
-  width: 78px;
-  height: 30px;
+  top: 150px;
+  left: 26px;
+  width: 70px;
+  height: 28px;
   animation: drift 14s ease-in-out infinite;
 }
 .cloud--b {
-  top: 66px;
-  right: 44px;
-  width: 56px;
-  height: 24px;
+  top: 122px;
+  right: 30px;
+  width: 52px;
+  height: 22px;
   animation: drift 18s ease-in-out infinite reverse;
 }
 
 .sun-face {
   position: absolute;
   left: 50%;
-  bottom: 18px;
-  width: 190px;
-  height: 190px;
+  bottom: 12px;
+  width: 150px;
+  height: 150px;
   transform: translateX(-50%);
   transform-origin: 50% 80%;
   animation: sun-bob 4s ease-in-out infinite;
@@ -239,57 +264,11 @@ defineEmits(['select'])
   }
 }
 
-/* ---- Masthead ---- */
-.masthead {
-  text-align: center;
-  padding: 30px 0 6px;
-}
-.eyebrow {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  font-size: 13px;
-  color: var(--cream);
-  background: var(--berry);
-  border: var(--line) solid var(--ink);
-  border-radius: 999px;
-  padding: 5px 14px;
-  margin: 0 0 18px;
-  transform: rotate(-3deg);
-  box-shadow: var(--pop-sm);
-}
-.wordmark {
-  font-family: var(--font-display);
-  font-size: clamp(46px, 12vw, 88px);
-  line-height: 0.86;
-  margin: 0;
-  letter-spacing: 0.01em;
-}
-.wordmark span {
-  display: block;
-  -webkit-text-stroke: 3px var(--ink);
-  paint-order: stroke fill;
-  text-shadow: var(--pop);
-}
-.wordmark__a {
-  color: var(--sun);
-}
-.wordmark__b {
-  color: var(--aqua);
-}
-.lede {
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--muted);
-  margin: 20px 0 0;
-}
-
 /* ---- Cabinets ---- */
 .cabinets {
   list-style: none;
   padding: 0;
-  margin: 34px 0 0;
+  margin: 28px 0 0;
   display: grid;
   gap: 20px;
 }
