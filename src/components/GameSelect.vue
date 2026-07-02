@@ -1,5 +1,6 @@
 <script setup>
 import DinoSprite from './DinoSprite.vue'
+import BirdSprite from './BirdSprite.vue'
 import { appVersion, updateReady, applyUpdate } from '../pwa.js'
 
 defineProps({
@@ -52,6 +53,11 @@ defineEmits(['select'])
             <span class="sky__sun cabinet__sun" />
             <span v-if="game.id === 'wordlock'" class="cabinet__tiles" aria-hidden="true">
               <i class="t-correct">W</i><i class="t-present">O</i><i class="t-plain">R</i><i class="t-correct">D</i>
+            </span>
+            <span v-else-if="game.id === 'flappy'" class="cabinet__flappy" aria-hidden="true">
+              <i class="cabinet__pipe cabinet__pipe--top" />
+              <i class="cabinet__pipe cabinet__pipe--bot" />
+              <span class="cabinet__bird"><BirdSprite /></span>
             </span>
             <span v-else class="cabinet__dino"><DinoSprite run /></span>
           </span>
@@ -371,6 +377,37 @@ defineEmits(['select'])
 }
 .cabinet__tiles .t-plain {
   background: var(--cream);
+}
+
+/* Flappy cabinet: a bird threading a pipe gap. */
+.cabinet__flappy {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.cabinet__bird {
+  position: absolute;
+  left: 22px;
+  top: 46%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 31px;
+}
+.cabinet__pipe {
+  position: absolute;
+  right: 28px;
+  width: 26px;
+  background: #57cc5f;
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+}
+.cabinet__pipe--top {
+  top: -3px;
+  height: 26px;
+}
+.cabinet__pipe--bot {
+  bottom: -3px;
+  height: 32px;
 }
 .cabinet__title {
   font-family: var(--font-display);

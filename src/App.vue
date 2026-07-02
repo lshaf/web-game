@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import GameSelect from './components/GameSelect.vue'
 import DinoGame from './games/DinoGame.vue'
 import WordLock from './games/WordLock.vue'
+import FlappyBird from './games/FlappyBird.vue'
 
 // Registry of playable games. Add a new entry here + its component to expand.
 const games = [
@@ -11,6 +12,12 @@ const games = [
     title: 'Dino Jump',
     tagline: 'Leap the cacti. Survive as long as you can.',
     component: DinoGame,
+  },
+  {
+    id: 'flappy',
+    title: 'Flappy',
+    tagline: 'Flap through the pipes. Do not touch.',
+    component: FlappyBird,
   },
   {
     id: 'wordlock',
