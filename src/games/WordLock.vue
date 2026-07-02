@@ -215,6 +215,14 @@ const stateClass = (s) =>
 // Keep the hidden input in charge of keystrokes: Enter submits, and any letter
 // pressed on a physical keyboard pulls focus back to it.
 function onKeydown(e) {
+  // On the result screen, Enter starts the next round ("New word").
+  if (phase.value === 'won' || phase.value === 'lost') {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      newRound()
+    }
+    return
+  }
   if (phase.value !== 'play') return
   if (e.key === 'Enter') {
     e.preventDefault()

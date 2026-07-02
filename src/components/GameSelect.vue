@@ -47,17 +47,16 @@ defineEmits(['select'])
       <li v-for="(game, i) in games" :key="game.id">
         <button class="cabinet" @click="$emit('select', game.id)">
           <span class="cabinet__no">{{ i + 1 }}</span>
-          <span class="cabinet__art sky">
-            <span class="sky__sun cabinet__sun" />
-            <span v-if="game.id === 'wordlock'" class="cabinet__tiles" aria-hidden="true">
+          <span class="cabinet__art" :class="'cabinet__art--' + game.id">
+            <span v-if="game.id === 'wordlock'" class="cabinet__icon cabinet__tiles" aria-hidden="true">
               <i class="t-correct">W</i><i class="t-present">O</i><i class="t-plain">R</i><i class="t-correct">D</i>
             </span>
-            <span v-else-if="game.id === 'flappy'" class="cabinet__flappy" aria-hidden="true">
+            <span v-else-if="game.id === 'flappy'" class="cabinet__icon cabinet__flappy" aria-hidden="true">
               <i class="cabinet__pipe cabinet__pipe--top" />
               <i class="cabinet__pipe cabinet__pipe--bot" />
               <span class="cabinet__bird"><BirdSprite /></span>
             </span>
-            <span v-else-if="game.id === 'sololock'" class="cabinet__solo" aria-hidden="true">
+            <span v-else-if="game.id === 'sololock'" class="cabinet__icon cabinet__solo" aria-hidden="true">
               <svg class="cabinet__lock" viewBox="0 0 24 24">
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="var(--ink)" stroke-width="2.4" />
                 <rect x="4.3" y="11" width="15.4" height="11" rx="2.5" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.4" />
@@ -65,7 +64,7 @@ defineEmits(['select'])
                 <rect x="11.2" y="16" width="1.6" height="3.4" rx="0.8" fill="var(--ink)" />
               </svg>
             </span>
-            <span v-else class="cabinet__dino"><DinoSprite run /></span>
+            <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
             <span class="cabinet__title">{{ game.title }}</span>
@@ -315,43 +314,54 @@ defineEmits(['select'])
   border: var(--line) solid var(--ink);
   border-radius: 50%;
 }
+/* Each game gets a flat, tinted label with its icon centered — no sky/sun. */
 .cabinet__art {
   height: 84px;
   border-radius: 14px;
   border: var(--line) solid var(--ink);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
-.cabinet__sun {
-  width: 96px;
-  height: 96px;
-  bottom: -18%;
+.cabinet__art--dino {
+  background: #ffe1a8;
 }
-.cabinet__dino {
-  position: absolute;
-  left: 14px;
-  bottom: 10px;
-  height: 34px;
-  color: #43c96b;
-  z-index: 1;
+.cabinet__art--flappy {
+  background: #bfe3ff;
+}
+.cabinet__art--wordlock {
+  background: #e6ddff;
+}
+.cabinet__art--sololock {
+  background: #c7efe0;
 }
 
-/* Word Lock cabinet: chunky tiles mid-solve. */
+/* Common: the icon sits centered in the tile. */
+.cabinet__icon {
+  display: grid;
+  place-items: center;
+}
+
+/* Dino Jump icon. */
+.cabinet__dino {
+  height: 50px;
+  color: #43c96b;
+}
+
+/* Word Lock icon: chunky tiles mid-solve. */
 .cabinet__tiles {
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  display: flex;
-  gap: 4px;
-  z-index: 1;
+  grid-auto-flow: column;
+  gap: 5px;
 }
 .cabinet__tiles i {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
   font-weight: 700;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 6px;
   border: 2px solid var(--ink);
   color: var(--ink);
@@ -366,48 +376,42 @@ defineEmits(['select'])
   background: var(--cream);
 }
 
-/* Flappy cabinet: a bird threading a pipe gap. */
+/* Flappy icon: a bird threading a pipe gap, centered as one unit. */
 .cabinet__flappy {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  position: relative;
+  width: 96px;
+  height: 60px;
 }
 .cabinet__bird {
   position: absolute;
-  left: 22px;
-  top: 46%;
+  left: 4px;
+  top: 50%;
   transform: translateY(-50%);
-  width: 42px;
-  height: 31px;
+  width: 44px;
+  height: 33px;
 }
 .cabinet__pipe {
   position: absolute;
-  right: 28px;
-  width: 26px;
+  right: 6px;
+  width: 24px;
   background: #57cc5f;
-  border: 2px solid var(--ink);
+  border: 2.4px solid var(--ink);
   border-radius: 5px;
 }
 .cabinet__pipe--top {
-  top: -3px;
-  height: 26px;
+  top: 0;
+  height: 20px;
 }
 .cabinet__pipe--bot {
-  bottom: -3px;
-  height: 32px;
+  bottom: 0;
+  height: 26px;
 }
 
-/* Solo Lock cabinet: a padlock. */
-.cabinet__solo {
-  position: absolute;
-  left: 16px;
-  bottom: 12px;
-  z-index: 1;
-}
+/* Solo Lock icon: a padlock. */
 .cabinet__lock {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   filter: drop-shadow(2px 2px 0 var(--ink));
 }
 .cabinet__title {
