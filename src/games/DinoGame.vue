@@ -274,6 +274,11 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
 .viewport {
   width: 100%;
   overflow: hidden;
+  /* Frame lives here (unscaled) so the cartoon outline stays chunky on mobile
+     even as the stage inside scales down. */
+  border: var(--line) solid var(--ink);
+  border-radius: 20px;
+  box-shadow: var(--pop);
 }
 
 .stage {
@@ -284,8 +289,6 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 210, 122, 0.25);
   overflow: hidden;
   touch-action: manipulation;
   cursor: pointer;
@@ -300,44 +303,50 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
 .hud {
   position: absolute;
   top: 16px;
-  right: 20px;
+  right: 18px;
   display: flex;
-  gap: 18px;
+  gap: 14px;
+  align-items: center;
   font-family: var(--font-mono);
-  font-size: 20px;
-  letter-spacing: 0.08em;
-  color: var(--sand);
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  padding: 5px 15px;
+  box-shadow: var(--pop-sm);
 }
 
 .hud__best {
-  color: var(--muted);
+  color: var(--berry);
 }
 
 .ground {
   position: absolute;
   left: 0;
   right: 0;
-  height: 40px;
-  background: var(--ink);
-  border-top: 2px solid var(--glow);
-  opacity: 0.92;
+  height: 44px;
+  background: #f4b24d;
+  border-top: var(--line) solid var(--ink);
 }
 
 .dino-wrap {
   position: absolute;
-  color: var(--ink);
+  color: #43c96b;
 }
 
 .cactus {
   position: absolute;
-  color: #2f6b3d;
+  color: #2fa85f;
 }
 
 .cactus__stalk,
 .cactus__arm {
   position: absolute;
   background: currentColor;
-  border-radius: 3px;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
 }
 
 .cactus__stalk {
@@ -371,41 +380,49 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
   align-items: center;
   justify-content: center;
   gap: 14px;
-  background: rgba(23, 18, 40, 0.35);
+  background: rgba(44, 19, 56, 0.4);
   backdrop-filter: blur(1px);
 }
 
 .overlay__title {
   font-family: var(--font-display);
-  font-size: 46px;
+  font-size: 54px;
   margin: 0;
-  color: var(--sand);
-  text-shadow: 0 3px 0 rgba(255, 138, 76, 0.4);
+  letter-spacing: 0.02em;
+  color: var(--sun);
+  -webkit-text-stroke: 3px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: var(--pop);
 }
 
 .overlay__title--over {
-  color: var(--horizon);
+  color: var(--berry);
 }
 
 .overlay__hint {
   margin: 0;
-  font-family: var(--font-mono);
-  color: var(--sand);
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--cream);
   font-size: 15px;
 }
 
 kbd {
   font-family: var(--font-mono);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--cream);
+  color: var(--ink);
+  border: 2px solid var(--ink);
   border-radius: 6px;
   padding: 1px 7px;
   font-size: 0.9em;
+  box-shadow: 0 2px 0 var(--ink);
 }
 
 .controls {
   text-align: center;
   color: var(--muted);
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 14px;
   margin: 18px 0 0;
 }

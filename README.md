@@ -1,8 +1,10 @@
 # Dusk Arcade
 
-A small web arcade built with Vue 3 + Vite. The first screen is a game
-selection menu; pick a cabinet and play. The first game is **Dino Jump** —
-a dusk-desert runner with SVG assets.
+A small, bright-cartoon web arcade built with Vue 3 + Vite. The first screen is
+a game menu; pick a cabinet and play. Two games so far: **Dino Jump** (leap the
+cacti) and **Word Lock** (a pass-and-play word guesser where correct letters
+lock in). The look is a joyful sunset — a grinning sun mascot, thick ink
+outlines, hard offset shadows, and rounded **Lilita One** / **Fredoka** type.
 
 It installs as a **PWA**: add it to a phone home screen and it launches
 full-screen and plays offline. The layout is mobile-first — safe-area insets
@@ -10,10 +12,10 @@ for notched phones, dynamic viewport height, and tap-to-jump controls.
 
 ## PWA
 
-- **Icon** — a single vector, [public/icon.svg](public/icon.svg) (dusk sky,
-  setting sun, dino silhouette). It's the primary manifest icon; the PNGs in
-  `public/` are raster fallbacks derived from it for iOS home screens and the
-  Android install banner.
+- **Icon** — a single vector, [public/icon.svg](public/icon.svg) (a grinning
+  sun with an outlined dino on the horizon). It's the primary manifest icon;
+  the PNGs in `public/` are raster fallbacks derived from it for iOS home
+  screens and the Android install banner.
 - **Offline** — [public/sw.js](public/sw.js) caches the app shell on install
   and everything else (scripts, styles, fonts) as it's requested, so the
   arcade opens with no network after the first visit.
@@ -62,9 +64,12 @@ It then appears as a new cabinet on the menu automatically.
 ```
 src/
   App.vue                 menu <-> play routing + game registry
+  styles.css              palette, cartoon sky signature, global type
+  pwa.js                  service-worker registration + update signal
   components/
-    GameSelect.vue        the arcade menu (hero + cabinet tiles)
-    DinoSprite.vue        shared SVG dinosaur silhouette
+    GameSelect.vue        the arcade menu (grinning-sun hero + cabinets)
+    DinoSprite.vue        shared SVG dinosaur, ink-outlined
   games/
     DinoGame.vue          the Dino Jump game
+    WordLock.vue          the Word Lock game
 ```

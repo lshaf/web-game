@@ -4,7 +4,7 @@
 defineProps({
   run: { type: Boolean, default: false },
   dead: { type: Boolean, default: false },
-  eyeColor: { type: String, default: 'var(--night)' },
+  eyeColor: { type: String, default: 'var(--cream)' },
 })
 </script>
 
@@ -41,7 +41,10 @@ defineProps({
   display: block;
   height: 100%;
   width: auto;
-  color: var(--ink);
+  color: #43c96b;
+  /* Chunky cartoon outline around the whole silhouette. */
+  filter: drop-shadow(1.5px 0 0 var(--ink)) drop-shadow(-1.5px 0 0 var(--ink))
+    drop-shadow(0 1.5px 0 var(--ink)) drop-shadow(0 -1.5px 0 var(--ink));
 }
 
 .leg {

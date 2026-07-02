@@ -1,13 +1,13 @@
 {
   "name": "Dusk Arcade",
   "short_name": "Dusk Arcade",
-  "description": "A tiny arcade at the edge of the desert. Leap the cacti as the sun goes down.",
+  "description": "A tiny cartoon arcade under a very happy sun. Leap the cacti, then crack a secret word.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#171228",
-  "theme_color": "#171228",
+  "background_color": "#fff3df",
+  "theme_color": "#7b5be6",
   "categories": ["games", "entertainment"],
   "icons": [
     { "src": "icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },

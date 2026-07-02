@@ -10,29 +10,50 @@ defineEmits(['select'])
 
 <template>
   <div class="select">
-    <!-- Hero: the shared dusk horizon. A dino runs the line the game is played on. -->
+    <!-- Hero: a sunny cartoon sky ruled by a very happy sun. -->
     <section class="sky hero" aria-hidden="true">
-      <span class="sky__sun" />
-      <div class="hero__horizon" />
-      <div class="hero__runner">
-        <DinoSprite run />
-      </div>
-      <div class="hero__scrub" />
+      <span class="cloud cloud--a" />
+      <span class="cloud cloud--b" />
+
+      <svg class="sun-face" viewBox="0 0 120 120">
+        <g class="sun-face__rays">
+          <polygon points="54,25 66,25 60,11" transform="rotate(0 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(45 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(90 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(135 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(180 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(225 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(270 60 60)" />
+          <polygon points="54,25 66,25 60,11" transform="rotate(315 60 60)" />
+        </g>
+        <circle class="sun-face__disc" cx="60" cy="60" r="33" />
+        <circle class="sun-face__cheek" cx="45" cy="67" r="4.5" />
+        <circle class="sun-face__cheek" cx="75" cy="67" r="4.5" />
+        <circle class="sun-face__eye" cx="51" cy="57" r="4" />
+        <circle class="sun-face__eye" cx="69" cy="57" r="4" />
+        <path class="sun-face__smile" d="M49 66 Q60 79 71 66" />
+      </svg>
+
+      <div class="hero__ground" />
+      <div class="hero__runner"><DinoSprite run /></div>
     </section>
 
     <header class="masthead">
       <p class="eyebrow">INSERT COIN</p>
-      <h1 class="wordmark">DUSK<span>ARCADE</span></h1>
-      <p class="lede">Pick a cabinet. The horizon does the rest.</p>
+      <h1 class="wordmark"><span class="wordmark__a">DUSK</span><span class="wordmark__b">ARCADE</span></h1>
+      <p class="lede">Two little games. One extremely happy sun.</p>
     </header>
 
     <ul class="cabinets">
       <li v-for="(game, i) in games" :key="game.id">
         <button class="cabinet" @click="$emit('select', game.id)">
-          <span class="cabinet__no">{{ String(i + 1).padStart(2, '0') }}</span>
+          <span class="cabinet__no">{{ i + 1 }}</span>
           <span class="cabinet__art sky">
             <span class="sky__sun cabinet__sun" />
-            <span class="cabinet__dino"><DinoSprite run /></span>
+            <span v-if="game.id === 'wordlock'" class="cabinet__tiles" aria-hidden="true">
+              <i class="t-correct">W</i><i class="t-present">O</i><i class="t-plain">R</i><i class="t-correct">D</i>
+            </span>
+            <span v-else class="cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
             <span class="cabinet__title">{{ game.title }}</span>
@@ -44,9 +65,9 @@ defineEmits(['select'])
     </ul>
 
     <footer class="foot">
-      <span class="foot__soon">MORE CABINETS SOON</span>
+      <span class="foot__soon">More games coming soon</span>
       <span class="foot__build">
-        <span class="foot__ver">BUILD v{{ appVersion }}</span>
+        <span class="foot__ver">v{{ appVersion }}</span>
         <button
           class="foot__update"
           :class="{ 'is-ready': updateReady }"
@@ -64,40 +85,98 @@ defineEmits(['select'])
 <style scoped>
 .select {
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   margin: 0 auto;
-  /* Side cutouts + home indicator get their space; the dark hero happily
-     bleeds under the translucent status bar up top. */
-  padding: 0 max(20px, env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom))
+  padding: 20px max(20px, env(safe-area-inset-right)) calc(56px + env(safe-area-inset-bottom))
     max(20px, env(safe-area-inset-left));
 }
 
 /* ---- Hero ---- */
 .hero {
-  height: 240px;
-  border-radius: 0 0 20px 20px;
-  border-bottom: 1px solid rgba(255, 210, 122, 0.25);
+  height: 260px;
+  border: var(--line) solid var(--ink);
+  border-radius: 26px;
+  box-shadow: var(--pop);
 }
 
-.hero__horizon {
+.cloud {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 34px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--glow) 20%, var(--glow) 80%, transparent);
-  opacity: 0.7;
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  box-shadow: inset 0 -6px 0 rgba(44, 19, 56, 0.06);
+}
+.cloud--a {
+  top: 34px;
+  left: 34px;
+  width: 78px;
+  height: 30px;
+  animation: drift 14s ease-in-out infinite;
+}
+.cloud--b {
+  top: 66px;
+  right: 44px;
+  width: 56px;
+  height: 24px;
+  animation: drift 18s ease-in-out infinite reverse;
 }
 
+.sun-face {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 190px;
+  height: 190px;
+  transform: translateX(-50%);
+  transform-origin: 50% 80%;
+  animation: sun-bob 4s ease-in-out infinite;
+}
+.sun-face__rays {
+  transform-origin: 60px 60px;
+  animation: spin 26s linear infinite;
+}
+.sun-face__rays polygon {
+  fill: var(--sun);
+  stroke: var(--ink);
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+.sun-face__disc {
+  fill: var(--sun);
+  stroke: var(--ink);
+  stroke-width: 4;
+}
+.sun-face__eye {
+  fill: var(--ink);
+  transform-origin: center;
+  animation: blink 5.5s ease-in-out infinite;
+}
+.sun-face__cheek {
+  fill: var(--berry);
+  opacity: 0.5;
+}
+.sun-face__smile {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.hero__ground {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 46px;
+  background: var(--aqua);
+  border-top: var(--line) solid var(--ink);
+}
 .hero__runner {
   position: absolute;
-  bottom: 30px;
-  height: 56px;
-  color: var(--ink);
+  bottom: 40px;
+  height: 52px;
   left: -60px;
+  color: #43c96b;
   animation: run-across 7.5s linear infinite;
 }
-
 .hero__runner .dino {
   animation: hop 0.75s ease-in-out infinite;
 }
@@ -110,7 +189,6 @@ defineEmits(['select'])
     left: 100%;
   }
 }
-
 @keyframes hop {
   0%,
   70%,
@@ -118,222 +196,286 @@ defineEmits(['select'])
     transform: translateY(0);
   }
   35% {
-    transform: translateY(-26px);
+    transform: translateY(-24px);
   }
 }
-
-.hero__scrub {
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 30px;
-  background: var(--ink);
-  opacity: 0.85;
+@keyframes sun-bob {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0%,
+  92%,
+  100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.15);
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(14px);
+  }
 }
 
 /* ---- Masthead ---- */
 .masthead {
   text-align: center;
-  padding: 34px 0 8px;
+  padding: 30px 0 6px;
 }
-
 .eyebrow {
-  font-family: var(--font-mono);
-  letter-spacing: 0.42em;
-  font-size: 12px;
-  color: var(--horizon);
-  margin: 0 0 14px;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  color: var(--cream);
+  background: var(--berry);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin: 0 0 18px;
+  transform: rotate(-3deg);
+  box-shadow: var(--pop-sm);
 }
-
 .wordmark {
   font-family: var(--font-display);
-  font-size: clamp(38px, 9vw, 76px);
-  line-height: 0.9;
+  font-size: clamp(46px, 12vw, 88px);
+  line-height: 0.86;
   margin: 0;
-  color: var(--sand);
-  text-shadow: 0 3px 0 rgba(255, 138, 76, 0.35);
+  letter-spacing: 0.01em;
 }
-
 .wordmark span {
   display: block;
-  color: var(--horizon);
+  -webkit-text-stroke: 3px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: var(--pop);
 }
-
+.wordmark__a {
+  color: var(--sun);
+}
+.wordmark__b {
+  color: var(--aqua);
+}
 .lede {
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
   color: var(--muted);
-  margin: 18px 0 0;
+  margin: 20px 0 0;
 }
 
-/* ---- Cabinet tiles ---- */
+/* ---- Cabinets ---- */
 .cabinets {
   list-style: none;
   padding: 0;
-  margin: 40px 0 0;
+  margin: 34px 0 0;
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
-
 .cabinet {
   width: 100%;
   display: grid;
   grid-template-columns: auto 132px 1fr auto;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   text-align: left;
-  background: #1e1733;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  padding: 14px 22px 14px 16px;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 20px;
+  padding: 14px 18px 14px 14px;
+  box-shadow: var(--pop);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
-
 .cabinet:hover,
 .cabinet:focus-visible {
-  transform: translateY(-3px);
-  border-color: rgba(255, 210, 122, 0.55);
-  background: #241b3d;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--ink);
 }
-
+.cabinet:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
 .cabinet__no {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  color: var(--muted);
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--sun);
+  border: var(--line) solid var(--ink);
+  border-radius: 50%;
 }
-
 .cabinet__art {
-  height: 78px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 84px;
+  border-radius: 14px;
+  border: var(--line) solid var(--ink);
 }
-
 .cabinet__sun {
-  width: 90px;
-  height: 90px;
-  bottom: -14%;
+  width: 96px;
+  height: 96px;
+  bottom: -18%;
 }
-
 .cabinet__dino {
   position: absolute;
   left: 14px;
   bottom: 10px;
   height: 34px;
+  color: #43c96b;
+  z-index: 1;
+}
+
+/* Word Lock cabinet: chunky tiles mid-solve. */
+.cabinet__tiles {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 4px;
+  z-index: 1;
+}
+.cabinet__tiles i {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 2px solid var(--ink);
   color: var(--ink);
 }
-
+.cabinet__tiles .t-correct {
+  background: var(--aqua);
+}
+.cabinet__tiles .t-present {
+  background: var(--sun);
+}
+.cabinet__tiles .t-plain {
+  background: var(--cream);
+}
 .cabinet__title {
   font-family: var(--font-display);
-  font-size: 22px;
-  color: var(--sand);
+  font-size: 24px;
+  color: var(--ink);
 }
-
 .cabinet__tag {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 14px;
+  font-weight: 500;
   color: var(--muted);
 }
-
 .cabinet__play {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.12em;
-  color: var(--horizon);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: var(--aqua);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  padding: 8px 15px;
   white-space: nowrap;
 }
 
 /* ---- Footer ---- */
 .foot {
-  margin-top: 34px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  color: rgba(185, 169, 214, 0.55);
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--muted);
 }
-
+.foot__soon {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
 .foot__build {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  letter-spacing: 0.16em;
 }
-
 .foot__ver {
-  color: rgba(185, 169, 214, 0.5);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
 }
-
 .foot__update {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
   border-radius: 999px;
-  padding: 6px 14px;
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  padding: 6px 15px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
-
 .foot__update:hover,
 .foot__update:focus-visible {
-  color: var(--sand);
-  border-color: rgba(255, 210, 122, 0.5);
-  background: rgba(255, 210, 122, 0.06);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
-
-/* Lit up only when a freshly deployed build is actually waiting. */
+.foot__update:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
 .foot__update.is-ready {
-  color: var(--night);
-  background: var(--glow);
-  border-color: var(--glow);
+  background: var(--sun);
 }
-
-.foot__update.is-ready:hover,
-.foot__update.is-ready:focus-visible {
-  background: #ffdf9a;
-}
-
 .foot__dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--horizon);
-  box-shadow: 0 0 0 0 rgba(255, 138, 76, 0.6);
-  animation: update-pulse 1.6s ease-out infinite;
+  background: var(--berry);
+  border: 1.5px solid var(--ink);
+  animation: dot-pulse 1.2s ease-in-out infinite;
 }
 
-@keyframes update-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 138, 76, 0.55);
-  }
-  70% {
-    box-shadow: 0 0 0 7px rgba(255, 138, 76, 0);
-  }
+@keyframes dot-pulse {
+  0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 138, 76, 0);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.35);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .foot__dot {
-    animation: none;
-  }
-}
-
+/* ---- Mobile: art becomes a full banner ---- */
 @media (max-width: 560px) {
   .cabinet {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
       "art  art  art"
       "no   meta play";
-    gap: 12px 16px;
-    align-items: center;
+    gap: 12px 14px;
   }
   .cabinet__no {
     grid-area: no;
@@ -342,12 +484,10 @@ defineEmits(['select'])
   .cabinet__meta {
     grid-area: meta;
   }
-  /* Full-bleed dusk banner instead of a collapsed sliver — the art's children
-     are absolutely positioned, so it needs an explicit size to show up. */
   .cabinet__art {
     grid-area: art;
     width: 100%;
-    height: 96px;
+    height: 104px;
   }
   .cabinet__play {
     grid-area: play;
@@ -358,7 +498,12 @@ defineEmits(['select'])
 
 @media (prefers-reduced-motion: reduce) {
   .hero__runner,
-  .hero__runner .dino {
+  .hero__runner .dino,
+  .sun-face,
+  .sun-face__rays,
+  .sun-face__eye,
+  .cloud,
+  .foot__dot {
     animation: none;
   }
   .hero__runner {
