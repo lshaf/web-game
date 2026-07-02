@@ -54,7 +54,9 @@ function backToMenu() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  /* Clear the status bar / notch in standalone mode and any side cutouts. */
+  padding: calc(16px + env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 16px
+    max(20px, env(safe-area-inset-left));
 }
 
 .back {

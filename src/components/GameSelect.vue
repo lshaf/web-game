@@ -1,5 +1,6 @@
 <script setup>
 import DinoSprite from './DinoSprite.vue'
+import { appVersion, updateReady, applyUpdate } from '../pwa.js'
 
 defineProps({
   games: { type: Array, required: true },
@@ -43,7 +44,19 @@ defineEmits(['select'])
     </ul>
 
     <footer class="foot">
-      <span>MORE CABINETS SOON</span>
+      <span class="foot__soon">MORE CABINETS SOON</span>
+      <span class="foot__build">
+        <span class="foot__ver">BUILD v{{ appVersion }}</span>
+        <button
+          class="foot__update"
+          :class="{ 'is-ready': updateReady }"
+          :title="updateReady ? 'A new build is ready — tap to reload' : 'Reload for the latest build'"
+          @click="applyUpdate"
+        >
+          <span v-if="updateReady" class="foot__dot" aria-hidden="true" />
+          {{ updateReady ? 'Update ready' : 'Update' }}
+        </button>
+      </span>
     </footer>
   </div>
 </template>
@@ -53,7 +66,10 @@ defineEmits(['select'])
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px 64px;
+  /* Side cutouts + home indicator get their space; the dark hero happily
+     bleeds under the translucent status bar up top. */
+  padding: 0 max(20px, env(safe-area-inset-right)) calc(64px + env(safe-area-inset-bottom))
+    max(20px, env(safe-area-inset-left));
 }
 
 /* ---- Hero ---- */
@@ -228,29 +244,110 @@ defineEmits(['select'])
 /* ---- Footer ---- */
 .foot {
   margin-top: 34px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.3em;
   color: rgba(185, 169, 214, 0.55);
 }
 
+.foot__build {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 0.16em;
+}
+
+.foot__ver {
+  color: rgba(185, 169, 214, 0.5);
+}
+
+.foot__update {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.foot__update:hover,
+.foot__update:focus-visible {
+  color: var(--sand);
+  border-color: rgba(255, 210, 122, 0.5);
+  background: rgba(255, 210, 122, 0.06);
+}
+
+/* Lit up only when a freshly deployed build is actually waiting. */
+.foot__update.is-ready {
+  color: var(--night);
+  background: var(--glow);
+  border-color: var(--glow);
+}
+
+.foot__update.is-ready:hover,
+.foot__update.is-ready:focus-visible {
+  background: #ffdf9a;
+}
+
+.foot__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--horizon);
+  box-shadow: 0 0 0 0 rgba(255, 138, 76, 0.6);
+  animation: update-pulse 1.6s ease-out infinite;
+}
+
+@keyframes update-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 138, 76, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255, 138, 76, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 138, 76, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foot__dot {
+    animation: none;
+  }
+}
+
 @media (max-width: 560px) {
   .cabinet {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
-      "no meta"
-      "art play";
-    row-gap: 14px;
+      "art  art  art"
+      "no   meta play";
+    gap: 12px 16px;
+    align-items: center;
   }
   .cabinet__no {
     grid-area: no;
+    align-self: center;
   }
   .cabinet__meta {
     grid-area: meta;
   }
+  /* Full-bleed dusk banner instead of a collapsed sliver — the art's children
+     are absolutely positioned, so it needs an explicit size to show up. */
   .cabinet__art {
     grid-area: art;
+    width: 100%;
+    height: 96px;
   }
   .cabinet__play {
     grid-area: play;

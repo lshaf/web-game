@@ -261,7 +261,12 @@ const pad2 = (n) => String(Math.floor(n)).padStart(5, '0')
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 12px 40px;
+  padding: 0 max(12px, env(safe-area-inset-right)) calc(40px + env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+  /* Rapid tapping to jump must never select text or pop a callout. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 /* The stage is scaled as a whole; the viewport reserves the scaled height

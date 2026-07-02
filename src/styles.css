@@ -23,16 +23,28 @@ body {
   height: 100%;
 }
 
+html {
+  /* Keep our type scale intact when iOS rotates to landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   background: var(--night);
   color: var(--sand);
   font-family: var(--font-body);
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
+  /* No rubber-band scroll or pull-to-refresh stealing taps mid-jump, and no
+     grey flash when tapping controls on mobile. */
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #app {
+  /* dvh tracks the shrinking mobile URL bar; vh is the fallback. */
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }

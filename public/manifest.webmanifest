@@ -1,0 +1,18 @@
+{
+  "name": "Dusk Arcade",
+  "short_name": "Dusk Arcade",
+  "description": "A tiny arcade at the edge of the desert. Leap the cacti as the sun goes down.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#171228",
+  "theme_color": "#171228",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" },
+    { "src": "icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "maskable" },
+    { "src": "pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
