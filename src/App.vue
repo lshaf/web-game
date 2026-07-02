@@ -25,6 +25,13 @@ const games = [
     tagline: 'Set a secret word. Lock in letters to crack it.',
     component: WordLock,
   },
+  {
+    id: 'sololock',
+    title: 'Solo Lock',
+    tagline: 'Crack a random Indonesian word, solo.',
+    component: WordLock,
+    props: { mode: 'solo' },
+  },
 ]
 
 const selectedId = ref(null)
@@ -50,7 +57,7 @@ function backToMenu() {
       <span class="play-title">{{ currentGame.title }}</span>
       <span class="spacer" />
     </header>
-    <component :is="currentGame.component" />
+    <component :is="currentGame.component" v-bind="currentGame.props || {}" :key="currentGame.id" />
   </div>
 </template>
 

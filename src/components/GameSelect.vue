@@ -57,6 +57,14 @@ defineEmits(['select'])
               <i class="cabinet__pipe cabinet__pipe--bot" />
               <span class="cabinet__bird"><BirdSprite /></span>
             </span>
+            <span v-else-if="game.id === 'sololock'" class="cabinet__solo" aria-hidden="true">
+              <svg class="cabinet__lock" viewBox="0 0 24 24">
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="var(--ink)" stroke-width="2.4" />
+                <rect x="4.3" y="11" width="15.4" height="11" rx="2.5" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.4" />
+                <circle cx="12" cy="15.5" r="1.7" fill="var(--ink)" />
+                <rect x="11.2" y="16" width="1.6" height="3.4" rx="0.8" fill="var(--ink)" />
+              </svg>
+            </span>
             <span v-else class="cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -387,6 +395,20 @@ defineEmits(['select'])
 .cabinet__pipe--bot {
   bottom: -3px;
   height: 32px;
+}
+
+/* Solo Lock cabinet: a padlock. */
+.cabinet__solo {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  z-index: 1;
+}
+.cabinet__lock {
+  display: block;
+  width: 46px;
+  height: 46px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
 }
 .cabinet__title {
   font-family: var(--font-display);
