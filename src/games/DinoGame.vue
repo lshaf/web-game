@@ -16,8 +16,8 @@ const DINO_X = 96
 
 const GRAVITY = 2600 // px/s^2
 const JUMP_V = -900 // px/s
-const START_SPEED = 380 // px/s
-const MAX_SPEED = 900
+const START_SPEED = 300 // px/s
+const MAX_SPEED = 680
 
 const FPS = 30
 const FRAME = 1 / FPS // fixed simulation step
@@ -101,7 +101,7 @@ function step(dt) {
   const ground = groundY.value
 
   // difficulty ramps with score
-  speed = Math.min(MAX_SPEED, START_SPEED + score.value * 0.6)
+  speed = Math.min(MAX_SPEED, START_SPEED + score.value * 0.4)
 
   // dino physics
   velY += GRAVITY * dt
