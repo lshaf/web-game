@@ -34,6 +34,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      # SPA history-mode fallback: GitHub Pages serves 404.html for unknown
+      # paths, so a copy of index.html lets deep links (/play/dino) boot the
+      # app and let the router resolve the route.
+      - name: Add SPA 404 fallback
+        run: cp dist/index.html dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

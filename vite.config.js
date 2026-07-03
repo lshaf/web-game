@@ -4,10 +4,10 @@ import vue from '@vitejs/plugin-vue'
 
 const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)))
 
-// Relative base so the build works on GitHub Pages project pages
-// (https://<user>.github.io/<repo>/) without hardcoding the repo name.
+// Served from the domain root (custom domain / user page), so the base is "/".
+// History-mode routing and deep-link asset URLs (/assets/...) resolve from root.
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [vue()],
   // Surface the package version to the app so the menu can print the build.
   define: {
