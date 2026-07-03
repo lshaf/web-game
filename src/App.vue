@@ -5,6 +5,7 @@ import DinoGame from './games/DinoGame.vue'
 import WordLock from './games/WordLock.vue'
 import FlappyBird from './games/FlappyBird.vue'
 import AcakKata from './games/AcakKata.vue'
+import Hangman from './games/Hangman.vue'
 
 // Registry of playable games. Add a new entry here + its component to expand.
 const games = [
@@ -38,6 +39,12 @@ const games = [
     title: 'Acak Kata',
     tagline: 'Unscramble the Indonesian word.',
     component: AcakKata,
+  },
+  {
+    id: 'hangman',
+    title: 'Tebak Kata',
+    tagline: 'Guess the word before the gallows fills.',
+    component: Hangman,
   },
 ]
 

@@ -67,6 +67,18 @@ defineEmits(['select'])
             <span v-else-if="game.id === 'acakkata'" class="cabinet__icon cabinet__scramble" aria-hidden="true">
               <i>A</i><i>C</i><i>A</i><i>K</i>
             </span>
+            <span v-else-if="game.id === 'hangman'" class="cabinet__icon cabinet__gallows" aria-hidden="true">
+              <svg viewBox="0 0 48 46">
+                <g fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round">
+                  <line x1="6" y1="42" x2="26" y2="42" />
+                  <line x1="12" y1="42" x2="12" y2="6" />
+                  <line x1="10.5" y1="6" x2="34" y2="6" />
+                  <line x1="34" y1="6" x2="34" y2="12" stroke-width="2.4" />
+                </g>
+                <circle cx="34" cy="18" r="5.5" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.6" />
+                <line x1="34" y1="23.5" x2="34" y2="34" stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -341,6 +353,9 @@ defineEmits(['select'])
 .cabinet__art--acakkata {
   background: #ffd6e3;
 }
+.cabinet__art--hangman {
+  background: #cdd6ff;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -416,6 +431,14 @@ defineEmits(['select'])
   transform: rotate(9deg);
   background: var(--berry);
   color: var(--cream);
+}
+
+/* Tebak Kata icon: a little gallows. */
+.cabinet__gallows svg {
+  display: block;
+  width: 54px;
+  height: 52px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
 }
 
 /* Flappy icon: a bird threading a pipe gap, centered as one unit. */
