@@ -24,15 +24,8 @@ export const games = [
   {
     id: 'wordlock',
     title: 'Word Lock',
-    tagline: 'Set a secret word. Lock in letters to crack it.',
+    tagline: 'Lock in letters to crack the word. Solo or two players.',
     component: WordLock,
-  },
-  {
-    id: 'sololock',
-    title: 'Solo Lock',
-    tagline: 'Crack a random Indonesian word, solo.',
-    component: WordLock,
-    props: { mode: 'solo' },
   },
   {
     id: 'acakkata',

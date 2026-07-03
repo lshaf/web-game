@@ -3,12 +3,11 @@ import { ref, computed, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { puzzles } from '../data/words.js'
 import { sfx } from '../sound.js'
 
-const props = defineProps({
-  // 'duo' = pass-and-play (Player 1 sets the word).
-  // 'solo' = a random Indonesian word from the puzzle database.
-  mode: { type: String, default: 'duo' },
-})
-const isSolo = props.mode === 'solo'
+// Mode is chosen on the in-game picker:
+//   'solo' = a random Indonesian word from the puzzle database.
+//   'duo'  = pass-and-play (Player 1 sets the word).
+const mode = ref(null)
+const isSolo = computed(() => mode.value === 'solo')
 
 /* ---- Portable core (framework-agnostic, per the WordLock spec §4) ---- */
 
@@ -60,7 +59,7 @@ const unlockedCount = (locked) => locked.filter((l) => !l).length
 
 /* ---- Reactive round state ---- */
 
-const phase = ref(isSolo ? 'play' : 'setup') // setup | handoff | play | won | lost
+const phase = ref('menu') // menu | setup | handoff | play | won | lost
 const clue = ref('')
 const answer = ref('')
 const maxAttempts = ref(6)
@@ -114,8 +113,32 @@ function pickPuzzle() {
   phase.value = 'play'
 }
 
-// Seed the first solo round before the initial render so the board isn't empty.
-if (isSolo) pickPuzzle()
+// Pick a mode from the opening screen.
+function chooseMode(m) {
+  mode.value = m
+  if (m === 'solo') {
+    try {
+      bestStreak.value = Number(localStorage.getItem(streakKey)) || 0
+    } catch (e) {
+      bestStreak.value = 0
+    }
+    streak.value = 0
+    pickPuzzle() // sets phase = 'play'
+    nextTick(focusInput)
+  } else {
+    clueDraft.value = ''
+    answerDraft.value = ''
+    attemptsDraft.value = 6
+    showAnswer.value = false
+    setupError.value = ''
+    phase.value = 'setup'
+  }
+}
+
+function backToMenu() {
+  mode.value = null
+  phase.value = 'menu'
+}
 
 function lockIn() {
   const a = cleanAnswer(answerDraft.value)
@@ -172,7 +195,7 @@ function submit() {
   if (guess === answer.value) {
     phase.value = 'won'
     sfx.win()
-    if (isSolo) {
+    if (isSolo.value) {
       streak.value++
       if (streak.value > bestStreak.value) {
         bestStreak.value = streak.value
@@ -186,14 +209,14 @@ function submit() {
   } else if (guesses.value.length >= maxAttempts.value) {
     phase.value = 'lost'
     sfx.lose()
-    if (isSolo) streak.value = 0
+    if (isSolo.value) streak.value = 0
   } else {
     nextTick(focusInput)
   }
 }
 
 function newRound() {
-  if (isSolo) {
+  if (isSolo.value) {
     pickPuzzle()
     nextTick(focusInput)
     return
@@ -237,14 +260,6 @@ function onKeydown(e) {
 
 onMounted(() => {
   window.addEventListener('keydown', onKeydown)
-  if (isSolo) {
-    try {
-      bestStreak.value = Number(localStorage.getItem(streakKey)) || 0
-    } catch (e) {
-      bestStreak.value = 0
-    }
-    nextTick(focusInput)
-  }
 })
 onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 </script>
@@ -252,8 +267,17 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 <template>
   <div class="wordlock">
     <div class="panel">
+      <!-- ===== Mode picker ===== -->
+      <section v-if="phase === 'menu'" class="screen">
+        <p class="brand"><span>WORD</span><span class="brand__lock">LOCK</span></p>
+        <p class="eyebrow">PILIH MODE</p>
+        <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+      </section>
+
       <!-- ===== Setup: Player 1 sets the word ===== -->
-      <section v-if="phase === 'setup'" class="screen setup">
+      <section v-else-if="phase === 'setup'" class="screen setup">
+        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
         <p class="brand"><span>WORD</span><span class="brand__lock">LOCK</span></p>
         <p class="eyebrow">PLAYER 1 · SET THE WORD</p>
 
@@ -312,6 +336,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Handoff: hide the answer, pass the device ===== -->
       <section v-else-if="phase === 'handoff'" class="screen handoff">
+        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
         <span class="lock-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24">
             <path d="M7 10V7a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.2" />
@@ -325,6 +350,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Play: Player 2 guesses (duo) / you guess (solo) ===== -->
       <section v-else-if="phase === 'play'" class="screen play">
+        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
         <div v-if="isSolo" class="solobar">
           <span class="solobar__streak">STREAK <b>{{ streak }}</b></span>
           <span class="solobar__best">BEST {{ bestStreak }}</span>
@@ -386,6 +412,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Result: won / lost ===== -->
       <section v-else class="screen result">
+        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
         <p class="result__title" :class="{ 'is-lost': phase === 'lost' }">
           {{ phase === 'won' ? 'Solved!' : 'Out of guesses' }}
         </p>
@@ -611,6 +638,34 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   cursor: not-allowed;
   transform: none;
   box-shadow: var(--pop);
+}
+.cta--alt {
+  background: var(--sun);
+}
+
+/* ---- Mode back-bar (top-left, on every sub-screen) ---- */
+.backbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.modebtn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 7px 14px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.modebtn:hover,
+.modebtn:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 /* ---- Handoff ---- */

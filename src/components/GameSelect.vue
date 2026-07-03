@@ -56,14 +56,6 @@ defineEmits(['select'])
               <i class="cabinet__pipe cabinet__pipe--bot" />
               <span class="cabinet__bird"><BirdSprite /></span>
             </span>
-            <span v-else-if="game.id === 'sololock'" class="cabinet__icon cabinet__solo" aria-hidden="true">
-              <svg class="cabinet__lock" viewBox="0 0 24 24">
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="var(--ink)" stroke-width="2.4" />
-                <rect x="4.3" y="11" width="15.4" height="11" rx="2.5" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.4" />
-                <circle cx="12" cy="15.5" r="1.7" fill="var(--ink)" />
-                <rect x="11.2" y="16" width="1.6" height="3.4" rx="0.8" fill="var(--ink)" />
-              </svg>
-            </span>
             <span v-else-if="game.id === 'acakkata'" class="cabinet__icon cabinet__scramble" aria-hidden="true">
               <i>A</i><i>C</i><i>A</i><i>K</i>
             </span>
