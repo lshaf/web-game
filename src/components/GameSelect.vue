@@ -86,6 +86,29 @@ defineEmits(['select'])
                 <circle cx="31" cy="14" r="2.4" fill="var(--cream)" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'ular'" class="cabinet__icon cabinet__ular" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="40" height="40" rx="7" fill="#ffe7b0" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="3.4" stroke-linecap="round">
+                  <line x1="12" y1="40" x2="18" y2="7" />
+                  <line x1="19" y1="40" x2="25" y2="7" />
+                </g>
+                <g stroke="#d98a3d" stroke-width="1.9" stroke-linecap="round">
+                  <line x1="12" y1="40" x2="18" y2="7" />
+                  <line x1="19" y1="40" x2="25" y2="7" />
+                </g>
+                <g stroke="#e8a24e" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="14" y1="32" x2="20.5" y2="32" />
+                  <line x1="15.3" y1="23" x2="21.8" y2="23" />
+                  <line x1="16.6" y1="14" x2="23.1" y2="14" />
+                </g>
+                <path d="M34 8 q-8 6 0 12 q8 6 0 12" fill="none" stroke="var(--ink)" stroke-width="4.6" stroke-linecap="round" />
+                <path d="M34 8 q-8 6 0 12 q8 6 0 12" fill="none" stroke="var(--berry)" stroke-width="3" stroke-linecap="round" />
+                <circle cx="34" cy="8" r="3.2" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.4" />
+                <circle cx="32.8" cy="7.4" r="0.7" fill="var(--ink)" />
+                <circle cx="35.2" cy="7.4" r="0.7" fill="var(--ink)" />
+              </svg>
+            </span>
             <span v-else-if="game.id === 'ingatan'" class="cabinet__icon cabinet__mem" aria-hidden="true">
               <svg viewBox="0 0 46 46">
                 <rect x="3" y="3" width="18" height="18" rx="4" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.4" />
@@ -414,6 +437,9 @@ defineEmits(['select'])
 .cabinet__art--armada {
   background: #cfe0ea;
 }
+.cabinet__art--ular {
+  background: #ffe1a8;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -527,6 +553,14 @@ defineEmits(['select'])
   display: block;
   width: 54px;
   height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Ular Tangga icon: a board with a ladder climbing and a snake sliding. */
+.cabinet__ular svg {
+  display: block;
+  width: 56px;
+  height: 56px;
   filter: drop-shadow(2px 2px 0 var(--ink));
 }
 

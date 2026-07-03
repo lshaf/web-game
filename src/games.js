@@ -8,6 +8,7 @@ import TebakWarna from './games/TebakWarna.vue'
 import ConnectFour from './games/ConnectFour.vue'
 import Ingatan from './games/Ingatan.vue'
 import Armada from './games/Armada.vue'
+import UlarTangga from './games/UlarTangga.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -71,6 +72,12 @@ export const games = [
     title: 'Armada',
     tagline: 'Place your fleet, sink theirs. Solo vs CPU or two players.',
     component: Armada,
+  },
+  {
+    id: 'ular',
+    title: 'Ular Tangga',
+    tagline: 'Roll the die, ride ladders, dodge snakes. Solo vs CPU or two players.',
+    component: UlarTangga,
   },
 ]
 
