@@ -177,7 +177,7 @@ onBeforeUnmount(() => {
         <span class="solobar__best">BEST {{ best }}</span>
       </div>
 
-      <p class="brand"><span>ACAK</span><span class="brand__b">KATA</span></p>
+      <p class="brand"><span>ACAK</span><span class="brand__accent">KATA</span></p>
       <p class="clue"><span class="clue__label">CLUE</span>{{ clue }}</p>
 
       <!-- Answer slots: tap a filled tile to send it back. -->
@@ -247,10 +247,6 @@ onBeforeUnmount(() => {
 .brand {
   font-size: 32px;
   margin: 0 0 14px;
-  color: var(--ink);
-}
-.brand__b {
-  color: var(--berry);
 }
 
 .clue {

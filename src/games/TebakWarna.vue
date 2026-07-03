@@ -225,8 +225,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
     <div class="panel">
       <!-- ===== Mode picker ===== -->
       <section v-if="phase === 'mode'" class="screen">
-        <p class="brand">TEBAK<span>WARNA</span></p>
-        <p class="eyebrow">PECAHKAN KODE WARNA</p>
+        <p class="brand">TEBAK<span class="brand__accent">WARNA</span></p>
+        <p class="eyebrow">PILIH MODE</p>
         <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
         <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
       </section>
@@ -234,7 +234,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <!-- ===== Solo config ===== -->
       <section v-else-if="phase === 'config'" class="screen">
         <div class="backbar"><button class="mini" type="button" @click="backToModes">← Mode</button></div>
-        <p class="brand">TEBAK<span>WARNA</span></p>
+        <p class="brand">TEBAK<span class="brand__accent">WARNA</span></p>
         <p class="eyebrow">ATUR PERMAINAN</p>
 
         <div class="field">
@@ -275,7 +275,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <!-- ===== Multi setup (Player 1) ===== -->
       <section v-else-if="phase === 'setup'" class="screen">
         <div class="backbar"><button class="mini" type="button" @click="backToModes">← Mode</button></div>
-        <p class="brand">TEBAK<span>WARNA</span></p>
+        <p class="brand">TEBAK<span class="brand__accent">WARNA</span></p>
         <p class="eyebrow">PEMAIN 1 · SUSUN KODE</p>
 
         <div class="draft" :class="{ 'is-empty': !codeDraft.length }">
@@ -435,14 +435,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
 .brand {
   font-size: 34px;
-  color: var(--berry);
-}
-.brand span {
-  color: var(--aqua-deep);
-}
-.eyebrow {
-  letter-spacing: 0.26em;
-  color: var(--muted);
 }
 
 /* ---- Config pickers ---- */
@@ -545,9 +537,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 /* ---- Top bar (play) ---- */
 .play {
   width: 100%;
-}
-.topbar {
-  margin-bottom: 18px;
 }
 .streak {
   font-family: var(--font-mono);

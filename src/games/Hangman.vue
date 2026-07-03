@@ -122,7 +122,7 @@ onBeforeUnmount(() => {
         <span class="solobar__best">BEST {{ best }}</span>
       </div>
 
-      <p class="brand"><span>TEBAK</span><span class="brand__b">KATA</span></p>
+      <p class="brand"><span>TEBAK</span><span class="brand__accent">KATA</span></p>
 
       <!-- Gallows: parts appear as wrong guesses stack up. -->
       <svg class="gallows" viewBox="0 0 120 150" aria-hidden="true">
@@ -218,10 +218,6 @@ onBeforeUnmount(() => {
 .brand {
   font-size: 30px;
   margin: 0 0 8px;
-  color: var(--ink);
-}
-.brand__b {
-  color: var(--berry);
 }
 
 .gallows {

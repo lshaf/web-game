@@ -78,6 +78,17 @@ defineEmits(['select'])
               <i style="background: #4aa3ff" />
               <i style="background: #7b5be6" />
             </span>
+            <span v-else-if="game.id === 'connect4'" class="cabinet__icon cabinet__c4" aria-hidden="true">
+              <svg viewBox="0 0 48 44">
+                <rect x="4" y="6" width="40" height="34" rx="6" fill="#3f78e0" stroke="var(--ink)" stroke-width="2.6" />
+                <circle cx="14" cy="16" r="4.2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="24" cy="16" r="4.2" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="34" cy="16" r="4.2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="14" cy="30" r="4.2" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="24" cy="30" r="4.2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="34" cy="30" r="4.2" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.6" />
+              </svg>
+            </span>
             <span v-else-if="game.id === 'tictactoe'" class="cabinet__icon cabinet__ttt" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <g stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round">
@@ -377,6 +388,9 @@ defineEmits(['select'])
 .cabinet__art--tebakwarna {
   background: #ece7f2;
 }
+.cabinet__art--connect4 {
+  background: #d3edc4;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -467,6 +481,14 @@ defineEmits(['select'])
   display: block;
   width: 56px;
   height: 56px;
+}
+
+/* Connect 4 icon: a mini blue board with discs. */
+.cabinet__c4 svg {
+  display: block;
+  width: 58px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
 }
 
 /* Tebak Warna icon: a fan of color swatches. */

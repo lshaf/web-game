@@ -269,7 +269,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
     <div class="panel">
       <!-- ===== Mode picker ===== -->
       <section v-if="phase === 'menu'" class="screen">
-        <p class="brand"><span>WORD</span><span class="brand__lock">LOCK</span></p>
+        <p class="brand"><span>WORD</span><span class="brand__accent">LOCK</span></p>
         <p class="eyebrow">PILIH MODE</p>
         <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
         <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
@@ -278,7 +278,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <!-- ===== Setup: Player 1 sets the word ===== -->
       <section v-else-if="phase === 'setup'" class="screen setup">
         <div class="backbar"><button class="mini" type="button" @click="backToMenu">← Mode</button></div>
-        <p class="brand"><span>WORD</span><span class="brand__lock">LOCK</span></p>
+        <p class="brand"><span>WORD</span><span class="brand__accent">LOCK</span></p>
         <p class="eyebrow">PLAYER 1 · SET THE WORD</p>
 
         <label class="field">
@@ -472,16 +472,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   animation: screen-in 0.28s ease both;
 }
 
-/* ---- Brand + labels (base is global; these are the per-page bits) ---- */
+/* ---- Brand (base is global; only the size is per-page) ---- */
 .brand {
   font-size: 34px;
-  color: var(--ink);
-}
-.brand__lock {
-  color: var(--aqua-deep);
-}
-.eyebrow {
-  color: var(--berry);
 }
 
 /* ---- Setup form ---- */

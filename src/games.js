@@ -5,6 +5,7 @@ import AcakKata from './games/AcakKata.vue'
 import Hangman from './games/Hangman.vue'
 import TicTacToe from './games/TicTacToe.vue'
 import TebakWarna from './games/TebakWarna.vue'
+import ConnectFour from './games/ConnectFour.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -50,6 +51,12 @@ export const games = [
     title: 'Tebak Warna',
     tagline: 'Crack the secret color code. Solo or two players.',
     component: TebakWarna,
+  },
+  {
+    id: 'connect4',
+    title: 'Connect 4',
+    tagline: 'Drop discs, line up four. Solo vs CPU or two players.',
+    component: ConnectFour,
   },
 ]
 

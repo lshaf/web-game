@@ -189,6 +189,10 @@ button {
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 0 var(--ink);
 }
+/* An invisible pill used as a spacer to balance a top bar. */
+.mini--ghost {
+  visibility: hidden;
+}
 
 /* Top-left back bar. */
 .backbar {
@@ -198,27 +202,42 @@ button {
   margin-bottom: 10px;
 }
 
-/* Left / center / right control bar. */
+/* Left / center / right control bar, with a centered status label. */
 .topbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 16px;
+}
+.status {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--ink);
+}
+.status.is-over {
+  color: var(--berry);
 }
 
-/* Display wordmark — size & accent colors are per game. */
+/* Display wordmark — size is per game; the trailing segment uses .brand__accent
+   so every game's two-tone wordmark reads the same way. */
 .brand {
   font-family: var(--font-display);
   letter-spacing: 0.02em;
   margin: 0;
+  color: var(--ink);
+}
+.brand__accent {
+  color: var(--aqua-deep);
 }
 
-/* Mono eyebrow label — color is per game. */
+/* Mono eyebrow label — a quiet signpost, same everywhere. */
 .eyebrow {
   font-family: var(--font-mono);
   letter-spacing: 0.28em;
   font-size: 11px;
+  color: var(--muted);
   margin: 10px 0 22px;
 }
 

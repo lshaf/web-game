@@ -40,8 +40,10 @@ Layout / containers:
   flex-direction:column; align-items:center` if the game centers via the panel
   instead of `.screen`) in your scoped style.
 - **`.screen`** — a vertical centered column for one screen/phase.
-- **`.backbar` + `.mini`** — top-left back/mode pill row.
-- **`.topbar`** — left/center/right control bar (mode · status · counter).
+- **`.backbar` + `.mini`** — top-left back/mode pill row. `.mini--ghost` is an
+  invisible pill spacer to balance a three-slot bar.
+- **`.topbar`** + **`.status`** (+`.status.is-over`) — left/center/right control
+  bar with a centered status label that turns berry when the round is over.
 
 Buttons:
 
@@ -51,9 +53,11 @@ Buttons:
 
 Headings & text:
 
-- **`.brand`** — the wordmark. Set `font-size` and `color` scoped; use a child
-  `<span>` (or `.brand__x`) for the two-tone accent.
-- **`.eyebrow`** — mono uppercase label above the title. Set `color` scoped.
+- **`.brand`** — the wordmark (ink). Set only `font-size` scoped. Wrap the
+  trailing segment in `<span class="brand__accent">` for the two-tone look
+  (ink + aqua-deep) — every game's wordmark reads the same way.
+- **`.eyebrow`** — mono uppercase label above the title (muted). On a mode
+  picker the text is always `PILIH MODE`.
 - **`.clue`** + **`.clue__label`** — a clue line with its "CLUE" kicker.
 - **`.field`** + **`.field__label`** — a labelled form input group.
 

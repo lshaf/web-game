@@ -170,7 +170,7 @@ onBeforeUnmount(() => {
     <div class="panel">
       <!-- Mode picker -->
       <section v-if="!mode" class="screen">
-        <p class="brand">TIC<span>TAC</span></p>
+        <p class="brand">TIC<span class="brand__accent">TAC</span></p>
         <p class="eyebrow">PILIH MODE</p>
         <button class="cta" type="button" @click="chooseMode('cpu')">Lawan Komputer ▸</button>
         <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
@@ -179,7 +179,7 @@ onBeforeUnmount(() => {
       <!-- Game -->
       <section v-else class="screen">
         <div class="topbar">
-          <button class="mini" type="button" @click="backToModes">Mode</button>
+          <button class="mini" type="button" @click="backToModes">← Mode</button>
           <span class="status" :class="{ 'is-over': isOver }">{{ status }}</span>
           <span class="mini mini--ghost" aria-hidden="true" />
         </div>
@@ -229,33 +229,6 @@ onBeforeUnmount(() => {
 
 .brand {
   font-size: 40px;
-  color: var(--berry);
-}
-.brand span {
-  color: var(--aqua-deep);
-}
-.eyebrow {
-  color: var(--muted);
-}
-
-/* ---- Top bar (base is global; page-specific bits only) ---- */
-.topbar {
-  margin-bottom: 16px;
-}
-.mini {
-  font-size: 12px;
-  padding: 5px 12px;
-}
-.mini--ghost {
-  visibility: hidden;
-}
-.status {
-  font-family: var(--font-display);
-  font-size: 18px;
-  color: var(--ink);
-}
-.status.is-over {
-  color: var(--berry);
 }
 
 /* ---- Board ---- */
