@@ -437,29 +437,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   font-size: 34px;
 }
 
-/* ---- Config pickers ---- */
+/* ---- Config pickers (base is global; only the label spacing differs) ---- */
 .field__label {
   letter-spacing: 0.14em;
-}
-.picker {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-.pick {
-  font-family: var(--font-mono);
-  font-size: 16px;
-  color: var(--ink);
-  background: var(--paper-lit);
-  border: 2px solid var(--ink);
-  border-radius: 12px;
-  padding: 11px 0;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-}
-.pick.is-on {
-  background: var(--sun);
-  box-shadow: var(--pop-sm);
-  font-weight: 700;
 }
 
 /* ---- Swatches (palette) ---- */

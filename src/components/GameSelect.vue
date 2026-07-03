@@ -78,6 +78,15 @@ defineEmits(['select'])
               <i style="background: #4aa3ff" />
               <i style="background: #7b5be6" />
             </span>
+            <span v-else-if="game.id === 'ingatan'" class="cabinet__icon cabinet__mem" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.4" />
+                <rect x="25" y="3" width="18" height="18" rx="4" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.4" />
+                <rect x="3" y="25" width="18" height="18" rx="4" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.4" />
+                <rect x="25" y="25" width="18" height="18" rx="4" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.4" />
+                <circle cx="34" cy="34" r="4.6" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.8" />
+              </svg>
+            </span>
             <span v-else-if="game.id === 'connect4'" class="cabinet__icon cabinet__c4" aria-hidden="true">
               <svg viewBox="0 0 48 44">
                 <rect x="4" y="6" width="40" height="34" rx="6" fill="#3f78e0" stroke="var(--ink)" stroke-width="2.6" />
@@ -391,6 +400,9 @@ defineEmits(['select'])
 .cabinet__art--connect4 {
   background: #d3edc4;
 }
+.cabinet__art--ingatan {
+  background: #c7efe0;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -488,6 +500,14 @@ defineEmits(['select'])
   display: block;
   width: 58px;
   height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Ingatan icon: four memory cards, one flipped. */
+.cabinet__mem svg {
+  display: block;
+  width: 52px;
+  height: 52px;
   filter: drop-shadow(2px 2px 0 var(--ink));
 }
 

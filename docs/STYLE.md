@@ -60,6 +60,8 @@ Headings & text:
   picker the text is always `PILIH MODE`.
 - **`.clue`** + **`.clue__label`** — a clue line with its "CLUE" kicker.
 - **`.field`** + **`.field__label`** — a labelled form input group.
+- **`.picker`** + **`.pick`** (+`.pick.is-on`) — a four-up segmented option
+  picker for config screens (e.g. difficulty, attempts).
 
 Game furniture:
 
