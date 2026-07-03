@@ -79,6 +79,13 @@ defineEmits(['select'])
                 <line x1="34" y1="23.5" x2="34" y2="34" stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'tebakwarna'" class="cabinet__icon cabinet__warna" aria-hidden="true">
+              <i style="background: #ff3b3b" />
+              <i style="background: #ffd23f" />
+              <i style="background: #43c96b" />
+              <i style="background: #4aa3ff" />
+              <i style="background: #7b5be6" />
+            </span>
             <span v-else-if="game.id === 'tictactoe'" class="cabinet__icon cabinet__ttt" aria-hidden="true">
               <svg viewBox="0 0 48 48">
                 <g stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round">
@@ -378,6 +385,9 @@ defineEmits(['select'])
 .cabinet__art--tictactoe {
   background: #ffc9b9;
 }
+.cabinet__art--tebakwarna {
+  background: #ece7f2;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -468,6 +478,18 @@ defineEmits(['select'])
   display: block;
   width: 56px;
   height: 56px;
+}
+
+/* Tebak Warna icon: a fan of color swatches. */
+.cabinet__warna {
+  grid-auto-flow: column;
+  gap: 4px;
+}
+.cabinet__warna i {
+  width: 15px;
+  height: 26px;
+  border: 2px solid var(--ink);
+  border-radius: 5px;
 }
 
 /* Flappy icon: a bird threading a pipe gap, centered as one unit. */
