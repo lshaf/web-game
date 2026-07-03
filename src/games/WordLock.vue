@@ -277,7 +277,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Setup: Player 1 sets the word ===== -->
       <section v-else-if="phase === 'setup'" class="screen setup">
-        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
+        <div class="backbar"><button class="mini" type="button" @click="backToMenu">← Mode</button></div>
         <p class="brand"><span>WORD</span><span class="brand__lock">LOCK</span></p>
         <p class="eyebrow">PLAYER 1 · SET THE WORD</p>
 
@@ -336,7 +336,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Handoff: hide the answer, pass the device ===== -->
       <section v-else-if="phase === 'handoff'" class="screen handoff">
-        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
+        <div class="backbar"><button class="mini" type="button" @click="backToMenu">← Mode</button></div>
         <span class="lock-badge" aria-hidden="true">
           <svg viewBox="0 0 24 24">
             <path d="M7 10V7a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.2" />
@@ -350,7 +350,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Play: Player 2 guesses (duo) / you guess (solo) ===== -->
       <section v-else-if="phase === 'play'" class="screen play">
-        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
+        <div class="backbar"><button class="mini" type="button" @click="backToMenu">← Mode</button></div>
         <div v-if="isSolo" class="solobar">
           <span class="solobar__streak">STREAK <b>{{ streak }}</b></span>
           <span class="solobar__best">BEST {{ bestStreak }}</span>
@@ -412,7 +412,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
       <!-- ===== Result: won / lost ===== -->
       <section v-else class="screen result">
-        <div class="backbar"><button class="modebtn" type="button" @click="backToMenu">← Mode</button></div>
+        <div class="backbar"><button class="mini" type="button" @click="backToMenu">← Mode</button></div>
         <p class="result__title" :class="{ 'is-lost': phase === 'lost' }">
           {{ phase === 'won' ? 'Solved!' : 'Out of guesses' }}
         </p>
@@ -451,12 +451,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   --wl-present: var(--sun);
   --wl-present-edge: var(--ink);
   --wl-present-ink: var(--ink);
-  --wl-absent: #ccbfda;
+  --wl-absent: var(--absent);
   --wl-absent-edge: var(--ink);
-  --wl-absent-ink: #6c5480;
-  --wl-panel: var(--cream);
-  --wl-screen: #fffaf0;
-  --wl-cta-edge: var(--ink);
+  --wl-absent-ink: var(--muted);
+  --wl-screen: var(--paper-lit);
 
   width: 100%;
   max-width: 480px;
@@ -466,64 +464,27 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 }
 
 .panel {
-  background: var(--wl-panel);
-  border: var(--line) solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--pop);
   padding: 28px 22px 30px;
 }
 
+/* Word Lock alone fades each screen in. */
 .screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   animation: screen-in 0.28s ease both;
 }
 
-@keyframes screen-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-}
-
-/* ---- Brand + labels ---- */
+/* ---- Brand + labels (base is global; these are the per-page bits) ---- */
 .brand {
-  font-family: var(--font-display);
   font-size: 34px;
-  letter-spacing: 0.02em;
-  margin: 0;
   color: var(--ink);
 }
 .brand__lock {
   color: var(--aqua-deep);
 }
-
 .eyebrow {
-  font-family: var(--font-mono);
-  letter-spacing: 0.28em;
-  font-size: 11px;
   color: var(--berry);
-  margin: 10px 0 22px;
 }
 
 /* ---- Setup form ---- */
-.field {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.field__label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 .text-input {
   width: 100%;
   font-family: var(--font-body);
@@ -608,126 +569,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   margin: 0 0 14px;
 }
 
-/* ---- CTA (chunky, arcade depth) ---- */
-.cta {
-  width: 100%;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-  background: var(--aqua);
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  padding: 13px 20px;
-  margin-top: 6px;
-  box-shadow: var(--pop);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.cta:hover,
-.cta:focus-visible {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--ink);
-}
-.cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
-}
-.cta:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: var(--pop);
-}
-.cta--alt {
-  background: var(--sun);
-}
-
-/* ---- Mode back-bar (top-left, on every sub-screen) ---- */
-.backbar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-.modebtn {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--ink);
-  background: var(--cream);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  padding: 7px 14px;
-  box-shadow: var(--pop-sm);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.modebtn:hover,
-.modebtn:focus-visible {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-
-/* ---- Handoff ---- */
-.handoff {
-  gap: 4px;
-  padding: 16px 0 6px;
-}
-.lock-badge {
-  width: 76px;
-  height: 76px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--ink);
-  background: var(--sun);
-  border: var(--line) solid var(--ink);
-  box-shadow: var(--pop);
-  margin-bottom: 18px;
-}
-.lock-badge svg {
-  width: 38px;
-  height: 38px;
-}
-.handoff__title {
-  font-family: var(--font-display);
-  font-size: 30px;
-  color: var(--ink);
-  margin: 0 0 8px;
-}
-.handoff__sub {
-  font-size: 15px;
-  color: var(--muted);
-  text-align: center;
-  margin: 0 0 22px;
-  max-width: 300px;
-}
-
-/* ---- Solo streak bar ---- */
+/* ---- Solo streak bar (base is global; only the margin is page-specific) ---- */
 .solobar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  color: var(--muted);
   margin-bottom: 16px;
-}
-.solobar b {
-  color: var(--aqua-deep);
-  font-weight: 700;
-}
-.solobar__best {
-  color: var(--berry);
-}
-.result__streak {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  margin: 0 0 18px;
 }
 
 /* ---- Play head ---- */
@@ -741,21 +585,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   justify-content: space-between;
   gap: 14px;
   margin-bottom: 20px;
-}
-.clue {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--ink);
-  line-height: 1.35;
-}
-.clue__label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.28em;
-  color: var(--berry);
-  margin-bottom: 4px;
 }
 .left {
   margin: 0;
@@ -820,7 +649,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 }
 .tile.is-typing {
   border-color: var(--ink);
-  background: #fff3c4;
+  background: var(--tile-live);
   animation: pop 0.12s ease;
 }
 .tile.is-correct {
@@ -888,24 +717,9 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   animation-delay: var(--d);
 }
 
-/* ---- Result ---- */
-.result {
-  padding: 8px 0 4px;
-}
-.result__title {
-  font-family: var(--font-display);
-  font-size: 36px;
-  color: var(--aqua-deep);
-  margin: 0 0 8px;
-}
-.result__title.is-lost {
-  color: var(--berry);
-}
+/* ---- Result (base is global; these are Word Lock-only) ---- */
 .result__sub {
-  font-size: 15px;
   font-weight: 500;
-  color: var(--muted);
-  margin: 0 0 6px;
 }
 .result__clue {
   margin: 0 0 22px;
@@ -943,32 +757,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   }
   50% {
     box-shadow: 0 4px 0 var(--wl-correct-edge), 0 0 14px rgba(35, 201, 176, 0.7);
-  }
-}
-.shake {
-  animation: shake 0.4s ease;
-}
-@keyframes shake {
-  10%,
-  90% {
-    transform: translateX(-2px);
-  }
-  30%,
-  70% {
-    transform: translateX(4px);
-  }
-  50% {
-    transform: translateX(-6px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .screen,
-  .tile,
-  .hrow.is-latest .tile,
-  .tile.is-locked,
-  .shake {
-    animation: none;
   }
 }
 </style>

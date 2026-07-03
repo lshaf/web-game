@@ -233,39 +233,19 @@ onBeforeUnmount(() => {
 }
 
 .panel {
-  background: var(--cream);
-  border: var(--line) solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--pop);
   padding: 22px 22px 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* base is global; only the margin is page-specific */
 .solobar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  color: var(--muted);
   margin-bottom: 12px;
-}
-.solobar b {
-  color: var(--aqua-deep);
-  font-weight: 700;
-}
-.solobar__best {
-  color: var(--berry);
 }
 
 .brand {
-  font-family: var(--font-display);
   font-size: 32px;
-  letter-spacing: 0.02em;
   margin: 0 0 14px;
   color: var(--ink);
 }
@@ -275,19 +255,7 @@ onBeforeUnmount(() => {
 
 .clue {
   margin: 0 0 20px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--ink);
   text-align: center;
-  line-height: 1.35;
-}
-.clue__label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.28em;
-  color: var(--berry);
-  margin-bottom: 4px;
 }
 
 /* ---- Tiles (shared look) ---- */
@@ -324,7 +292,7 @@ onBeforeUnmount(() => {
 
 /* Answer slots */
 .slot.is-filled {
-  background: #fff3c4;
+  background: var(--tile-live);
   box-shadow: 0 4px 0 var(--ink);
 }
 .slot:not(.is-filled) {
@@ -333,7 +301,7 @@ onBeforeUnmount(() => {
   cursor: default;
 }
 .slot.is-wrong.is-filled {
-  background: #ffd0dc;
+  background: var(--tile-wrong);
 }
 .slot.is-correct {
   background: var(--aqua);
@@ -397,7 +365,7 @@ onBeforeUnmount(() => {
 .btn:hover,
 .btn:focus-visible {
   transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 var(--ink);
+  box-shadow: var(--pop);
 }
 .btn:active {
   transform: translate(2px, 2px);
@@ -405,31 +373,5 @@ onBeforeUnmount(() => {
 }
 .btn--skip {
   background: var(--aqua);
-}
-
-/* ---- Motion ---- */
-.shake {
-  animation: shake 0.4s ease;
-}
-@keyframes shake {
-  10%,
-  90% {
-    transform: translateX(-2px);
-  }
-  30%,
-  70% {
-    transform: translateX(4px);
-  }
-  50% {
-    transform: translateX(-6px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .shake,
-  .verdict {
-    animation: none;
-    transition: none;
-  }
 }
 </style>

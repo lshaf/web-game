@@ -365,9 +365,6 @@ defineEmits(['select'])
 .cabinet__art--wordlock {
   background: #e6ddff;
 }
-.cabinet__art--sololock {
-  background: #c7efe0;
-}
 .cabinet__art--acakkata {
   background: #ffd6e3;
 }
@@ -513,14 +510,6 @@ defineEmits(['select'])
 .cabinet__pipe--bot {
   bottom: 0;
   height: 26px;
-}
-
-/* Solo Lock icon: a padlock. */
-.cabinet__lock {
-  display: block;
-  width: 50px;
-  height: 50px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
 }
 .cabinet__title {
   font-family: var(--font-display);

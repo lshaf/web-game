@@ -54,8 +54,12 @@ path without extra configuration.
 
 ## Add another game
 
-1. Create a component in `src/games/`.
-2. Register it in the `games` array in [src/App.vue](src/App.vue).
+1. Create a component in `src/games/` — follow the shared style pattern in
+   [docs/STYLE.md](docs/STYLE.md) so it reuses the global UI classes (panel,
+   buttons, headings…) and only adds scoped CSS for its own board.
+2. Register it in the `games` array in [src/games.js](src/games.js) (the `id`
+   becomes its `/play/:id` route).
+3. Add its cabinet icon in [src/components/GameSelect.vue](src/components/GameSelect.vue).
 
 It then appears as a new cabinet on the menu automatically.
 

@@ -204,39 +204,19 @@ onBeforeUnmount(() => {
 }
 
 .panel {
-  background: var(--cream);
-  border: var(--line) solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--pop);
   padding: 20px 20px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* base is global; only the margin is page-specific */
 .solobar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  color: var(--muted);
   margin-bottom: 8px;
-}
-.solobar b {
-  color: var(--aqua-deep);
-  font-weight: 700;
-}
-.solobar__best {
-  color: var(--berry);
 }
 
 .brand {
-  font-family: var(--font-display);
   font-size: 30px;
-  letter-spacing: 0.02em;
   margin: 0 0 8px;
   color: var(--ink);
 }
@@ -277,19 +257,7 @@ onBeforeUnmount(() => {
 
 .clue {
   margin: 0 0 16px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--ink);
   text-align: center;
-  line-height: 1.35;
-}
-.clue__label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.28em;
-  color: var(--berry);
-  margin-bottom: 4px;
 }
 
 /* ---- Word slots ---- */
@@ -329,7 +297,7 @@ onBeforeUnmount(() => {
 .slot.is-missed {
   border: 2.5px solid var(--ink);
   border-radius: 8px;
-  background: #ffd0dc;
+  background: var(--tile-wrong);
   color: var(--berry);
   box-shadow: 0 4px 0 var(--ink);
 }
@@ -386,38 +354,8 @@ onBeforeUnmount(() => {
   opacity: 1;
 }
 .key.is-miss {
-  background: var(--wl-absent, #ccbfda);
-  color: #6c5480;
+  background: var(--absent);
+  color: var(--muted);
   opacity: 0.75;
-}
-
-/* ---- New word CTA ---- */
-.cta {
-  width: 100%;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  background: var(--aqua);
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  padding: 13px 20px;
-  box-shadow: var(--pop);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.cta:hover,
-.cta:focus-visible {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--ink);
-}
-.cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .part {
-    animation: none;
-  }
 }
 </style>

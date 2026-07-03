@@ -376,7 +376,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         </div>
 
         <div class="play-actions">
-          <button class="btn-sec" type="button" @click="clearSlots">Hapus</button>
+          <button class="cta cta--ghost" type="button" @click="clearSlots">Hapus</button>
           <button class="cta cta--go" :disabled="!isFull" type="button" @click="submit">Tebak ▸</button>
         </div>
 
@@ -430,51 +430,24 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 }
 
 .panel {
-  background: var(--cream);
-  border: var(--line) solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--pop);
   padding: 24px 22px 28px;
 }
 
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .brand {
-  font-family: var(--font-display);
   font-size: 34px;
-  letter-spacing: 0.02em;
-  margin: 0;
   color: var(--berry);
 }
 .brand span {
   color: var(--aqua-deep);
 }
 .eyebrow {
-  font-family: var(--font-mono);
   letter-spacing: 0.26em;
-  font-size: 11px;
   color: var(--muted);
-  margin: 10px 0 22px;
 }
 
 /* ---- Config pickers ---- */
-.field {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 18px;
-}
 .field__label {
-  font-family: var(--font-mono);
-  font-size: 12px;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 .picker {
   display: grid;
@@ -485,7 +458,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   font-family: var(--font-mono);
   font-size: 16px;
   color: var(--ink);
-  background: #fffaf0;
+  background: var(--paper-lit);
   border: 2px solid var(--ink);
   border-radius: 12px;
   padding: 11px 0;
@@ -574,11 +547,6 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   width: 100%;
 }
 .topbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
   margin-bottom: 18px;
 }
 .streak {
@@ -619,13 +587,10 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   aspect-ratio: 1;
   border: var(--line) solid var(--ink);
   border-radius: 12px;
-  background: #fffaf0;
+  background: var(--paper-lit);
 }
 .slot.is-filled {
   box-shadow: 0 4px 0 var(--ink);
-}
-.result__board {
-  margin: 8px auto 20px;
 }
 
 .play-actions {
@@ -635,37 +600,17 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   align-items: stretch;
   margin-bottom: 6px;
 }
-/* Zero the CTA's base top margin here (higher specificity than .cta) so it
-   matches the secondary button and both stretch to the same height. */
+/* Zero the CTA's base top margin so both buttons stretch to equal height; the
+   ghost sizes to its content while the primary fills the rest of the row. */
 .play-actions .cta {
   margin-top: 0;
 }
+.play-actions .cta--ghost {
+  flex: 0 0 auto;
+  width: auto;
+}
 .cta--go {
   flex: 1;
-}
-
-/* Secondary action button — identical to the primary CTA (size, shape, shadow
-   depth) but white, so the row is balanced. */
-.btn-sec {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--ink);
-  background: #fff;
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  padding: 13px 20px;
-  box-shadow: var(--pop);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.btn-sec:hover,
-.btn-sec:focus-visible {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--ink);
-}
-.btn-sec:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
 }
 
 /* ---- History ---- */
@@ -682,7 +627,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   justify-content: space-between;
   gap: 12px;
   padding: 6px 10px;
-  background: #fffaf0;
+  background: var(--paper-lit);
   border: 2px solid var(--ink);
   border-radius: 12px;
 }
@@ -722,148 +667,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
   border-color: rgba(44, 19, 56, 0.3);
 }
 
-/* ---- Handoff ---- */
-.handoff {
-  gap: 4px;
-  padding: 16px 0 6px;
-}
-.lock-badge {
-  width: 76px;
-  height: 76px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--ink);
-  background: var(--sun);
-  border: var(--line) solid var(--ink);
-  box-shadow: var(--pop);
-  margin-bottom: 18px;
-}
-.lock-badge svg {
-  width: 38px;
-  height: 38px;
-}
+/* ---- Handoff / Result — per-page overrides only ---- */
 .handoff__title {
-  font-family: var(--font-display);
   font-size: 28px;
-  color: var(--ink);
-  margin: 0 0 8px;
-}
-.handoff__sub {
-  font-size: 15px;
-  color: var(--muted);
-  text-align: center;
-  margin: 0 0 22px;
-  max-width: 300px;
-}
-
-/* ---- Result ---- */
-.result {
-  padding: 8px 0 4px;
 }
 .result__title {
-  font-family: var(--font-display);
   font-size: 34px;
-  color: var(--aqua-deep);
-  margin: 0 0 8px;
-}
-.result__title.is-lost {
-  color: var(--berry);
-}
-.result__sub {
-  font-size: 15px;
-  color: var(--muted);
-  margin: 0 0 6px;
 }
 .result__streak {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: var(--muted);
   margin: 0 0 14px;
-}
-
-/* ---- Buttons ---- */
-.cta {
-  width: 100%;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  background: var(--aqua);
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  padding: 13px 20px;
-  margin-top: 6px;
-  box-shadow: var(--pop);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.cta--alt {
-  background: var(--sun);
-}
-.cta:hover:not(:disabled),
-.cta:focus-visible:not(:disabled) {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--ink);
-}
-.cta:active:not(:disabled) {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
-}
-.cta:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-.mini {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 13px;
-  color: var(--ink);
-  background: var(--cream);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  padding: 7px 14px;
-  box-shadow: var(--pop-sm);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.mini:disabled {
-  opacity: 0.4;
-}
-
-/* Top-left back-to-modes header, consistent with the play screen's top bar. */
-.backbar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-.mini:hover:not(:disabled),
-.mini:focus-visible:not(:disabled) {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-
-/* ---- Motion ---- */
-.shake {
-  animation: shake 0.4s ease;
-}
-@keyframes shake {
-  10%,
-  90% {
-    transform: translateX(-2px);
-  }
-  30%,
-  70% {
-    transform: translateX(4px);
-  }
-  50% {
-    transform: translateX(-6px);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .shake {
-    animation: none;
-  }
 }
 </style>

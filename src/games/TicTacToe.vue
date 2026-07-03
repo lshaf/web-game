@@ -224,57 +224,27 @@ onBeforeUnmount(() => {
 }
 
 .panel {
-  background: var(--cream);
-  border: var(--line) solid var(--ink);
-  border-radius: 22px;
-  box-shadow: var(--pop);
   padding: 26px 22px 28px;
 }
 
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .brand {
-  font-family: var(--font-display);
   font-size: 40px;
-  letter-spacing: 0.02em;
-  margin: 0;
   color: var(--berry);
 }
 .brand span {
   color: var(--aqua-deep);
 }
-
 .eyebrow {
-  font-family: var(--font-mono);
-  letter-spacing: 0.28em;
-  font-size: 11px;
   color: var(--muted);
-  margin: 10px 0 22px;
 }
 
-/* ---- Top bar ---- */
+/* ---- Top bar (base is global; page-specific bits only) ---- */
 .topbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
   margin-bottom: 16px;
 }
 .mini {
-  font-family: var(--font-body);
-  font-weight: 700;
   font-size: 12px;
-  color: var(--ink);
-  background: var(--cream);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
   padding: 5px 12px;
-  box-shadow: var(--pop-sm);
 }
 .mini--ghost {
   visibility: hidden;
@@ -303,7 +273,7 @@ onBeforeUnmount(() => {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  background: #fffaf0;
+  background: var(--paper-lit);
   border: var(--line) solid var(--ink);
   border-radius: 14px;
   box-shadow: 0 4px 0 var(--ink);
@@ -312,7 +282,7 @@ onBeforeUnmount(() => {
 .cell:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 6px 0 var(--ink);
-  background: #fff3c4;
+  background: var(--tile-live);
 }
 .cell:active:not(:disabled) {
   transform: translateY(2px);
@@ -370,37 +340,4 @@ onBeforeUnmount(() => {
   text-align: center;
 }
 
-/* ---- CTA ---- */
-.cta {
-  width: 100%;
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  background: var(--aqua);
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  padding: 13px 20px;
-  margin-top: 6px;
-  box-shadow: var(--pop);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.cta--alt {
-  background: var(--sun);
-}
-.cta:hover,
-.cta:focus-visible {
-  transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--ink);
-}
-.cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mark {
-    animation: none;
-  }
-}
 </style>

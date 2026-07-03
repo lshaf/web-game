@@ -17,6 +17,12 @@
   --pop: 5px 5px 0 var(--ink); /* hard offset shadow */
   --pop-sm: 3px 3px 0 var(--ink);
 
+  /* Shared game-tile surfaces (used across the word/puzzle games). */
+  --paper-lit: #fffaf0; /* lit paper / input fill */
+  --tile-live: #fff3c4; /* the tile being typed / hovered */
+  --tile-wrong: #ffd0dc; /* a wrong / missed tile */
+  --absent: #ccbfda; /* absent letter lilac */
+
   --font-display: "Lilita One", system-ui, sans-serif;
   --font-body: "Fredoka", system-ui, -apple-system, sans-serif;
   --font-mono: "DM Mono", ui-monospace, "Cascadia Code", monospace;
@@ -103,4 +109,266 @@ button {
   background: radial-gradient(circle at 50% 42%, var(--sun) 0 58%, var(--sun-core) 100%);
   box-shadow: 0 0 0 var(--line) var(--ink);
   pointer-events: none;
+}
+
+/* ============================================================
+   Shared game UI — the common panel/button/heading vocabulary
+   used across the word & puzzle games. Page-specific sizing,
+   colors, and boards stay in each component's scoped <style>;
+   only the shared base lives here.
+   ============================================================ */
+
+/* Vertical, centered screen column. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card container — each screen sets its own padding. */
+.panel {
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 22px;
+  box-shadow: var(--pop);
+}
+
+/* Primary chunky button. */
+.cta {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--aqua);
+  border: var(--line) solid var(--ink);
+  border-radius: 14px;
+  padding: 13px 20px;
+  margin-top: 6px;
+  box-shadow: var(--pop);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.cta--alt {
+  background: var(--sun);
+}
+.cta--ghost {
+  background: #fff;
+}
+.cta:hover:not(:disabled),
+.cta:focus-visible:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+.cta:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.cta:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Small rounded pill (mode / back / secondary). */
+.mini {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 7px 14px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.mini:disabled {
+  opacity: 0.4;
+}
+.mini:hover:not(:disabled),
+.mini:focus-visible:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* Top-left back bar. */
+.backbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+/* Left / center / right control bar. */
+.topbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Display wordmark — size & accent colors are per game. */
+.brand {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Mono eyebrow label — color is per game. */
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.28em;
+  font-size: 11px;
+  margin: 10px 0 22px;
+}
+
+/* Clue line. */
+.clue {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.clue__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--berry);
+  margin-bottom: 4px;
+}
+
+/* Labeled form field. */
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.field__label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Solo streak bar. */
+.solobar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.solobar b {
+  color: var(--aqua-deep);
+  font-weight: 700;
+}
+.solobar__best {
+  color: var(--berry);
+}
+
+/* Handoff (pass-and-play) screen. */
+.handoff {
+  gap: 4px;
+  padding: 16px 0 6px;
+}
+.handoff__title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.handoff__sub {
+  font-size: 15px;
+  color: var(--muted);
+  text-align: center;
+  margin: 0 0 22px;
+  max-width: 300px;
+}
+.lock-badge {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--sun);
+  border: var(--line) solid var(--ink);
+  box-shadow: var(--pop);
+  margin-bottom: 18px;
+}
+.lock-badge svg {
+  width: 38px;
+  height: 38px;
+}
+
+/* Result screen. */
+.result {
+  padding: 8px 0 4px;
+}
+.result__title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--aqua-deep);
+  margin: 0 0 8px;
+}
+.result__title.is-lost {
+  color: var(--berry);
+}
+.result__sub {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.result__streak {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+.result__board {
+  margin: 8px auto 20px;
+}
+
+/* Invalid-input shake (shared). */
+.shake {
+  animation: shake 0.4s ease;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  30%,
+  70% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+}
+@keyframes screen-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* One global reduced-motion reset replaces the per-component blocks. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
