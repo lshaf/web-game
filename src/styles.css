@@ -48,6 +48,9 @@ body {
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Always reserve the scrollbar gutter so a game that grows/shrinks past one
+     screen doesn't shift the whole layout sideways when the scrollbar toggles. */
+  scrollbar-gutter: stable;
 }
 
 body {

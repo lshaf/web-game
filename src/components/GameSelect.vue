@@ -78,6 +78,14 @@ defineEmits(['select'])
               <i style="background: #4aa3ff" />
               <i style="background: #7b5be6" />
             </span>
+            <span v-else-if="game.id === 'armada'" class="cabinet__icon cabinet__armada" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="40" height="40" rx="7" fill="#3f78e0" stroke="var(--ink)" stroke-width="2.6" />
+                <rect x="9" y="26" width="28" height="9" rx="3" fill="var(--grape)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="15" cy="14" r="4.6" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.8" />
+                <circle cx="31" cy="14" r="2.4" fill="var(--cream)" />
+              </svg>
+            </span>
             <span v-else-if="game.id === 'ingatan'" class="cabinet__icon cabinet__mem" aria-hidden="true">
               <svg viewBox="0 0 46 46">
                 <rect x="3" y="3" width="18" height="18" rx="4" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.4" />
@@ -403,6 +411,9 @@ defineEmits(['select'])
 .cabinet__art--ingatan {
   background: #c7efe0;
 }
+.cabinet__art--armada {
+  background: #cfe0ea;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -508,6 +519,14 @@ defineEmits(['select'])
   display: block;
   width: 52px;
   height: 52px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Armada icon: a battle grid with a ship and a hit. */
+.cabinet__armada svg {
+  display: block;
+  width: 54px;
+  height: 54px;
   filter: drop-shadow(2px 2px 0 var(--ink));
 }
 
