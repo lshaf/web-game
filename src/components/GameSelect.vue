@@ -64,6 +64,9 @@ defineEmits(['select'])
                 <rect x="11.2" y="16" width="1.6" height="3.4" rx="0.8" fill="var(--ink)" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'acakkata'" class="cabinet__icon cabinet__scramble" aria-hidden="true">
+              <i>A</i><i>C</i><i>A</i><i>K</i>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -335,6 +338,9 @@ defineEmits(['select'])
 .cabinet__art--sololock {
   background: #c7efe0;
 }
+.cabinet__art--acakkata {
+  background: #ffd6e3;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -374,6 +380,42 @@ defineEmits(['select'])
 }
 .cabinet__tiles .t-plain {
   background: var(--cream);
+}
+
+/* Acak Kata icon: scrambled, tilted letter tiles. */
+.cabinet__scramble {
+  grid-auto-flow: column;
+  gap: 5px;
+}
+.cabinet__scramble i {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: var(--cream);
+}
+.cabinet__scramble i:nth-child(1) {
+  transform: rotate(-8deg);
+  background: var(--sun);
+}
+.cabinet__scramble i:nth-child(2) {
+  transform: rotate(7deg);
+  background: var(--aqua);
+}
+.cabinet__scramble i:nth-child(3) {
+  transform: rotate(-5deg);
+}
+.cabinet__scramble i:nth-child(4) {
+  transform: rotate(9deg);
+  background: var(--berry);
+  color: var(--cream);
 }
 
 /* Flappy icon: a bird threading a pipe gap, centered as one unit. */

@@ -4,6 +4,7 @@ import GameSelect from './components/GameSelect.vue'
 import DinoGame from './games/DinoGame.vue'
 import WordLock from './games/WordLock.vue'
 import FlappyBird from './games/FlappyBird.vue'
+import AcakKata from './games/AcakKata.vue'
 
 // Registry of playable games. Add a new entry here + its component to expand.
 const games = [
@@ -31,6 +32,12 @@ const games = [
     tagline: 'Crack a random Indonesian word, solo.',
     component: WordLock,
     props: { mode: 'solo' },
+  },
+  {
+    id: 'acakkata',
+    title: 'Acak Kata',
+    tagline: 'Unscramble the Indonesian word.',
+    component: AcakKata,
   },
 ]
 
