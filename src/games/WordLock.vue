@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { puzzles } from '../data/words.js'
+import { sfx } from '../sound.js'
 
 const props = defineProps({
   // 'duo' = pass-and-play (Player 1 sets the word).
@@ -170,6 +171,7 @@ function submit() {
   typed.value = ''
   if (guess === answer.value) {
     phase.value = 'won'
+    sfx.win()
     if (isSolo) {
       streak.value++
       if (streak.value > bestStreak.value) {
@@ -183,6 +185,7 @@ function submit() {
     }
   } else if (guesses.value.length >= maxAttempts.value) {
     phase.value = 'lost'
+    sfx.lose()
     if (isSolo) streak.value = 0
   } else {
     nextTick(focusInput)

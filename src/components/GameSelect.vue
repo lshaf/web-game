@@ -79,6 +79,25 @@ defineEmits(['select'])
                 <line x1="34" y1="23.5" x2="34" y2="34" stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'tictactoe'" class="cabinet__icon cabinet__ttt" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <g stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round">
+                  <line x1="17" y1="5" x2="17" y2="43" />
+                  <line x1="31" y1="5" x2="31" y2="43" />
+                  <line x1="5" y1="17" x2="43" y2="17" />
+                  <line x1="5" y1="31" x2="43" y2="31" />
+                </g>
+                <g stroke="var(--berry)" stroke-width="3.4" stroke-linecap="round">
+                  <line x1="7" y1="7" x2="15" y2="15" />
+                  <line x1="15" y1="7" x2="7" y2="15" />
+                </g>
+                <circle cx="24" cy="24" r="5" fill="none" stroke="var(--aqua-deep)" stroke-width="3.4" />
+                <g stroke="var(--berry)" stroke-width="3.4" stroke-linecap="round">
+                  <line x1="33" y1="33" x2="41" y2="41" />
+                  <line x1="41" y1="33" x2="33" y2="41" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -356,6 +375,9 @@ defineEmits(['select'])
 .cabinet__art--hangman {
   background: #cdd6ff;
 }
+.cabinet__art--tictactoe {
+  background: #ffc9b9;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -439,6 +461,13 @@ defineEmits(['select'])
   width: 54px;
   height: 52px;
   filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Tic Tac Toe icon: a 3x3 grid with X and O. */
+.cabinet__ttt svg {
+  display: block;
+  width: 56px;
+  height: 56px;
 }
 
 /* Flappy icon: a bird threading a pipe gap, centered as one unit. */

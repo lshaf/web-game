@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, computed, onMounted, onBeforeUnmount } from 'vue'
 import BirdSprite from '../components/BirdSprite.vue'
+import { sfx } from '../sound.js'
 
 // Same fill machinery as Dino Jump: width is fixed, height grows to fill the
 // container (full-height on mobile). Because Flappy uses the WHOLE vertical
@@ -84,11 +85,13 @@ function start() {
 function flap() {
   if (phase.value === STATE.RUNNING) {
     velY = flapV()
+    sfx.flap()
     return
   }
   // From the ready screen or after a crash: restart and give one flap.
   start()
   velY = flapV()
+  sfx.flap()
 }
 
 function spawnPipe() {
@@ -155,6 +158,7 @@ function step(dt) {
 
 function gameOver() {
   phase.value = STATE.DEAD
+  sfx.lose()
   if (score.value > best.value) {
     best.value = score.value
     try {

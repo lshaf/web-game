@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, onMounted, onBeforeUnmount, computed } from 'vue'
 import DinoSprite from '../components/DinoSprite.vue'
+import { sfx } from '../sound.js'
 
 // Logical playfield. Width is fixed so horizontal game distance (and reaction
 // time) never changes; height grows to fill the container, so the board is
@@ -66,6 +67,7 @@ function jump() {
   if (phase.value === STATE.READY) {
     start()
     velY = JUMP_V
+    sfx.jump()
     return
   }
   if (phase.value === STATE.DEAD) {
@@ -73,7 +75,10 @@ function jump() {
     return
   }
   // only jump from the ground
-  if (!isJumping.value) velY = JUMP_V
+  if (!isJumping.value) {
+    velY = JUMP_V
+    sfx.jump()
+  }
 }
 
 function spawnObstacle() {
@@ -173,6 +178,7 @@ function tick(t) {
 
 function gameOver() {
   phase.value = STATE.DEAD
+  sfx.lose()
   if (score.value > best.value) {
     best.value = score.value
     try {

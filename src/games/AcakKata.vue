@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { puzzles } from '../data/words.js'
+import { sfx } from '../sound.js'
 
 // Solo anagram game over the Indonesian word bank: the answer's letters are
 // scrambled into a pool; tap (or type) to rearrange them into the word.
@@ -102,6 +103,7 @@ function removeLast() {
 function check() {
   if (built.value === answer.value) {
     phase.value = 'won'
+    sfx.win()
     streak.value++
     if (streak.value > best.value) {
       best.value = streak.value
@@ -115,6 +117,7 @@ function check() {
   } else {
     wrong.value = true
     shake()
+    sfx.wrong()
   }
 }
 

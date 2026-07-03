@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { puzzles } from '../data/words.js'
+import { sfx } from '../sound.js'
 
 // Hangman (Tebak Kata) over the Indonesian word bank: guess letters from the
 // clue; six wrong guesses complete the gallows figure.
@@ -49,8 +50,10 @@ function solved() {
 function guess(letter) {
   if (phase.value !== 'play' || guessed.value.includes(letter)) return
   guessed.value.push(letter)
+  const hit = answer.value.includes(letter)
   if (solved()) {
     phase.value = 'won'
+    sfx.win()
     streak.value++
     if (streak.value > best.value) {
       best.value = streak.value
@@ -63,7 +66,11 @@ function guess(letter) {
     advanceTimer = setTimeout(pick, 1100)
   } else if (wrong.value >= MAX_WRONG) {
     phase.value = 'lost'
+    sfx.lose()
     streak.value = 0
+  } else if (!hit) {
+    // Wrong letter — buzzer.
+    sfx.wrong()
   }
 }
 
