@@ -27,15 +27,9 @@ let cpuTimer = 0
 
 const isOver = computed(() => winner.value !== null)
 const locked = computed(() => isOver.value || (mode.value === 'cpu' && turn.value === 'Y'))
-const status = computed(() => {
-  if (winner.value === 'draw') return 'Seri!'
-  if (winner.value) {
-    if (mode.value === 'cpu') return winner.value === 'R' ? 'Kamu menang!' : 'Komputer menang'
-    return `${winner.value === 'R' ? 'Merah' : 'Kuning'} menang!`
-  }
-  if (mode.value === 'cpu') return turn.value === 'R' ? 'Giliranmu' : 'Komputer berpikir...'
-  return `Giliran ${turn.value === 'R' ? 'Merah' : 'Kuning'}`
-})
+
+// The color's own name, in its disc color (see the .cname span in the template).
+const colorName = (p) => (p === 'R' ? 'Merah' : 'Kuning')
 
 function landingRow(col) {
   for (let r = ROWS - 1; r >= 0; r--) if (grid.value[r][col] === '') return r
@@ -158,7 +152,15 @@ onBeforeUnmount(() => {
       <section v-else class="screen">
         <div class="topbar">
           <button class="mini" type="button" @click="backToModes">← Mode</button>
-          <span class="status" :class="{ 'is-over': isOver }">{{ status }}</span>
+          <span class="status" :class="{ 'is-over': isOver }">
+            <template v-if="winner === 'draw'">Seri!</template>
+            <template v-else-if="winner">
+              <template v-if="mode === 'cpu'">{{ winner === 'R' ? 'Kamu menang!' : 'Komputer menang' }}</template>
+              <template v-else><span class="cname" :class="'cname--' + winner">{{ colorName(winner) }}</span> menang!</template>
+            </template>
+            <template v-else-if="mode === 'cpu'">{{ turn === 'R' ? 'Giliranmu' : 'Komputer berpikir...' }}</template>
+            <template v-else>Giliran <span class="cname" :class="'cname--' + turn">{{ colorName(turn) }}</span></template>
+          </span>
           <span class="mini mini--ghost" aria-hidden="true" />
         </div>
 
@@ -208,6 +210,19 @@ onBeforeUnmount(() => {
 
 .brand {
   font-size: 34px;
+}
+
+/* The player's colour name, shown in its disc colour with an ink outline so
+   the yellow stays legible on the cream panel. */
+.cname {
+  paint-order: stroke fill;
+  -webkit-text-stroke: 0.7px var(--ink);
+}
+.cname--R {
+  color: var(--berry);
+}
+.cname--Y {
+  color: var(--sun);
 }
 
 /* ---- The blue board with cream holes ---- */
