@@ -55,20 +55,39 @@ function sequence(notes, opts = {}) {
   notes.forEach((f, i) => blip(f, { ...opts, delay: i * step }))
 }
 
+// Fire a haptic pulse alongside the big moments. Gated on the same mute toggle
+// as sound; navigator.vibrate is a harmless no-op on desktop / unsupported
+// browsers (e.g. iOS Safari).
+function buzz(pattern) {
+  if (muted.value) return
+  try {
+    navigator.vibrate?.(pattern)
+  } catch (e) {
+    /* vibration blocked/unsupported; ignore */
+  }
+}
+
 export const sfx = {
   // A quick upward chirp for a Dino jump.
   jump: () => blip(0, { type: 'square', from: 240, to: 520, dur: 0.14, gain: 0.16 }),
   // A soft, short flutter for a Flappy flap.
   flap: () => blip(0, { type: 'triangle', from: 420, to: 240, dur: 0.09, gain: 0.14 }),
-  // A low buzzer for a wrong letter / wrong arrangement.
+  // A low buzzer + short buzz for a wrong letter / wrong arrangement.
   wrong: () => {
+    buzz(45)
     blip(190, { type: 'sawtooth', dur: 0.14, gain: 0.13 })
     blip(130, { type: 'sawtooth', dur: 0.18, gain: 0.13, delay: 0.09 })
   },
-  // A rising major arpeggio on a win.
-  win: () => sequence([523, 659, 784, 1047], { type: 'square', dur: 0.15, gain: 0.14, step: 0.11 }),
-  // A falling figure on a loss.
-  lose: () => sequence([392, 330, 262], { type: 'triangle', dur: 0.22, gain: 0.14, step: 0.15 }),
+  // A rising major arpeggio + celebratory buzz on a win.
+  win: () => {
+    buzz([25, 40, 30])
+    sequence([523, 659, 784, 1047], { type: 'square', dur: 0.15, gain: 0.14, step: 0.11 })
+  },
+  // A falling figure + one buzz on a loss.
+  lose: () => {
+    buzz(70)
+    sequence([392, 330, 262], { type: 'triangle', dur: 0.22, gain: 0.14, step: 0.15 })
+  },
   // A neutral click for a placed tile / move.
   tick: () => blip(0, { type: 'square', from: 320, to: 380, dur: 0.05, gain: 0.09 }),
 }

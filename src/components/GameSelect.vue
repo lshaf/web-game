@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import DinoSprite from './DinoSprite.vue'
 import BirdSprite from './BirdSprite.vue'
-import { appVersion, updateReady, applyUpdate } from '../pwa.js'
+import { appVersion, updateReady, applyUpdate, canInstall, installApp } from '../pwa.js'
 
 const props = defineProps({
   games: { type: Array, required: true },
@@ -62,6 +62,23 @@ const shown = computed(() => {
   // (Array.prototype.sort is stable).
   return [...list].sort((a, b) => Number(isFav(b.id)) - Number(isFav(a.id)))
 })
+
+// Share the arcade — Web Share where available, else copy the link.
+const shared = ref(false)
+async function share() {
+  const data = { title: 'Dusk Arcade', text: 'Main mini-games seru di Dusk Arcade!', url: location.href }
+  try {
+    if (navigator.share) {
+      await navigator.share(data)
+    } else if (navigator.clipboard) {
+      await navigator.clipboard.writeText(location.href)
+      shared.value = true
+      setTimeout(() => (shared.value = false), 1500)
+    }
+  } catch (e) {
+    /* user cancelled or blocked; ignore */
+  }
+}
 </script>
 
 <template>
@@ -461,6 +478,14 @@ const shown = computed(() => {
     <p v-if="!shown.length" class="empty">Belum ada favorit — ketuk ★ pada game mana pun.</p>
 
     <footer class="foot">
+      <div class="foot__actions">
+        <button v-if="canInstall" class="foot__btn" type="button" @click="installApp">
+          ⬇ Pasang aplikasi
+        </button>
+        <button class="foot__btn" type="button" @click="share">
+          {{ shared ? '✓ Link disalin' : '↗ Bagikan' }}
+        </button>
+      </div>
       <span class="foot__soon">More games coming soon</span>
       <span class="foot__build">
         <span class="foot__ver">v{{ appVersion }}</span>
@@ -1014,6 +1039,33 @@ const shown = computed(() => {
   font-family: var(--font-body);
   font-weight: 600;
   color: var(--muted);
+}
+.foot__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.foot__btn {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--sun);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  padding: 8px 16px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.foot__btn:hover,
+.foot__btn:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.foot__btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
 }
 .foot__soon {
   font-size: 14px;

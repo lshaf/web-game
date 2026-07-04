@@ -15,6 +15,37 @@ let waitingWorker = null
 let updating = false // set only when the player asked to update
 let refreshing = false
 
+// ---- Add-to-home-screen install prompt ----
+// Chromium fires beforeinstallprompt when the PWA is installable; stash it so
+// the menu can offer a real install button (iOS Safari has no such API, so the
+// button simply never appears there).
+export const canInstall = ref(false)
+let deferredPrompt = null
+if (typeof window !== 'undefined') {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault()
+    deferredPrompt = e
+    canInstall.value = true
+  })
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null
+    canInstall.value = false
+  })
+}
+
+// Show the browser's install dialog on demand, then forget the one-shot prompt.
+export async function installApp() {
+  if (!deferredPrompt) return
+  deferredPrompt.prompt()
+  try {
+    await deferredPrompt.userChoice
+  } catch (e) {
+    /* dismissed; ignore */
+  }
+  deferredPrompt = null
+  canInstall.value = false
+}
+
 function markReady(worker) {
   waitingWorker = worker
   updateReady.value = true
