@@ -15,16 +15,73 @@ try {
 export const muted = ref(initialMuted)
 
 let ctx = null
-function audio() {
+let primed = false
+
+function makeCtx() {
   if (typeof window === 'undefined') return null
   if (!ctx) {
     const AC = window.AudioContext || window.webkitAudioContext
     if (!AC) return null
     ctx = new AC()
   }
-  // Browsers start the context suspended until a user gesture; resume on use.
-  if (ctx.state === 'suspended') ctx.resume()
   return ctx
+}
+
+// Resume a suspended context. The browser only honors this from a user gesture,
+// which is why unlock() below is wired to the first tap/key — resuming from a
+// timer or rAF (where most blips fire) is silently ignored.
+function resume() {
+  if (ctx && ctx.state === 'suspended') {
+    try {
+      ctx.resume()
+    } catch (e) {
+      /* not resumable right now; a later gesture will retry */
+    }
+  }
+}
+
+function audio() {
+  const c = makeCtx()
+  if (!c) return null
+  resume()
+  return c
+}
+
+// Installed (standalone) PWAs enforce the autoplay policy strictly: the
+// AudioContext starts suspended and only a real user gesture can resume it.
+// Most game blips fire from timers/rAF rather than directly from a tap, so
+// without this priming those sounds are dropped and audio "often doesn't come
+// out" after install. A zero-gain blip also fully unlocks WebAudio on iOS.
+function unlock() {
+  const c = makeCtx()
+  if (!c) return
+  resume()
+  if (primed) return
+  try {
+    const osc = c.createOscillator()
+    const g = c.createGain()
+    g.gain.value = 0
+    osc.connect(g).connect(c.destination)
+    osc.start()
+    osc.stop(c.currentTime + 0.03)
+    primed = true
+  } catch (e) {
+    /* priming failed; the resume above still helps */
+  }
+}
+
+if (typeof window !== 'undefined') {
+  // Prime on the first real gesture, and keep listening so a context that gets
+  // re-suspended (e.g. after the PWA is backgrounded) is revived on the next
+  // tap or key. Capture + passive so it never interferes with game controls.
+  for (const ev of ['pointerdown', 'touchend', 'keydown']) {
+    window.addEventListener(ev, unlock, { passive: true, capture: true })
+  }
+  // Returning to the foreground re-suspends the context on many platforms; try
+  // to resume as soon as the app is visible again.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') resume()
+  })
 }
 
 // One oscillator blip with an attack/decay envelope. `from`/`to` glide the
