@@ -125,6 +125,18 @@ defineEmits(['select'])
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'tikus'" class="cabinet__icon cabinet__tikus" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <ellipse cx="23" cy="35" rx="18" ry="7.5" fill="var(--ink)" />
+                <ellipse cx="23" cy="22" rx="13" ry="12" fill="#9b5b3a" stroke="var(--ink)" stroke-width="2.4" />
+                <ellipse cx="23" cy="26" rx="7" ry="5" fill="#d9a679" stroke="var(--ink)" stroke-width="1.8" />
+                <circle cx="18" cy="18" r="3.4" fill="#fff" stroke="var(--ink)" stroke-width="1.5" />
+                <circle cx="28" cy="18" r="3.4" fill="#fff" stroke="var(--ink)" stroke-width="1.5" />
+                <circle cx="18.4" cy="18.8" r="1.5" fill="var(--ink)" />
+                <circle cx="27.6" cy="18.8" r="1.5" fill="var(--ink)" />
+                <ellipse cx="23" cy="24" rx="2.2" ry="1.7" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.1" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -414,6 +426,9 @@ defineEmits(['select'])
 .cabinet__art--armada {
   background: #cfe0ea;
 }
+.cabinet__art--tikus {
+  background: #ecdcc0;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -524,6 +539,14 @@ defineEmits(['select'])
 
 /* Armada icon: a battle grid with a ship and a hit. */
 .cabinet__armada svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Pukul Tikus icon: a mole peeking from a hole. */
+.cabinet__tikus svg {
   display: block;
   width: 54px;
   height: 54px;
