@@ -25,6 +25,7 @@ import Gaple from './games/Gaple.vue'
 import Lampu from './games/Lampu.vue'
 import Tirukan from './games/Tirukan.vue'
 import FloodIt from './games/FloodIt.vue'
+import Snake from './games/Snake.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -231,6 +232,13 @@ export const games = [
     tagline: 'Flood the board into one colour before you run out of moves.',
     component: FloodIt,
     category: 'puzzle',
+  },
+  {
+    id: 'snake',
+    title: 'Ular Lapar',
+    tagline: 'Eat, grow, and don\'t bite your own tail.',
+    component: Snake,
+    category: 'aksi',
   },
 ]
 

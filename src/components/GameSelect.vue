@@ -460,6 +460,18 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'snake'" class="cabinet__icon cabinet__snake" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <path d="M22 41 C8 41 7 21 23 21 C34 21 34 34 23 34 C16 34 16 26 22 26"
+                  fill="none" stroke="var(--ink)" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M22 41 C8 41 7 21 23 21 C34 21 34 34 23 34 C16 34 16 26 22 26"
+                  fill="none" stroke="var(--aqua)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="22" cy="26" r="4.4" fill="var(--aqua-deep)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="22.6" cy="25" r="1" fill="var(--ink)" />
+                <circle cx="34" cy="11" r="3.6" fill="var(--sun)" stroke="var(--ink)" stroke-width="2" />
+                <path d="M34 7.4 q2 -2 3.4 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -890,6 +902,9 @@ async function share() {
 }
 .cabinet__art--flood {
   background: #ede3f2;
+}
+.cabinet__art--snake {
+  background: #cfeee2;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
