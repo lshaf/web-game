@@ -354,6 +354,17 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
                 <circle cx="31" cy="31" r="2.6" fill="#fff5dc" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'tirukan'" class="cabinet__icon cabinet__tirukan" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.6">
+                  <rect x="5" y="5" width="16.5" height="16.5" rx="4" fill="var(--aqua)" opacity="0.5" />
+                  <rect x="24.5" y="5" width="16.5" height="16.5" rx="4" fill="var(--berry)" />
+                  <rect x="5" y="24.5" width="16.5" height="16.5" rx="4" fill="var(--sun)" opacity="0.5" />
+                  <rect x="24.5" y="24.5" width="16.5" height="16.5" rx="4" fill="var(--grape)" opacity="0.5" />
+                </g>
+                <circle cx="32.75" cy="13.25" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -738,6 +749,9 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 }
 .cabinet__art--lampu {
   background: #efdcc2;
+}
+.cabinet__art--tirukan {
+  background: #f3d9e6;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
