@@ -1,8 +1,11 @@
 // Dusk Arcade service worker — runtime caching so the arcade opens offline
 // after the first visit. No build step involved: assets are cached as they are
 // requested, so Vite's hashed filenames are handled without knowing them ahead
-// of time. Bump CACHE to force old caches out on the next visit.
-const CACHE = 'dusk-arcade-v3'
+// of time. CACHE is stamped with the app version at build time (see the
+// stamp-service-worker plugin in vite.config.js): every release names a fresh
+// cache, so the old one is dropped on activate and the byte-changed worker
+// lights up the in-app "Update" button — we never skipWaiting on our own.
+const CACHE = 'dusk-arcade-v__SW_VERSION__'
 
 // The minimum needed to cold-boot offline. Kept tiny on purpose — everything
 // else is cached on demand below.
