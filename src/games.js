@@ -29,6 +29,7 @@ import Snake from './games/Snake.vue'
 import Permata from './games/Permata.vue'
 import Menara from './games/Menara.vue'
 import Sokoban from './games/Sokoban.vue'
+import Suit from './games/Suit.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -263,6 +264,14 @@ export const games = [
     tagline: 'Push every crate onto its target. No pulling.',
     component: Sokoban,
     category: 'puzzle',
+  },
+  {
+    id: 'suit',
+    title: 'Suit',
+    tagline: 'Batu, gunting, kertas. Solo vs CPU or two players.',
+    component: Suit,
+    category: 'strategi',
+    duo: true,
   },
 ]
 

@@ -502,6 +502,9 @@ async function share() {
                 <path d="M26 24 H31.5 M29 21.5 L31.8 24 L29 26.5" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'suit'" class="cabinet__icon cabinet__suit" aria-hidden="true">
+              <i class="s-batu">B</i><i class="s-kertas">K</i><i class="s-gunting">G</i>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -945,6 +948,9 @@ async function share() {
 .cabinet__art--sokoban {
   background: #ffe6bd;
 }
+.cabinet__art--suit {
+  background: #ffdbe6;
+}
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
    of the tile via cqmin (the tile is a query container), so all icons read at
@@ -993,6 +999,34 @@ async function share() {
 }
 .cabinet__tiles .t-plain {
   background: var(--cream);
+}
+
+/* Suit icon: Batu / Kertas / Gunting tiles. */
+.cabinet__suit {
+  grid-auto-flow: column;
+  gap: 3cqmin;
+}
+.cabinet__suit i {
+  width: 18cqmin;
+  height: 18cqmin;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10cqmin;
+  border-radius: 5px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.cabinet__suit .s-batu {
+  background: #b6abcf;
+}
+.cabinet__suit .s-kertas {
+  background: var(--cream);
+}
+.cabinet__suit .s-gunting {
+  background: var(--sun);
 }
 
 
