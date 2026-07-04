@@ -1,12 +1,18 @@
 <script setup>
+import { ref, computed } from 'vue'
 import DinoSprite from './DinoSprite.vue'
 import BirdSprite from './BirdSprite.vue'
 import { appVersion, updateReady, applyUpdate } from '../pwa.js'
 
-defineProps({
+const props = defineProps({
   games: { type: Array, required: true },
 })
 defineEmits(['select'])
+
+// "Duo game" filter: show only games with a two-player mode.
+const duoOnly = ref(false)
+const duoCount = computed(() => props.games.filter((g) => g.duo).length)
+const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) : props.games))
 </script>
 
 <template>
@@ -43,8 +49,15 @@ defineEmits(['select'])
       <div class="hero__runner" aria-hidden="true"><DinoSprite run /></div>
     </header>
 
+    <label class="duofilter" :class="{ 'is-on': duoOnly }">
+      <input type="checkbox" v-model="duoOnly" />
+      <span class="duofilter__box" aria-hidden="true">✓</span>
+      <span class="duofilter__label">Duo Game</span>
+      <span class="duofilter__count">{{ duoCount }} game 2 pemain</span>
+    </label>
+
     <ul class="cabinets">
-      <li v-for="(game, i) in games" :key="game.id">
+      <li v-for="(game, i) in shown" :key="game.id">
         <button class="cabinet" @click="$emit('select', game.id)">
           <span class="cabinet__no">{{ i + 1 }}</span>
           <span class="cabinet__art" :class="'cabinet__art--' + game.id">
@@ -208,6 +221,36 @@ defineEmits(['select'])
                   <rect x="28" y="13" width="10" height="10" rx="1.5" fill="var(--grape)" />
                   <rect x="18" y="23" width="10" height="10" rx="1.5" fill="var(--sun)" />
                 </g>
+              </svg>
+            </span>
+            <span v-else-if="game.id === 'carikata'" class="cabinet__icon cabinet__cari" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <text x="9" y="17" font-family="monospace" font-size="9" font-weight="700" fill="var(--muted)">K A T</text>
+                <text x="9" y="29" font-family="monospace" font-size="9" font-weight="700" fill="var(--aqua-deep)">C A R</text>
+                <circle cx="30" cy="30" r="7" fill="none" stroke="var(--ink)" stroke-width="2.6" />
+                <line x1="35" y1="35" x2="41" y2="41" stroke="var(--ink)" stroke-width="3.2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span v-else-if="game.id === 'otello'" class="cabinet__icon cabinet__otello" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="6" fill="#4f9d54" stroke="var(--ink)" stroke-width="2.6" />
+                <circle cx="16" cy="16" r="6.5" fill="var(--ink)" />
+                <circle cx="30" cy="16" r="6.5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="16" cy="30" r="6.5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="30" cy="30" r="6.5" fill="var(--ink)" />
+              </svg>
+            </span>
+            <span v-else-if="game.id === 'dakon'" class="cabinet__icon cabinet__dakon" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="12" width="40" height="22" rx="11" fill="#c98a4e" stroke="var(--ink)" stroke-width="2.6" />
+                <circle cx="15" cy="23" r="5.2" fill="#7c4e26" stroke="var(--ink)" stroke-width="1.8" />
+                <circle cx="26" cy="23" r="5.2" fill="#7c4e26" stroke="var(--ink)" stroke-width="1.8" />
+                <ellipse cx="37" cy="23" rx="4" ry="8" fill="#7c4e26" stroke="var(--ink)" stroke-width="1.8" />
+                <circle cx="13.5" cy="22" r="1.5" fill="var(--sun)" />
+                <circle cx="16.5" cy="24.5" r="1.5" fill="var(--berry)" />
+                <circle cx="24.5" cy="22" r="1.5" fill="var(--aqua)" />
+                <circle cx="27.5" cy="24.5" r="1.5" fill="var(--sun)" />
               </svg>
             </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
@@ -418,10 +461,67 @@ defineEmits(['select'])
 }
 
 /* ---- Cabinets ---- */
+/* ---- Duo-game filter ---- */
+.duofilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 10px 14px;
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 14px;
+  box-shadow: var(--pop-sm);
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+.duofilter.is-on {
+  background: var(--sun);
+}
+.duofilter input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.duofilter__box {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--paper-lit);
+  border: 2.5px solid var(--ink);
+  border-radius: 7px;
+  color: transparent;
+  font-weight: 900;
+  font-size: 15px;
+}
+.duofilter.is-on .duofilter__box {
+  background: var(--aqua);
+  color: var(--ink);
+}
+.duofilter input:focus-visible + .duofilter__box {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+.duofilter__label {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--ink);
+}
+.duofilter__count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
 .cabinets {
   list-style: none;
   padding: 0;
-  margin: 28px 0 0;
+  margin: 16px 0 0;
   display: grid;
   gap: 20px;
 }
@@ -516,6 +616,15 @@ defineEmits(['select'])
 }
 .cabinet__art--ular {
   background: #ffe1a8;
+}
+.cabinet__art--carikata {
+  background: #d7ecec;
+}
+.cabinet__art--otello {
+  background: #cfe8d2;
+}
+.cabinet__art--dakon {
+  background: #ecd9b6;
 }
 
 /* Common: the icon sits centered in the tile. */
@@ -675,6 +784,30 @@ defineEmits(['select'])
 
 /* Ular Tangga icon: a board with a ladder climbing and a snake sliding. */
 .cabinet__ular svg {
+  display: block;
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Cari Kata icon: a lettered grid under a magnifier. */
+.cabinet__cari svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Otello icon: a green board with four discs. */
+.cabinet__otello svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Dakon icon: a wooden board with pits, a store and seeds. */
+.cabinet__dakon svg {
   display: block;
   width: 56px;
   height: 56px;

@@ -14,6 +14,9 @@ import BallBreaker from './games/BallBreaker.vue'
 import Minesweeper from './games/Minesweeper.vue'
 import Tetris from './games/Tetris.vue'
 import UlarTangga from './games/UlarTangga.vue'
+import CariKata from './games/CariKata.vue'
+import Otello from './games/Otello.vue'
+import Dakon from './games/Dakon.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -35,6 +38,7 @@ export const games = [
     title: 'Word Lock',
     tagline: 'Lock in letters to crack the word. Solo or two players.',
     component: WordLock,
+    duo: true,
   },
   {
     id: 'acakkata',
@@ -53,30 +57,35 @@ export const games = [
     title: 'Tic Tac Toe',
     tagline: 'Endless three-in-a-row. Solo vs CPU or two players.',
     component: TicTacToe,
+    duo: true,
   },
   {
     id: 'tebakwarna',
     title: 'Tebak Warna',
     tagline: 'Crack the secret color code. Solo or two players.',
     component: TebakWarna,
+    duo: true,
   },
   {
     id: 'connect4',
     title: 'Connect 4',
     tagline: 'Drop discs, line up four. Solo vs CPU or two players.',
     component: ConnectFour,
+    duo: true,
   },
   {
     id: 'ingatan',
     title: 'Ingatan',
     tagline: 'Match every pair. Solo against a limit, or two players.',
     component: Ingatan,
+    duo: true,
   },
   {
     id: 'armada',
     title: 'Armada',
     tagline: 'Place your fleet, sink theirs. Solo vs CPU or two players.',
     component: Armada,
+    duo: true,
   },
   {
     id: 'tikus',
@@ -113,6 +122,27 @@ export const games = [
     title: 'Ular Tangga',
     tagline: 'Roll the die, ride ladders, dodge snakes. Solo vs CPU or two players.',
     component: UlarTangga,
+    duo: true,
+  },
+  {
+    id: 'carikata',
+    title: 'Cari Kata',
+    tagline: 'Find the hidden Indonesian words in the grid.',
+    component: CariKata,
+  },
+  {
+    id: 'otello',
+    title: 'Otello',
+    tagline: 'Flip discs to own the board. Solo vs CPU or two players.',
+    component: Otello,
+    duo: true,
+  },
+  {
+    id: 'dakon',
+    title: 'Dakon',
+    tagline: 'Sow seeds, fill your store. Solo vs CPU or two players.',
+    component: Dakon,
+    duo: true,
   },
 ]
 
