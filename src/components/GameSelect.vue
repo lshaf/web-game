@@ -472,6 +472,18 @@ async function share() {
                 <path d="M34 7.4 q2 -2 3.4 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'permata'" class="cabinet__icon cabinet__permata" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="40" height="40" rx="7" fill="#efe4ff" stroke="var(--ink)" stroke-width="2.6" />
+                <circle cx="14" cy="14" r="6" fill="var(--berry)" stroke="var(--ink)" stroke-width="2.2" />
+                <rect x="24.5" y="8.5" width="11" height="11" rx="3" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.2" />
+                <path d="M32 24 L38 30 L32 36 L26 30 Z" fill="var(--grape)" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round" />
+                <circle cx="11" cy="31" r="6" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2.2" />
+                <rect x="5" y="38" width="10" height="4.5" rx="2.2" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2" />
+                <rect x="17" y="38" width="10" height="4.5" rx="2.2" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2" />
+                <rect x="29" y="38" width="10" height="4.5" rx="2.2" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -905,6 +917,9 @@ async function share() {
 }
 .cabinet__art--snake {
   background: #cfeee2;
+}
+.cabinet__art--permata {
+  background: #ece0ff;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction

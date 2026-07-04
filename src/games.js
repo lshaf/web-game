@@ -26,6 +26,7 @@ import Lampu from './games/Lampu.vue'
 import Tirukan from './games/Tirukan.vue'
 import FloodIt from './games/FloodIt.vue'
 import Snake from './games/Snake.vue'
+import Permata from './games/Permata.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -239,6 +240,13 @@ export const games = [
     tagline: 'Eat, grow, and don\'t bite your own tail.',
     component: Snake,
     category: 'aksi',
+  },
+  {
+    id: 'permata',
+    title: 'Permata',
+    tagline: 'Swap gems, match three, chain the cascades.',
+    component: Permata,
+    category: 'puzzle',
   },
 ]
 
