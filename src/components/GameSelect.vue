@@ -484,6 +484,16 @@ async function share() {
                 <rect x="29" y="38" width="10" height="4.5" rx="2.2" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'menara'" class="cabinet__icon cabinet__menara" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.2">
+                  <rect x="9" y="30" width="28" height="9" rx="2.5" fill="var(--aqua)" />
+                  <rect x="12" y="21" width="24" height="9" rx="2.5" fill="var(--berry)" />
+                  <rect x="16" y="12" width="19" height="9" rx="2.5" fill="var(--sun)" />
+                  <rect x="20" y="4" width="14" height="8" rx="2.5" fill="var(--grape)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -920,6 +930,9 @@ async function share() {
 }
 .cabinet__art--permata {
   background: #ece0ff;
+}
+.cabinet__art--menara {
+  background: #d9ece6;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction

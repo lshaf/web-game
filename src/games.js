@@ -27,6 +27,7 @@ import Tirukan from './games/Tirukan.vue'
 import FloodIt from './games/FloodIt.vue'
 import Snake from './games/Snake.vue'
 import Permata from './games/Permata.vue'
+import Menara from './games/Menara.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -247,6 +248,13 @@ export const games = [
     tagline: 'Swap gems, match three, chain the cascades.',
     component: Permata,
     category: 'puzzle',
+  },
+  {
+    id: 'menara',
+    title: 'Menara',
+    tagline: 'Drop each block, stack the tower sky-high.',
+    component: Menara,
+    category: 'aksi',
   },
 ]
 
