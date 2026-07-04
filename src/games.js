@@ -22,6 +22,7 @@ import GeserAngka from './games/GeserAngka.vue'
 import LimaSejajar from './games/LimaSejajar.vue'
 import Dam from './games/Dam.vue'
 import Gaple from './games/Gaple.vue'
+import Lampu from './games/Lampu.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -181,6 +182,12 @@ export const games = [
     title: 'Geser Angka',
     tagline: 'Slide the tiles to order 1–15.',
     component: GeserAngka,
+  },
+  {
+    id: 'lampu',
+    title: 'Lampu',
+    tagline: 'Tap to toggle. Turn every light off.',
+    component: Lampu,
   },
 ]
 
