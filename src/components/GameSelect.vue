@@ -57,9 +57,8 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
     </label>
 
     <ul class="cabinets">
-      <li v-for="(game, i) in shown" :key="game.id">
+      <li v-for="game in shown" :key="game.id">
         <button class="cabinet" @click="$emit('select', game.id)">
-          <span class="cabinet__no">{{ i + 1 }}</span>
           <span class="cabinet__art" :class="'cabinet__art--' + game.id">
             <span v-if="game.id === 'wordlock'" class="cabinet__icon cabinet__tiles" aria-hidden="true">
               <i class="t-correct">W</i><i class="t-present">O</i><i class="t-plain">R</i><i class="t-correct">D</i>
@@ -253,13 +252,78 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
                 <circle cx="27.5" cy="24.5" r="1.5" fill="var(--sun)" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'dam'" class="cabinet__icon cabinet__dam" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <defs>
+                  <clipPath id="dam-board"><rect x="3" y="3" width="40" height="40" rx="7" /></clipPath>
+                </defs>
+                <g clip-path="url(#dam-board)">
+                  <rect x="3" y="3" width="40" height="40" fill="#ffe9c9" />
+                  <g fill="#c98a4e">
+                    <rect x="3" y="3" width="10" height="10" />
+                    <rect x="23" y="3" width="10" height="10" />
+                    <rect x="13" y="13" width="10" height="10" />
+                    <rect x="33" y="13" width="10" height="10" />
+                    <rect x="3" y="23" width="10" height="10" />
+                    <rect x="23" y="23" width="10" height="10" />
+                    <rect x="13" y="33" width="10" height="10" />
+                    <rect x="33" y="33" width="10" height="10" />
+                  </g>
+                </g>
+                <rect x="3" y="3" width="40" height="40" rx="7" fill="none" stroke="var(--ink)" stroke-width="2.6" />
+                <circle cx="14" cy="32" r="6.3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="30" cy="16" r="6.3" fill="var(--berry)" stroke="var(--ink)" stroke-width="2" />
+                <path d="M26 17 L26 13.4 L28.3 15 L30 11.8 L31.7 15 L34 13.4 L34 17 Z"
+                  fill="var(--sun)" stroke="var(--ink)" stroke-width="1.3" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span v-else-if="game.id === 'gomoku'" class="cabinet__icon cabinet__gomoku" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="40" height="40" rx="6" fill="#e3b579" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="1.6" opacity="0.65">
+                  <line x1="15" y1="6" x2="15" y2="40" />
+                  <line x1="23" y1="6" x2="23" y2="40" />
+                  <line x1="31" y1="6" x2="31" y2="40" />
+                  <line x1="6" y1="15" x2="40" y2="15" />
+                  <line x1="6" y1="23" x2="40" y2="23" />
+                  <line x1="6" y1="31" x2="40" y2="31" />
+                </g>
+                <circle cx="15" cy="15" r="4.4" fill="#241030" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="23" cy="23" r="4.4" fill="#241030" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="31" cy="31" r="4.4" fill="#241030" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="31" cy="15" r="4.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+                <circle cx="15" cy="31" r="4.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
+              </svg>
+            </span>
+            <span v-else-if="game.id === '2048'" class="cabinet__icon cabinet__2048" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="5" width="38" height="15" rx="4" fill="var(--berry)" stroke="var(--ink)" stroke-width="2.4" />
+                <text x="23" y="16" text-anchor="middle" font-family="monospace" font-size="9.5" font-weight="700" fill="var(--cream)">2048</text>
+                <rect x="5" y="25" width="11" height="16" rx="3" fill="var(--paper-lit)" stroke="var(--ink)" stroke-width="2.2" />
+                <rect x="18" y="25" width="11" height="16" rx="3" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.2" />
+                <rect x="31" y="25" width="11" height="16" rx="3" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2.2" />
+                <text x="10.5" y="37" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700" fill="var(--ink)">2</text>
+                <text x="23.5" y="37" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700" fill="var(--ink)">4</text>
+                <text x="36.5" y="37" text-anchor="middle" font-family="monospace" font-size="9" font-weight="700" fill="var(--ink)">8</text>
+              </svg>
+            </span>
+            <span v-else-if="game.id === 'geser'" class="cabinet__icon cabinet__geser" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--paper-lit)" stroke="var(--ink)" stroke-width="2.6" />
+                <rect x="25" y="25" width="14" height="14" rx="3" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="3 2.5" opacity="0.55" />
+                <g font-family="monospace" font-weight="700" font-size="10" text-anchor="middle">
+                  <rect x="7" y="7" width="14" height="14" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+                  <text x="14" y="18.5" fill="var(--ink)">1</text>
+                  <rect x="25" y="7" width="14" height="14" rx="3" fill="var(--sun)" stroke="var(--ink)" stroke-width="2" />
+                  <text x="32" y="18.5" fill="var(--ink)">2</text>
+                  <rect x="7" y="25" width="14" height="14" rx="3" fill="var(--aqua)" stroke="var(--ink)" stroke-width="2" />
+                  <text x="14" y="36.5" fill="var(--ink)">3</text>
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
-          <span class="cabinet__meta">
-            <span class="cabinet__title">{{ game.title }}</span>
-            <span class="cabinet__tag">{{ game.tagline }}</span>
-          </span>
-          <span class="cabinet__play">PLAY ▸</span>
+          <span class="cabinet__title">{{ game.title }}</span>
         </button>
       </li>
     </ul>
@@ -518,56 +582,54 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
   color: var(--muted);
 }
 
+/* A responsive grid of square icon tiles; each column is at least 96px, so the
+   menu is 2-up on the narrowest phones and up to 5-up on a wide screen. */
 .cabinets {
   list-style: none;
   padding: 0;
   margin: 16px 0 0;
   display: grid;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 14px;
+}
+.cabinets li {
+  display: flex; /* let the card stretch to the row height for even cards */
 }
 .cabinet {
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 132px 1fr auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
-  text-align: left;
+  gap: 8px;
+  text-align: center;
   background: var(--cream);
   border: var(--line) solid var(--ink);
-  border-radius: 20px;
-  padding: 14px 18px 14px 14px;
-  box-shadow: var(--pop);
+  border-radius: 16px;
+  padding: 9px 7px 11px;
+  box-shadow: var(--pop-sm);
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 .cabinet:hover,
 .cabinet:focus-visible {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
 }
 .cabinet:active {
-  transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0 var(--ink);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
 }
-.cabinet__no {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  font-family: var(--font-display);
-  font-size: 18px;
-  color: var(--ink);
-  background: var(--sun);
-  border: var(--line) solid var(--ink);
-  border-radius: 50%;
-}
-/* Each game gets a flat, tinted label with its icon centered — no sky/sun. */
+/* Each game gets a flat, tinted square with its icon centered — no sky/sun.
+   container-type lets the icon size itself as a fraction of the square (cqmin)
+   so every icon reads at the same scale regardless of the column count. */
 .cabinet__art {
-  height: 84px;
-  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
   border: var(--line) solid var(--ink);
   display: grid;
   place-items: center;
   overflow: hidden;
+  container-type: size;
 }
 .cabinet__art--dino {
   background: #ffe1a8;
@@ -626,34 +688,55 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 .cabinet__art--dakon {
   background: #ecd9b6;
 }
+.cabinet__art--dam {
+  background: #ead9c2;
+}
+.cabinet__art--gomoku {
+  background: #f0d6ab;
+}
+.cabinet__art--2048 {
+  background: #ffe0c9;
+}
+.cabinet__art--geser {
+  background: #efe6cf;
+}
 
-/* Common: the icon sits centered in the tile. */
+/* The icon sits centered in the square. Every SVG icon is sized as one fraction
+   of the tile via cqmin (the tile is a query container), so all icons read at
+   the same scale whatever the column count. The dino is a sprite with its own
+   aspect ratio and outline, so it opts out and sets its own height. */
 .cabinet__icon {
   display: grid;
   place-items: center;
 }
+.cabinet__icon:not(.cabinet__dino) > svg {
+  display: block;
+  width: 62cqmin;
+  height: 62cqmin;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
 
-/* Dino Jump icon. */
+/* Dino Jump icon (sprite keeps its own aspect + multi-side outline). */
 .cabinet__dino {
-  height: 50px;
+  height: 58cqmin;
   color: #43c96b;
 }
 
 /* Word Lock icon: chunky tiles mid-solve. */
 .cabinet__tiles {
   grid-auto-flow: column;
-  gap: 5px;
+  gap: 2.5cqmin;
 }
 .cabinet__tiles i {
-  width: 26px;
-  height: 26px;
+  width: 16cqmin;
+  height: 16cqmin;
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
   font-weight: 700;
   font-style: normal;
-  font-size: 14px;
-  border-radius: 6px;
+  font-size: 9cqmin;
+  border-radius: 4px;
   border: 2px solid var(--ink);
   color: var(--ink);
 }
@@ -670,18 +753,18 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 /* Acak Kata icon: scrambled, tilted letter tiles. */
 .cabinet__scramble {
   grid-auto-flow: column;
-  gap: 5px;
+  gap: 2.5cqmin;
 }
 .cabinet__scramble i {
-  width: 26px;
-  height: 26px;
+  width: 16cqmin;
+  height: 16cqmin;
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
   font-weight: 700;
   font-style: normal;
-  font-size: 14px;
-  border-radius: 6px;
+  font-size: 9cqmin;
+  border-radius: 4px;
   border: 2px solid var(--ink);
   color: var(--ink);
   background: var(--cream);
@@ -703,182 +786,56 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
   color: var(--cream);
 }
 
-/* Tebak Kata icon: a little gallows. */
-.cabinet__gallows svg {
-  display: block;
-  width: 54px;
-  height: 52px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Tic Tac Toe icon: a 3x3 grid with X and O. */
-.cabinet__ttt svg {
-  display: block;
-  width: 56px;
-  height: 56px;
-}
-
-/* Connect 4 icon: a mini blue board with discs. */
-.cabinet__c4 svg {
-  display: block;
-  width: 58px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Ingatan icon: four memory cards, one flipped. */
-.cabinet__mem svg {
-  display: block;
-  width: 52px;
-  height: 52px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Armada icon: a battle grid with a ship and a hit. */
-.cabinet__armada svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Pukul Tikus icon: a mole peeking from a hole. */
-.cabinet__tikus svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Sudoku icon: a 3x3 grid with digits. */
-.cabinet__sudoku svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Ball Breaker icon: brick wall, ball and paddle. */
-.cabinet__breaker svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Ranjau icon: a mine on a cell. */
-.cabinet__ranjau svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Tetris icon: a T-tetromino. */
-.cabinet__tetris svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Ular Tangga icon: a board with a ladder climbing and a snake sliding. */
-.cabinet__ular svg {
-  display: block;
-  width: 56px;
-  height: 56px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Cari Kata icon: a lettered grid under a magnifier. */
-.cabinet__cari svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Otello icon: a green board with four discs. */
-.cabinet__otello svg {
-  display: block;
-  width: 54px;
-  height: 54px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
-/* Dakon icon: a wooden board with pits, a store and seeds. */
-.cabinet__dakon svg {
-  display: block;
-  width: 56px;
-  height: 56px;
-  filter: drop-shadow(2px 2px 0 var(--ink));
-}
-
 /* Tebak Warna icon: a fan of color swatches. */
 .cabinet__warna {
   grid-auto-flow: column;
-  gap: 4px;
+  gap: 2cqmin;
 }
 .cabinet__warna i {
-  width: 15px;
-  height: 26px;
+  width: 9cqmin;
+  height: 17cqmin;
   border: 2px solid var(--ink);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Flappy icon: a bird threading a pipe gap, centered as one unit. */
 .cabinet__flappy {
   position: relative;
-  width: 96px;
-  height: 60px;
+  width: 62cqmin;
+  height: 40cqmin;
 }
 .cabinet__bird {
   position: absolute;
-  left: 4px;
+  left: 3cqmin;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 33px;
+  width: 30cqmin;
+  height: 22cqmin;
 }
 .cabinet__pipe {
   position: absolute;
-  right: 6px;
-  width: 24px;
+  right: 4cqmin;
+  width: 15cqmin;
   background: #57cc5f;
   border: 2.4px solid var(--ink);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .cabinet__pipe--top {
   top: 0;
-  height: 20px;
+  height: 13cqmin;
 }
 .cabinet__pipe--bot {
   bottom: 0;
-  height: 26px;
+  height: 17cqmin;
 }
+
+/* Game title, centered under the icon. */
 .cabinet__title {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 13px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
   color: var(--ink);
-}
-.cabinet__tag {
-  display: block;
-  margin-top: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
-}
-.cabinet__play {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  background: var(--aqua);
-  border: var(--line) solid var(--ink);
-  border-radius: 999px;
-  padding: 8px 15px;
-  white-space: nowrap;
 }
 
 /* ---- Footer ---- */
@@ -949,34 +906,6 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
   }
   50% {
     transform: scale(1.35);
-  }
-}
-
-/* ---- Mobile: art becomes a full banner ---- */
-@media (max-width: 560px) {
-  .cabinet {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "art  art  art"
-      "no   meta play";
-    gap: 12px 14px;
-  }
-  .cabinet__no {
-    grid-area: no;
-    align-self: center;
-  }
-  .cabinet__meta {
-    grid-area: meta;
-  }
-  .cabinet__art {
-    grid-area: art;
-    width: 100%;
-    height: 104px;
-  }
-  .cabinet__play {
-    grid-area: play;
-    align-self: center;
-    justify-self: end;
   }
 }
 

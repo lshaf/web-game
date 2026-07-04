@@ -2,7 +2,7 @@
 // after the first visit. No build step involved: assets are cached as they are
 // requested, so Vite's hashed filenames are handled without knowing them ahead
 // of time. Bump CACHE to force old caches out on the next visit.
-const CACHE = 'dusk-arcade-v2'
+const CACHE = 'dusk-arcade-v3'
 
 // The minimum needed to cold-boot offline. Kept tiny on purpose — everything
 // else is cached on demand below.

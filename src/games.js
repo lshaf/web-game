@@ -17,6 +17,10 @@ import UlarTangga from './games/UlarTangga.vue'
 import CariKata from './games/CariKata.vue'
 import Otello from './games/Otello.vue'
 import Dakon from './games/Dakon.vue'
+import Game2048 from './games/Game2048.vue'
+import GeserAngka from './games/GeserAngka.vue'
+import LimaSejajar from './games/LimaSejajar.vue'
+import Dam from './games/Dam.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -143,6 +147,32 @@ export const games = [
     tagline: 'Sow seeds, fill your store. Solo vs CPU or two players.',
     component: Dakon,
     duo: true,
+  },
+  {
+    id: 'dam',
+    title: 'Dam',
+    tagline: 'Jump and capture on the diagonals. Solo vs CPU or two players.',
+    component: Dam,
+    duo: true,
+  },
+  {
+    id: 'gomoku',
+    title: 'Lima Sejajar',
+    tagline: 'Line up five in a row. Solo vs CPU or two players.',
+    component: LimaSejajar,
+    duo: true,
+  },
+  {
+    id: '2048',
+    title: '2048',
+    tagline: 'Slide and merge tiles to reach 2048.',
+    component: Game2048,
+  },
+  {
+    id: 'geser',
+    title: 'Geser Angka',
+    tagline: 'Slide the tiles to order 1–15.',
+    component: GeserAngka,
   },
 ]
 
