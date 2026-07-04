@@ -365,6 +365,29 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
                 <circle cx="32.75" cy="13.25" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.6" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'flood'" class="cabinet__icon cabinet__flood" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="3" y="3" width="40" height="40" rx="7" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="1.1">
+                  <rect x="9" y="9" width="6.5" height="6.5" rx="1.6" fill="var(--aqua)" />
+                  <rect x="16.6" y="9" width="6.5" height="6.5" rx="1.6" fill="var(--aqua)" />
+                  <rect x="24.2" y="9" width="6.5" height="6.5" rx="1.6" fill="var(--berry)" />
+                  <rect x="31.8" y="9" width="6.5" height="6.5" rx="1.6" fill="var(--sun)" />
+                  <rect x="9" y="16.6" width="6.5" height="6.5" rx="1.6" fill="var(--aqua)" />
+                  <rect x="16.6" y="16.6" width="6.5" height="6.5" rx="1.6" fill="var(--aqua)" />
+                  <rect x="24.2" y="16.6" width="6.5" height="6.5" rx="1.6" fill="var(--grape)" />
+                  <rect x="31.8" y="16.6" width="6.5" height="6.5" rx="1.6" fill="var(--sun-core)" />
+                  <rect x="9" y="24.2" width="6.5" height="6.5" rx="1.6" fill="var(--sun-core)" />
+                  <rect x="16.6" y="24.2" width="6.5" height="6.5" rx="1.6" fill="var(--grape)" />
+                  <rect x="24.2" y="24.2" width="6.5" height="6.5" rx="1.6" fill="var(--sun)" />
+                  <rect x="31.8" y="24.2" width="6.5" height="6.5" rx="1.6" fill="var(--aqua-deep)" />
+                  <rect x="9" y="31.8" width="6.5" height="6.5" rx="1.6" fill="var(--berry)" />
+                  <rect x="16.6" y="31.8" width="6.5" height="6.5" rx="1.6" fill="var(--sun)" />
+                  <rect x="24.2" y="31.8" width="6.5" height="6.5" rx="1.6" fill="var(--aqua-deep)" />
+                  <rect x="31.8" y="31.8" width="6.5" height="6.5" rx="1.6" fill="var(--grape)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -752,6 +775,9 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 }
 .cabinet__art--tirukan {
   background: #f3d9e6;
+}
+.cabinet__art--flood {
+  background: #ede3f2;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction

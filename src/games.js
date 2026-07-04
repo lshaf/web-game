@@ -24,6 +24,7 @@ import Dam from './games/Dam.vue'
 import Gaple from './games/Gaple.vue'
 import Lampu from './games/Lampu.vue'
 import Tirukan from './games/Tirukan.vue'
+import FloodIt from './games/FloodIt.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -195,6 +196,12 @@ export const games = [
     title: 'Tirukan',
     tagline: 'Watch the colors, then tap them back in order.',
     component: Tirukan,
+  },
+  {
+    id: 'flood',
+    title: 'Flood-It',
+    tagline: 'Flood the board into one colour before you run out of moves.',
+    component: FloodIt,
   },
 ]
 
