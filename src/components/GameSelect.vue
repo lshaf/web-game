@@ -494,6 +494,14 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'sokoban'" class="cabinet__icon cabinet__sokoban" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <circle cx="38" cy="24" r="7.5" fill="none" stroke="var(--aqua-deep)" stroke-width="3.5" />
+                <rect x="5" y="14" width="19" height="19" rx="3" fill="var(--sun)" stroke="var(--ink)" stroke-width="3" />
+                <rect x="10.5" y="19.5" width="8" height="8" rx="1.5" fill="none" stroke="var(--ink)" stroke-width="2" opacity="0.35" />
+                <path d="M26 24 H31.5 M29 21.5 L31.8 24 L29 26.5" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -934,6 +942,9 @@ async function share() {
 .cabinet__art--menara {
   background: #d9ece6;
 }
+.cabinet__art--sokoban {
+  background: #ffe6bd;
+}
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
    of the tile via cqmin (the tile is a query container), so all icons read at
@@ -983,6 +994,7 @@ async function share() {
 .cabinet__tiles .t-plain {
   background: var(--cream);
 }
+
 
 /* Acak Kata icon: scrambled, tilted letter tiles. */
 .cabinet__scramble {

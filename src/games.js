@@ -28,6 +28,7 @@ import FloodIt from './games/FloodIt.vue'
 import Snake from './games/Snake.vue'
 import Permata from './games/Permata.vue'
 import Menara from './games/Menara.vue'
+import Sokoban from './games/Sokoban.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -255,6 +256,13 @@ export const games = [
     tagline: 'Drop each block, stack the tower sky-high.',
     component: Menara,
     category: 'aksi',
+  },
+  {
+    id: 'sokoban',
+    title: 'Dorong Kotak',
+    tagline: 'Push every crate onto its target. No pulling.',
+    component: Sokoban,
+    category: 'puzzle',
   },
 ]
 
