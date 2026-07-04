@@ -47,6 +47,28 @@ function audio() {
   return c
 }
 
+// A master gain (loudness boost) feeding a limiter, so the synthesized blips —
+// which are quite quiet on their own — come out clearly on phone speakers
+// without harsh clipping when several overlap.
+let master = null
+function output() {
+  const c = makeCtx()
+  if (!c) return null
+  if (!master) {
+    master = c.createGain()
+    master.gain.value = 3.0 // overall boost
+    const limiter = c.createDynamicsCompressor()
+    limiter.threshold.value = -5
+    limiter.knee.value = 0
+    limiter.ratio.value = 20
+    limiter.attack.value = 0.003
+    limiter.release.value = 0.12
+    master.connect(limiter)
+    limiter.connect(c.destination)
+  }
+  return master
+}
+
 // Installed (standalone) PWAs enforce the autoplay policy strictly: the
 // AudioContext starts suspended and only a real user gesture can resume it.
 // Most game blips fire from timers/rAF rather than directly from a tap, so
@@ -102,7 +124,7 @@ function blip(freq, { type = 'square', dur = 0.12, gain = 0.15, from, to, delay 
   g.gain.setValueAtTime(0.0001, t0)
   g.gain.exponentialRampToValueAtTime(gain, t0 + 0.012)
   g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur)
-  osc.connect(g).connect(c.destination)
+  osc.connect(g).connect(output() || c.destination)
   osc.start(t0)
   osc.stop(t0 + dur + 0.03)
 }
