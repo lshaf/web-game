@@ -151,6 +151,19 @@ defineEmits(['select'])
                 <text x="32.5" y="39" font-family="monospace" font-size="11" font-weight="700" fill="var(--aqua-deep)">7</text>
               </svg>
             </span>
+            <span v-else-if="game.id === 'breaker'" class="cabinet__icon cabinet__breaker" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="1.8">
+                  <rect x="5" y="6" width="10" height="6" rx="1.5" fill="var(--berry)" />
+                  <rect x="17" y="6" width="10" height="6" rx="1.5" fill="var(--sun)" />
+                  <rect x="29" y="6" width="10" height="6" rx="1.5" fill="var(--aqua)" />
+                  <rect x="11" y="14" width="10" height="6" rx="1.5" fill="var(--grape)" />
+                  <rect x="23" y="14" width="10" height="6" rx="1.5" fill="var(--sun-core)" />
+                </g>
+                <circle cx="24" cy="30" r="4" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" />
+                <rect x="14" y="37" width="18" height="5" rx="2.5" fill="var(--grape)" stroke="var(--ink)" stroke-width="2" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -446,6 +459,9 @@ defineEmits(['select'])
 .cabinet__art--sudoku {
   background: #dfeaf0;
 }
+.cabinet__art--breaker {
+  background: #ffe1b0;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -572,6 +588,14 @@ defineEmits(['select'])
 
 /* Sudoku icon: a 3x3 grid with digits. */
 .cabinet__sudoku svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Ball Breaker icon: brick wall, ball and paddle. */
+.cabinet__breaker svg {
   display: block;
   width: 54px;
   height: 54px;
