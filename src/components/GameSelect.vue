@@ -9,10 +9,59 @@ const props = defineProps({
 })
 defineEmits(['select'])
 
-// "Duo game" filter: show only games with a two-player mode.
-const duoOnly = ref(false)
-const duoCount = computed(() => props.games.filter((g) => g.duo).length)
-const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) : props.games))
+// Filter chips: All / Favorites / the four categories / Duo. One active at a time.
+const FILTERS = [
+  { key: 'all', label: 'Semua' },
+  { key: 'fav', label: '★ Favorit' },
+  { key: 'aksi', label: 'Aksi' },
+  { key: 'kata', label: 'Kata' },
+  { key: 'strategi', label: 'Strategi' },
+  { key: 'puzzle', label: 'Puzzle' },
+  { key: 'duo', label: 'Duo' },
+]
+const filter = ref('all')
+
+function matches(g, key) {
+  if (key === 'all') return true
+  if (key === 'fav') return favorites.value.has(g.id)
+  if (key === 'duo') return !!g.duo
+  return g.category === key
+}
+function count(key) {
+  return props.games.reduce((n, g) => n + (matches(g, key) ? 1 : 0), 0)
+}
+
+// Favorites live in localStorage; in the "Semua" view they pin to the front.
+const favKey = 'dusk-favorites'
+function loadFavs() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(favKey) || '[]'))
+  } catch (e) {
+    return new Set()
+  }
+}
+const favorites = ref(loadFavs())
+function isFav(id) {
+  return favorites.value.has(id)
+}
+function toggleFav(id) {
+  const next = new Set(favorites.value)
+  next.has(id) ? next.delete(id) : next.add(id)
+  favorites.value = next
+  try {
+    localStorage.setItem(favKey, JSON.stringify([...next]))
+  } catch (e) {
+    /* storage blocked; keep the in-memory set */
+  }
+}
+
+const shown = computed(() => {
+  const list = props.games.filter((g) => matches(g, filter.value))
+  if (filter.value !== 'all') return list
+  // Pin favorites to the front; registry order is preserved otherwise
+  // (Array.prototype.sort is stable).
+  return [...list].sort((a, b) => Number(isFav(b.id)) - Number(isFav(a.id)))
+})
 </script>
 
 <template>
@@ -49,12 +98,18 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
       <div class="hero__runner" aria-hidden="true"><DinoSprite run /></div>
     </header>
 
-    <label class="duofilter" :class="{ 'is-on': duoOnly }">
-      <input type="checkbox" v-model="duoOnly" />
-      <span class="duofilter__box" aria-hidden="true">✓</span>
-      <span class="duofilter__label">Duo Game</span>
-      <span class="duofilter__count">{{ duoCount }} game 2 pemain</span>
-    </label>
+    <div class="filters" aria-label="Filter game">
+      <button
+        v-for="f in FILTERS"
+        :key="f.key"
+        class="chip"
+        :class="{ 'is-on': filter === f.key }"
+        type="button"
+        @click="filter = f.key"
+      >
+        {{ f.label }}<span class="chip__n">{{ count(f.key) }}</span>
+      </button>
+    </div>
 
     <ul class="cabinets">
       <li v-for="game in shown" :key="game.id">
@@ -392,8 +447,18 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
         </button>
+        <button
+          class="cabinet__fav"
+          :class="{ 'is-on': isFav(game.id) }"
+          type="button"
+          :aria-label="isFav(game.id) ? 'Hapus dari favorit' : 'Tambah ke favorit'"
+          @click="toggleFav(game.id)"
+        >
+          ★
+        </button>
       </li>
     </ul>
+    <p v-if="!shown.length" class="empty">Belum ada favorit — ketuk ★ pada game mana pun.</p>
 
     <footer class="foot">
       <span class="foot__soon">More games coming soon</span>
@@ -592,60 +657,49 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 }
 
 /* ---- Cabinets ---- */
-/* ---- Duo-game filter ---- */
-.duofilter {
+/* ---- Filter chips (All / Favorites / categories / Duo) ---- */
+.filters {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
   width: 100%;
-  margin: 24px 0 0;
-  padding: 10px 14px;
-  background: var(--cream);
-  border: var(--line) solid var(--ink);
-  border-radius: 14px;
-  box-shadow: var(--pop-sm);
-  cursor: pointer;
-  transition: background 0.12s ease;
+  margin: 22px 0 0;
 }
-.duofilter.is-on {
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 6px 12px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+.chip:hover,
+.chip:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.chip.is-on {
   background: var(--sun);
 }
-.duofilter input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-.duofilter__box {
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  background: var(--paper-lit);
-  border: 2.5px solid var(--ink);
-  border-radius: 7px;
-  color: transparent;
-  font-weight: 900;
-  font-size: 15px;
-}
-.duofilter.is-on .duofilter__box {
-  background: var(--aqua);
-  color: var(--ink);
-}
-.duofilter input:focus-visible + .duofilter__box {
-  outline: 3px solid var(--ink);
-  outline-offset: 2px;
-}
-.duofilter__label {
-  font-family: var(--font-display);
-  font-size: 17px;
-  color: var(--ink);
-}
-.duofilter__count {
-  margin-left: auto;
+.chip__n {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  font-size: 10px;
+  color: var(--muted);
+}
+.chip.is-on .chip__n {
+  color: var(--ink);
+}
+.empty {
+  margin: 28px 0 0;
+  text-align: center;
+  font-weight: 600;
   color: var(--muted);
 }
 
@@ -660,7 +714,40 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
   gap: 14px;
 }
 .cabinets li {
+  position: relative; /* anchor for the favorite star */
   display: flex; /* let the card stretch to the row height for even cards */
+}
+/* Favorite star, top-right of each tile — a sibling of the card so tapping it
+   toggles the favorite without launching the game. */
+.cabinet__fav {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  line-height: 1;
+  font-size: 15px;
+  color: var(--muted);
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: var(--pop-sm);
+  opacity: 0.55;
+  transition: transform 0.1s ease, opacity 0.1s ease, color 0.1s ease, background 0.1s ease;
+}
+.cabinet__fav:hover,
+.cabinet__fav:focus-visible {
+  opacity: 1;
+  transform: scale(1.08);
+}
+.cabinet__fav.is-on {
+  opacity: 1;
+  color: var(--sun-core);
+  background: var(--sun);
 }
 .cabinet {
   width: 100%;

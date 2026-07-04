@@ -28,24 +28,29 @@ import FloodIt from './games/FloodIt.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
+// `category` (aksi | kata | strategi | puzzle) drives the menu filter chips;
+// `duo` marks games with a two-player mode.
 export const games = [
   {
     id: 'dino',
     title: 'Dino Jump',
     tagline: 'Leap the cacti. Survive as long as you can.',
     component: DinoGame,
+    category: 'aksi',
   },
   {
     id: 'flappy',
     title: 'Flappy',
     tagline: 'Flap through the pipes. Do not touch.',
     component: FlappyBird,
+    category: 'aksi',
   },
   {
     id: 'wordlock',
     title: 'Word Lock',
     tagline: 'Lock in letters to crack the word. Solo or two players.',
     component: WordLock,
+    category: 'kata',
     duo: true,
   },
   {
@@ -53,18 +58,21 @@ export const games = [
     title: 'Acak Kata',
     tagline: 'Unscramble the Indonesian word.',
     component: AcakKata,
+    category: 'kata',
   },
   {
     id: 'hangman',
     title: 'Tebak Kata',
     tagline: 'Guess the word before the gallows fills.',
     component: Hangman,
+    category: 'kata',
   },
   {
     id: 'tictactoe',
     title: 'Tic Tac Toe',
     tagline: 'Endless three-in-a-row. Solo vs CPU or two players.',
     component: TicTacToe,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -72,6 +80,7 @@ export const games = [
     title: 'Tebak Warna',
     tagline: 'Crack the secret color code. Solo or two players.',
     component: TebakWarna,
+    category: 'puzzle',
     duo: true,
   },
   {
@@ -79,6 +88,7 @@ export const games = [
     title: 'Connect 4',
     tagline: 'Drop discs, line up four. Solo vs CPU or two players.',
     component: ConnectFour,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -86,6 +96,7 @@ export const games = [
     title: 'Ingatan',
     tagline: 'Match every pair. Solo against a limit, or two players.',
     component: Ingatan,
+    category: 'puzzle',
     duo: true,
   },
   {
@@ -93,6 +104,7 @@ export const games = [
     title: 'Armada',
     tagline: 'Place your fleet, sink theirs. Solo vs CPU or two players.',
     component: Armada,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -100,36 +112,42 @@ export const games = [
     title: 'Pukul Tikus',
     tagline: 'Whack moles, dodge bombs. How far can you go?',
     component: PukulTikus,
+    category: 'aksi',
   },
   {
     id: 'sudoku',
     title: 'Sudoku',
     tagline: 'Fill the 9×9 so every row, column and box holds 1–9.',
     component: Sudoku,
+    category: 'puzzle',
   },
   {
     id: 'breaker',
     title: 'Ball Breaker',
     tagline: 'Bounce the ball, break every brick.',
     component: BallBreaker,
+    category: 'aksi',
   },
   {
     id: 'ranjau',
     title: 'Ranjau',
     tagline: 'Clear the field without hitting a mine.',
     component: Minesweeper,
+    category: 'puzzle',
   },
   {
     id: 'tetris',
     title: 'Tetris',
     tagline: 'Stack the blocks, clear the lines.',
     component: Tetris,
+    category: 'aksi',
   },
   {
     id: 'ular',
     title: 'Ular Tangga',
     tagline: 'Roll the die, ride ladders, dodge snakes. Solo vs CPU or two players.',
     component: UlarTangga,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -137,12 +155,14 @@ export const games = [
     title: 'Cari Kata',
     tagline: 'Find the hidden Indonesian words in the grid.',
     component: CariKata,
+    category: 'kata',
   },
   {
     id: 'otello',
     title: 'Otello',
     tagline: 'Flip discs to own the board. Solo vs CPU or two players.',
     component: Otello,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -150,6 +170,7 @@ export const games = [
     title: 'Dakon',
     tagline: 'Sow seeds, fill your store. Solo vs CPU or two players.',
     component: Dakon,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -157,6 +178,7 @@ export const games = [
     title: 'Dam',
     tagline: 'Jump and capture on the diagonals. Solo vs CPU or two players.',
     component: Dam,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -164,6 +186,7 @@ export const games = [
     title: 'Lima Sejajar',
     tagline: 'Line up five in a row. Solo vs CPU or two players.',
     component: LimaSejajar,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -171,6 +194,7 @@ export const games = [
     title: 'Gaple',
     tagline: 'Match the dominoes, empty your hand. Solo vs CPU or two players.',
     component: Gaple,
+    category: 'strategi',
     duo: true,
   },
   {
@@ -178,30 +202,35 @@ export const games = [
     title: '2048',
     tagline: 'Slide and merge tiles to reach 2048.',
     component: Game2048,
+    category: 'puzzle',
   },
   {
     id: 'geser',
     title: 'Geser Angka',
     tagline: 'Slide the tiles to order 1–15.',
     component: GeserAngka,
+    category: 'puzzle',
   },
   {
     id: 'lampu',
     title: 'Lampu',
     tagline: 'Tap to toggle. Turn every light off.',
     component: Lampu,
+    category: 'puzzle',
   },
   {
     id: 'tirukan',
     title: 'Tirukan',
     tagline: 'Watch the colors, then tap them back in order.',
     component: Tirukan,
+    category: 'puzzle',
   },
   {
     id: 'flood',
     title: 'Flood-It',
     tagline: 'Flood the board into one colour before you run out of moves.',
     component: FloodIt,
+    category: 'puzzle',
   },
 ]
 
