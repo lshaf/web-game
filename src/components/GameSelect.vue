@@ -164,6 +164,19 @@ defineEmits(['select'])
                 <rect x="14" y="37" width="18" height="5" rx="2.5" fill="var(--grape)" stroke="var(--ink)" stroke-width="2" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'ranjau'" class="cabinet__icon cabinet__ranjau" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="6" y="6" width="34" height="34" rx="6" fill="var(--paper-lit)" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round">
+                  <line x1="23" y1="12" x2="23" y2="34" />
+                  <line x1="12" y1="23" x2="34" y2="23" />
+                  <line x1="15.5" y1="15.5" x2="30.5" y2="30.5" />
+                  <line x1="30.5" y1="15.5" x2="15.5" y2="30.5" />
+                </g>
+                <circle cx="23" cy="23" r="8" fill="var(--ink)" />
+                <circle cx="20" cy="20" r="2" fill="var(--cream)" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -462,6 +475,9 @@ defineEmits(['select'])
 .cabinet__art--breaker {
   background: #ffe1b0;
 }
+.cabinet__art--ranjau {
+  background: #d7dbe8;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -596,6 +612,14 @@ defineEmits(['select'])
 
 /* Ball Breaker icon: brick wall, ball and paddle. */
 .cabinet__breaker svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Ranjau icon: a mine on a cell. */
+.cabinet__ranjau svg {
   display: block;
   width: 54px;
   height: 54px;

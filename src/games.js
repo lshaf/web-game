@@ -11,6 +11,7 @@ import Armada from './games/Armada.vue'
 import PukulTikus from './games/PukulTikus.vue'
 import Sudoku from './games/Sudoku.vue'
 import BallBreaker from './games/BallBreaker.vue'
+import Minesweeper from './games/Minesweeper.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -92,6 +93,12 @@ export const games = [
     title: 'Ball Breaker',
     tagline: 'Bounce the ball, break every brick.',
     component: BallBreaker,
+  },
+  {
+    id: 'ranjau',
+    title: 'Ranjau',
+    tagline: 'Clear the field without hitting a mine.',
+    component: Minesweeper,
   },
 ]
 
