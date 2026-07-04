@@ -137,6 +137,20 @@ defineEmits(['select'])
                 <ellipse cx="23" cy="24" rx="2.2" ry="1.7" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.1" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'sudoku'" class="cabinet__icon cabinet__sudoku" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="2.2">
+                  <line x1="17" y1="5" x2="17" y2="41" />
+                  <line x1="29" y1="5" x2="29" y2="41" />
+                  <line x1="5" y1="17" x2="41" y2="17" />
+                  <line x1="5" y1="29" x2="41" y2="29" />
+                </g>
+                <text x="8.5" y="15" font-family="monospace" font-size="11" font-weight="700" fill="var(--aqua-deep)">5</text>
+                <text x="20.5" y="27" font-family="monospace" font-size="11" font-weight="700" fill="var(--berry)">3</text>
+                <text x="32.5" y="39" font-family="monospace" font-size="11" font-weight="700" fill="var(--aqua-deep)">7</text>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -429,6 +443,9 @@ defineEmits(['select'])
 .cabinet__art--tikus {
   background: #ecdcc0;
 }
+.cabinet__art--sudoku {
+  background: #dfeaf0;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -547,6 +564,14 @@ defineEmits(['select'])
 
 /* Pukul Tikus icon: a mole peeking from a hole. */
 .cabinet__tikus svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Sudoku icon: a 3x3 grid with digits. */
+.cabinet__sudoku svg {
   display: block;
   width: 54px;
   height: 54px;

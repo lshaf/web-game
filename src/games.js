@@ -9,6 +9,7 @@ import ConnectFour from './games/ConnectFour.vue'
 import Ingatan from './games/Ingatan.vue'
 import Armada from './games/Armada.vue'
 import PukulTikus from './games/PukulTikus.vue'
+import Sudoku from './games/Sudoku.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -78,6 +79,12 @@ export const games = [
     title: 'Pukul Tikus',
     tagline: 'Whack moles, dodge bombs. How far can you go?',
     component: PukulTikus,
+  },
+  {
+    id: 'sudoku',
+    title: 'Sudoku',
+    tagline: 'Fill the 9×9 so every row, column and box holds 1–9.',
+    component: Sudoku,
   },
 ]
 
