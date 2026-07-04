@@ -177,6 +177,16 @@ defineEmits(['select'])
                 <circle cx="20" cy="20" r="2" fill="var(--cream)" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'tetris'" class="cabinet__icon cabinet__tetris" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.2">
+                  <rect x="8" y="13" width="10" height="10" rx="1.5" fill="var(--grape)" />
+                  <rect x="18" y="13" width="10" height="10" rx="1.5" fill="var(--grape)" />
+                  <rect x="28" y="13" width="10" height="10" rx="1.5" fill="var(--grape)" />
+                  <rect x="18" y="23" width="10" height="10" rx="1.5" fill="var(--sun)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__meta">
@@ -478,6 +488,9 @@ defineEmits(['select'])
 .cabinet__art--ranjau {
   background: #d7dbe8;
 }
+.cabinet__art--tetris {
+  background: #e4d9f2;
+}
 
 /* Common: the icon sits centered in the tile. */
 .cabinet__icon {
@@ -620,6 +633,14 @@ defineEmits(['select'])
 
 /* Ranjau icon: a mine on a cell. */
 .cabinet__ranjau svg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+
+/* Tetris icon: a T-tetromino. */
+.cabinet__tetris svg {
   display: block;
   width: 54px;
   height: 54px;

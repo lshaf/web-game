@@ -12,6 +12,7 @@ import PukulTikus from './games/PukulTikus.vue'
 import Sudoku from './games/Sudoku.vue'
 import BallBreaker from './games/BallBreaker.vue'
 import Minesweeper from './games/Minesweeper.vue'
+import Tetris from './games/Tetris.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -99,6 +100,12 @@ export const games = [
     title: 'Ranjau',
     tagline: 'Clear the field without hitting a mine.',
     component: Minesweeper,
+  },
+  {
+    id: 'tetris',
+    title: 'Tetris',
+    tagline: 'Stack the blocks, clear the lines.',
+    component: Tetris,
   },
 ]
 
