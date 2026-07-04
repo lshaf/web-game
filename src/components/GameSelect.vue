@@ -321,6 +321,26 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'gaple'" class="cabinet__icon cabinet__gaple" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g transform="rotate(-16 21 16)">
+                  <rect x="5" y="8" width="28" height="14" rx="3" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.6" />
+                  <line x1="19" y1="8" x2="19" y2="22" stroke="var(--ink)" stroke-width="2" />
+                  <circle cx="12" cy="15" r="1.7" fill="var(--ink)" />
+                  <circle cx="24" cy="12" r="1.7" fill="var(--ink)" />
+                  <circle cx="28" cy="18" r="1.7" fill="var(--ink)" />
+                </g>
+                <g transform="rotate(11 25 30)">
+                  <rect x="11" y="23" width="31" height="15" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                  <line x1="26.5" y1="23" x2="26.5" y2="38" stroke="var(--ink)" stroke-width="2" />
+                  <circle cx="15" cy="27" r="1.8" fill="var(--berry)" />
+                  <circle cx="18.7" cy="30.5" r="1.8" fill="var(--berry)" />
+                  <circle cx="22.4" cy="34" r="1.8" fill="var(--berry)" />
+                  <circle cx="31" cy="27" r="1.8" fill="var(--aqua-deep)" />
+                  <circle cx="37.5" cy="34" r="1.8" fill="var(--aqua-deep)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -699,6 +719,9 @@ const shown = computed(() => (duoOnly.value ? props.games.filter((g) => g.duo) :
 }
 .cabinet__art--geser {
   background: #efe6cf;
+}
+.cabinet__art--gaple {
+  background: #ecdcc7;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction

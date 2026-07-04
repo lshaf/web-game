@@ -21,6 +21,7 @@ import Game2048 from './games/Game2048.vue'
 import GeserAngka from './games/GeserAngka.vue'
 import LimaSejajar from './games/LimaSejajar.vue'
 import Dam from './games/Dam.vue'
+import Gaple from './games/Gaple.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -160,6 +161,13 @@ export const games = [
     title: 'Lima Sejajar',
     tagline: 'Line up five in a row. Solo vs CPU or two players.',
     component: LimaSejajar,
+    duo: true,
+  },
+  {
+    id: 'gaple',
+    title: 'Gaple',
+    tagline: 'Match the dominoes, empty your hand. Solo vs CPU or two players.',
+    component: Gaple,
     duo: true,
   },
   {
