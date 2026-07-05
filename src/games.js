@@ -37,6 +37,7 @@ import Piktogram from './games/Piktogram.vue'
 import TitikKotak from './games/TitikKotak.vue'
 import Katak from './games/Katak.vue'
 import BlokKayu from './games/BlokKayu.vue'
+import Pipa from './games/Pipa.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -328,6 +329,13 @@ export const games = [
     title: 'Blok Kayu',
     tagline: 'Drop blocks onto the grid and clear rows, columns, and boxes.',
     component: BlokKayu,
+    category: 'puzzle',
+  },
+  {
+    id: 'pipa',
+    title: 'Pipa',
+    tagline: 'Rotate the pipes so the water flows to the drain.',
+    component: Pipa,
     category: 'puzzle',
   },
 ]

@@ -608,6 +608,18 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'pipa'" class="cabinet__icon cabinet__pipa" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 10 V23 H33 V36" stroke="var(--ink)" stroke-width="7" />
+                  <path d="M13 10 V23 H33 V36" stroke="var(--aqua)" stroke-width="3.4" />
+                </g>
+                <circle cx="13" cy="10" r="3.4" fill="var(--aqua-deep)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="33" cy="36" r="3.8" fill="var(--sun)" stroke="var(--ink)" stroke-width="2" />
+                <circle cx="33" cy="36" r="1.5" fill="var(--ink)" />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -1074,6 +1086,9 @@ async function share() {
 }
 .cabinet__art--blokkayu {
   background: #efdcbe;
+}
+.cabinet__art--pipa {
+  background: #dbe9f0;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
