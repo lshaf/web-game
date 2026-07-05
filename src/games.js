@@ -34,6 +34,7 @@ import MenaraHanoi from './games/MenaraHanoi.vue'
 import Macet from './games/Macet.vue'
 import KataHarian from './games/KataHarian.vue'
 import Piktogram from './games/Piktogram.vue'
+import TitikKotak from './games/TitikKotak.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -304,6 +305,14 @@ export const games = [
     tagline: 'Fill the grid from the number clues to reveal a picture.',
     component: Piktogram,
     category: 'puzzle',
+  },
+  {
+    id: 'titikkotak',
+    title: 'Titik & Kotak',
+    tagline: 'Claim the most boxes. Solo vs CPU or two players.',
+    component: TitikKotak,
+    category: 'strategi',
+    duo: true,
   },
 ]
 

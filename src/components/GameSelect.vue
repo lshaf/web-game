@@ -562,6 +562,20 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'titikkotak'" class="cabinet__icon cabinet__titikkotak" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="9" y="9" width="14" height="14" rx="1.5" fill="var(--berry)" opacity="0.45" />
+                <g stroke-width="3" stroke-linecap="round" fill="none">
+                  <path d="M9 9 H23 M9 9 V23 M23 9 V23 M9 23 H23" stroke="var(--berry)" />
+                  <path d="M23 37 H37 M37 23 V37" stroke="var(--aqua-deep)" />
+                </g>
+                <g fill="var(--ink)">
+                  <circle cx="9" cy="9" r="2.6" /><circle cx="23" cy="9" r="2.6" /><circle cx="37" cy="9" r="2.6" />
+                  <circle cx="9" cy="23" r="2.6" /><circle cx="23" cy="23" r="2.6" /><circle cx="37" cy="23" r="2.6" />
+                  <circle cx="9" cy="37" r="2.6" /><circle cx="23" cy="37" r="2.6" /><circle cx="37" cy="37" r="2.6" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -1019,6 +1033,9 @@ async function share() {
 }
 .cabinet__art--piktogram {
   background: #e9e1f4;
+}
+.cabinet__art--titikkotak {
+  background: #f6dfe9;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
