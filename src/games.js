@@ -33,6 +33,7 @@ import Suit from './games/Suit.vue'
 import MenaraHanoi from './games/MenaraHanoi.vue'
 import Macet from './games/Macet.vue'
 import KataHarian from './games/KataHarian.vue'
+import Piktogram from './games/Piktogram.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -296,6 +297,13 @@ export const games = [
     tagline: 'Guess the five-letter Indonesian word in six tries.',
     component: KataHarian,
     category: 'kata',
+  },
+  {
+    id: 'piktogram',
+    title: 'Piktogram',
+    tagline: 'Fill the grid from the number clues to reveal a picture.',
+    component: Piktogram,
+    category: 'puzzle',
   },
 ]
 

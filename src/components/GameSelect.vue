@@ -544,6 +544,24 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'piktogram'" class="cabinet__icon cabinet__piktogram" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="13" y="13" width="30" height="30" rx="2.5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.4" />
+                <g fill="var(--berry)">
+                  <rect x="19" y="13" width="6" height="6" />
+                  <rect x="31" y="13" width="6" height="6" />
+                  <rect x="13" y="19" width="30" height="6" />
+                  <rect x="13" y="25" width="30" height="6" />
+                  <rect x="19" y="31" width="18" height="6" />
+                  <rect x="25" y="37" width="6" height="6" />
+                </g>
+                <g font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle">
+                  <text x="28" y="10.5">4</text>
+                  <text x="8" y="23">5</text>
+                  <text x="8" y="35">3</text>
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -998,6 +1016,9 @@ async function share() {
 }
 .cabinet__art--kataharian {
   background: #d4efd9;
+}
+.cabinet__art--piktogram {
+  background: #e9e1f4;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
