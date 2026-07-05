@@ -620,6 +620,25 @@ async function share() {
                 <circle cx="33" cy="36" r="1.5" fill="var(--ink)" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'sandi'" class="cabinet__icon cabinet__sandi" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.4">
+                  <rect x="3" y="14" width="12.5" height="16" rx="2.5" fill="var(--cream)" />
+                  <rect x="16.75" y="14" width="12.5" height="16" rx="2.5" fill="var(--sun)" />
+                  <rect x="30.5" y="14" width="12.5" height="16" rx="2.5" fill="var(--cream)" />
+                </g>
+                <g font-family="monospace" font-weight="700" text-anchor="middle" fill="var(--ink)" font-size="11">
+                  <text x="9.25" y="27">S</text>
+                  <text x="23" y="27">?</text>
+                  <text x="36.75" y="27">N</text>
+                </g>
+                <g font-family="monospace" text-anchor="middle" fill="var(--muted)" font-size="6.5">
+                  <text x="9.25" y="11">X</text>
+                  <text x="23" y="11">Q</text>
+                  <text x="36.75" y="11">M</text>
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -1089,6 +1108,9 @@ async function share() {
 }
 .cabinet__art--pipa {
   background: #dbe9f0;
+}
+.cabinet__art--sandi {
+  background: #ece1f5;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
