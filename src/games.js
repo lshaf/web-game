@@ -32,6 +32,7 @@ import Sokoban from './games/Sokoban.vue'
 import Suit from './games/Suit.vue'
 import MenaraHanoi from './games/MenaraHanoi.vue'
 import Macet from './games/Macet.vue'
+import KataHarian from './games/KataHarian.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -288,6 +289,13 @@ export const games = [
     tagline: 'Slide the cars aside and drive the red one out.',
     component: Macet,
     category: 'puzzle',
+  },
+  {
+    id: 'kataharian',
+    title: 'Kata Harian',
+    tagline: 'Guess the five-letter Indonesian word in six tries.',
+    component: KataHarian,
+    category: 'kata',
   },
 ]
 

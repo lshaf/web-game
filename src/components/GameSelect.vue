@@ -530,6 +530,20 @@ async function share() {
                 <path d="M39 22.7 L44 22.7 M41.6 20 L44 22.7 L41.6 25.4" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'kataharian'" class="cabinet__icon cabinet__kataharian" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.6">
+                  <rect x="2" y="15" width="13.6" height="16" rx="3" fill="#43c96b" />
+                  <rect x="16.2" y="15" width="13.6" height="16" rx="3" fill="var(--sun)" />
+                  <rect x="30.4" y="15" width="13.6" height="16" rx="3" fill="var(--absent)" />
+                </g>
+                <g font-family="monospace" font-weight="700" font-size="12" text-anchor="middle" fill="var(--ink)">
+                  <text x="8.8" y="27.5">K</text>
+                  <text x="23" y="27.5">A</text>
+                  <text x="37.2" y="27.5">T</text>
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -981,6 +995,9 @@ async function share() {
 }
 .cabinet__art--macet {
   background: #f4ddd0;
+}
+.cabinet__art--kataharian {
+  background: #d4efd9;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
