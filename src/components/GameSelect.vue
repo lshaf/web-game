@@ -639,6 +639,20 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'lompat'" class="cabinet__icon cabinet__lompat" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g fill="#8fd694" stroke="var(--ink)" stroke-width="2.2">
+                  <rect x="5" y="35" width="16" height="6" rx="3" />
+                  <rect x="26" y="27" width="15" height="6" rx="3" />
+                  <rect x="7" y="17" width="14" height="6" rx="3" />
+                </g>
+                <g>
+                  <circle cx="31" cy="16" r="7" fill="var(--berry)" stroke="var(--ink)" stroke-width="2.4" />
+                  <circle cx="28.6" cy="14.6" r="1.5" fill="var(--ink)" />
+                  <circle cx="33.4" cy="14.6" r="1.5" fill="var(--ink)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -1111,6 +1125,9 @@ async function share() {
 }
 .cabinet__art--sandi {
   background: #ece1f5;
+}
+.cabinet__art--lompat {
+  background: #d3ebff;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
