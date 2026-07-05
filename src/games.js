@@ -31,6 +31,7 @@ import Menara from './games/Menara.vue'
 import Sokoban from './games/Sokoban.vue'
 import Suit from './games/Suit.vue'
 import MenaraHanoi from './games/MenaraHanoi.vue'
+import Macet from './games/Macet.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -279,6 +280,13 @@ export const games = [
     title: 'Menara Hanoi',
     tagline: 'Move the whole stack across, one disc at a time.',
     component: MenaraHanoi,
+    category: 'puzzle',
+  },
+  {
+    id: 'macet',
+    title: 'Macet',
+    tagline: 'Slide the cars aside and drive the red one out.',
+    component: Macet,
     category: 'puzzle',
   },
 ]
