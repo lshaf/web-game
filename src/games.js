@@ -35,6 +35,7 @@ import Macet from './games/Macet.vue'
 import KataHarian from './games/KataHarian.vue'
 import Piktogram from './games/Piktogram.vue'
 import TitikKotak from './games/TitikKotak.vue'
+import Katak from './games/Katak.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -313,6 +314,13 @@ export const games = [
     component: TitikKotak,
     category: 'strategi',
     duo: true,
+  },
+  {
+    id: 'katak',
+    title: 'Katak Menyeberang',
+    tagline: 'Hop across the traffic and river. Do not get squished.',
+    component: Katak,
+    category: 'aksi',
   },
 ]
 
