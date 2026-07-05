@@ -36,6 +36,7 @@ import Wordle from './games/Wordle.vue'
 import Piktogram from './games/Piktogram.vue'
 import TitikKotak from './games/TitikKotak.vue'
 import Katak from './games/Katak.vue'
+import BlokKayu from './games/BlokKayu.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -321,6 +322,13 @@ export const games = [
     tagline: 'Hop across the traffic and river. Do not get squished.',
     component: Katak,
     category: 'aksi',
+  },
+  {
+    id: 'blokkayu',
+    title: 'Blok Kayu',
+    tagline: 'Drop blocks onto the grid and clear rows, columns, and boxes.',
+    component: BlokKayu,
+    category: 'puzzle',
   },
 ]
 

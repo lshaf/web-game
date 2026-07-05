@@ -591,6 +591,23 @@ async function share() {
                 <path d="M13 28 q-3 3 -1 6 M33 28 q3 3 1 6" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'blokkayu'" class="cabinet__icon cabinet__blokkayu" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="1" opacity="0.25">
+                  <line x1="16.7" y1="4" x2="16.7" y2="42" />
+                  <line x1="29.3" y1="4" x2="29.3" y2="42" />
+                  <line x1="4" y1="16.7" x2="42" y2="16.7" />
+                  <line x1="4" y1="29.3" x2="42" y2="29.3" />
+                </g>
+                <g fill="#c98b3a" stroke="var(--ink)" stroke-width="1.6">
+                  <rect x="6" y="6" width="9.2" height="9.2" rx="2" />
+                  <rect x="6" y="18.5" width="9.2" height="9.2" rx="2" />
+                  <rect x="18.5" y="18.5" width="9.2" height="9.2" rx="2" />
+                  <rect x="31" y="31" width="9.2" height="9.2" rx="2" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -1054,6 +1071,9 @@ async function share() {
 }
 .cabinet__art--katak {
   background: #cdeccb;
+}
+.cabinet__art--blokkayu {
+  background: #efdcbe;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
