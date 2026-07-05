@@ -30,6 +30,7 @@ import Permata from './games/Permata.vue'
 import Menara from './games/Menara.vue'
 import Sokoban from './games/Sokoban.vue'
 import Suit from './games/Suit.vue'
+import MenaraHanoi from './games/MenaraHanoi.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -272,6 +273,13 @@ export const games = [
     component: Suit,
     category: 'strategi',
     duo: true,
+  },
+  {
+    id: 'hanoi',
+    title: 'Menara Hanoi',
+    tagline: 'Move the whole stack across, one disc at a time.',
+    component: MenaraHanoi,
+    category: 'puzzle',
   },
 ]
 

@@ -505,6 +505,19 @@ async function share() {
             <span v-else-if="game.id === 'suit'" class="cabinet__icon cabinet__suit" aria-hidden="true">
               <i class="s-batu">B</i><i class="s-kertas">K</i><i class="s-gunting">G</i>
             </span>
+            <span v-else-if="game.id === 'hanoi'" class="cabinet__icon cabinet__hanoi" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round">
+                  <rect x="4" y="36" width="38" height="6" rx="2.6" fill="var(--aqua-deep)" />
+                  <rect x="10" y="14" width="3" height="23" rx="1.5" fill="#b79a63" />
+                  <rect x="21.5" y="14" width="3" height="23" rx="1.5" fill="#b79a63" />
+                  <rect x="33" y="14" width="3" height="23" rx="1.5" fill="#b79a63" />
+                  <rect x="2" y="30" width="19" height="6" rx="2.4" fill="var(--berry)" />
+                  <rect x="4" y="24" width="15" height="6" rx="2.4" fill="var(--sun)" />
+                  <rect x="6" y="18" width="11" height="6" rx="2.4" fill="var(--aqua)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
@@ -950,6 +963,9 @@ async function share() {
 }
 .cabinet__art--suit {
   background: #ffdbe6;
+}
+.cabinet__art--hanoi {
+  background: #d7e4f0;
 }
 
 /* The icon sits centered in the square. Every SVG icon is sized as one fraction
