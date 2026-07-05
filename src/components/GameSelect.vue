@@ -530,7 +530,7 @@ async function share() {
                 <path d="M39 22.7 L44 22.7 M41.6 20 L44 22.7 L41.6 25.4" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
-            <span v-else-if="game.id === 'kataharian'" class="cabinet__icon cabinet__kataharian" aria-hidden="true">
+            <span v-else-if="game.id === 'wordle'" class="cabinet__icon cabinet__wordle" aria-hidden="true">
               <svg viewBox="0 0 46 46">
                 <g stroke="var(--ink)" stroke-width="2.6">
                   <rect x="2" y="15" width="13.6" height="16" rx="3" fill="#43c96b" />
@@ -1043,7 +1043,7 @@ async function share() {
 .cabinet__art--macet {
   background: #f4ddd0;
 }
-.cabinet__art--kataharian {
+.cabinet__art--wordle {
   background: #d4efd9;
 }
 .cabinet__art--piktogram {

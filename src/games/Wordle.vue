@@ -1,15 +1,15 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import { ANSWERS, VALID } from './kata-harian-words.js'
+import { ANSWERS, VALID } from '../data/wordle.js'
 import { sfx } from '../sound.js'
 
-// Kata Harian — Wordle in Indonesian. Guess a secret 5-letter word in 6 tries;
-// each guess is scored letter-by-letter (correct / present / absent) with the
-// classic duplicate-safe two-pass rule. Solo stats persist across games.
+// Wordle — the classic word game in Indonesian. Guess a secret 5-letter word in
+// 6 tries; each guess is scored letter-by-letter (correct / present / absent)
+// with the duplicate-safe two-pass rule. Solo stats persist across games.
 
 const ROWS = 6
 const COLS = 5
-const STATS_KEY = 'dusk-kataharian-stats'
+const STATS_KEY = 'dusk-wordle-stats'
 
 const KEY_ROWS = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
@@ -238,10 +238,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="kataharian">
+  <div class="wordle">
     <div class="panel">
       <section class="screen">
-        <p class="brand">KATA<span class="brand__accent"> HARIAN</span></p>
+        <p class="brand">WORD<span class="brand__accent">LE</span></p>
         <p class="eyebrow">TEBAK KATA LIMA HURUF</p>
 
         <div class="solobar stats">
@@ -307,7 +307,7 @@ onBeforeUnmount(() => {
 <style scoped>
 /* Page-specific only — panel/screen/brand/eyebrow/cta/solobar/result come from
    src/styles.css. */
-.kataharian {
+.wordle {
   width: 100%;
   max-width: 460px;
   margin: 0 auto;

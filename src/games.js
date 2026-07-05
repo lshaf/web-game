@@ -32,7 +32,7 @@ import Sokoban from './games/Sokoban.vue'
 import Suit from './games/Suit.vue'
 import MenaraHanoi from './games/MenaraHanoi.vue'
 import Macet from './games/Macet.vue'
-import KataHarian from './games/KataHarian.vue'
+import Wordle from './games/Wordle.vue'
 import Piktogram from './games/Piktogram.vue'
 import TitikKotak from './games/TitikKotak.vue'
 import Katak from './games/Katak.vue'
@@ -294,10 +294,10 @@ export const games = [
     category: 'puzzle',
   },
   {
-    id: 'kataharian',
-    title: 'Kata Harian',
+    id: 'wordle',
+    title: 'Wordle',
     tagline: 'Guess the five-letter Indonesian word in six tries.',
-    component: KataHarian,
+    component: Wordle,
     category: 'kata',
   },
   {
