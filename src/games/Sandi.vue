@@ -115,23 +115,16 @@ function fmt(secs) {
   return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0')
 }
 
-// Reveal the correct mapping for the most frequent cipher letter, and lock it —
-// the free leg-up every puzzle opens with (does not count as a Petunjuk).
-function revealFrequent() {
-  const freq = {}
-  for (const c of cipher.value) if (c !== ' ') freq[c] = (freq[c] || 0) + 1
-  let best = ''
-  let bestN = -1
-  for (const ch in freq) {
-    if (freq[ch] > bestN) {
-      bestN = freq[ch]
-      best = ch
-    }
-  }
-  if (best) {
-    guessMap.value[best] = decMap.value[best]
-    locked.value[best] = true
-  }
+// Reveal the correct mapping for one random cipher letter, and lock it — the
+// free leg-up every puzzle opens with (does not count as a Petunjuk). Picked at
+// random rather than by frequency: 'A' is by far the most common letter in
+// Indonesian, so revealing the most frequent one gave away 'A' almost every game.
+function revealOne() {
+  const letters = cipherLetters.value
+  if (!letters.length) return
+  const ch = letters[Math.floor(Math.random() * letters.length)]
+  guessMap.value[ch] = decMap.value[ch]
+  locked.value[ch] = true
 }
 
 // Build a fresh proverb + cipher without touching the timer.
@@ -149,7 +142,7 @@ function initPuzzle() {
   phase.value = 'play'
   elapsed.value = 0
   wasFull = false
-  revealFrequent()
+  revealOne()
   selected.value = cipherLetters.value.find((ch) => !locked.value[ch]) || ''
 }
 
