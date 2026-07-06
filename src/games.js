@@ -44,6 +44,7 @@ import Wordle from './games/Wordle.vue'
 import Sandi from './games/Sandi.vue'
 import TekaSilang from './games/TekaSilang.vue'
 import SambungKata from './games/SambungKata.vue'
+import TanggaKata from './games/TanggaKata.vue'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
 // demand so their big dictionaries (kbbi.js, words.js, …) only download when you
@@ -391,6 +392,13 @@ export const games = [
     component: SambungKata,
     category: 'kata',
     duo: true,
+  },
+  {
+    id: 'tangga',
+    title: 'Tangga Kata',
+    tagline: 'Change one letter at a time to climb to the goal word.',
+    component: TanggaKata,
+    category: 'kata',
   },
 ]
 
