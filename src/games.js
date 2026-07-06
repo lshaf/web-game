@@ -35,6 +35,7 @@ import BlokKayu from './games/BlokKayu.vue'
 import Pipa from './games/Pipa.vue'
 import Lompat from './games/Lompat.vue'
 import SortirWarna from './games/SortirWarna.vue'
+import Yatzy from './games/Yatzy.vue'
 import WordLock from './games/WordLock.vue'
 import AcakKata from './games/AcakKata.vue'
 import Hangman from './games/Hangman.vue'
@@ -373,6 +374,14 @@ export const games = [
     tagline: 'Pour the balls until every tube is a single colour.',
     component: SortirWarna,
     category: 'puzzle',
+  },
+  {
+    id: 'yatzy',
+    title: 'Yatzy',
+    tagline: 'Roll five dice, chase the scorecard. Solo or two players.',
+    component: Yatzy,
+    category: 'strategi',
+    duo: true,
   },
 ]
 

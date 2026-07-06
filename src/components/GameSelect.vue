@@ -697,6 +697,23 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'yatzy'" class="cabinet__icon cabinet__yatzy" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="22" y="6" width="17" height="17" rx="4" fill="var(--sun)" stroke="var(--ink)" stroke-width="2.2" />
+                <g fill="var(--ink)">
+                  <circle cx="27" cy="11" r="1.6" />
+                  <circle cx="34" cy="18" r="1.6" />
+                </g>
+                <rect x="7" y="20" width="20" height="20" rx="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.4" />
+                <g fill="var(--ink)">
+                  <circle cx="12.5" cy="25.5" r="1.9" />
+                  <circle cx="21.5" cy="25.5" r="1.9" />
+                  <circle cx="17" cy="30" r="1.9" />
+                  <circle cx="12.5" cy="34.5" r="1.9" />
+                  <circle cx="21.5" cy="34.5" r="1.9" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
