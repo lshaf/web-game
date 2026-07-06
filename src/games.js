@@ -1,8 +1,5 @@
 import DinoGame from './games/DinoGame.vue'
-import WordLock from './games/WordLock.vue'
 import FlappyBird from './games/FlappyBird.vue'
-import AcakKata from './games/AcakKata.vue'
-import Hangman from './games/Hangman.vue'
 import TicTacToe from './games/TicTacToe.vue'
 import TebakWarna from './games/TebakWarna.vue'
 import ConnectFour from './games/ConnectFour.vue'
@@ -14,14 +11,13 @@ import BallBreaker from './games/BallBreaker.vue'
 import Minesweeper from './games/Minesweeper.vue'
 import Tetris from './games/Tetris.vue'
 import UlarTangga from './games/UlarTangga.vue'
-import CariKata from './games/CariKata.vue'
 import Otello from './games/Otello.vue'
 import Dakon from './games/Dakon.vue'
+import Dam from './games/Dam.vue'
+import LimaSejajar from './games/LimaSejajar.vue'
+import Gaple from './games/Gaple.vue'
 import Game2048 from './games/Game2048.vue'
 import GeserAngka from './games/GeserAngka.vue'
-import LimaSejajar from './games/LimaSejajar.vue'
-import Dam from './games/Dam.vue'
-import Gaple from './games/Gaple.vue'
 import Lampu from './games/Lampu.vue'
 import Tirukan from './games/Tirukan.vue'
 import FloodIt from './games/FloodIt.vue'
@@ -32,16 +28,25 @@ import Sokoban from './games/Sokoban.vue'
 import Suit from './games/Suit.vue'
 import MenaraHanoi from './games/MenaraHanoi.vue'
 import Macet from './games/Macet.vue'
-import Wordle from './games/Wordle.vue'
 import Piktogram from './games/Piktogram.vue'
 import TitikKotak from './games/TitikKotak.vue'
 import Katak from './games/Katak.vue'
 import BlokKayu from './games/BlokKayu.vue'
 import Pipa from './games/Pipa.vue'
-import Sandi from './games/Sandi.vue'
 import Lompat from './games/Lompat.vue'
+import SortirWarna from './games/SortirWarna.vue'
+import WordLock from './games/WordLock.vue'
+import AcakKata from './games/AcakKata.vue'
+import Hangman from './games/Hangman.vue'
+import CariKata from './games/CariKata.vue'
+import Wordle from './games/Wordle.vue'
+import Sandi from './games/Sandi.vue'
 import TekaSilang from './games/TekaSilang.vue'
 
+// Small games are bundled with the app; the data-heavy word games are loaded on
+// demand so their big dictionaries (kbbi.js, words.js, …) only download when you
+// actually open them, not on the first visit.
+const lazy = (loader) => defineAsyncComponent(loader)
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
 // `category` (aksi | kata | strategi | puzzle) drives the menu filter chips;
@@ -361,6 +366,13 @@ export const games = [
     tagline: 'Fill the grid from across and down clues.',
     component: TekaSilang,
     category: 'kata',
+  },
+  {
+    id: 'sortir',
+    title: 'Sortir Warna',
+    tagline: 'Pour the balls until every tube is a single colour.',
+    component: SortirWarna,
+    category: 'puzzle',
   },
 ]
 
