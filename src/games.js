@@ -1,3 +1,4 @@
+import { defineAsyncComponent } from 'vue'
 import DinoGame from './games/DinoGame.vue'
 import FlappyBird from './games/FlappyBird.vue'
 import TicTacToe from './games/TicTacToe.vue'
@@ -36,15 +37,6 @@ import Pipa from './games/Pipa.vue'
 import Lompat from './games/Lompat.vue'
 import SortirWarna from './games/SortirWarna.vue'
 import Yatzy from './games/Yatzy.vue'
-import WordLock from './games/WordLock.vue'
-import AcakKata from './games/AcakKata.vue'
-import Hangman from './games/Hangman.vue'
-import CariKata from './games/CariKata.vue'
-import Wordle from './games/Wordle.vue'
-import Sandi from './games/Sandi.vue'
-import TekaSilang from './games/TekaSilang.vue'
-import SambungKata from './games/SambungKata.vue'
-import TanggaKata from './games/TanggaKata.vue'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
 // demand so their big dictionaries (kbbi.js, words.js, …) only download when you
@@ -73,7 +65,7 @@ export const games = [
     id: 'wordlock',
     title: 'Word Lock',
     tagline: 'Lock in letters to crack the word. Solo or two players.',
-    component: WordLock,
+    component: lazy(() => import('./games/WordLock.vue')),
     category: 'kata',
     duo: true,
   },
@@ -81,14 +73,14 @@ export const games = [
     id: 'acakkata',
     title: 'Acak Kata',
     tagline: 'Unscramble the Indonesian word.',
-    component: AcakKata,
+    component: lazy(() => import('./games/AcakKata.vue')),
     category: 'kata',
   },
   {
     id: 'hangman',
     title: 'Tebak Kata',
     tagline: 'Guess the word before the gallows fills.',
-    component: Hangman,
+    component: lazy(() => import('./games/Hangman.vue')),
     category: 'kata',
   },
   {
@@ -178,7 +170,7 @@ export const games = [
     id: 'carikata',
     title: 'Cari Kata',
     tagline: 'Find the hidden Indonesian words in the grid.',
-    component: CariKata,
+    component: lazy(() => import('./games/CariKata.vue')),
     category: 'kata',
   },
   {
@@ -310,7 +302,7 @@ export const games = [
     id: 'wordle',
     title: 'Wordle',
     tagline: 'Guess the five-letter Indonesian word in six tries.',
-    component: Wordle,
+    component: lazy(() => import('./games/Wordle.vue')),
     category: 'kata',
   },
   {
@@ -353,7 +345,7 @@ export const games = [
     id: 'sandi',
     title: 'Sandi',
     tagline: 'Crack the cipher to reveal an Indonesian proverb.',
-    component: Sandi,
+    component: lazy(() => import('./games/Sandi.vue')),
     category: 'kata',
   },
   {
@@ -367,7 +359,7 @@ export const games = [
     id: 'teka',
     title: 'Teka-Teki Silang',
     tagline: 'Fill the grid from across and down clues.',
-    component: TekaSilang,
+    component: lazy(() => import('./games/TekaSilang.vue')),
     category: 'kata',
   },
   {
@@ -389,7 +381,7 @@ export const games = [
     id: 'sambung',
     title: 'Sambung Kata',
     tagline: 'Chain words by their last letter. Solo vs CPU or two players.',
-    component: SambungKata,
+    component: lazy(() => import('./games/SambungKata.vue')),
     category: 'kata',
     duo: true,
   },
@@ -397,7 +389,7 @@ export const games = [
     id: 'tangga',
     title: 'Tangga Kata',
     tagline: 'Change one letter at a time to climb to the goal word.',
-    component: TanggaKata,
+    component: lazy(() => import('./games/TanggaKata.vue')),
     category: 'kata',
   },
 ]
