@@ -40,6 +40,7 @@ import BlokKayu from './games/BlokKayu.vue'
 import Pipa from './games/Pipa.vue'
 import Sandi from './games/Sandi.vue'
 import Lompat from './games/Lompat.vue'
+import TekaSilang from './games/TekaSilang.vue'
 
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
@@ -353,6 +354,13 @@ export const games = [
     tagline: 'Bounce up the endless platforms. Do not fall.',
     component: Lompat,
     category: 'aksi',
+  },
+  {
+    id: 'teka',
+    title: 'Teka-Teki Silang',
+    tagline: 'Fill the grid from across and down clues.',
+    component: TekaSilang,
+    category: 'kata',
   },
 ]
 

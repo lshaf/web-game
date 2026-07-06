@@ -653,6 +653,35 @@ async function share() {
                 </g>
               </svg>
             </span>
+            <span v-else-if="game.id === 'teka'" class="cabinet__icon cabinet__teka" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+                <g stroke="var(--ink)" stroke-width="1.6">
+                  <g fill="var(--ink)">
+                    <rect x="7" y="7" width="8" height="8" />
+                    <rect x="23" y="7" width="8" height="8" />
+                    <rect x="31" y="7" width="8" height="8" />
+                    <rect x="7" y="23" width="8" height="8" />
+                    <rect x="23" y="23" width="8" height="8" />
+                    <rect x="31" y="23" width="8" height="8" />
+                    <rect x="7" y="31" width="8" height="8" />
+                    <rect x="23" y="31" width="8" height="8" />
+                    <rect x="31" y="31" width="8" height="8" />
+                  </g>
+                  <g fill="var(--sun)">
+                    <rect x="15" y="7" width="8" height="8" />
+                    <rect x="15" y="23" width="8" height="8" />
+                    <rect x="15" y="31" width="8" height="8" />
+                  </g>
+                  <g fill="var(--cream)">
+                    <rect x="7" y="15" width="8" height="8" />
+                    <rect x="23" y="15" width="8" height="8" />
+                    <rect x="31" y="15" width="8" height="8" />
+                  </g>
+                  <rect x="15" y="15" width="8" height="8" fill="var(--aqua)" />
+                </g>
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>
