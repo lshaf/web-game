@@ -748,6 +748,22 @@ async function share() {
                 <circle cx="33.5" cy="31.5" r="3.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.8" />
               </svg>
             </span>
+            <span v-else-if="game.id === 'lebah'" class="cabinet__icon cabinet__lebah" aria-hidden="true">
+              <svg viewBox="0 0 46 46">
+                <polygon
+                  points="30,7 39.53,12.5 39.53,23.5 30,29 20.47,23.5 20.47,12.5"
+                  fill="var(--aqua)"
+                  stroke="var(--ink)"
+                  stroke-width="2.4"
+                />
+                <polygon
+                  points="18,15 27.53,20.5 27.53,31.5 18,37 8.47,31.5 8.47,20.5"
+                  fill="var(--sun)"
+                  stroke="var(--ink)"
+                  stroke-width="2.4"
+                />
+              </svg>
+            </span>
             <span v-else class="cabinet__icon cabinet__dino"><DinoSprite run /></span>
           </span>
           <span class="cabinet__title">{{ game.title }}</span>

@@ -400,6 +400,13 @@ export const games = [
     component: Onet,
     category: 'puzzle',
   },
+  {
+    id: 'lebah',
+    title: 'Kata Lebah',
+    tagline: 'Spell as many words as you can from seven letters.',
+    component: lazy(() => import('./games/KataLebah.vue')),
+    category: 'kata',
+  },
 ]
 
 export function findGame(id) {
