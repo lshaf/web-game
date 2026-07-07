@@ -1,6 +1,7 @@
 import { defineAsyncComponent } from 'vue'
 import Onet from './games/Onet.vue'
 import Takuzu from './games/Takuzu.vue'
+import DamTiga from './games/DamTiga.vue'
 import DinoGame from './games/DinoGame.vue'
 import FlappyBird from './games/FlappyBird.vue'
 import TicTacToe from './games/TicTacToe.vue'
@@ -414,6 +415,14 @@ export const games = [
     tagline: 'Fill the grid with two colours by pure logic.',
     component: Takuzu,
     category: 'puzzle',
+  },
+  {
+    id: 'damtiga',
+    title: 'Dam Tiga',
+    tagline: 'Form mills to capture pieces. Solo vs CPU or two players.',
+    component: DamTiga,
+    category: 'strategi',
+    duo: true,
   },
 ]
 
