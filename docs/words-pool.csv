@@ -3,44 +3,44 @@ OKE,aksi,3,setuju,Setuju
 JAM,benda,3,pukul2,Punya 12 angka
 AIR,benda,3,"benda cair yang biasa terdapat di sumur, sungai, danau yang mendidih pada suhu 100�C",Ikut wadahnya
 TAU,aksi,3,tahu,Sudah belajar
-TIM,aksi,3,mengetim,
+TIM,aksi,3,mengetim,Regu dalam pertandingan
 IDE,benda,3,perasaan yang benar-benar menyelimuti pikiran,Hasil kerja otak
 API,benda,3,kebakaran,Sakit dan tak tersentuh
-MAN,benda,3,paman,
-SIR,benda,3,tiruan bunyi desir,
-KIM,benda,3,permainan dengan menandai angka yang telah terletak dalam kolom ataupun baris yang telah d,
-HAK,benda,3,kewenangan,
-DAH,benda,3,sudah,
-BOM,benda,3,pelabuhan; pabean,
-BAU,aksi,3,ada baunya; mengeluarkan bau,
-MIL,benda,3,surat-surat pos,
+MAN,benda,3,paman,Saudara lelaki orang tua
+SIR,benda,3,tiruan bunyi desir,Tiruan bunyi hembusan lembut
+KIM,benda,3,permainan dengan menandai angka yang telah terletak dalam kolom ataupun baris yang telah d,Permainan angka mirip bingo
+HAK,benda,3,kewenangan,Wewenang yang dimiliki
+DAH,benda,3,sudah,Menyatakan telah selesai
+BOM,benda,3,pelabuhan; pabean,Senjata bahan peledak
+BAU,aksi,3,ada baunya; mengeluarkan bau,Yang tercium oleh hidung
+MIL,benda,3,surat-surat pos,Kiriman lewat kantor pos
 KUE,benda,3,"penganan yang dibuat dari bahan yang bermacam-macam, dapat dibuat dalam berbagai bentuk, a",Makanan manis
-TAS,benda,3,bunyi lembut sekali,
-BAR,benda,3,"tempat minum-minum (biasanya minuman keras, seperti anggur, bir, wiski)",
-TOM,benda,3,tali kekang,
-TEH,benda,3,"pohon kecil, tumbuh di alam bebas, daunnya berbentuk jorong atau bulat telur, pucuknya dil",
-BIR,benda,3,minuman mengandung alkohol yang dibuat dengan peragian lambat,
-TES,benda,3,percobaan untuk menguji kelaikan jalan suatu kendaraan bermotor umum; uji,
-JIN,benda,3,pelana,
-JIM,benda,3,nama huruf ke-5 abjad Arab,
-BOB,benda,3,potongan rambut pendek dan membulat (biasanya pada wanita),
-WON,benda,3,mata uang Korea Selatan dan Korea Utara,
-BUS,benda,3,tiruan bunyi angin berembus,
-SEL,benda,3,"bilik kecil dan sempit (dalam penjara, biara, dan sebagainya)",
-ROH,benda,3,semangat; spirit,
-GOT,benda,3,selokan,
-MIN,benda,3,"tanaman herba genus Mentha, memiliki batang berbentuk persegi, bunga berukuran kecil berwa",
-GAS,benda,3,uap dari bensin (bensol dan sebagainya),
-ARE,benda,3,"satuan ukuran luas, sama dengan 100 m_",
+TAS,benda,3,bunyi lembut sekali,Wadah pembawa barang
+BAR,benda,3,"tempat minum-minum (biasanya minuman keras, seperti anggur, bir, wiski)",Tempat minum minuman keras
+TOM,benda,3,tali kekang,Tali pengendali kuda
+TEH,benda,3,"pohon kecil, tumbuh di alam bebas, daunnya berbentuk jorong atau bulat telur, pucuknya dil",Minuman seduhan daun
+BIR,benda,3,minuman mengandung alkohol yang dibuat dengan peragian lambat,Minuman beralkohol hasil fermentasi
+TES,benda,3,percobaan untuk menguji kelaikan jalan suatu kendaraan bermotor umum; uji,Uji kemampuan seseorang
+JIN,benda,3,pelana,Makhluk halus tak terlihat
+JIM,benda,3,nama huruf ke-5 abjad Arab,Huruf dalam abjad Arab
+BOB,benda,3,potongan rambut pendek dan membulat (biasanya pada wanita),Model rambut pendek wanita
+WON,benda,3,mata uang Korea Selatan dan Korea Utara,Mata uang negara Korea
+BUS,benda,3,tiruan bunyi angin berembus,Kendaraan umum besar
+SEL,benda,3,"bilik kecil dan sempit (dalam penjara, biara, dan sebagainya)",Kamar kecil di penjara
+ROH,benda,3,semangat; spirit,Jiwa atau nyawa
+GOT,benda,3,selokan,Saluran pembuangan air kotor
+MIN,benda,3,"tanaman herba genus Mentha, memiliki batang berbentuk persegi, bunga berukuran kecil berwa",Tanda kurang dalam hitungan
+GAS,benda,3,uap dari bensin (bensol dan sebagainya),Wujud zat seperti udara
+ARE,benda,3,"satuan ukuran luas, sama dengan 100 m_",Satuan ukuran luas tanah
 CEK,benda,3,encek,Surat perintah bank
-AJA,benda,3,sebutan putri bangsawan (Deli),
-BUT,benda,3,mulai awal,
+AJA,benda,3,sebutan putri bangsawan (Deli),Bermakna cuma atau hanya
+BUT,benda,3,mulai awal,Titik mula sesuatu
 KAK,benda,3,kakak; saudara tua,Panggilan saudara tua
 POS,benda,3,prosedur operasional standar,Kantor kirim surat
 NOT,benda,3,tanda nada tertentu pada musik; bunyi musik dengan frekuensi dasar tertentu; titi nada,Simbol nada musik
 GAY,benda,3,pria yang mencintai atau merasakan rangsangan seksual sesama jenisnya,Sesama lelaki
 SUN,benda,3,ciuman,Kecupan sayang singkat
-ALI,benda,3,sapaan untuk laki-laki,
+ALI,benda,3,sapaan untuk laki-laki,Panggilan untuk kaum pria
 ASA,aksi,3,sangka,Harapan yang tersisa
 GUA,benda,3,liang (lubang) besar (pada kaki gunung dan sebagainya),Lubang besar gunung
 PIL,benda,3,obat dalam bentuk butiran kecil padat; gentel; tablet,Obat bentuk bulat kecil
@@ -51,16 +51,16 @@ PAS,aksi,3,lulus (dalam ujian),Ukuran tepat sekali
 CAT,benda,3,"bahan pewarna (berupa barang cair, cairan yang kental, atau tepung)",Pewarna dinding rumah
 MEI,benda,3,magister ekonomi Islam,Bulan sebelum Juni
 HIU,benda,3,"ikan laut kelas Chondrichtyes, pemakan ikan dan hewan laut lain, berbentuk torpedo, bertul",Predator laut bersirip
-DAD,benda,3,(ditulis dengan titik bawah) huruf ke-15 abjad Arab,
+DAD,benda,3,(ditulis dengan titik bawah) huruf ke-15 abjad Arab,Salah satu huruf hijaiah
 SET,aksi,3,mengeset,Atur sebelum mulai
-JUN,benda,3,buyung atau tempayan kecil,
+JUN,benda,3,buyung atau tempayan kecil,Guci kecil tempat air
 JET,benda,3,pesawat terbang bermesin yang digerakkan oleh tenaga pancaran gas; pesawat pancar gas,Pesawat cepat bermesin
 BAN,benda,3,ikat pinggang; sabuk,Karet bundar kendaraan
 LOS,benda,3,rumah besar panjang (pasar dan sebagainya); bangsal,Kios panjang di pasar
 SOK,benda,3,kaus kaki panjang,Bergaya padahal tidak
 BEL,benda,3,genta,Bunyi tanda kedatangan tamu
-KEN,benda,3,kepalan; jurus (dalam olahraga kempo),
-LEO,benda,3,singa,
+KEN,benda,3,kepalan; jurus (dalam olahraga kempo),Kepalan tangan bela diri
+LEO,benda,3,singa,Zodiak berlambang singa
 TUR,benda,3,perjalanan untuk bertamasya dan sebagainya,Perjalanan wisata berpemandu
 BIS,benda,3,pembuluh,Kendaraan umum roda banyak
 SEN,benda,3,"satuan uang senilai 1/100 dari nilai satuannya, seperti rupiah, dolar Amerika, dolar Austr",Pecahan kecil mata uang
@@ -68,352 +68,339 @@ SAH,aksi,3,tidak batal (tentang keagamaan),Berlaku secara resmi
 JUS,benda,3,sari buah,Minuman sari buah blender
 POP,benda,3,boneka,Genre musik masa kini
 UJI,benda,3,"percobaan untuk mengetahui mutu sesuatu (ketulenan, kecakapan, ketahanan, dan sebagainya)",Percobaan cek kualitas
-GUN,benda,3,serit pada perkakas tenun untuk memisahkan benang,
-CAO,benda,3,ikan kecil yang diawetkan dalam botol dengan menggunakan garam dan pengawet kemudian diber,
+GUN,benda,3,serit pada perkakas tenun untuk memisahkan benang,Pemisah benang pada tenun
+CAO,benda,3,ikan kecil yang diawetkan dalam botol dengan menggunakan garam dan pengawet kemudian diber,Ikan asin dalam botol
 DOA,benda,3,"permohonan (harapan, permintaan, pujian) kepada Tuhan",Permohonan kepada Tuhan
 RAS,benda,3,tiruan bunyi daun kering bergesekan,Klasifikasi berdasar ciri fisik
 BAK,benda,3,buang air kecil,Wadah besar penampung air
-CUT,benda,3,gelar bangsawan putri (di Aceh),
-TAN,benda,3,sutan,
+CUT,benda,3,gelar bangsawan putri (di Aceh),Gelar bangsawan wanita Aceh
+TAN,benda,3,sutan,Gelar adat Minangkabau
 ERA,benda,3,kurun waktu dalam sejarah; sejumlah tahun dalam jangka waktu antara beberapa peristiwa pen,Masa atau jaman
-DAE,benda,3,gelar untuk bangsawan perempuan suku Bima yang sudah menikah,
-TOP,benda,3,baju kebaya; baju top,
-JAS,benda,3,"baju resmi (potongan Eropa) berlengan panjang, berkancing satu sampai tiga, dipakai di lua",
-ROB,aksi,3,pasang besar yang menyebabkan luapan air laut,
-MAK,benda,3,mamak,
-RAM,benda,3,jendela,
+DAE,benda,3,gelar untuk bangsawan perempuan suku Bima yang sudah menikah,Gelar wanita bangsawan Bima
+TOP,benda,3,baju kebaya; baju top,Terbaik dan paling unggul
+JAS,benda,3,"baju resmi (potongan Eropa) berlengan panjang, berkancing satu sampai tiga, dipakai di lua",Setelan resmi model Eropa
+ROB,aksi,3,pasang besar yang menyebabkan luapan air laut,Banjir dari pasang laut
+MAK,benda,3,mamak,Sebutan akrab bagi ibu
+RAM,benda,3,jendela,Kerangka daun jendela
 REM,benda,3,penghambat; penghalang; pengekang,Penghimpit besi tipis
-BAB,benda,3,hal; masalah,
-RAK,benda,3,tiruan bunyi pena digoreskan,
-TON,benda,3,seribu rupiah,
-DEK,benda,3,geladak kapal,
-BAD,benda,3,angin,
-PON,benda,3,satuan ukuran berat 500 gr,
+BAB,benda,3,hal; masalah,Bagian dalam buku
+RAK,benda,3,tiruan bunyi pena digoreskan,Tempat menyimpan buku
+TON,benda,3,seribu rupiah,Satuan berat seribu kilogram
+DEK,benda,3,geladak kapal,Lantai atas kapal
+BAD,benda,3,angin,Udara yang berembus
+PON,benda,3,satuan ukuran berat 500 gr,Ukuran berat setengah kilogram
 GEN,benda,3,bagian kromosom yang menjadi lokasi sifat-sifat keturunan; faktor keturunan,Turun temurun
-HIS,benda,3,penguncupan (pengerutan) rahim pada waktu persalinan,
-GUS,benda,3,nama julukan atau nama panggilan untuk anak laki-laki,
-SON,benda,3,"bawang putih yang dipanen muda, yaitu pada umur 70 hari pascatanam",
+HIS,benda,3,penguncupan (pengerutan) rahim pada waktu persalinan,Kontraksi otot rahim
+GUS,benda,3,nama julukan atau nama panggilan untuk anak laki-laki,Panggilan putra kiai
+SON,benda,3,"bawang putih yang dipanen muda, yaitu pada umur 70 hari pascatanam",Bawang putih muda
 FLU,benda,3,penyakit menular pada saluran pernapasan yang disebabkan oleh virus; influenza; pilek,Penyakit
-DIL,benda,3,permainan yang menggunakan bola keras dan tongkat pemukul bola,
-AIN,benda,3,mata,
-PAN,benda,3,"alat (tempat) untuk memanggang (kue dan sebagainya), terbuat dari seng tebal (bekas kaleng",
-YUP,benda,3,pemukul dari batu untuk perang,
+DIL,benda,3,permainan yang menggunakan bola keras dan tongkat pemukul bola,Permainan pukul bola
+AIN,benda,3,mata,Indra penglihatan manusia
+PAN,benda,3,"alat (tempat) untuk memanggang (kue dan sebagainya), terbuat dari seng tebal (bekas kaleng",Wadah pemanggang kue
+YUP,benda,3,pemukul dari batu untuk perang,Pemukul batu untuk perang
 GOL,benda,3,gawang pada permainan bola,Bola masuk
-HAD,benda,3,batas; hingga,
-TIP,aksi,3,mengetip,
-NAN,benda,3,"roti pipih beragi yang terbuat dari tepung gandum, permukaannya ditaburi wijen atau jintan",
-HAS,benda,3,daging bagian pinggang atau lambung (sapi dan sebagainya),
-ANU,benda,3,"yang tidak disebutkan namanya (orang, benda, dan sebagainya)",
-WEI,benda,3,laktoserum,
+HAD,benda,3,batas; hingga,Batas paling akhir
+TIP,aksi,3,mengetip,Uang tambahan untuk pelayan
+NAN,benda,3,"roti pipih beragi yang terbuat dari tepung gandum, permukaannya ditaburi wijen atau jintan",Roti pipih khas India
+HAS,benda,3,daging bagian pinggang atau lambung (sapi dan sebagainya),Daging pinggang sapi
+ANU,benda,3,"yang tidak disebutkan namanya (orang, benda, dan sebagainya)",Sesuatu yang tak disebut
+WEI,benda,3,laktoserum,Cairan sisa dadih susu
 UFO,benda,3,"anomali yang muncul di langit yang tidak dapat diidentifikasi, sering dikaitkan dengan keb",Benda asing terbang
-ZAT,benda,3,wujud; hakikat (Allah),
-MAL,benda,3,dana,
-MAS,benda,3,emas,
-LAS,benda,3,penyambungan (besi dan sebagainya) dengan cara membakar,
-ROK,benda,3,gaun,
-WEB,benda,3,"sistem untuk mengakses, memanipulasi, dan mengunduh dokumen hipertaut yang terdapat dalam",
-WAN,benda,3,tuan,
-YEN,benda,3,mata uang Jepang,
-REL,benda,3,besi batang untuk landasan jalan kereta api (trem dan sebagainya),
+ZAT,benda,3,wujud; hakikat (Allah),Unsur pembentuk materi
+MAL,benda,3,dana,Pusat perbelanjaan besar
+MAS,benda,3,emas,Logam mulia berkilau
+LAS,benda,3,penyambungan (besi dan sebagainya) dengan cara membakar,Menyambung logam dengan api
+ROK,benda,3,gaun,Busana bawahan wanita
+WEB,benda,3,"sistem untuk mengakses, memanipulasi, dan mengunduh dokumen hipertaut yang terdapat dalam",Jaringan situs internet
+WAN,benda,3,tuan,Sebutan lelaki terhormat
+YEN,benda,3,mata uang Jepang,Mata uang negeri sakura
+REL,benda,3,besi batang untuk landasan jalan kereta api (trem dan sebagainya),Lintasan besi kereta api
 PRO,benda,3,profesional,Bukan level amatir
-SAL,benda,3,"ruang besar (di rumah sakit, asrama, dan sebagainya); bangsal",
+SAL,benda,3,"ruang besar (di rumah sakit, asrama, dan sebagainya); bangsal",Ruang rawat rumah sakit
 LES,benda,3,tali kekang; tali kendali,Belajar tambahan sepulang sekolah
-BUM,benda,3,pabean,
-LIN,benda,3,pita,
+BUM,benda,3,pabean,Kantor bea cukai
+LIN,benda,3,pita,Jalur atau trayek
 SKI,benda,3,papan panjang pipih dengan ujung agak melengkung yang digunakan sebagai sepatu untuk melun,Papan luncur di salju
 POT,benda,3,pispot,Wadah tanaman hias
-SIL,benda,3,surat keterangan menyimpan barang di sebuah gudang yang disewakan untuk umum dan sebagainy,
+SIL,benda,3,surat keterangan menyimpan barang di sebuah gudang yang disewakan untuk umum dan sebagainy,Surat tanda simpan gudang
 CAP,benda,3,merek,Stempel penanda resmi
-ELO,benda,3,"ukuran panjang, sama dengan 0,688 m",
+ELO,benda,3,"ukuran panjang, sama dengan 0,688 m",Satuan panjang kain lama
 LEM,benda,3,"barang cair atau liat, dipakai untuk merekatkan sesuatu pada barang lain; perekat",Cairan lengket rekat
 UAP,benda,3,gas yang terjadi dari cairan (air dan sebagainya) apabila dipanaskan; bentuk gas suatu zat,Gas dari air panas
-PAL,benda,3,faal,
+PAL,benda,3,faal,Tonggak penanda jarak
 BIT,benda,3,satuan kecepatan transfer data terkecil dalam sistem informasi,Angka nol atau satu
-BAM,benda,3,tiruan bunyi yang berat dan lembut pada gendang,
-TAO,benda,3,konsep metafisika yang berasal dari ujaran-ujaran Lao-Tzu yang berkembang menjadi ajaran a,
+BAM,benda,3,tiruan bunyi yang berat dan lembut pada gendang,Bunyi pukulan gendang
+TAO,benda,3,konsep metafisika yang berasal dari ujaran-ujaran Lao-Tzu yang berkembang menjadi ajaran a,Falsafah metafisika Tionghoa
 KIT,benda,3,wadah,Satu set peralatan
-CAL,benda,3,syal; selendang; mafela,
+CAL,benda,3,syal; selendang; mafela,Kain penghangat leher
 TOS,benda,3,undian dengan cara melemparkan uang logam dan sebagainya (seperti untuk menentukan kalah m,Tepuk telapak tangan
 BOR,benda,3,papan (dalam kelas dan sebagainya) untuk menulis; papan tulis,Alat pelubang dinding
 BON,benda,3,gabungan perkumpulan olahraga; perserikatan,Nota bukti pembayaran
 TOL,benda,3,pintu cukai; gerbang cukai,Jalan bebas hambatan
-SER,benda,3,deretan suksesi ekologi komunitas tumbuhan pada suatu habitat dari priser sampai klimaks,
-BAO,benda,3,duda (di Halmahera),
+SER,benda,3,deretan suksesi ekologi komunitas tumbuhan pada suatu habitat dari priser sampai klimaks,Urutan komunitas tumbuhan
+BAO,benda,3,duda (di Halmahera),Pria yang ditinggal istri
 FAN,benda,3,pengagum; penggemar,Pengikut setia idola
-ACE,benda,3,perempuan Tionghoa dewasa,
+ACE,benda,3,perempuan Tionghoa dewasa,Perempuan Tionghoa dewasa
 EGO,benda,3,aku; diri pribadi,Rasa mementingkan diri
 ISU,benda,3,masalah yang dikedepankan (untuk ditanggapi dan sebagainya),Topik lagi ramai dibicarakan
-ELU,aksi,3,longok,
-ARI,benda,3,hari,
-KOI,benda,3,kerabat dari pihak ibu dalam sistem perkawinan masyarakat Aceh,
-GAO,benda,3,sumber air panas,
-ABE,benda,3,abab,
-MEL,aksi,3,"memberitahukan; menyebutkan (nama, alamat, dan sebagainya); melaporkan diri",
+ELU,aksi,3,longok,Sebutan kamu ala Betawi
+ARI,benda,3,hari,Pergantian siang dan malam
+KOI,benda,3,kerabat dari pihak ibu dalam sistem perkawinan masyarakat Aceh,Ikan hias kolam berwarna
+GAO,benda,3,sumber air panas,Mata air panas alami
+ABE,benda,3,abab,Uap napas dari mulut
+MEL,aksi,3,"memberitahukan; menyebutkan (nama, alamat, dan sebagainya); melaporkan diri",Menyampaikan pemberitahuan resmi
 KOL,benda,3,kubis,Sayur bulat berlapis
 SOL,benda,3,telapak (alas) sepatu (sandal dan sebagainya),Alas bawah sepatu
-ALA,benda,3,"tanah yang tidak dikerjakan lagi, tetapi pemilik atau keturunannya masih mempunyai hak uta",
-AHA,benda,3,piring yang terbuat dari batok kelapa,
-UNI,benda,3,kakak perempuan,
+ALA,benda,3,"tanah yang tidak dikerjakan lagi, tetapi pemilik atau keturunannya masih mempunyai hak uta",Menurut gaya tertentu
+AHA,benda,3,piring yang terbuat dari batok kelapa,Seruan tanda mengerti
+UNI,benda,3,kakak perempuan,Sebutan kakak perempuan
 DAM,benda,3,dekameter,Bendungan penahan air
-TAR,benda,3,tiruan bunyi mencambuk,
+TAR,benda,3,tiruan bunyi mencambuk,Kue ulang tahun
 GIN,benda,3,mesin untuk memisahkan serat kapas dari bijinya,Mesin pemisah biji kapas
 LAP,benda,3,jarak sepanjang kolam renang,Kain pembersih permukaan
-CAM,aksi,3,memperhatikan; berminat,
+CAM,aksi,3,memperhatikan; berminat,Menaruh perhatian penuh
 BOT,benda,3,robot,Program otomatis komputer
-TUK,benda,3,mata air,
+TUK,benda,3,mata air,Sumber air alami
 DIK,benda,3,daftar isian kegiatan,Panggilan buat yang muda
-PIT,benda,3,sepeda,
-LAU,benda,3,sarung tradisional wanita Sumba,
-BAI,benda,3,pengantin baru laki-laki,
-YIN,benda,3,"kekuatan feminin, negatif, dan pasif dalam alam semesta",
-RUM,benda,3,lemak kentalan air susu; kepala susu,
-WOL,benda,3,"bulu binatang yang halus (seperti bulu domba) untuk bahan pakaian (baju hangat, jas, celan",
-ADU,benda,3,lomba,
-NON,benda,3,nona,
-AIB,benda,3,cela; noda; salah; keliru,
-BEA,benda,3,pajak; cukai,
-TIN,benda,3,kaleng; belek,
-RIM,benda,3,ikat pinggang dari kulit,
-NUH,benda,3,nabi dan rasul ketiga yang diutus Allah Swt.,
-NEK,benda,3,nenek,
-BRA,benda,3,kutang; beha,
+PIT,benda,3,sepeda,Kendaraan roda dua dikayuh
+LAU,benda,3,sarung tradisional wanita Sumba,Kain sarung khas Sumba
+BAI,benda,3,pengantin baru laki-laki,Pengantin baru pria
+YIN,benda,3,"kekuatan feminin, negatif, dan pasif dalam alam semesta",Kekuatan feminin dan pasif
+RUM,benda,3,lemak kentalan air susu; kepala susu,Lapisan lemak pada susu
+WOL,benda,3,"bulu binatang yang halus (seperti bulu domba) untuk bahan pakaian (baju hangat, jas, celan",Bulu domba untuk pakaian
+ADU,benda,3,lomba,Saling bertanding kekuatan
+NON,benda,3,nona,Panggilan untuk gadis
+AIB,benda,3,cela; noda; salah; keliru,Noda yang memalukan
+BEA,benda,3,pajak; cukai,Pungutan pajak barang
+TIN,benda,3,kaleng; belek,Wadah logam untuk makanan
+RIM,benda,3,ikat pinggang dari kulit,Satuan jumlah kertas
+NEK,benda,3,nenek,Ibu dari orang tua
+BRA,benda,3,kutang; beha,Pakaian dalam wanita
 ATM,benda,3,atmosfer,Kotak pemberi uang
-RAP,benda,3,tiruan bunyi kayu bergesek dengan kayu dan sebagainya,
-MAD,benda,3,tanda bunyi panjang dalam bahasa Arab (bunyi pendek menjadi bunyi panjang),
-KEK,benda,3,kakek,
-KAS,benda,3,keluar masuknya uang,
-DOR,benda,3,tiruan bunyi letusan senapan,
-IRA,benda,3,garis atau urat kayu,
-TUM,aksi,3,dibungkus,
-KAP,benda,3,tali di kapal,
-JAB,benda,3,"jenis pukulan dalam tinju, lurus, dan pendek",
-DOL,benda,3,gendang,
-PUB,benda,3,tempat hiburan khusus untuk mendengarkan musik sambil minum-minum yang dibuka pada waktu m,
-KUN,benda,3,kata yang diucapkan Allah Swt. ketika menciptakan sesuatu yang Dia kehendaki,
-DAI,benda,3,simpul mati di kail atau jangkar,
-POD,benda,3,"kontainer berbentuk panjang dan sempit, digantung di bawah pesawat udara, digunakan untuk",
-BAH,benda,3,"air yang meluap, mengalir deras, dan menggenangi sawah (perkampungan, kota, dan sebagainya",
+RAP,benda,3,tiruan bunyi kayu bergesek dengan kayu dan sebagainya,Gaya musik berima cepat
+MAD,benda,3,tanda bunyi panjang dalam bahasa Arab (bunyi pendek menjadi bunyi panjang),Panjang bacaan huruf Arab
+KEK,benda,3,kakek,Ayah dari orang tua
+KAS,benda,3,keluar masuknya uang,Simpanan uang tunai
+DOR,benda,3,tiruan bunyi letusan senapan,Bunyi tembakan pistol
+IRA,benda,3,garis atau urat kayu,Garis serat pada kayu
+TUM,aksi,3,dibungkus,Makanan dibungkus daun pisang
+KAP,benda,3,tali di kapal,Tudung pelindung lampu
+JAB,benda,3,"jenis pukulan dalam tinju, lurus, dan pendek",Pukulan lurus tinju
+DOL,benda,3,gendang,Alat musik pukul tradisional
+PUB,benda,3,tempat hiburan khusus untuk mendengarkan musik sambil minum-minum yang dibuka pada waktu m,Tempat hiburan minum malam
+KUN,benda,3,kata yang diucapkan Allah Swt. ketika menciptakan sesuatu yang Dia kehendaki,Sabda Tuhan saat mencipta
+DAI,benda,3,simpul mati di kail atau jangkar,Juru dakwah Islam
+POD,benda,3,"kontainer berbentuk panjang dan sempit, digantung di bawah pesawat udara, digunakan untuk",Wadah panjang bawah pesawat
+BAH,benda,3,"air yang meluap, mengalir deras, dan menggenangi sawah (perkampungan, kota, dan sebagainya",Luapan air deras
 KTP,benda,3,kartu tanda penduduk,Tipis dan berwajah
-CIK,benda,3,encik,
-SAT,benda,3,takaran beras dan sebagainya,
-CAR,benda,3,daerah kekuasaan yang harus dipertahankan sebagai bentuk harga diri,
-HOP,benda,3,"kepala, misalnya kepala regu",
-POM,benda,3,bahasa yang dituturkan suku Pom,
-DOT,benda,3,alat dari karet untuk menyusui bayi; puting karet penutup botol susu bayi,
-LOT,benda,3,undian; lotre,
-LAM,benda,3,nama huruf ke-23 dalam abjad Arab,
-SIS,benda,3,tiruan bunyi desis (tentang angin berembus dan sebagainya),
-WIG,benda,3,"rambut tiruan (rambut buatan, rambut palsu) sebagai penutup kepala",
-MAM,benda,3,mama; mami,
-ONS,benda,3,satuan ukuran berat (massa) sama dengan seratus gram,
-OLI,benda,3,"minyak pelumas (motor, mesin, dan sebagainya)",
-AKA,benda,3,ayun kanan,
-CUP,benda,3,tiruan bunyi barang yang dicelupkan dan sebagainya,
-IGA,benda,3,tulang yang pipih dan melengkung di bagian dada yang bersambung dengan tulang dada dan tul,
-PEN,benda,3,"penyangga dari logam (tembaga dan sebagainya) untuk memperkuat tulang yang retak, patah, r",
-ZEN,benda,3,"aliran agama Buddha di Asia Timur, terutama berkembang di Jepang dan berpengaruh besar ter",
-DUM,benda,3,sesuatu yang sudah tidak dipakai lagi; bekas,
-AMA,benda,3,panggilan kepada orang tua laki-laki,
-TIK,benda,3,mesin tik,
-DAO,benda,3,tombak yang digunakan untuk menangkap buaya,
-HUB,benda,3,perangkat yang memungkinkan jaringan eternet menggunakan tata letak fisik mirip dengan jar,
-LAO,benda,3,bahasa yang dituturkan di Laos,
-NAS,benda,3,teks,
-LAI,benda,3,helai,
-TER,benda,3,barang cair yang hitam warnanya untuk mengecat; aspal,
-LIL,benda,3,lukah (bubu) yang berpintu di samping,
-WAI,benda,3,sungai; kali,
-VAS,benda,3,pembuluh dalam tubuh,
-AKI,benda,3,ayun kiri,
-TAP,aksi,3,tuang,
+CIK,benda,3,encik,Sapaan hormat Melayu
+SAT,benda,3,takaran beras dan sebagainya,Ukuran takaran beras
+CAR,benda,3,daerah kekuasaan yang harus dipertahankan sebagai bentuk harga diri,Daerah kekuasaan dipertahankan
+HOP,benda,3,"kepala, misalnya kepala regu",Pemimpin sebuah regu
+DOT,benda,3,alat dari karet untuk menyusui bayi; puting karet penutup botol susu bayi,Karet pengganti puting susu
+LOT,benda,3,undian; lotre,Undian penentu nasib
+LAM,benda,3,nama huruf ke-23 dalam abjad Arab,Huruf dalam abjad Arab
+SIS,benda,3,tiruan bunyi desis (tentang angin berembus dan sebagainya),Tiruan bunyi angin berembus
+WIG,benda,3,"rambut tiruan (rambut buatan, rambut palsu) sebagai penutup kepala",Rambut palsu penutup kepala
+MAM,benda,3,mama; mami,Panggilan untuk seorang ibu
+ONS,benda,3,satuan ukuran berat (massa) sama dengan seratus gram,Satuan berat seratus gram
+OLI,benda,3,"minyak pelumas (motor, mesin, dan sebagainya)",Pelumas mesin kendaraan bermotor
+AKA,benda,3,ayun kanan,Ayunan ke arah kanan
+CUP,benda,3,tiruan bunyi barang yang dicelupkan dan sebagainya,Tiruan bunyi benda dicelup
+IGA,benda,3,tulang yang pipih dan melengkung di bagian dada yang bersambung dengan tulang dada dan tul,Tulang rusuk pada dada
+PEN,benda,3,"penyangga dari logam (tembaga dan sebagainya) untuk memperkuat tulang yang retak, patah, r",Logam penguat tulang patah
+ZEN,benda,3,"aliran agama Buddha di Asia Timur, terutama berkembang di Jepang dan berpengaruh besar ter",Aliran meditasi agama Buddha
+DUM,benda,3,sesuatu yang sudah tidak dipakai lagi; bekas,Barang bekas tak terpakai
+AMA,benda,3,panggilan kepada orang tua laki-laki,Panggilan untuk seorang ayah
+TIK,benda,3,mesin tik,Mesin tulis manual kuno
+DAO,benda,3,tombak yang digunakan untuk menangkap buaya,Tombak penangkap buaya
+HUB,benda,3,perangkat yang memungkinkan jaringan eternet menggunakan tata letak fisik mirip dengan jar,Perangkat penghubung jaringan komputer
+NAS,benda,3,teks,Petikan ayat kitab suci
+LAI,benda,3,helai,Satuan untuk lembaran kertas
+TER,benda,3,barang cair yang hitam warnanya untuk mengecat; aspal,Cairan hitam pelapis jalan
+LIL,benda,3,lukah (bubu) yang berpintu di samping,Perangkap ikan berpintu samping
+WAI,benda,3,sungai; kali,Aliran air menuju laut
+VAS,benda,3,pembuluh dalam tubuh,Wadah untuk bunga hias
+AKI,benda,3,ayun kiri,Baterai kendaraan bermotor
+TAP,aksi,3,tuang,Menuang ke dalam wadah
 RSJ,benda,3,rumah sakit jiwa,Perkumpulan jiwa yang hilang
-PEL,benda,3,(helai) kertas,
-JIP,benda,3,"mobil jenis jip, tetapi lebih besar dan mewah",
-FAI,benda,3,harta pampasan perang yang diperoleh tanpa melalui pertempuran,
-GIM,benda,3,permainan,
-KIP,benda,3,mata uang Laos,
-ADI,benda,3,penutup atau pengalas lantai yang terbuat dari kain (seperti tikar),
-SUH,benda,3,panas badan; suhu,
-RAT,benda,3,alam; jagat; dunia,
-HUN,benda,3,"satuan ukuran berat, sama dengan 1/100 tahil atau 0,378 g",
-SAI,aksi,3,berjalan dan berlari-lari kecil pulang pergi tujuh kali dari Safa ke Marwa pada waktu mela,
-WOI,benda,3,bahasa yang dituturkan suku Woi,
-BAS,benda,3,kepala; pembesar,
-BAT,benda,3,efa,
-NET,benda,3,rajut untuk pelindung rambut (sanggul dan sebagainya),
-AUR,aksi,3,tabur,
-GEL,benda,3,filter berwarna yang ketika ditempatkan di depan lampu akan memberi warna pada cahaya,
-MOK,benda,3,piala dari email,
-GUK,benda,3,tiruan bunyi anjing menggonggong,
-LIT,benda,3,alat yang terbuat dari daun rotan muda yang dikeringkan dan digunakan untuk mengikat tangk,
-SAD,benda,3,nama huruf ke-14 abjad Arab,
-AVE,benda,3,mata pisau,
-ETA,benda,3,nama huruf ke-7 abjad Yunani,
-DIN,benda,3,agama,
-PAH,benda,3,papah,
-APE,benda,3,"kue apam kecil yang dibuat dari adonan tepung terigu, gula, dan telur, rasanya manis dan g",
-SOM,benda,3,satuan mata uang Kirgizstan,
-BEO,benda,3,"burung berbulu hitam berkilau yang dapat dilatih menirukan bunyi (kata-kata, nyanyian, dan",
-DAR,benda,3,tempat,
-BET,benda,3,pemukul bola dalam olahraga tenis meja,
-SAR,benda,3,tiruan bunyi angin kencang dan sebagainya,
-MAT,benda,3,irama,
-MOB,benda,3,sekelompok orang (tanpa dukungan masyarakat) yang dengan marah menyerang dan berusaha melu,
-YAK,benda,3,"lembu yang hidup di Pegunungan Himalaya, bulunya sangat tebal dan panjang, mempunyai tandu",
-OHM,benda,3,satuan hambatan listrik sebagai tahanan antara dua ujung yang dilalui arus listrik jika pa,
-IDA,benda,3,gelar golongan Brahmana,
-AGE,benda,3,"masakan khas Brebes mirip rendang, dibuat dari daging sapi atau kerbau, rasanya manis dan",
-EON,benda,3,kesatuan jangka waktu sepanjang satu miliar (109) tahun,
-MOR,benda,3,"suku bangsa yang mendiami Kepulauan Mor di Teluk Cenderawasih, Kabupaten Paniai, Provinsi",
-UBI,benda,3,"umbi atau akar dari berbagai macam tumbuhan yang biasanya dapat dimakan, seperti -- jalar,",
-JOK,benda,3,"tempat duduk yang berlapis kasur (karet busa, pegas, dan sebagainya) dalam mobil, becak, d",
-SUM,benda,3,kapal Siam,
-FON,benda,3,bunyi ujar yang dihasilkan oleh alat ucap; bunyi bahasa,
-LEI,benda,3,batu tulis,
-COP,benda,3,pukulan yang menyebabkan jatuhnya bola di lapangan depan dekat net (dalam permainan bulu t,
-DUO,benda,3,"kolaborasi atau kemitraan antara dua orang (dalam musik, olahraga, dan sebagainya)",
-KIA,aksi,3,jahit (dengan tangan),
-LUN,benda,3,Lundayeh,
-PAR,benda,3,jumlah pukulan dan gol yang dinilai terbaik dalam permainan golf,
-PET,benda,3,topi (songkok) yang bagian depannya memakai tutup,
-GAN,benda,3,juragan,
-ARA,benda,3,panggilan sayang kepada anak gadis,
-AGO,benda,3,"tempat untuk membawa ikan, terbuat dari bambu yang dianyam, bentuknya bulat dan bagian b",
-KAM,benda,3,sisir kuda-kuda,
-NIA,benda,3,kerah (leher) baju,
-ION,benda,3,"partikel (atom atau molekul) yang bermuatan listrik, yang dihasilkan atau terbentuk dengan",
-RAI,benda,3,gembala,
-SOP,benda,3,sup,
-GAM,benda,3,tiruan bunyi gemuruh seperti meriam dan sebagainya; degam,
-ADE,benda,3,pegangan kantong atau noken,
-GAH,benda,3,kemasyhuran dan kemuliaan,
-GUL,benda,3,bunga mawar,
-KUI,benda,3,bahasa yang dituturkan oleh suku Kui,
-LEK,benda,3,satuan mata uang Albania,
+PEL,benda,3,(helai) kertas,Alat pembersih lantai basah
+JIP,benda,3,"mobil jenis jip, tetapi lebih besar dan mewah",Mobil tangguh segala medan
+FAI,benda,3,harta pampasan perang yang diperoleh tanpa melalui pertempuran,Harta rampasan perang
+GIM,benda,3,permainan,Hiburan interaktif di layar
+KIP,benda,3,mata uang Laos,Mata uang negara Laos
+ADI,benda,3,penutup atau pengalas lantai yang terbuat dari kain (seperti tikar),Alas lantai dari kain
+SUH,benda,3,panas badan; suhu,Derajat panas tubuh
+RAT,benda,3,alam; jagat; dunia,Jagat alam semesta
+HUN,benda,3,"satuan ukuran berat, sama dengan 1/100 tahil atau 0,378 g",Satuan berat sangat kecil
+SAI,aksi,3,berjalan dan berlari-lari kecil pulang pergi tujuh kali dari Safa ke Marwa pada waktu mela,Ritual lari saat haji
+BAS,benda,3,kepala; pembesar,Atasan di tempat kerja
+BAT,benda,3,efa,Satuan takaran zat cair
+NET,benda,3,rajut untuk pelindung rambut (sanggul dan sebagainya),Jaring pembatas lapangan voli
+AUR,aksi,3,tabur,Sejenis pohon bambu
+GEL,benda,3,filter berwarna yang ketika ditempatkan di depan lampu akan memberi warna pada cahaya,Zat kental penata rambut
+MOK,benda,3,piala dari email,Cangkir besar untuk minum
+GUK,benda,3,tiruan bunyi anjing menggonggong,Bunyi anjing menyalak
+LIT,benda,3,alat yang terbuat dari daun rotan muda yang dikeringkan dan digunakan untuk mengikat tangk,Pengikat dari daun rotan
+SAD,benda,3,nama huruf ke-14 abjad Arab,Huruf dalam abjad Arab
+AVE,benda,3,mata pisau,Bagian tajam pada pisau
+ETA,benda,3,nama huruf ke-7 abjad Yunani,Huruf dalam abjad Yunani
+DIN,benda,3,agama,Kepercayaan kepada Tuhan
+PAH,benda,3,papah,Menopang orang yang berjalan
+APE,benda,3,"kue apam kecil yang dibuat dari adonan tepung terigu, gula, dan telur, rasanya manis dan g",Kue manis dari terigu
+SOM,benda,3,satuan mata uang Kirgizstan,Mata uang Kirgizstan
+BEO,benda,3,"burung berbulu hitam berkilau yang dapat dilatih menirukan bunyi (kata-kata, nyanyian, dan",Burung hitam peniru suara
+DAR,benda,3,tempat,Tempat atau negeri
+BET,benda,3,pemukul bola dalam olahraga tenis meja,Pemukul dalam permainan pingpong
+SAR,benda,3,tiruan bunyi angin kencang dan sebagainya,Bunyi angin bertiup kencang
+MAT,benda,3,irama,Akhir permainan catur
+MOB,benda,3,sekelompok orang (tanpa dukungan masyarakat) yang dengan marah menyerang dan berusaha melu,Gerombolan orang yang mengamuk
+YAK,benda,3,"lembu yang hidup di Pegunungan Himalaya, bulunya sangat tebal dan panjang, mempunyai tandu",Lembu berbulu tebal Himalaya
+OHM,benda,3,satuan hambatan listrik sebagai tahanan antara dua ujung yang dilalui arus listrik jika pa,Satuan hambatan aliran listrik
+IDA,benda,3,gelar golongan Brahmana,Gelar kasta Brahmana
+AGE,benda,3,"masakan khas Brebes mirip rendang, dibuat dari daging sapi atau kerbau, rasanya manis dan",Masakan khas mirip rendang
+EON,benda,3,kesatuan jangka waktu sepanjang satu miliar (109) tahun,Kurun waktu sangat panjang
+UBI,benda,3,"umbi atau akar dari berbagai macam tumbuhan yang biasanya dapat dimakan, seperti -- jalar,",Umbi tanaman yang dimakan
+JOK,benda,3,"tempat duduk yang berlapis kasur (karet busa, pegas, dan sebagainya) dalam mobil, becak, d",Tempat duduk empuk kendaraan
+SUM,benda,3,kapal Siam,Kapal dari negeri Siam
+FON,benda,3,bunyi ujar yang dihasilkan oleh alat ucap; bunyi bahasa,Satuan bunyi ujaran
+LEI,benda,3,batu tulis,Papan tulis dari batu
+COP,benda,3,pukulan yang menyebabkan jatuhnya bola di lapangan depan dekat net (dalam permainan bulu t,Pukulan halus dekat net
+DUO,benda,3,"kolaborasi atau kemitraan antara dua orang (dalam musik, olahraga, dan sebagainya)",Pasangan berjumlah dua orang
+KIA,aksi,3,jahit (dengan tangan),Menjahit memakai tangan
+PAR,benda,3,jumlah pukulan dan gol yang dinilai terbaik dalam permainan golf,Jumlah pukulan baku golf
+PET,benda,3,topi (songkok) yang bagian depannya memakai tutup,Topi dengan tutup depan
+GAN,benda,3,juragan,Sapaan untuk majikan
+ARA,benda,3,panggilan sayang kepada anak gadis,Sapaan sayang untuk gadis
+AGO,benda,3,"tempat untuk membawa ikan, terbuat dari bambu yang dianyam, bentuknya bulat dan bagian b",Keranjang bambu untuk ikan
+KAM,benda,3,sisir kuda-kuda,Sisir pada alat tenun
+NIA,benda,3,kerah (leher) baju,Bagian leher pada baju
+ION,benda,3,"partikel (atom atau molekul) yang bermuatan listrik, yang dihasilkan atau terbentuk dengan",Atom yang bermuatan listrik
+RAI,benda,3,gembala,Penggembala hewan ternak
+SOP,benda,3,sup,Masakan berkuah isi sayuran
+GAM,benda,3,tiruan bunyi gemuruh seperti meriam dan sebagainya; degam,Bunyi dentuman seperti meriam
+ADE,benda,3,pegangan kantong atau noken,Tali pegangan tas
+GAH,benda,3,kemasyhuran dan kemuliaan,Ketenaran dan kemuliaan
+GUL,benda,3,bunga mawar,Bunga lambang cinta
+LEK,benda,3,satuan mata uang Albania,Mata uang Albania
 SWT,benda,3,"ungkapan yang artinya 'Mahasuci dan Mahatinggi Allah', biasanya diucapkan sesudah menyebut",Allah
-EJA,aksi,3,lafal huruf satu demi satu,
+EJA,aksi,3,lafal huruf satu demi satu,Menyebut huruf satu-satu
 USG,benda,3,ultrasonografi,Penerawang awal kehidupan
-JEM,benda,3,selai; jeli,
-URI,benda,3,organ tubuh yang menghubungkan badan ibu dengan bayi di dalam rahim; ari-ari; tembuni; pla,
-AKE,benda,3,ukiran yang melambangkan persamaan cita-cita dan keyakinan pada bingkai pintu dan daun jen,
-AKO,benda,3,"kata sapaan kepada laki-laki keturunan Cina dalam masyarakat Flores Timur, Nusa Tenggara T",
-CAS,aksi,3,mengisi daya listrik,
-MUG,benda,3,"gelas atau wadah air minum yang memiliki gagang, berukuran lebih besar daripada cangkir",
+JEM,benda,3,selai; jeli,Olesan manis pada roti
+URI,benda,3,organ tubuh yang menghubungkan badan ibu dengan bayi di dalam rahim; ari-ari; tembuni; pla,Penghubung ibu dan janin
+AKE,benda,3,ukiran yang melambangkan persamaan cita-cita dan keyakinan pada bingkai pintu dan daun jen,Ukiran pada bingkai pintu
+AKO,benda,3,"kata sapaan kepada laki-laki keturunan Cina dalam masyarakat Flores Timur, Nusa Tenggara T",Sapaan lelaki keturunan Tionghoa
+CAS,aksi,3,mengisi daya listrik,Isi ulang baterai ponsel
+MUG,benda,3,"gelas atau wadah air minum yang memiliki gagang, berukuran lebih besar daripada cangkir",Gelas besar bergagang
 PNS,benda,3,pegawai negeri sipil,Budak negara
-KOS,benda,3,indekos,
-GAP,benda,3,celah,
-ASI,benda,3,perhatian,
-KOM,benda,3,baskom,
-MOL,benda,3,aksidental yang ditempatkan sebelum sebuah not yang menurunkannya setengah nada,
-COR,aksi,3,tuang,
-UNA,benda,3,bahasa yang dituturkan oleh suku Una,
-ISA,benda,3,"nabi dan rasul kedua puluh empat yang diutus Allah Swt. dengan membawa kitab Injil, putra",
-POK,benda,3,"jenis kayu yang ulet, mengeluarkan lendir jika kena air, digunakan sebagai bantalan poros",
-ROL,benda,3,peranan,
-DIM,benda,3,"ukuran panjang 1/12 kaki; 2,54 ml; inci",
-POL,benda,3,penuh,
-PEI,aksi,3,cara bermain kartu dengan menggunakan kartu ceki,
-POO,benda,3,minyak yang dibuat dari pohon merdinah (Mentha merdinah) dan pohon poko (Mentha orvensib),
-MAG,benda,3,lambung,
-LEV,benda,3,mata uang Bulgaria,
-ABA,benda,3,ayah; bapak,
-BUK,aksi,3,pesan,
-HUD,benda,3,surah ke-11 dalam Al-Qur'an,
-HAP,benda,3,lempeng timah tipis bekas tempat candu,
-BEK,benda,3,kepala kampung (pada zaman penjajahan Belanda),
-KOH,benda,3,engkoh,
-GUM,benda,3,tiruan bunyi meriam,
-DOI,benda,3,uang,
-DOU,benda,3,"suku bangsa yang mendiami daerah aliran sungai-sungai di Kabupaten Paniai, Provinsi Papua",
-BUN,benda,3,bunda,
-ALU,benda,3,alat untuk menumbuk padi dan sebagainya yang dibuat dari kayu; antan,
-LIK,benda,3,sebab yang dicari-cari; dalih,
-AGU,benda,3,sebutan untuk orang gunung atau orang yang tinggal di pedalaman pulau Alor,
-ROS,benda,3,mawar1,
-KAD,benda,3,kartu,
-BOL,benda,3,ujung usus pada pelepasan (dubur),
+KOS,benda,3,indekos,Kamar sewa bulanan
+GAP,benda,3,celah,Sela sempit di antara
+ASI,benda,3,perhatian,Rasa peduli dan minat
+KOM,benda,3,baskom,Wadah besar tempat air
+MOL,benda,3,aksidental yang ditempatkan sebelum sebuah not yang menurunkannya setengah nada,Tanda penurun setengah nada
+COR,aksi,3,tuang,Menuang adukan semen
+POK,benda,3,"jenis kayu yang ulet, mengeluarkan lendir jika kena air, digunakan sebagai bantalan poros",Jenis kayu untuk bantalan
+ROL,benda,3,peranan,Peran dalam sandiwara
+DIM,benda,3,"ukuran panjang 1/12 kaki; 2,54 ml; inci",Satuan panjang setara inci
+POL,benda,3,penuh,Sudah terisi seluruhnya
+PEI,aksi,3,cara bermain kartu dengan menggunakan kartu ceki,Permainan dengan kartu ceki
+POO,benda,3,minyak yang dibuat dari pohon merdinah (Mentha merdinah) dan pohon poko (Mentha orvensib),Minyak dari pohon mint
+MAG,benda,3,lambung,Organ pencerna makanan
+LEV,benda,3,mata uang Bulgaria,Mata uang Bulgaria
+ABA,benda,3,ayah; bapak,Panggilan kepada orang tua lelaki
+BUK,aksi,3,pesan,Memesan tempat lebih dulu
+HAP,benda,3,lempeng timah tipis bekas tempat candu,Lempeng timah tempat candu
+BEK,benda,3,kepala kampung (pada zaman penjajahan Belanda),Pemain belakang sepak bola
+KOH,benda,3,engkoh,Panggilan kakak lelaki Tionghoa
+GUM,benda,3,tiruan bunyi meriam,Tiruan bunyi ledakan meriam
+DOI,benda,3,uang,Istilah gaul untuk uang
+BUN,benda,3,bunda,Sebutan mesra seorang ibu
+ALU,benda,3,alat untuk menumbuk padi dan sebagainya yang dibuat dari kayu; antan,Penumbuk padi dari kayu
+LIK,benda,3,sebab yang dicari-cari; dalih,Alasan pura-pura untuk mengelak
+AGU,benda,3,sebutan untuk orang gunung atau orang yang tinggal di pedalaman pulau Alor,Sapaan penghuni pedalaman gunung
+ROS,benda,3,mawar1,Bunga tanda kasih sayang
+KAD,benda,3,kartu,Lembar identitas atau ucapan
+BOL,benda,3,ujung usus pada pelepasan (dubur),Ujung usus dekat dubur
 BBM,benda,3,bahan bakar minyak,Minuman mahkluk keras
-ANI,benda,3,pemidangan dari kayu tempat memasang lungsin (pada perkakas tenun); anian,
-JIB,benda,3,layar berbentuk segitiga yang dipasang pada tiang terdepan,
-COB,aksi,3,menggerak-gerakkan badan ke atas dan ke bawah (pada waktu berjalan cepat),
+ANI,benda,3,pemidangan dari kayu tempat memasang lungsin (pada perkakas tenun); anian,Perkakas pemasang benang tenun
+JIB,benda,3,layar berbentuk segitiga yang dipasang pada tiang terdepan,Layar segitiga di haluan
+COB,aksi,3,menggerak-gerakkan badan ke atas dan ke bawah (pada waktu berjalan cepat),Gerak badan naik turun
 KUA,benda,3,Kantor Urusan Agama (kantor yang melaksanakan sebagian tugas kantor Kementerian Agama Indo,Tempat bilang SAH
-CUE,benda,3,pindang,
-LAD,aksi,3,keluar dari desa karena tidak mematuhi ketentuan adat yang berlaku di desa itu,
-MUR,benda,3,"damar yang harum baunya, dipakai untuk dupa dan sebagainya",
-GAR,benda,3,tiruan bunyi seperti guruh dan sebagainya,
-LUK,benda,3,keluk (pada keris),
-ITO,benda,3,panggilan bagi saudara laki-laki yang belum berumah tangga,
-MOI,benda,3,Mekwai,
-ZAI,benda,3,nama huruf ke-11 abjad Arab,
-KHA,benda,3,nama huruf ke-7 abjad Arab,
-BID,benda,3,"tawaran harga atau membeli sesuatu pada harga tertentu, khususnya pada penjualan lelang",
-ASU,benda,3,anjing,
-VAK,benda,3,mata pelajaran; mata kuliah,
-AIS,benda,3,puting susu babi,
-MIM,benda,3,nama huruf ke-24 abjad Arab,
-BOG,benda,3,rawa gambut lumut,
-JAL,benda,3,jaringan area luas,
-ATE,benda,3,daun sagu yang dijahit untuk dijadikan atap,
-KOA,benda,3,permainan kartu ceki,
-SIF,benda,3,"masuk atau bekerja secara bergiliran dalam pabrik dan sebagainya, baik masuk pagi, siang m",
-CIP,benda,3,tendangan atau tembakan pendek yang melengkung,
-AMI,benda,3,saudara laki-laki ayah,
-BOA,benda,3,"syal atau selendang panjang yang terbuat dari benang halus, bulu binatang, atau kain lembu",
-INA,benda,3,inang; emak; ibu,
-MER,benda,3,satuan monomer,
-GAI,benda,3,giuk,
-PEK,benda,3,empek,
-LIS,benda,3,daftar (nama dan sebagainya),
-UDA,benda,3,kakak (laki-laki); abang,
-NUR,benda,3,cahaya; sinar,
-ABI,benda,3,bapak; ayah,
-RAU,benda,3,sengkuang,
-CUK,benda,3,jentik-jentik,
-TUS,benda,3,tiruan bunyi senapan meletus; detus,
-TAL,benda,3,daun tal,
-KOP,benda,3,judul,
-BAL,benda,3,bola,
-TEM,benda,3,tempo; waktu,
-KIR,benda,3,pemeriksaan (misalnya pemeriksaan kesehatan atau pemeriksaan kendaraan),
-OPA,benda,3,kakek,
-UME,benda,3,keluarga inti dalam sistem kekerabatan suku Dawan di Kupang,
-GIR,benda,3,"bulatan logam pipih yang bergerigi tempat rantai berpaut untuk memutar roda (pada sepeda,",
-APO,benda,3,perbukitan yang atasnya datar yang dapat dimanfaatkan sebagai wilayah hunian dan perladang,
-AMO,benda,3,"tungau berwarna putih, berjalan cepat, hidup di sekam padi",
-SUS,benda,3,kata sapaan kepada wanita muda,
-OTO,benda,3,kendaraan (kereta) yang dijalankan dengan motor; mobil; otomobil,
-ATA,benda,3,golongan hamba sahaya pada suku Helong di Kupang,
-OPO,benda,3,nenek moyang,
-ZAN,benda,3,syak; curiga; waham,
-PES,benda,3,"penyakit menular yang disebabkan oleh basil pes, ditularkan oleh kutu-kutu tikus (Xenopsyl",
-WET,benda,3,undang-undang; hukum,
-PIS,aksi,3,pipis2,
-COK,benda,3,"kue sagu, dimakan dengan sayuran atau daging",
-DUS,benda,3,kotak dari kertas tebal (karton); dos; kardus,
-CUI,benda,3,pembusukan pada kuku kaki,
-AMU,benda,3,"kutu berukuran sangat kecil, berwarna transparan atau putih, merupakan ektoparasit pada un",
-MOP,benda,3,lelucon,
-BUI,benda,3,penjara,
-YAI,benda,3,kiai,
-HEM,benda,3,kemeja,
-EMU,benda,3,kantong air yang terdapat dalam sarang lebah,
-UMA,benda,3,rumah adat di Mentawai,
-KEP,benda,3,jambul,
-KOR,benda,3,paduan suara; nyanyian bersama,
-ETI,benda,3,harta warisan orang tua yang belum dibagikan kepada anak-anaknya,
-NOK,benda,3,bubung,
-HOS,benda,3,komputer yang terhubung pada jaringan dan menyediakan fasilitas bagi komputer lain dan pen,
-TUI,aksi,3,menumpang modal pada orang yang bermain judi,
-AAN,benda,3,bayi laki-laki,
-ZUS,benda,3,kata sapaan akrab kepada perempuan,
-ARU,benda,3,gelar bangsawan Bugis,
-HIN,benda,3,ukuran isi sebesar 1/6 bat atau kurang lebih 6 liter,
-MES,benda,3,lubang ayakan berbentuk bujur sangkar,
-LAK,benda,3,zat anorganik yang menyerap warna,
-ULI,benda,3,penganan yang dibuat dari ketan dan parutan kelapa (sering dimakan bersama dengan tapai ke,
-BIU,benda,3,gelar bagi pemangku adat yang bertugas mempersiapkan bahan-bahan di luar atau halaman ista,
-CIT,benda,3,kain cita; encit,
-AJI,benda,3,baginda; raja,
+CUE,benda,3,pindang,Ikan rebus berbumbu garam
+LAD,aksi,3,keluar dari desa karena tidak mematuhi ketentuan adat yang berlaku di desa itu,Terusir dari desa adat
+MUR,benda,3,"damar yang harum baunya, dipakai untuk dupa dan sebagainya",Pasangan baut pengencang
+GAR,benda,3,tiruan bunyi seperti guruh dan sebagainya,Tiruan bunyi guruh
+LUK,benda,3,keluk (pada keris),Kelok pada bilah keris
+ITO,benda,3,panggilan bagi saudara laki-laki yang belum berumah tangga,Panggilan pria belum menikah
+ZAI,benda,3,nama huruf ke-11 abjad Arab,Huruf kesebelas abjad Arab
+KHA,benda,3,nama huruf ke-7 abjad Arab,Huruf ketujuh abjad Arab
+BID,benda,3,"tawaran harga atau membeli sesuatu pada harga tertentu, khususnya pada penjualan lelang",Tawaran harga dalam lelang
+ASU,benda,3,anjing,Hewan penggonggong penjaga rumah
+VAK,benda,3,mata pelajaran; mata kuliah,Cabang mata pelajaran
+AIS,benda,3,puting susu babi,Puting susu induk babi
+MIM,benda,3,nama huruf ke-24 abjad Arab,Huruf ke-24 abjad Arab
+BOG,benda,3,rawa gambut lumut,Rawa gambut berlumut
+ATE,benda,3,daun sagu yang dijahit untuk dijadikan atap,Daun sagu untuk atap
+KOA,benda,3,permainan kartu ceki,Permainan memakai kartu ceki
+SIF,benda,3,"masuk atau bekerja secara bergiliran dalam pabrik dan sebagainya, baik masuk pagi, siang m",Giliran kerja di pabrik
+CIP,benda,3,tendangan atau tembakan pendek yang melengkung,Tendangan pendek melengkung
+AMI,benda,3,saudara laki-laki ayah,Saudara lelaki dari ayah
+BOA,benda,3,"syal atau selendang panjang yang terbuat dari benang halus, bulu binatang, atau kain lembu",Selendang panjang dari bulu
+INA,benda,3,inang; emak; ibu,Panggilan bagi emak
+MER,benda,3,satuan monomer,Satuan ulang dalam polimer
+GAI,benda,3,giuk,Sejenis ulat kecil
+PEK,benda,3,empek,Sapaan lelaki tua Tionghoa
+LIS,benda,3,daftar (nama dan sebagainya),Daftar nama tersusun
+UDA,benda,3,kakak (laki-laki); abang,Panggilan bagi abang
+NUR,benda,3,cahaya; sinar,Pancaran cahaya terang
+ABI,benda,3,bapak; ayah,Sebutan untuk ayah
+RAU,benda,3,sengkuang,Tumbuhan sejenis sengkuang
+CUK,benda,3,jentik-jentik,Jentik anak nyamuk
+TUS,benda,3,tiruan bunyi senapan meletus; detus,Tiruan bunyi senapan meletus
+TAL,benda,3,daun tal,Sejenis pohon lontar
+KOP,benda,3,judul,Kepala pada surat resmi
+BAL,benda,3,bola,Benda bundar untuk ditendang
+TEM,benda,3,tempo; waktu,Jangka waktu tertentu
+KIR,benda,3,pemeriksaan (misalnya pemeriksaan kesehatan atau pemeriksaan kendaraan),Pemeriksaan kelayakan kendaraan
+OPA,benda,3,kakek,Sebutan untuk kakek
+UME,benda,3,keluarga inti dalam sistem kekerabatan suku Dawan di Kupang,Keluarga inti tradisional
+GIR,benda,3,"bulatan logam pipih yang bergerigi tempat rantai berpaut untuk memutar roda (pada sepeda,",Roda logam bergigi sepeda
+APO,benda,3,perbukitan yang atasnya datar yang dapat dimanfaatkan sebagai wilayah hunian dan perladang,Perbukitan berpuncak datar
+AMO,benda,3,"tungau berwarna putih, berjalan cepat, hidup di sekam padi",Tungau putih pada padi
+SUS,benda,3,kata sapaan kepada wanita muda,Kue lembut berisi vla
+OTO,benda,3,kendaraan (kereta) yang dijalankan dengan motor; mobil; otomobil,Kendaraan bermotor beroda empat
+ATA,benda,3,golongan hamba sahaya pada suku Helong di Kupang,Golongan budak belian
+OPO,benda,3,nenek moyang,Leluhur zaman dahulu
+ZAN,benda,3,syak; curiga; waham,Rasa curiga tak berdasar
+PES,benda,3,"penyakit menular yang disebabkan oleh basil pes, ditularkan oleh kutu-kutu tikus (Xenopsyl",Wabah menular dari tikus
+WET,benda,3,undang-undang; hukum,Peraturan hukum negara
+PIS,aksi,3,pipis2,Buang air kecil
+COK,benda,3,"kue sagu, dimakan dengan sayuran atau daging",Kue berbahan tepung sagu
+DUS,benda,3,kotak dari kertas tebal (karton); dos; kardus,Kotak dari karton tebal
+CUI,benda,3,pembusukan pada kuku kaki,Kuku kaki yang membusuk
+AMU,benda,3,"kutu berukuran sangat kecil, berwarna transparan atau putih, merupakan ektoparasit pada un",Kutu kecil parasit unggas
+MOP,benda,3,lelucon,Kisah lucu menghibur
+BUI,benda,3,penjara,Tempat tahanan dikurung
+YAI,benda,3,kiai,Pemuka agama Islam
+HEM,benda,3,kemeja,Baju atasan berkerah
+EMU,benda,3,kantong air yang terdapat dalam sarang lebah,Burung besar tak terbang
+UMA,benda,3,rumah adat di Mentawai,Rumah adat Mentawai
+KEP,benda,3,jambul,Jambul rambut menonjol
+KOR,benda,3,paduan suara; nyanyian bersama,Nyanyian bersama satu kelompok
+ETI,benda,3,harta warisan orang tua yang belum dibagikan kepada anak-anaknya,Warisan belum dibagikan
+NOK,benda,3,bubung,Bagian puncak atap
+HOS,benda,3,komputer yang terhubung pada jaringan dan menyediakan fasilitas bagi komputer lain dan pen,Komputer penyedia layanan jaringan
+TUI,aksi,3,menumpang modal pada orang yang bermain judi,Menumpang modal pemain judi
+AAN,benda,3,bayi laki-laki,Anak bayi laki-laki
+ZUS,benda,3,kata sapaan akrab kepada perempuan,Panggilan akrab kaum wanita
+ARU,benda,3,gelar bangsawan Bugis,Gelar bangsawan orang Bugis
+HIN,benda,3,ukuran isi sebesar 1/6 bat atau kurang lebih 6 liter,Satuan ukuran isi kuno
+MES,benda,3,lubang ayakan berbentuk bujur sangkar,Asrama tempat tinggal bersama
+LAK,benda,3,zat anorganik yang menyerap warna,Bahan penyerap zat warna
+ULI,benda,3,penganan yang dibuat dari ketan dan parutan kelapa (sering dimakan bersama dengan tapai ke,Penganan ketan dan kelapa
+BIU,benda,3,gelar bagi pemangku adat yang bertugas mempersiapkan bahan-bahan di luar atau halaman ista,Gelar pemangku adat istana
+CIT,benda,3,kain cita; encit,Kain katun bermotif bunga
+AJI,benda,3,baginda; raja,Sebutan bagi seorang raja
 MAAF,benda,4,ungkapan permintaan ampun atau penyesalan,Orang salah
 MATI,aksi,4,tidak bernyawa; tidak pernah hidup,Tidur dalam tanah
 ANAK,benda,4,manusia yang masih kecil,Manusia kecil
@@ -5905,13 +5892,13 @@ NINABOBO,benda,8,nyanyian untuk menidurkan anak,Lagu pengantar tidur bayi
 FORMALIN,benda,8,"larutan bening berbau menyengat, mengandung sedikit metanol untuk bahan pengawet dan pembu",Cairan pengawet menyengat
 OLIGARKI,benda,8,pemerintahan yang dijalankan oleh beberapa orang yang berkuasa dari golongan atau kelompok,Kekuasaan segelintir elite
 SONOGRAM,benda,8,rekaman atau gambar yang dihasilkan dari pemeriksaan ultrasonik,Citra hasil ultrasonik
-PEREMPUAN,benda,9,istri; bini,
-INFORMASI,benda,9,penerangan,
-ISTIRAHAT,aksi,9,berhenti (mengaso) sebentar dari suatu kegiatan (untuk melepaskan lelah); rehat,
-BERANGKAT,aksi,9,"mulai berjalan (pergi, bepergian)",
-TEKNOLOGI,benda,9,metode ilmiah untuk mencapai tujuan praktis; ilmu pengetahuan terapan,
-APARTEMEN,benda,9,"tempat tinggal yang terdiri atas ruang duduk, kamar tidur, kamar mandi, dapur, dan sebagai",
-TENGGELAM,aksi,9,asyik,
+PEREMPUAN,benda,9,istri; bini,Kaum hawa
+INFORMASI,benda,9,penerangan,Kabar dan keterangan
+ISTIRAHAT,aksi,9,berhenti (mengaso) sebentar dari suatu kegiatan (untuk melepaskan lelah); rehat,Rehat sejenak melepas lelah
+BERANGKAT,aksi,9,"mulai berjalan (pergi, bepergian)",Mulai suatu perjalanan
+TEKNOLOGI,benda,9,metode ilmiah untuk mencapai tujuan praktis; ilmu pengetahuan terapan,Ilmu pengetahuan terapan
+APARTEMEN,benda,9,"tempat tinggal yang terdiri atas ruang duduk, kamar tidur, kamar mandi, dapur, dan sebagai",Hunian bertingkat modern
+TENGGELAM,aksi,9,asyik,Karam ke dasar air
 TELANJANG,aksi,9,tidak berpakaian,Tanpa alat bantu lihat
 PENGANTIN,benda,9,kembang pengantin,Mempelai baru menikah
 IDENTITAS,benda,9,jati diri,Kartu tanda pengenal
@@ -5923,39 +5910,39 @@ KOMPETISI,benda,9,persaingan,Ajang saling bersaing
 MAHASISWA,benda,9,orang yang belajar di perguruan tinggi,Penuntut ilmu kampus
 FASILITAS,benda,9,sarana untuk melancarkan pelaksanaan fungsi; kemudahan,Sarana penunjang kegiatan
 INSPEKTUR,benda,9,nama pangkat dalam kepolisian,Pangkat penyidik polisi
-INDONESIA,benda,9,"bangsa, budaya, bahasa bagi negara Indonesia",
+INDONESIA,benda,9,"bangsa, budaya, bahasa bagi negara Indonesia",Negeri zamrud khatulistiwa Nusantara
 PERANGKAP,benda,9,tipu muslihat untuk memperdaya orang,Jebakan buat mangsa
 BANGSAWAN,benda,9,keturunan orang mulia (terutama raja dan kerabatnya); ningrat; orang berbangsa,Keturunan darah biru
 GRAVITASI,benda,9,proses gaya tarik bumi,Gaya tarik bumi
 INTELIJEN,benda,9,orang yang bertugas mencari (mengamat-amati) seseorang; dinas rahasia,Mata-mata dinas rahasia
 KOMUNITAS,benda,9,kelompok organisme (orang dan sebagainya) yang hidup dan saling berinteraksi di dalam daer,Kelompok orang sehobi sama
-TENGKORAK,benda,9,bagian yang keras dan bertulang dari kepala dan berfungsi melindungi otak; tulang kepala;,
-KOMISARIS,benda,9,petugas partai politik pada tingkatan desa,
-TRANSAKSI,benda,9,pelunasan (pemberesan) pembayaran (seperti dalam bank),
-PRIORITAS,benda,9,yang didahulukan dan diutamakan daripada yang lain,
-KILOMETER,benda,9,satuan ukuran panjang 1.000 m (disingkat km),
-SUTRADARA,benda,9,"sosok guru, pimpinan, pengelola yang berperan terhadap keberhasilan pertunjukan",
-FREKUENSI,benda,9,kekerapan,
-INVESTASI,benda,9,penanaman uang atau modal dalam suatu perusahaan atau proyek untuk tujuan memperoleh keunt,
-AUSTRALIA,benda,9,benua yang terletak di sebelah timur Asia Tenggara dan sebelah selatan daerah khatulistiwa,
-PERINGKAT,benda,9,tingkat; pangkat,
-SEPTEMBER,benda,9,bulan ke-9 tahun Masehi (30 hari),
-PSIKIATER,benda,9,dokter yang ahli dalam penyakit jiwa,
-AKTIVITAS,benda,9,keaktifan; kegiatan,
-KELELAWAR,benda,9,"mamalia yang mampu terbang sempurna, memiliki membran atau selaput di antara jari sehingga",
-SELINGKUH,aksi,9,menyeleweng,
-INSPIRASI,benda,9,ilham,
-INSTRUKSI,benda,9,pelajaran; petunjuk,
-KEPONAKAN,benda,9,anak saudara; kemenakan,
-KOMBINASI,benda,9,"gabungan beberapa hal (pengertian, perkara, warna, pasukan, dan sebagainya)",
-TRANSMISI,benda,9,"penularan, penyebaran, penjangkitan penyakit",
-LAKSAMANA,benda,9,"pangkat perwira tinggi peringkat kedua dalam angkatan laut, setaraf dengan jenderal TNI da",
-NEGOSIASI,benda,9,penyelesaian sengketa secara damai melalui perundingan antara pihak yang bersengketa,
-IMAJINASI,benda,9,khayalan,
-KERANJANG,benda,9,bakul besar yang anyamannya kasar-kasar,
-GENERATOR,benda,9,"pembangkit tenaga (listrik, uap, dan sebagainya)",
-EKSEKUTIF,benda,9,kekuasaan menjalankan undang-undang,
-NONGKRONG,aksi,9,menongkrong,
+TENGKORAK,benda,9,bagian yang keras dan bertulang dari kepala dan berfungsi melindungi otak; tulang kepala;,Tulang pelindung otak
+KOMISARIS,benda,9,petugas partai politik pada tingkatan desa,Dewan pengawas perusahaan
+TRANSAKSI,benda,9,pelunasan (pemberesan) pembayaran (seperti dalam bank),Kegiatan jual beli
+PRIORITAS,benda,9,yang didahulukan dan diutamakan daripada yang lain,Hal yang diutamakan
+KILOMETER,benda,9,satuan ukuran panjang 1.000 m (disingkat km),Satuan jarak seribu meter
+SUTRADARA,benda,9,"sosok guru, pimpinan, pengelola yang berperan terhadap keberhasilan pertunjukan",Pengarah adegan film
+FREKUENSI,benda,9,kekerapan,Tingkat keseringan
+INVESTASI,benda,9,penanaman uang atau modal dalam suatu perusahaan atau proyek untuk tujuan memperoleh keunt,Penanaman modal usaha
+AUSTRALIA,benda,9,benua yang terletak di sebelah timur Asia Tenggara dan sebelah selatan daerah khatulistiwa,Benua negeri hewan kanguru
+PERINGKAT,benda,9,tingkat; pangkat,Urutan kedudukan
+SEPTEMBER,benda,9,bulan ke-9 tahun Masehi (30 hari),Bulan kesembilan Masehi
+PSIKIATER,benda,9,dokter yang ahli dalam penyakit jiwa,Dokter ahli jiwa
+AKTIVITAS,benda,9,keaktifan; kegiatan,Kesibukan sehari-hari
+KELELAWAR,benda,9,"mamalia yang mampu terbang sempurna, memiliki membran atau selaput di antara jari sehingga",Mamalia terbang malam
+SELINGKUH,aksi,9,menyeleweng,Tidak setia pasangan
+INSPIRASI,benda,9,ilham,Ilham atau gagasan
+INSTRUKSI,benda,9,pelajaran; petunjuk,Perintah dan arahan
+KEPONAKAN,benda,9,anak saudara; kemenakan,Anak dari saudara
+KOMBINASI,benda,9,"gabungan beberapa hal (pengertian, perkara, warna, pasukan, dan sebagainya)",Gabungan beberapa unsur
+TRANSMISI,benda,9,"penularan, penyebaran, penjangkitan penyakit",Penyebaran atau penularan
+LAKSAMANA,benda,9,"pangkat perwira tinggi peringkat kedua dalam angkatan laut, setaraf dengan jenderal TNI da",Pangkat tinggi angkatan laut
+NEGOSIASI,benda,9,penyelesaian sengketa secara damai melalui perundingan antara pihak yang bersengketa,Perundingan mencari kesepakatan
+IMAJINASI,benda,9,khayalan,Daya khayal pikiran
+KERANJANG,benda,9,bakul besar yang anyamannya kasar-kasar,Wadah anyaman besar
+GENERATOR,benda,9,"pembangkit tenaga (listrik, uap, dan sebagainya)",Pembangkit tenaga listrik
+EKSEKUTIF,benda,9,kekuasaan menjalankan undang-undang,Cabang pelaksana pemerintahan
+NONGKRONG,aksi,9,menongkrong,Duduk santai berkumpul
 SPESIALIS,benda,9,ahli suatu cabang ilmu atau keterampilan,Pakar bidang tertentu
 PERIMETER,benda,9,batas luas lingkaran; batas luar dari tempat tertutup atau tempat terlindungi (bandar udar,Total garis keliling
 MANAJEMEN,benda,9,penggunaan sumber daya secara efektif untuk mencapai sasaran,Atur sumber daya
@@ -5976,311 +5963,296 @@ NARKOTIKA,benda,9,"obat untuk menenangkan saraf, menghilangkan rasa sakit, menim
 HAMBURGER,benda,9,"penganan yang terbuat dari daging cacah, biasanya daging sapi, dibentuk bulat, kemudian di",Roti isi daging panggang
 EKSPEDISI,benda,9,perusahaan pengangkutan barang,Jasa pengiriman barang
 SANDIWARA,benda,9,"perkumpulan drama (teater, tonil)",Lakon penuh kepura-puraan
-AMSTERDAM,benda,9,ibu kota Belanda,
 PARAMEDIS,benda,9,tenaga terlatih yang memberikan perawatan darurat kepada orang yang sakit atau terluka seb,Petugas medis darurat
 ORGANISME,benda,9,"segala jenis makhluk hidup (tumbuhan, hewan, dan sebagainya); susunan yang bersistem dari",Makhluk hidup bersistem
 ASTRONOMI,benda,9,"ilmu tentang matahari, bulan, bintang, dan planet-planet lain; ilmu falak",Ilmu tentang bintang
-STATISTIK,benda,9,catatan angka-angka (bilangan); perangkaan,
-FRUSTRASI,benda,9,rasa kecewa akibat kegagalan di dalam mengerjakan sesuatu atau akibat tidak berhasil dalam,
-RUTINITAS,benda,9,kerutinan,
-ADRENALIN,benda,9,hormon yang dihasilkan dari ekstrak kelenjar suprarenal atau kelenjar adrenal; epinefrina,
-LOYALITAS,benda,9,kepatuhan; kesetiaan,
-SUPERSTAR,benda,9,(orang) yang unggul (cemerlang dan sebagainya) dalam tugasnya (profesinya dan sebagainya);,
-MEKANISME,benda,9,penggunaan mesin; alat-alat dari mesin; hal kerja mesin,
-GLADIATOR,benda,9,"orang yang mendapat upah, biasanya tawanan atau budak-budak, dengan berkelahi di depan pen",
-POTENSIAL,benda,9,"tegangan listrik, lambang V; arus listrik",
-PRAMUGARI,benda,9,"karyawati perusahaan pengangkutan umum (udara, darat, dan laut) yang bertugas melayani pen",
-ALGORITMA,benda,9,urutan logis pengambilan keputusan untuk pemecahan masalah,
-KONDUKTOR,benda,9,"benda atau bahan penghantar panas, arus listrik, atau suara",
-KONTAINER,benda,9,kotak kargo,
-OVERDOSIS,benda,9,ukuran (obat dan sebagainya) yang berlebihan,
-INSTITUSI,benda,9,lembaga; pranata,
-YERUSALEM,benda,9,ibu kota Palestina,
-ARGENTINA,benda,9,"negara yang terletak di Amerika Selatan, beribu kota Buenos Aires",
-SINGAPURA,benda,9,ibu kota negara Singapura,
-PROTOTIPE,benda,9,model yang mula-mula (model asli) yang menjadi contoh; contoh baku; contoh khas,
-MAHASISWI,benda,9,mahasiswa wanita,
-SPEKULASI,benda,9,(perihal) membeli atau menjual sesuatu yang mungkin mendatangkan untung besar,
-INISIATIF,benda,9,prakarsa,
-WISATAWAN,benda,9,orang yang berwisata; pelancong; turis,
-CAKRAWALA,benda,9,lengkung langit,
-FOTOGRAFI,benda,9,seni dan penghasilan gambar dan cahaya pada film atau permukaan yang dipekakan,
-POLITIKUS,benda,9,ahli politik; ahli kenegaraan,
-MAYORITAS,benda,9,jumlah orang terbanyak yang memperlihatkan ciri tertentu menurut suatu patokan dibandingka,
-MERCUSUAR,benda,9,sesuatu yang dipakai untuk memperoleh nama dan untuk bergagah-gagah,
-KONTESTAN,benda,9,"peserta kontes (perlombaan, pemilihan, dan sebagainya)",
-RESERVASI,benda,9,"pengaturan atau pemesanan tiket, meja, kamar hotel, dan sebagainya untuk seseorang pada wa",
-HIPOTESIS,benda,9,"sesuatu yang dianggap benar untuk alasan atau pengutaraan pendapat (teori, proposisi, dan",
-TOLERANSI,benda,9,sifat atau sikap toleran,
-EKSTRAKSI,benda,9,pencurian,
-OBSERVASI,benda,9,peninjauan secara cermat,
-SELEBARAN,benda,9,"terbitan tidak berjilid (tidak berkulit) yang disebarkan kepada umum, biasanya untuk mempr",
-DEHIDRASI,benda,9,kehilangan cairan tubuh,
-UNIVERSAL,benda,9,kategori keilmubahasaan yang berlaku untuk semua bahasa,
-KABUPATEN,benda,9,kantor tempat kerja bupati,
-KONSELING,benda,9,pemberian bimbingan oleh yang ahli kepada seseorang dengan menggunakan metode psikologis d,
-KOMPOSISI,benda,9,susunan,
-MILIARDER,benda,9,orang kaya raya yang hartanya bermiliar-miliar,
-PELAMPUNG,benda,9,tumbuhan ambung-ambung,
-ARKEOLOGI,benda,9,"ilmu tentang kehidupan dan kebudayaan zaman kuno berdasarkan benda peninggalannya, seperti",
-OTORISASI,benda,9,pemberian kekuasaan; pemberian kuasa,
-DEKLARASI,benda,9,pernyataan ringkas dan jelas (tentang suatu hal),
-ORIENTASI,benda,9,"pandangan yang mendasari pikiran, perhatian atau kecenderungan",
-PRASANGKA,benda,9,"pendapat (anggapan) yang kurang baik mengenai sesuatu sebelum mengetahui (menyaksikan, men",
-SEJARAWAN,benda,9,ahli sejarah; penulis sejarah,
-VENEZUELA,benda,9,"negara yang terletak di Amerika Selatan, beribu kota Karakas",
-DIAGNOSIS,benda,9,pemeriksaan terhadap suatu hal,
-EJAKULASI,benda,9,pemancaran ke luar (tentang mani) dari lubang zakar,
-DETONATOR,benda,9,zat atau bahan yang dapat menyebabkan terjadinya ledakan,
-MILIMETER,benda,9,"satuan ukuran panjang sama dengan 0,001 m (disingkat mm)",
-BIROKRASI,benda,9,"cara bekerja atau susunan pekerjaan yang banyak liku-likunya, menurut tata aturan (adat da",
-INTERAKSI,benda,9,"hal saling melakukan aksi, berhubungan, memengaruhi; antarhubungan",
-MINORITAS,benda,9,golongan sosial yang jumlah warganya jauh lebih kecil jika dibandingkan dengan golongan la,
-MORALITAS,benda,9,"sopan santun, segala sesuatu yang berhubungan dengan etiket atau adat sopan santun",
-KAMUFLASE,benda,9,"perubahan bentuk, rupa, sikap, warna, dan sebagainya menjadi lain agar tidak dikenali; pen",
-TRANSFUSI,benda,9,pemindahan atau pemasukan obat atau darah dan sebagainya kepada orang yang memerlukan,
-FISIKAWAN,benda,9,ahli fisika,
-KEPOMPONG,benda,9,bakal serangga (kupu-kupu) yang berada dalam stadium (kehidupan) ketiga sebelum berubah be,
-FINLANDIA,benda,9,"negara yang terletak di Eropa Utara, beribu kota Helsinki",
-ANTARIKSA,benda,9,bagian alam semesta yang berada di luar atmosfer bumi,
-INFANTERI,benda,9,angkatan bersenjata yang termasuk dalam kesatuan pasukan berjalan kaki,
-PUBLIKASI,benda,9,pengumuman,
-PARAMETER,benda,9,keadaan yang membatasi bagaimana sesuatu dilakukan atau apa yang dapat dilakukan,
-ASTROLOGI,benda,9,ilmu perbintangan yang dipakai untuk meramal dan mengetahui nasib orang; nujum,
-NAVIGATOR,benda,9,orang yang melakukan navigasi,
-SELENDANG,benda,9,kain untuk menggendong dan sebagainya,
-AKOMODASI,benda,9,kamar atau ruang tempat tinggal awak kapal atau penumpang kapal,
-EFISIENSI,benda,9,"kemampuan menjalankan tugas dengan baik dan tepat (dengan tidak membuang waktu, tenaga, bi",
-GELANDANG,aksi,9,seret,
-ALUMINIUM,benda,9,"logam putih perak, ringan, dan mulur; unsur dengan nomor atom 13, lambang Al dan bobot ato",
-ANTIVIRUS,benda,9,program untuk melindungi komputer dari serangan virus,
-MARIYUANA,benda,9,"tumbuhan semak, daunnya mengandung zat yang memabukkan; ganja2",
-MIKROSKOP,benda,9,alat untuk melihat benda yang tidak dapat dilihat dengan mata telanjang (seperti kuman-kum,
-SUPERNOVA,benda,9,bintang meledak berukuran besar,
-AKUNTANSI,benda,9,hal yang berkaitan dengan akuntan,
-HIBERNASI,benda,9,tidak aktif; mati sementara untuk menghemat baterai,
-KELONTONG,benda,9,"barang-barang untuk keperluan sehari-hari seperti sabun, sikat gigi, gelas, cangkir, mangk",
-KONTRAKSI,benda,9,tarik-menarik antara atom dalam sebuah molekul,
-SIRKULASI,benda,9,peredaran,
-PERMADANI,benda,9,"hamparan (karpet) yang dianyam dari bulu domba dan sebagainya, biasanya berbunga-bunga; am",
-KORPORASI,benda,9,badan usaha yang sah; badan hukum,
-INSTALASI,benda,9,proses menyiapkan sistem komputer baru,
-MAHAKARYA,benda,9,karya besar; karya gemilang,
-PALESTINA,benda,9,"negara di Timur Tengah, ibu kotanya Yerusalem",
-PLUTONIUM,benda,9,"unsur logam radioaktif dengan nomor atom 94, lambang Pu, dan bobot atom 242",
-PROYEKTOR,benda,9,alat untuk membuat proyeksi,
-SAMARINDA,benda,9,"ibu kota Provinsi Kalimantan Timur, terkenal dengan sebutan Kota Tepian",
-LITERATUR,benda,9,"bahan bacaan yang digunakan dalam berbagai aktivitas, baik secara intelektual maupun rekre",
-NOSTALGIA,benda,9,kenangan manis pada masa yang telah lama silam,
-PNEUMONIA,benda,9,penyakit radang paru-paru,
-REFORMASI,benda,9,"perubahan secara drastis untuk perbaikan (bidang sosial, politik, atau agama) dalam suatu",
-PUNTIANAK,benda,9,hantu perempuan (suka mengambil anak kecil atau mengganggu wanita yang melahirkan),
-PESTISIDA,benda,9,zat yang beracun untuk membunuh hama; racun pembasmi hama; racun hama,
-KOMODITAS,benda,9,barang dagangan utama; benda niaga,
-TRANSKRIP,benda,9,salinan,
-APRESIASI,benda,9,kesadaran terhadap nilai seni dan budaya,
-DIPLOMASI,benda,9,pengetahuan dan kecakapan dalam hal perhubungan antara negara dan negara,
-TEMPURUNG,benda,9,yang menyerupai tempurung,
-GUATEMALA,benda,9,"negara yang terletak di Amerika Tengah, beribu kota Guatemala",
-PRASMANAN,benda,9,cara menjamu makan dengan mempersilakan tamu mengambil dan memilih sendiri hidangan yang s,
-BOLLYWOOD,benda,9,"industri film India, berbasis di Mumbai (Bombay)",
-ANTARMUKA,benda,9,hubungan atau batasan umum antara dua unit atau alat,
-EKOSISTEM,benda,9,"komunitas organik yang terdiri atas tumbuhan dan hewan, bersama habitatnya",
-PENETRASI,benda,9,penerobosan; penembusan; perembesan,
-PSIKIATRI,benda,9,cabang (spesialisasi) ilmu kedokteran yang berhubungan dengan penyakit jiwa,
-ULTIMATUM,benda,9,peringatan atau tuntutan yang terakhir dengan diberi batas waktu untuk menjawabnya; pering,
-SUBSTANSI,benda,9,unsur; zat,
-KAPITALIS,benda,9,kaum bermodal; orang yang bermodal besar; golongan atau orang yang sangat kaya,
-MAGNESIUM,benda,9,unsur logam berwarna putih perak yang diperoleh dari elektrolisis; unsur dengan nomor atom,
-AUTOPILOT,benda,9,pilot otomatis,
-BENDAHARA,benda,9,perdana menteri; wazir,
-RESTORASI,benda,9,gerbong kereta api yang dijadikan restoran,
-ILUSTRASI,benda,9,"gambar, desain, atau diagram untuk penghias (halaman sampul dan sebagainya)",
-KAFETARIA,benda,9,"restoran yang menyajikan aneka masakan, makanan, dan minuman di gerai (biasanya dengan sis",
-HIEROGLIF,benda,9,"tulisan dan abjad Mesir Kuno, yang terdiri atas 700 gambar dan lambang dalam bentuk manusi",
-IMPLIKASI,benda,9,keterlibatan atau keadaan terlibat,
-PARKINSON,benda,9,"penyakit saraf kronis yang berkembang pada orang yang lanjut usia, ditandai dengan gemetar",
-REKRUTMEN,benda,9,"perekrutan, misalnya tenaga kerja",
-PROTESTAN,benda,9,penganut Protestanisme,
-TAEKWONDO,benda,9,olahraga bela diri berasal dari Korea,
-ELIMINASI,benda,9,penyisihan,
-PROVOKASI,benda,9,perbuatan untuk membangkitkan kemarahan; tindakan menghasut; penghasutan; pancingan,
-VAKSINASI,benda,9,penanaman bibit penyakit (misalnya cacar) yang sudah dilemahkan ke dalam tubuh manusia ata,
-INDIKATOR,benda,9,sesuatu yang dapat memberikan (menjadi) petunjuk atau keterangan,
-ANDROMEDA,benda,9,"galaksi spiral besar yang berisi sekitar satu trilyun bintang dan berjarak 2,5 juta tahun",
-OPTIMISME,benda,9,paham (keyakinan) atas segala sesuatu dari segi yang baik dan menyenangkan; sikap selalu m,
-KURIKULUM,benda,9,perangkat mata kuliah mengenai bidang keahlian khusus,
-DEPORTASI,benda,9,"pembuangan, pengasingan, atau pengusiran seseorang ke luar suatu negeri sebagai hukuman, a",
-KONDEKTUR,benda,9,"orang yang memeriksa karcis atau menarik ongkos dan sebagainya (di kereta api, bus)",
-BARBARIAN,benda,9,orang atau kelompok barbar,
-KOMUNISME,benda,9,"paham atau ideologi (dalam bidang politik) yang menganut ajaran Karl Marx, yang hendak men",
-SEPARATIS,benda,9,orang (golongan) yang menghendaki pemisahan diri dari suatu persatuan; golongan (bangsa) u,
-KALIGRAFI,benda,9,seni menulis indah dengan pena,
-EDITORIAL,benda,9,artikel dalam surat kabar atau majalah yang mengungkapkan pendirian editor atau pimpinan s,
-PROYEKTIL,benda,9,benda yang ditembakkan dengan meriam dan sebagainya,
-PURWARUPA,benda,9,rupa yang pertama; rupa awal,
-LOKOMOTIF,benda,9,kepala kereta api (yang menarik gerbong kereta),
-BABILONIA,benda,9,"kota kuno yang terletak di sebelah selatan Mesopotamia (sekarang Irak), di wilayah Sumeria",
-NIKARAGUA,benda,9,"negara yang terletak di Amerika Tengah, beribu kota Managua",
-KALIBRASI,benda,9,tanda-tanda yang menyatakan pembagian skala,
-PENISILIN,benda,9,"antibiotik yang dihasilkan oleh beberapa jenis jamur, Penicillium notatum dan Penicillin c",
-KUANTITAS,benda,9,banyaknya (benda dan sebagainya); jumlah (sesuatu),
-MENOPAUSE,benda,9,tidak haid lagi (karena usia lanjut); mati haid,
-INKUBATOR,benda,9,perkakas untuk memanaskan bayi yang lahir sebelum waktunya,
-ASPARAGUS,benda,9,asparaga,
-PROPOSISI,benda,9,rancangan usulan,
-MOLEKULER,benda,9,"penghubung berbagai aktivitas pada bagian tubuh tertentu, misalnya gerakan kepala, tangan,",
-INTERUPSI,benda,9,"penyelaan atau pemotongan (pembicaraan, pidato, dan sebagainya)",
-HARMONIKA,benda,9,alat musik tiup dengan lubang-lubang nada berlidah-lidah yang mengeluarkan bunyi karena li,
-REGULATOR,benda,9,alat pengatur,
-HEPATITIS,benda,9,radang hati,
-AKADEMISI,benda,9,anggota akademi,
-ALKOHOLIK,benda,9,orang yang kecanduan alkohol,
-PRAMUSAJI,benda,9,orang yang melayani pesanan makanan dan minuman sesuai dengan permintaan,
-STIMULASI,benda,9,dorongan; rangsangan,
-EKSTREMIS,benda,9,orang yang ekstrem,
-DISERTASI,benda,9,karangan ilmiah yang ditulis untuk memperoleh gelar doktor,
-RESONANSI,benda,9,"dengungan (gema, getaran) suara",
-MELODRAMA,benda,9,pergelaran seni deklamasi yang diiringi musik,
-REALISASI,benda,9,wujud; kenyataan; pelaksanaan yang nyata,
-SUBMARINE,benda,9,kapal selam,
-TELEMETRI,benda,9,"cara mengukur dari jauh, biasanya dengan bantuan peranti komunikasi",
-DETASEMEN,benda,9,satuan tentara atau polisi yang berada di suatu tempat untuk menjalankan tugas yang bersif,
-KUKURUYUK,benda,9,tiruan bunyi ayam berkokok,
-DIREKTORI,benda,9,katalog dokumen atau berkas yang berada dalam diska komputer,
-GENDERANG,benda,9,tambur,
-INKARNASI,benda,9,perwujudan makhluk halus dalam bentuk yang nyata,
-MERKURIUS,benda,9,dewa dagang dan keuntungan bagi bangsa Romawi,
-RELAKSASI,benda,9,"pengenduran, pemanjangan (tentang otot)",
-SIMULATOR,benda,9,alat untuk melakukan simulasi; alat yang dapat menyimulasikan,
-EKSTERIOR,benda,9,"bagian luar (rumah, gedung, dan sebagainya)",
-RADIOLOGI,benda,9,ilmu tentang radioaktif,
-KAPASITOR,benda,9,peranti elektrik yang terdiri atas dua penghantar dan disekat di antaranya dengan dielektr,
-PRESENTER,benda,9,pewara,
-LOKAKARYA,benda,9,pertemuan antara para ahli (pakar) untuk membahas masalah praktis atau yang bersangkutan d,
-MANUSKRIP,benda,9,naskah tulisan tangan yang menjadi kajian filologi,
-BERONDONG,aksi,9,tembak beruntun,
-AKUMULASI,benda,9,pengumpulan; penimbunan; penghimpunan,
-DEKORATOR,benda,9,orang yang mengerjakan dekorasi; penghias panggung teater,
-SARASWATI,benda,9,"dewi pelindung atau pelimpah pengetahuan, kesadaran, dan sastra; sakti Dewa Brahma",
-DESTROYER,benda,9,perusak; penghancur,
-IDEALISME,benda,9,"hidup atau berusaha hidup menurut cita-cita, menurut patokan yang dianggap sempurna",
-SUPREMASI,benda,9,kekuasaan tertinggi (teratas),
-DISFUNGSI,benda,9,perihal tidak berfungsi secara normal atau terganggu fungsinya,
-FISIOLOGI,benda,9,"cabang biologi yang berkaitan dengan fungsi dan kegiatan kehidupan atau zat hidup (organ,",
-KOSMOLOGI,benda,9,ilmu (cabang dari metafisika) yang menyelidiki alam semesta sebagai sistem yang beraturan,
-MANIFESTO,benda,9,pernyataan terbuka tentang tujuan dan pandangan seseorang atau suatu kelompok,
-TRAMPOLIN,benda,9,kerangka ulet dan lentur yang digunakan oleh seorang akrobat untuk meloncat-loncat,
-TARANTULA,benda,9,salah satu spesies laba-laba besar dan berbisa,
-VITALITAS,benda,9,kemampuan untuk bertahan hidup; daya hidup,
-PEDOFILIA,benda,9,kelainan seksual yang menjadikan anak-anak sebagai objek seksual,
-KOMPRESOR,benda,9,alat berupa pompa untuk meninggikan tekanan,
-SIMBIOSIS,benda,9,keadaan hidup bersama secara erat antara dua organisme yang berbeda,
-DEGRADASI,benda,9,"penurunan (tentang pangkat, mutu, moral, dan sebagainya); kemunduran; kemerosotan",
-ESKALATOR,benda,9,tangga dengan anak-anak tangga yang bergerak naik atau turun sebagai bagian dari rangkaian,
-SEKURITAS,benda,9,surat berharga,
-KONFUSIUS,benda,9,"nama lain dari Kong Fu-tze, orang bijak dan filsuf Tiongkok, ajarannya berkembang menjadi",
-OPORTUNIS,benda,9,orang yang menganut paham oportunisme,
-FLUKTUASI,benda,9,ketaktetapan; kegoncangan,
-INTEGRASI,benda,9,pembauran hingga menjadi kesatuan yang utuh atau bulat,
-OKULTISME,benda,9,kajian tentang kekuatan gaib,
-TEORETISI,benda,9,perumus atau pengembang teori,
-KALKULASI,benda,9,"perincian biaya, ongkos, atau pengeluaran; perhitungan",
-PRIMADONA,benda,9,penyanyi wanita yang pertama atau utama dalam pertunjukan opera,
-MOTIVATOR,benda,9,petugas yang ditunjuk untuk memberikan penerangan dan motivasi kepada calon akseptor kelua,
-INHIBITOR,benda,9,"zat yang berfungsi menghambat (menghentikan) reaksi, misalnya dengan mengotori permukaan k",
-PARADIGMA,benda,9,kerangka berpikir,
-TRANSLASI,benda,9,pemindahan semua titik di dalam bidang tertentu pada jarak dan arah yang sama,
-POLARITAS,benda,9,hal pertentangan langsung,
-INFLUENZA,benda,9,radang selaput lendir pada rongga hidung (yang menyebabkan demam); penyakit demam yang mud,
-PEROKSIDA,benda,9,"oksida yang mempunyai ikatan -o-o- yang bereaksi dengan asam, menghasilkan hidrogen peroks",
-RETRIBUSI,benda,9,pungutan uang oleh pemerintah (kota praja dan sebagainya) sebagai balas jasa,
-EKSEMPLAR,benda,9,lembar; helai,
-REPLIKASI,benda,9,kemampuan virus memperbanyak diri,
-DIAFRAGMA,benda,9,sekat antara rongga dada dan rongga perut (pada tubuh),
-LEGALITAS,benda,9,perihal (keadaan) sah; keabsahan,
-MUJAHIDIN,benda,9,para mujahid,
-SOSIOLOGI,benda,9,"pengetahuan atau ilmu tentang sifat, perilaku, dan perkembangan masyarakat; ilmu tentang s",
-DISLEKSIA,benda,9,gangguan pada penglihatan dan pendengaran yang disebabkan oleh kelainan saraf pada otak se,
-MEGAHERTZ,benda,9,satuan jumlah gelombang yang setara dengan satu juta hertz disingkat MHz,
-SEROTONIN,benda,9,zat kimia yang berasal dari asam amino yang didistribusikan dalam jaringan,
-RESPONDEN,benda,9,penjawab (atas pertanyaan yang diajukan untuk kepentingan penelitian),
-BENDERANG,benda,9,tombak yang tangkainya dihiasi dengan bulu kambing (sebagai tanda kebesaran); tombak bende,
-PEKANBARU,benda,9,"ibu kota Provinsi Riau, terkenal dengan sebutan Kota Bertuah",
-RELEVANSI,benda,9,hubungan; kaitan,
-FEMINISME,benda,9,gerakan perempuan yang menuntut persamaan hak sepenuhnya antara kaum perempuan dan laki-la,
-SOSIALITA,benda,9,orang penting atau sosok yang berpengaruh,
-REKLAMASI,benda,9,pengurukan (tanah),
-POLINESIA,benda,9,sekelompok pulau yang tersebar di Samudra Pasifik bagian tengah dan selatan,
-TERMOSTAT,benda,9,alat untuk mengatur suhu secara otomatis yang bekerja karena perubahan suhu,
-DISLOKASI,benda,9,perubahan atau pemindahan lokasi,
-MONOKSIDA,benda,9,"senyawa yang mengandung atom oksigen tunggal, seperti karbon monoksida",
-DEFORMASI,benda,9,perubahan bentuk atau wujud dari yang baik menjadi kurang baik,
-PENTAGRAM,benda,9,bintang bersudut lima,
-TOPOGRAFI,benda,9,keadaan muka bumi pada suatu kawasan atau daerah,
-VENTRIKEL,benda,9,rongga kecil,
-RESERVOIR,benda,9,danau atau waduk yang digunakan untuk menyimpan air,
-KONSENSUS,benda,9,"kesepakatan kata atau permufakatan bersama (mengenai pendapat, pendirian, dan sebagainya)",
-DISPOSISI,benda,9,"kecenderungan untuk mendapatkan suatu penyakit, kelainan temperamen atau kelainan watak",
-RENAISANS,benda,9,masa peralihan dari Abad Pertengahan ke abad modern di Eropa (abad ke-14�ke-17) yang ditan,
-RESTITUSI,benda,9,ganti kerugian; pembayaran kembali,
-ARBITRASE,benda,9,usaha perantara dalam meleraikan sengketa,
-SELEMPANG,benda,9,"pita lebar tanda pangkat dan sebagainya yang disandangkan di bahu, menyerong di dada ke ar",
-NEGARAWAN,benda,9,orang yang ahli dalam kenegaraan (pemerintahan); pemimpin politik yang secara taat asas me,
-FLAMBOYAN,benda,9,"pohon, tinggi hingga 28 m, kayu terasnya keras dan berat, digunakan sebagai tiang dan balo",
-PROSTETIK,benda,9,"ilmu bedah yang mempelajari desain, produksi, dan penggunaan bagian tubuh buatan",
-KONTINGEN,benda,9,"rombongan (olahragawan, pramuka, pasukan militer, dan sebagainya) yang dikirim untuk berga",
-IMUNISASI,benda,9,inokulasi,
-GIMNASIUM,benda,9,ruangan besar untuk olahraga,
-APARTHEID,benda,9,politik diskriminasi warna kulit yang diterapkan (dahulu) oleh negara Afrika Selatan antar,
-NEUROLOGI,benda,9,"ilmu tentang urat saraf, terutama tentang penyakit urat saraf",
-KRIOGENIK,benda,9,pengetahuan tentang suhu yang sangat rendah,
-KOMPUTASI,benda,9,penghitungan dengan menggunakan komputer,
-KONDENSOR,benda,9,peralatan listrik pada mesin mobil,
-KUSTODIAN,benda,9,"pihak pemberi jasa penitipan efek dan harta lain yang berkaitan dengan efek dan jasa lain,",
-ALTIMETER,benda,9,alat untuk mengukur ketinggian atau tinggi suatu tempat dari permukaan bumi berdasarkan te,
-NEPOTISME,benda,9,perilaku yang memperlihatkan kesukaan yang berlebihan kepada kerabat dekat,
-VASEKTOMI,benda,9,operasi untuk memandulkan kaum pria dengan cara memotong saluran sperma atau saluran mani,
-BALAIRUNG,benda,9,balai atau pendopo besar tempat raja dihadap rakyatnya (di Yogyakarta dan Surakarta disebu,
-TESTIMONI,benda,9,pengakuan,
-ORDONANSI,benda,9,peraturan pemerintah; surat pemerintah; peraturan kerajaan,
-UNIFIKASI,benda,9,hal menyatukan; penyatuan; hal menjadikan seragam,
-PRASYARAT,benda,9,"syarat yang harus dipenuhi sebelum melakukan, mengikuti, atau memasuki pendidikan atau ses",
-PETROLEUM,benda,9,"zat cair berminyak yang dapat terbakar, mengandung aspal dengan warna yang bermacam-macam,",
-TENGKURAP,aksi,9,telungkup,
-DASAWARSA,benda,9,sepuluh tahun,
-BUDDHISME,benda,9,"ajaran yang dikembangkan oleh Sidharta Gautama yang, antara lain, mengajarkan bahwa keseng",
-SEDIAKALA,benda,9,yang semula; yang sudah-sudah; (keadaan) yang dulu-dulu,
-TRIMESTER,benda,9,periode tiga bulan; triwulan,
-KAHYANGAN,benda,9,kayangan,
-WIRANIAGA,benda,9,orang yang melakukan penjualan barang secara langsung kepada konsumen (pembeli); pedagang,
-AKROBATIK,benda,9,pertunjukan hebat dan mengagumkan berkenaan dengan ketangkasan,
-KLOROFORM,benda,9,cairan yang mudah menguap yang mengandung bau eter yang digunakan sebagai pelarut atau pem,
-SEKONGKOL,aksi,9,bersekongkol,
-ANOREKSIA,benda,9,kehilangan selera makan; nirselera,
-KONSTANTA,benda,9,tetapan,
-STETOSKOP,benda,9,alat yang digunakan oleh dokter untuk mendengarkan bunyi kerja alat tubuh dalam rongga dad,
-BAROMETER,benda,9,"tolok ukur; ukuran (baik, buruk, dan sebagainya)",
-KAMERAWAN,benda,9,orang yang kerjanya menggunakan kamera untuk merekam gambar (objek) film atau televisi,
-KOMPILASI,benda,9,"kumpulan yang tersusun secara teratur (tentang daftar informasi, karangan dan sebagainya)",
-KUESIONER,benda,9,"alat riset atau survei yang terdiri atas serangkaian pertanyaan tertulis, bertujuan mendap",
-VALIDITAS,benda,9,"sifat benar menurut bahan bukti yang ada, logika berpikir, atau kekuatan hukum; sifat vali",
-HOMOFOBIA,benda,9,fobia terhadap sesama jenis,
-ILUSIONIS,benda,9,tukang sulap,
-OBSTRUKSI,benda,9,penghambatan yang dilakukan oleh golongan politik tertentu untuk menghalangi diterimanya s,
-PURBAKALA,benda,9,zaman dahulu sekali; zaman kuno; dahulu kala,
-KONVERTER,benda,9,peranti yang mengubah sinyal listrik atau data komputer dari satu bentuk ke bentuk lainnya,
-BIMASAKTI,benda,9,galaksi tempat Bumi berada yang tampak seperti lajur cahaya di langit,
-HIPOFISIS,benda,9,"kelenjar kecil di sebelah bawah otak yang mengeluarkan getah, menghasilkan bermacam-macam",
-SIMPOSIUM,benda,9,"kumpulan pendapat tentang sesuatu, terutama yang dihimpun dan diterbitkan",
-BADMINTON,benda,9,bulu tangkis,
-IMPOTENSI,benda,9,perihal lemah syahwat,
-TROMBOSIT,benda,9,"keping-keping darah, mempunyai bentuk yang tidak teratur dan tidak mempunyai inti",
-KARIKATUR,benda,9,"gambar olok-olok yang mengandung pesan, sindiran, dan sebagainya",
-EKSEKUTOR,benda,9,orang yang melakukan eksekusi,
-MOBILITAS,benda,9,gerakan berpindah-pindah,
-MASYARAKAT,benda,10,sejumlah manusia dalam arti seluas-luasnya dan terikat oleh suatu kebudayaan yang mereka a,
-DEPARTEMEN,benda,10,cabang pekerjaan yang dikepalai oleh manajer tunggal,
+STATISTIK,benda,9,catatan angka-angka (bilangan); perangkaan,Ilmu pengolahan data
+FRUSTRASI,benda,9,rasa kecewa akibat kegagalan di dalam mengerjakan sesuatu atau akibat tidak berhasil dalam,Kecewa karena gagal
+RUTINITAS,benda,9,kerutinan,Kegiatan berulang harian
+ADRENALIN,benda,9,hormon yang dihasilkan dari ekstrak kelenjar suprarenal atau kelenjar adrenal; epinefrina,Hormon pemacu semangat
+LOYALITAS,benda,9,kepatuhan; kesetiaan,Kesetiaan dan kepatuhan
+SUPERSTAR,benda,9,(orang) yang unggul (cemerlang dan sebagainya) dalam tugasnya (profesinya dan sebagainya);,Bintang sangat terkenal
+MEKANISME,benda,9,penggunaan mesin; alat-alat dari mesin; hal kerja mesin,Cara kerja suatu sistem
+GLADIATOR,benda,9,"orang yang mendapat upah, biasanya tawanan atau budak-budak, dengan berkelahi di depan pen",Petarung di arena kuno
+POTENSIAL,benda,9,"tegangan listrik, lambang V; arus listrik",Memiliki kemampuan terpendam
+PRAMUGARI,benda,9,"karyawati perusahaan pengangkutan umum (udara, darat, dan laut) yang bertugas melayani pen",Pelayan penumpang pesawat
+ALGORITMA,benda,9,urutan logis pengambilan keputusan untuk pemecahan masalah,Langkah logis pemecah masalah
+KONDUKTOR,benda,9,"benda atau bahan penghantar panas, arus listrik, atau suara",Bahan penghantar arus listrik
+KONTAINER,benda,9,kotak kargo,Peti besar pengangkut barang
+OVERDOSIS,benda,9,ukuran (obat dan sebagainya) yang berlebihan,Takaran obat berlebihan
+INSTITUSI,benda,9,lembaga; pranata,Lembaga atau badan resmi
+ARGENTINA,benda,9,"negara yang terletak di Amerika Selatan, beribu kota Buenos Aires",Negeri Messi juara sepakbola
+SINGAPURA,benda,9,ibu kota negara Singapura,Negara kecil tetangga utara
+PROTOTIPE,benda,9,model yang mula-mula (model asli) yang menjadi contoh; contoh baku; contoh khas,Model awal sebuah produk
+MAHASISWI,benda,9,mahasiswa wanita,Perempuan pelajar perguruan tinggi
+SPEKULASI,benda,9,(perihal) membeli atau menjual sesuatu yang mungkin mendatangkan untung besar,Untung-untungan demi laba besar
+INISIATIF,benda,9,prakarsa,Dorongan bertindak lebih dulu
+WISATAWAN,benda,9,orang yang berwisata; pelancong; turis,Pelancong atau turis
+CAKRAWALA,benda,9,lengkung langit,Garis lengkung langit
+FOTOGRAFI,benda,9,seni dan penghasilan gambar dan cahaya pada film atau permukaan yang dipekakan,Seni menghasilkan gambar cahaya
+POLITIKUS,benda,9,ahli politik; ahli kenegaraan,Ahli urusan kenegaraan
+MAYORITAS,benda,9,jumlah orang terbanyak yang memperlihatkan ciri tertentu menurut suatu patokan dibandingka,Bagian terbesar suatu kelompok
+MERCUSUAR,benda,9,sesuatu yang dipakai untuk memperoleh nama dan untuk bergagah-gagah,Menara pemandu kapal laut
+KONTESTAN,benda,9,"peserta kontes (perlombaan, pemilihan, dan sebagainya)",Peserta sebuah perlombaan
+RESERVASI,benda,9,"pengaturan atau pemesanan tiket, meja, kamar hotel, dan sebagainya untuk seseorang pada wa",Pemesanan tempat lebih dulu
+HIPOTESIS,benda,9,"sesuatu yang dianggap benar untuk alasan atau pengutaraan pendapat (teori, proposisi, dan",Dugaan sementara suatu teori
+TOLERANSI,benda,9,sifat atau sikap toleran,Sikap menghargai perbedaan
+EKSTRAKSI,benda,9,pencurian,Proses pengambilan sari
+OBSERVASI,benda,9,peninjauan secara cermat,Pengamatan secara cermat
+SELEBARAN,benda,9,"terbitan tidak berjilid (tidak berkulit) yang disebarkan kepada umum, biasanya untuk mempr",Lembar edaran untuk umum
+DEHIDRASI,benda,9,kehilangan cairan tubuh,Kekurangan cairan tubuh
+UNIVERSAL,benda,9,kategori keilmubahasaan yang berlaku untuk semua bahasa,Bersifat umum dan menyeluruh
+KABUPATEN,benda,9,kantor tempat kerja bupati,Daerah di bawah provinsi
+KONSELING,benda,9,pemberian bimbingan oleh yang ahli kepada seseorang dengan menggunakan metode psikologis d,Bimbingan oleh tenaga ahli
+KOMPOSISI,benda,9,susunan,Susunan berbagai unsur
+MILIARDER,benda,9,orang kaya raya yang hartanya bermiliar-miliar,Orang kaya raya sekali
+PELAMPUNG,benda,9,tumbuhan ambung-ambung,Benda penolong di air
+ARKEOLOGI,benda,9,"ilmu tentang kehidupan dan kebudayaan zaman kuno berdasarkan benda peninggalannya, seperti",Ilmu tentang benda purbakala
+OTORISASI,benda,9,pemberian kekuasaan; pemberian kuasa,Pemberian wewenang resmi
+DEKLARASI,benda,9,pernyataan ringkas dan jelas (tentang suatu hal),Pernyataan resmi dan tegas
+ORIENTASI,benda,9,"pandangan yang mendasari pikiran, perhatian atau kecenderungan",Pandangan yang mendasari sikap
+PRASANGKA,benda,9,"pendapat (anggapan) yang kurang baik mengenai sesuatu sebelum mengetahui (menyaksikan, men",Anggapan buruk tanpa bukti
+SEJARAWAN,benda,9,ahli sejarah; penulis sejarah,Ahli peristiwa masa lampau
+DIAGNOSIS,benda,9,pemeriksaan terhadap suatu hal,Penentuan jenis penyakit
+EJAKULASI,benda,9,pemancaran ke luar (tentang mani) dari lubang zakar,Keluarnya air mani
+DETONATOR,benda,9,zat atau bahan yang dapat menyebabkan terjadinya ledakan,Pemicu ledakan
+MILIMETER,benda,9,"satuan ukuran panjang sama dengan 0,001 m (disingkat mm)",Seperseribu meter
+BIROKRASI,benda,9,"cara bekerja atau susunan pekerjaan yang banyak liku-likunya, menurut tata aturan (adat da",Sistem administrasi berbelit
+INTERAKSI,benda,9,"hal saling melakukan aksi, berhubungan, memengaruhi; antarhubungan",Hubungan saling memengaruhi
+MINORITAS,benda,9,golongan sosial yang jumlah warganya jauh lebih kecil jika dibandingkan dengan golongan la,Golongan paling sedikit
+MORALITAS,benda,9,"sopan santun, segala sesuatu yang berhubungan dengan etiket atau adat sopan santun",Ajaran sopan santun
+KAMUFLASE,benda,9,"perubahan bentuk, rupa, sikap, warna, dan sebagainya menjadi lain agar tidak dikenali; pen",Penyamaran agar tersembunyi
+TRANSFUSI,benda,9,pemindahan atau pemasukan obat atau darah dan sebagainya kepada orang yang memerlukan,Pemasukan darah donor
+FISIKAWAN,benda,9,ahli fisika,Ahli ilmu alam
+KEPOMPONG,benda,9,bakal serangga (kupu-kupu) yang berada dalam stadium (kehidupan) ketiga sebelum berubah be,Bakal calon kupu-kupu
+ANTARIKSA,benda,9,bagian alam semesta yang berada di luar atmosfer bumi,Ruang luar angkasa
+INFANTERI,benda,9,angkatan bersenjata yang termasuk dalam kesatuan pasukan berjalan kaki,Pasukan pejalan kaki
+PUBLIKASI,benda,9,pengumuman,Penyiaran ke umum
+PARAMETER,benda,9,keadaan yang membatasi bagaimana sesuatu dilakukan atau apa yang dapat dilakukan,Tolok ukur pembatas
+ASTROLOGI,benda,9,ilmu perbintangan yang dipakai untuk meramal dan mengetahui nasib orang; nujum,Ramalan lewat bintang
+NAVIGATOR,benda,9,orang yang melakukan navigasi,Pemandu arah pelayaran
+SELENDANG,benda,9,kain untuk menggendong dan sebagainya,Kain penutup bahu
+AKOMODASI,benda,9,kamar atau ruang tempat tinggal awak kapal atau penumpang kapal,Tempat menginap sementara
+EFISIENSI,benda,9,"kemampuan menjalankan tugas dengan baik dan tepat (dengan tidak membuang waktu, tenaga, bi",Kerja hemat waktu
+GELANDANG,aksi,9,seret,Pemain tengah sepak bola
+ALUMINIUM,benda,9,"logam putih perak, ringan, dan mulur; unsur dengan nomor atom 13, lambang Al dan bobot ato",Logam ringan putih perak
+ANTIVIRUS,benda,9,program untuk melindungi komputer dari serangan virus,Penangkal program jahat komputer
+MARIYUANA,benda,9,"tumbuhan semak, daunnya mengandung zat yang memabukkan; ganja2",Daun ganja memabukkan
+MIKROSKOP,benda,9,alat untuk melihat benda yang tidak dapat dilihat dengan mata telanjang (seperti kuman-kum,Alat pembesar benda kecil
+SUPERNOVA,benda,9,bintang meledak berukuran besar,Ledakan bintang raksasa
+AKUNTANSI,benda,9,hal yang berkaitan dengan akuntan,Ilmu catatan keuangan
+HIBERNASI,benda,9,tidak aktif; mati sementara untuk menghemat baterai,Tidur panjang musim dingin
+KELONTONG,benda,9,"barang-barang untuk keperluan sehari-hari seperti sabun, sikat gigi, gelas, cangkir, mangk",Warung barang harian
+KONTRAKSI,benda,9,tarik-menarik antara atom dalam sebuah molekul,Pengerutan otot tubuh
+SIRKULASI,benda,9,peredaran,Peredaran darah tubuh
+PERMADANI,benda,9,"hamparan (karpet) yang dianyam dari bulu domba dan sebagainya, biasanya berbunga-bunga; am",Karpet tebal mewah
+KORPORASI,benda,9,badan usaha yang sah; badan hukum,Perusahaan berbadan hukum
+INSTALASI,benda,9,proses menyiapkan sistem komputer baru,Pemasangan perangkat baru
+MAHAKARYA,benda,9,karya besar; karya gemilang,Ciptaan besar gemilang
+PLUTONIUM,benda,9,"unsur logam radioaktif dengan nomor atom 94, lambang Pu, dan bobot atom 242",Logam radioaktif nuklir
+PROYEKTOR,benda,9,alat untuk membuat proyeksi,Alat penayang gambar layar
+LITERATUR,benda,9,"bahan bacaan yang digunakan dalam berbagai aktivitas, baik secara intelektual maupun rekre",Bahan bacaan rujukan
+NOSTALGIA,benda,9,kenangan manis pada masa yang telah lama silam,Kenangan masa lampau
+PNEUMONIA,benda,9,penyakit radang paru-paru,Radang paru-paru
+REFORMASI,benda,9,"perubahan secara drastis untuk perbaikan (bidang sosial, politik, atau agama) dalam suatu",Perubahan tatanan menyeluruh
+PUNTIANAK,benda,9,hantu perempuan (suka mengambil anak kecil atau mengganggu wanita yang melahirkan),Hantu perempuan menyeramkan
+PESTISIDA,benda,9,zat yang beracun untuk membunuh hama; racun pembasmi hama; racun hama,Racun pembasmi hama
+KOMODITAS,benda,9,barang dagangan utama; benda niaga,Barang dagangan utama
+TRANSKRIP,benda,9,salinan,Salinan naskah tertulis
+APRESIASI,benda,9,kesadaran terhadap nilai seni dan budaya,Penghargaan terhadap seni
+DIPLOMASI,benda,9,pengetahuan dan kecakapan dalam hal perhubungan antara negara dan negara,Urusan antarnegara resmi
+TEMPURUNG,benda,9,yang menyerupai tempurung,Batok buah kelapa
+PRASMANAN,benda,9,cara menjamu makan dengan mempersilakan tamu mengambil dan memilih sendiri hidangan yang s,Ambil hidangan sendiri
+ANTARMUKA,benda,9,hubungan atau batasan umum antara dua unit atau alat,Penghubung dua perangkat
+EKOSISTEM,benda,9,"komunitas organik yang terdiri atas tumbuhan dan hewan, bersama habitatnya",Komunitas makhluk dan habitat
+PENETRASI,benda,9,penerobosan; penembusan; perembesan,Penerobosan atau penembusan
+PSIKIATRI,benda,9,cabang (spesialisasi) ilmu kedokteran yang berhubungan dengan penyakit jiwa,Ilmu kedokteran jiwa
+ULTIMATUM,benda,9,peringatan atau tuntutan yang terakhir dengan diberi batas waktu untuk menjawabnya; pering,Peringatan terakhir berbatas waktu
+SUBSTANSI,benda,9,unsur; zat,Zat atau unsur inti
+KAPITALIS,benda,9,kaum bermodal; orang yang bermodal besar; golongan atau orang yang sangat kaya,Pemilik modal besar
+MAGNESIUM,benda,9,unsur logam berwarna putih perak yang diperoleh dari elektrolisis; unsur dengan nomor atom,Unsur logam putih perak
+AUTOPILOT,benda,9,pilot otomatis,Pengemudi otomatis pesawat
+BENDAHARA,benda,9,perdana menteri; wazir,Pengurus keuangan organisasi
+RESTORASI,benda,9,gerbong kereta api yang dijadikan restoran,Pemulihan seperti semula
+ILUSTRASI,benda,9,"gambar, desain, atau diagram untuk penghias (halaman sampul dan sebagainya)",Gambar penghias halaman
+KAFETARIA,benda,9,"restoran yang menyajikan aneka masakan, makanan, dan minuman di gerai (biasanya dengan sis",Restoran layan mandiri
+HIEROGLIF,benda,9,"tulisan dan abjad Mesir Kuno, yang terdiri atas 700 gambar dan lambang dalam bentuk manusi",Tulisan gambar Mesir Kuno
+IMPLIKASI,benda,9,keterlibatan atau keadaan terlibat,Efek atau akibat
+PARKINSON,benda,9,"penyakit saraf kronis yang berkembang pada orang yang lanjut usia, ditandai dengan gemetar",Penyakit saraf gemetar
+REKRUTMEN,benda,9,"perekrutan, misalnya tenaga kerja",Penerimaan tenaga kerja
+PROTESTAN,benda,9,penganut Protestanisme,Aliran agama Kristen
+TAEKWONDO,benda,9,olahraga bela diri berasal dari Korea,Bela diri Korea
+ELIMINASI,benda,9,penyisihan,Proses penyisihan peserta
+PROVOKASI,benda,9,perbuatan untuk membangkitkan kemarahan; tindakan menghasut; penghasutan; pancingan,Tindakan menghasut kemarahan
+VAKSINASI,benda,9,penanaman bibit penyakit (misalnya cacar) yang sudah dilemahkan ke dalam tubuh manusia ata,Suntik pencegah penyakit
+INDIKATOR,benda,9,sesuatu yang dapat memberikan (menjadi) petunjuk atau keterangan,Petunjuk atau tanda
+OPTIMISME,benda,9,paham (keyakinan) atas segala sesuatu dari segi yang baik dan menyenangkan; sikap selalu m,Keyakinan segi baik
+KURIKULUM,benda,9,perangkat mata kuliah mengenai bidang keahlian khusus,Rancangan mata pelajaran
+DEPORTASI,benda,9,"pembuangan, pengasingan, atau pengusiran seseorang ke luar suatu negeri sebagai hukuman, a",Pengusiran dari negara
+KONDEKTUR,benda,9,"orang yang memeriksa karcis atau menarik ongkos dan sebagainya (di kereta api, bus)",Pemeriksa karcis kereta
+BARBARIAN,benda,9,orang atau kelompok barbar,Orang liar tak beradab
+KOMUNISME,benda,9,"paham atau ideologi (dalam bidang politik) yang menganut ajaran Karl Marx, yang hendak men",Ideologi ajaran Karl Marx
+SEPARATIS,benda,9,orang (golongan) yang menghendaki pemisahan diri dari suatu persatuan; golongan (bangsa) u,Penganjur pemisahan wilayah
+KALIGRAFI,benda,9,seni menulis indah dengan pena,Seni menulis indah
+EDITORIAL,benda,9,artikel dalam surat kabar atau majalah yang mengungkapkan pendirian editor atau pimpinan s,Tajuk rencana koran
+PROYEKTIL,benda,9,benda yang ditembakkan dengan meriam dan sebagainya,Peluru dari meriam
+PURWARUPA,benda,9,rupa yang pertama; rupa awal,Model awal produk
+LOKOMOTIF,benda,9,kepala kereta api (yang menarik gerbong kereta),Penarik gerbong kereta
+KALIBRASI,benda,9,tanda-tanda yang menyatakan pembagian skala,Penyetelan skala alat ukur
+PENISILIN,benda,9,"antibiotik yang dihasilkan oleh beberapa jenis jamur, Penicillium notatum dan Penicillin c",Antibiotik dari jamur
+KUANTITAS,benda,9,banyaknya (benda dan sebagainya); jumlah (sesuatu),Jumlah atau banyaknya
+MENOPAUSE,benda,9,tidak haid lagi (karena usia lanjut); mati haid,Berhentinya siklus haid
+INKUBATOR,benda,9,perkakas untuk memanaskan bayi yang lahir sebelum waktunya,Penghangat bayi prematur
+ASPARAGUS,benda,9,asparaga,Sayuran batang hijau
+PROPOSISI,benda,9,rancangan usulan,Rancangan suatu usulan
+MOLEKULER,benda,9,"penghubung berbagai aktivitas pada bagian tubuh tertentu, misalnya gerakan kepala, tangan,",Satuan terkecil suatu zat
+INTERUPSI,benda,9,"penyelaan atau pemotongan (pembicaraan, pidato, dan sebagainya)",Penyelaan suatu pembicaraan
+HARMONIKA,benda,9,alat musik tiup dengan lubang-lubang nada berlidah-lidah yang mengeluarkan bunyi karena li,Alat musik tiup kecil
+REGULATOR,benda,9,alat pengatur,Alat pengatur tekanan gas
+HEPATITIS,benda,9,radang hati,Radang organ hati
+AKADEMISI,benda,9,anggota akademi,Cendekiawan perguruan tinggi
+ALKOHOLIK,benda,9,orang yang kecanduan alkohol,Pecandu minuman keras
+PRAMUSAJI,benda,9,orang yang melayani pesanan makanan dan minuman sesuai dengan permintaan,Pelayan pesanan makanan
+STIMULASI,benda,9,dorongan; rangsangan,Dorongan atau rangsangan
+EKSTREMIS,benda,9,orang yang ekstrem,Penganut paham garis keras
+DISERTASI,benda,9,karangan ilmiah yang ditulis untuk memperoleh gelar doktor,Karya ilmiah calon doktor
+RESONANSI,benda,9,"dengungan (gema, getaran) suara",Getaran gema suara
+MELODRAMA,benda,9,pergelaran seni deklamasi yang diiringi musik,Lakon haru diiringi musik
+REALISASI,benda,9,wujud; kenyataan; pelaksanaan yang nyata,Pelaksanaan secara nyata
+SUBMARINE,benda,9,kapal selam,Kapal bawah laut
+TELEMETRI,benda,9,"cara mengukur dari jauh, biasanya dengan bantuan peranti komunikasi",Pengukuran dari jarak jauh
+DETASEMEN,benda,9,satuan tentara atau polisi yang berada di suatu tempat untuk menjalankan tugas yang bersif,Satuan kecil tentara
+KUKURUYUK,benda,9,tiruan bunyi ayam berkokok,Tiruan suara ayam jago
+DIREKTORI,benda,9,katalog dokumen atau berkas yang berada dalam diska komputer,Katalog berkas komputer
+GENDERANG,benda,9,tambur,Alat musik tabuh perang
+INKARNASI,benda,9,perwujudan makhluk halus dalam bentuk yang nyata,Penjelmaan dalam wujud nyata
+MERKURIUS,benda,9,dewa dagang dan keuntungan bagi bangsa Romawi,Planet terdekat dari matahari
+RELAKSASI,benda,9,"pengenduran, pemanjangan (tentang otot)",Pengenduran otot tegang
+SIMULATOR,benda,9,alat untuk melakukan simulasi; alat yang dapat menyimulasikan,Alat peniru kondisi nyata
+EKSTERIOR,benda,9,"bagian luar (rumah, gedung, dan sebagainya)",Bagian luar bangunan
+RADIOLOGI,benda,9,ilmu tentang radioaktif,Ilmu sinar rontgen
+KAPASITOR,benda,9,peranti elektrik yang terdiri atas dua penghantar dan disekat di antaranya dengan dielektr,Penyimpan muatan listrik
+PRESENTER,benda,9,pewara,Pembawa acara televisi
+LOKAKARYA,benda,9,pertemuan antara para ahli (pakar) untuk membahas masalah praktis atau yang bersangkutan d,Pertemuan para pakar
+MANUSKRIP,benda,9,naskah tulisan tangan yang menjadi kajian filologi,Naskah tulisan tangan kuno
+BERONDONG,aksi,9,tembak beruntun,Tembakan senjata beruntun
+AKUMULASI,benda,9,pengumpulan; penimbunan; penghimpunan,Penimbunan secara bertahap
+DEKORATOR,benda,9,orang yang mengerjakan dekorasi; penghias panggung teater,Penata hiasan panggung
+DESTROYER,benda,9,perusak; penghancur,Kapal perang perusak
+IDEALISME,benda,9,"hidup atau berusaha hidup menurut cita-cita, menurut patokan yang dianggap sempurna",Berpegang pada cita-cita
+SUPREMASI,benda,9,kekuasaan tertinggi (teratas),Kekuasaan paling tinggi
+DISFUNGSI,benda,9,perihal tidak berfungsi secara normal atau terganggu fungsinya,Gagal bekerja normal
+FISIOLOGI,benda,9,"cabang biologi yang berkaitan dengan fungsi dan kegiatan kehidupan atau zat hidup (organ,",Ilmu fungsi organ hidup
+KOSMOLOGI,benda,9,ilmu (cabang dari metafisika) yang menyelidiki alam semesta sebagai sistem yang beraturan,Ilmu tentang alam semesta
+MANIFESTO,benda,9,pernyataan terbuka tentang tujuan dan pandangan seseorang atau suatu kelompok,Pernyataan terbuka suatu kelompok
+TRAMPOLIN,benda,9,kerangka ulet dan lentur yang digunakan oleh seorang akrobat untuk meloncat-loncat,Alat lentur untuk melompat
+TARANTULA,benda,9,salah satu spesies laba-laba besar dan berbisa,Laba-laba besar berbisa
+VITALITAS,benda,9,kemampuan untuk bertahan hidup; daya hidup,Daya hidup seseorang
+PEDOFILIA,benda,9,kelainan seksual yang menjadikan anak-anak sebagai objek seksual,Penyimpangan seksual terhadap anak
+KOMPRESOR,benda,9,alat berupa pompa untuk meninggikan tekanan,Pompa penambah tekanan udara
+SIMBIOSIS,benda,9,keadaan hidup bersama secara erat antara dua organisme yang berbeda,Hidup bersama dua makhluk
+DEGRADASI,benda,9,"penurunan (tentang pangkat, mutu, moral, dan sebagainya); kemunduran; kemerosotan",Penurunan mutu dan pangkat
+ESKALATOR,benda,9,tangga dengan anak-anak tangga yang bergerak naik atau turun sebagai bagian dari rangkaian,Tangga berjalan otomatis
+SEKURITAS,benda,9,surat berharga,Surat berharga bernilai uang
+OPORTUNIS,benda,9,orang yang menganut paham oportunisme,Pencari untung dari kesempatan
+FLUKTUASI,benda,9,ketaktetapan; kegoncangan,Perubahan naik turun harga
+INTEGRASI,benda,9,pembauran hingga menjadi kesatuan yang utuh atau bulat,Penyatuan menjadi utuh
+OKULTISME,benda,9,kajian tentang kekuatan gaib,Kajian kekuatan gaib
+TEORETISI,benda,9,perumus atau pengembang teori,Perumus gagasan ilmiah
+KALKULASI,benda,9,"perincian biaya, ongkos, atau pengeluaran; perhitungan",Perhitungan biaya pengeluaran
+PRIMADONA,benda,9,penyanyi wanita yang pertama atau utama dalam pertunjukan opera,Pemeran utama pertunjukan opera
+MOTIVATOR,benda,9,petugas yang ditunjuk untuk memberikan penerangan dan motivasi kepada calon akseptor kelua,Pemberi dorongan semangat
+INHIBITOR,benda,9,"zat yang berfungsi menghambat (menghentikan) reaksi, misalnya dengan mengotori permukaan k",Zat penghambat reaksi kimia
+PARADIGMA,benda,9,kerangka berpikir,Kerangka cara berpikir
+TRANSLASI,benda,9,pemindahan semua titik di dalam bidang tertentu pada jarak dan arah yang sama,Pergeseran ke arah sama
+POLARITAS,benda,9,hal pertentangan langsung,Pertentangan dua kutub
+INFLUENZA,benda,9,radang selaput lendir pada rongga hidung (yang menyebabkan demam); penyakit demam yang mud,Penyakit flu dan demam
+PEROKSIDA,benda,9,"oksida yang mempunyai ikatan -o-o- yang bereaksi dengan asam, menghasilkan hidrogen peroks",Senyawa oksida pemutih
+RETRIBUSI,benda,9,pungutan uang oleh pemerintah (kota praja dan sebagainya) sebagai balas jasa,Pungutan resmi balas jasa
+EKSEMPLAR,benda,9,lembar; helai,Satuan jumlah buku
+REPLIKASI,benda,9,kemampuan virus memperbanyak diri,Proses menggandakan diri
+DIAFRAGMA,benda,9,sekat antara rongga dada dan rongga perut (pada tubuh),Sekat rongga dada perut
+LEGALITAS,benda,9,perihal (keadaan) sah; keabsahan,Keadaan sah hukum
+MUJAHIDIN,benda,9,para mujahid,Pejuang membela agama
+SOSIOLOGI,benda,9,"pengetahuan atau ilmu tentang sifat, perilaku, dan perkembangan masyarakat; ilmu tentang s",Ilmu tentang masyarakat
+DISLEKSIA,benda,9,gangguan pada penglihatan dan pendengaran yang disebabkan oleh kelainan saraf pada otak se,Gangguan kesulitan membaca
+MEGAHERTZ,benda,9,satuan jumlah gelombang yang setara dengan satu juta hertz disingkat MHz,Satuan frekuensi gelombang
+SEROTONIN,benda,9,zat kimia yang berasal dari asam amino yang didistribusikan dalam jaringan,Hormon pengatur suasana hati
+RESPONDEN,benda,9,penjawab (atas pertanyaan yang diajukan untuk kepentingan penelitian),Penjawab pertanyaan penelitian
+BENDERANG,benda,9,tombak yang tangkainya dihiasi dengan bulu kambing (sebagai tanda kebesaran); tombak bende,Sangat terang cahaya
+RELEVANSI,benda,9,hubungan; kaitan,Kaitan dengan topik
+FEMINISME,benda,9,gerakan perempuan yang menuntut persamaan hak sepenuhnya antara kaum perempuan dan laki-la,Gerakan persamaan hak perempuan
+SOSIALITA,benda,9,orang penting atau sosok yang berpengaruh,Sosok kalangan atas
+REKLAMASI,benda,9,pengurukan (tanah),Pengurukan lahan pantai
+TERMOSTAT,benda,9,alat untuk mengatur suhu secara otomatis yang bekerja karena perubahan suhu,Pengatur suhu otomatis
+DISLOKASI,benda,9,perubahan atau pemindahan lokasi,Pergeseran dari tempat
+MONOKSIDA,benda,9,"senyawa yang mengandung atom oksigen tunggal, seperti karbon monoksida",Senyawa beroksigen tunggal
+DEFORMASI,benda,9,perubahan bentuk atau wujud dari yang baik menjadi kurang baik,Perubahan bentuk benda
+PENTAGRAM,benda,9,bintang bersudut lima,Bintang bersudut lima
+TOPOGRAFI,benda,9,keadaan muka bumi pada suatu kawasan atau daerah,Keadaan permukaan bumi
+VENTRIKEL,benda,9,rongga kecil,Rongga bilik jantung
+RESERVOIR,benda,9,danau atau waduk yang digunakan untuk menyimpan air,Tempat menampung air
+KONSENSUS,benda,9,"kesepakatan kata atau permufakatan bersama (mengenai pendapat, pendirian, dan sebagainya)",Kesepakatan bersama
+DISPOSISI,benda,9,"kecenderungan untuk mendapatkan suatu penyakit, kelainan temperamen atau kelainan watak",Kecenderungan watak seseorang
+RENAISANS,benda,9,masa peralihan dari Abad Pertengahan ke abad modern di Eropa (abad ke-14�ke-17) yang ditan,Kebangkitan seni Eropa
+RESTITUSI,benda,9,ganti kerugian; pembayaran kembali,Pembayaran ganti rugi
+ARBITRASE,benda,9,usaha perantara dalam meleraikan sengketa,Penengah pihak bersengketa
+SELEMPANG,benda,9,"pita lebar tanda pangkat dan sebagainya yang disandangkan di bahu, menyerong di dada ke ar",Pita miring di bahu
+NEGARAWAN,benda,9,orang yang ahli dalam kenegaraan (pemerintahan); pemimpin politik yang secara taat asas me,Pemimpin politik bijaksana
+FLAMBOYAN,benda,9,"pohon, tinggi hingga 28 m, kayu terasnya keras dan berat, digunakan sebagai tiang dan balo",Pohon berbunga merah
+PROSTETIK,benda,9,"ilmu bedah yang mempelajari desain, produksi, dan penggunaan bagian tubuh buatan",Anggota tubuh buatan
+KONTINGEN,benda,9,"rombongan (olahragawan, pramuka, pasukan militer, dan sebagainya) yang dikirim untuk berga",Rombongan utusan pertandingan
+IMUNISASI,benda,9,inokulasi,Pemberian vaksin pencegah penyakit
+GIMNASIUM,benda,9,ruangan besar untuk olahraga,Ruang besar olahraga
+APARTHEID,benda,9,politik diskriminasi warna kulit yang diterapkan (dahulu) oleh negara Afrika Selatan antar,Pemisahan ras kulit
+NEUROLOGI,benda,9,"ilmu tentang urat saraf, terutama tentang penyakit urat saraf",Ilmu tentang saraf
+KRIOGENIK,benda,9,pengetahuan tentang suhu yang sangat rendah,Ilmu suhu rendah
+KOMPUTASI,benda,9,penghitungan dengan menggunakan komputer,Proses hitung otomatis
+KONDENSOR,benda,9,peralatan listrik pada mesin mobil,Komponen listrik mobil
+KUSTODIAN,benda,9,"pihak pemberi jasa penitipan efek dan harta lain yang berkaitan dengan efek dan jasa lain,",Penyimpan surat berharga
+ALTIMETER,benda,9,alat untuk mengukur ketinggian atau tinggi suatu tempat dari permukaan bumi berdasarkan te,Alat pengukur ketinggian
+NEPOTISME,benda,9,perilaku yang memperlihatkan kesukaan yang berlebihan kepada kerabat dekat,Pilih kasih kepada kerabat
+VASEKTOMI,benda,9,operasi untuk memandulkan kaum pria dengan cara memotong saluran sperma atau saluran mani,Operasi pemandulan pada pria
+BALAIRUNG,benda,9,balai atau pendopo besar tempat raja dihadap rakyatnya (di Yogyakarta dan Surakarta disebu,Aula besar istana raja
+TESTIMONI,benda,9,pengakuan,Pernyataan kesaksian seseorang
+ORDONANSI,benda,9,peraturan pemerintah; surat pemerintah; peraturan kerajaan,Peraturan resmi pemerintah
+UNIFIKASI,benda,9,hal menyatukan; penyatuan; hal menjadikan seragam,Proses menyatukan menjadi satu
+PRASYARAT,benda,9,"syarat yang harus dipenuhi sebelum melakukan, mengikuti, atau memasuki pendidikan atau ses",Ketentuan awal wajib dipenuhi
+PETROLEUM,benda,9,"zat cair berminyak yang dapat terbakar, mengandung aspal dengan warna yang bermacam-macam,",Minyak bumi mentah
+TENGKURAP,aksi,9,telungkup,Berbaring dada menghadap bawah
+DASAWARSA,benda,9,sepuluh tahun,Kurun sepuluh tahun
+BUDDHISME,benda,9,"ajaran yang dikembangkan oleh Sidharta Gautama yang, antara lain, mengajarkan bahwa keseng",Ajaran Sidharta Gautama
+SEDIAKALA,benda,9,yang semula; yang sudah-sudah; (keadaan) yang dulu-dulu,Keadaan seperti semula
+TRIMESTER,benda,9,periode tiga bulan; triwulan,Periode tiga bulan
+KAHYANGAN,benda,9,kayangan,Tempat bersemayam para dewa
+WIRANIAGA,benda,9,orang yang melakukan penjualan barang secara langsung kepada konsumen (pembeli); pedagang,Penjual barang ke konsumen
+AKROBATIK,benda,9,pertunjukan hebat dan mengagumkan berkenaan dengan ketangkasan,Pertunjukan ketangkasan tubuh
+KLOROFORM,benda,9,cairan yang mudah menguap yang mengandung bau eter yang digunakan sebagai pelarut atau pem,Cairan pembius berbau eter
+SEKONGKOL,aksi,9,bersekongkol,Berkomplot secara diam-diam
+ANOREKSIA,benda,9,kehilangan selera makan; nirselera,Hilang nafsu makan
+KONSTANTA,benda,9,tetapan,Nilai tetap tak berubah
+STETOSKOP,benda,9,alat yang digunakan oleh dokter untuk mendengarkan bunyi kerja alat tubuh dalam rongga dad,Alat dengar detak jantung
+BAROMETER,benda,9,"tolok ukur; ukuran (baik, buruk, dan sebagainya)",Alat ukur tekanan udara
+KAMERAWAN,benda,9,orang yang kerjanya menggunakan kamera untuk merekam gambar (objek) film atau televisi,Juru rekam gambar film
+KOMPILASI,benda,9,"kumpulan yang tersusun secara teratur (tentang daftar informasi, karangan dan sebagainya)",Kumpulan tersusun rapi
+KUESIONER,benda,9,"alat riset atau survei yang terdiri atas serangkaian pertanyaan tertulis, bertujuan mendap",Daftar pertanyaan survei
+VALIDITAS,benda,9,"sifat benar menurut bahan bukti yang ada, logika berpikir, atau kekuatan hukum; sifat vali",Sifat sahih dan benar
+HOMOFOBIA,benda,9,fobia terhadap sesama jenis,Takut pada sesama jenis
+ILUSIONIS,benda,9,tukang sulap,Ahli seni sulap
+OBSTRUKSI,benda,9,penghambatan yang dilakukan oleh golongan politik tertentu untuk menghalangi diterimanya s,Penghambatan secara sengaja
+PURBAKALA,benda,9,zaman dahulu sekali; zaman kuno; dahulu kala,Zaman dahulu kala
+KONVERTER,benda,9,peranti yang mengubah sinyal listrik atau data komputer dari satu bentuk ke bentuk lainnya,Pengubah bentuk sinyal
+BIMASAKTI,benda,9,galaksi tempat Bumi berada yang tampak seperti lajur cahaya di langit,Galaksi tempat bumi berada
+HIPOFISIS,benda,9,"kelenjar kecil di sebelah bawah otak yang mengeluarkan getah, menghasilkan bermacam-macam",Kelenjar kecil di otak
+SIMPOSIUM,benda,9,"kumpulan pendapat tentang sesuatu, terutama yang dihimpun dan diterbitkan",Pertemuan bertukar pendapat
+BADMINTON,benda,9,bulu tangkis,Olahraga raket dan kok
+IMPOTENSI,benda,9,perihal lemah syahwat,Lemah syahwat pada pria
+TROMBOSIT,benda,9,"keping-keping darah, mempunyai bentuk yang tidak teratur dan tidak mempunyai inti",Keping pembeku darah
+KARIKATUR,benda,9,"gambar olok-olok yang mengandung pesan, sindiran, dan sebagainya",Gambar sindiran jenaka
+EKSEKUTOR,benda,9,orang yang melakukan eksekusi,Pelaksana hukuman mati
+MOBILITAS,benda,9,gerakan berpindah-pindah,Gerak perpindahan tempat
+MASYARAKAT,benda,10,sejumlah manusia dalam arti seluas-luasnya dan terikat oleh suatu kebudayaan yang mereka a,Sekumpulan orang hidup bersama
+DEPARTEMEN,benda,10,cabang pekerjaan yang dikepalai oleh manajer tunggal,Kementerian dalam pemerintahan
 TEROWONGAN,benda,10,tembusan dalam tanah atau gunung (untuk jalan kereta api dan sebagainya),Jalan gelap bawah tanah
 HELIKOPTER,benda,10,pesawat udara dengan baling-baling besar di atas yang berputar horizontal lalu mempercepat,Capung besi
 KOMUNIKASI,benda,10,perhubungan,Pertukaran pesan antarorang
@@ -6288,17 +6260,17 @@ ORGANISASI,benda,10,strategi yang dimanfaatkan dalam upaya memperbesar kinerja m
 SEKRETARIS,benda,10,"orang (pegawai, anggota pengurus) yang diserahi pekerjaan tulis-menulis, surat-menyurat, d",Pengurus surat kantor
 MATEMATIKA,benda,10,"ilmu tentang bilangan, hubungan antara bilangan, dan prosedur operasional yang digunakan d",Ilmu hitung angka
 KONFERENSI,benda,10,rapat atau pertemuan untuk berunding atau bertukar pendapat mengenai suatu masalah yang di,Pertemuan bahas isu bersama
-KONFIRMASI,benda,10,penegasan; pengesahan; pembenaran,
-DINOSAURUS,benda,10,binatang raksasa dari zaman prasejarah yang termasuk kelompok reptilia bumi (pemakan dagin,
-EKSPERIMEN,benda,10,percobaan yang bersistem dan berencana (untuk membuktikan kebenaran suatu teori dan sebaga,
-ELEKTRONIK,benda,10,alat yang dibuat berdasarkan prinsip elektronika; hal atau benda yang menggunakan alat-ala,
-KONSTRUKSI,benda,10,susunan dan hubungan kata dalam kalimat atau kelompok kata,
-KONSPIRASI,benda,10,komplotan; persekongkolan,
-ALTERNATIF,benda,10,pilihan di antara dua atau beberapa kemungkinan,
-INTEROGASI,benda,10,pertanyaan,
+KONFIRMASI,benda,10,penegasan; pengesahan; pembenaran,Penegasan kebenaran sesuatu
+DINOSAURUS,benda,10,binatang raksasa dari zaman prasejarah yang termasuk kelompok reptilia bumi (pemakan dagin,Reptil raksasa purba
+EKSPERIMEN,benda,10,percobaan yang bersistem dan berencana (untuk membuktikan kebenaran suatu teori dan sebaga,Percobaan ilmiah terencana
+ELEKTRONIK,benda,10,alat yang dibuat berdasarkan prinsip elektronika; hal atau benda yang menggunakan alat-ala,Perangkat berbasis sirkuit
+KONSTRUKSI,benda,10,susunan dan hubungan kata dalam kalimat atau kelompok kata,Susunan struktur bangunan
+KONSPIRASI,benda,10,komplotan; persekongkolan,Persekongkolan rahasia
+ALTERNATIF,benda,10,pilihan di antara dua atau beberapa kemungkinan,Pilihan pengganti lain
+INTEROGASI,benda,10,pertanyaan,Pemeriksaan lewat pertanyaan
 METROPOLIS,benda,10,metropolitan,Kota besar modern
 NARAPIDANA,benda,10,orang hukuman (orang yang sedang menjalani hukuman karena tindak pidana); terhukum,Penghuni sel penjara
-MASTURBASI,benda,10,stimulasi organ seks oleh diri sendiri,
+MASTURBASI,benda,10,stimulasi organ seks oleh diri sendiri,Rangsangan seksual sendiri
 PRESENTASI,benda,10,pemberian (tentang hadiah),Paparan pakai slide
 KONTRAKTOR,benda,10,pemborong; anemer,Pemborong proyek bangunan
 FOTOGRAFER,benda,10,juru foto; tukang potret; pemotret; juru potret,Pengambil gambar profesional
@@ -6309,285 +6281,274 @@ PARANORMAL,benda,10,"orang yang mempunyai kemampuan dalam memahami, mengetahui, 
 KOMPENSASI,benda,10,ganti rugi,Ganti rugi kerugian
 PERMAISURI,benda,10,istri raja,Istri sah sang raja
 PERSPEKTIF,benda,10,sudut pandang; pandangan,Cara memandang suatu hal
-MALAPETAKA,benda,10,kecelakaan; kesengsaraan; musibah; bencana,
-INSTRUKTUR,benda,10,orang yang bertugas mengajarkan sesuatu dan sekaligus memberikan latihan dan bimbingannya;,
-GELANGGANG,benda,10,"medan perang (pertempuran, perjuangan)",
-KONSULTASI,benda,10,"pertukaran pikiran untuk mendapatkan kesimpulan (nasihat, saran, dan sebagainya) yang seba",
-INTEGRITAS,benda,10,"mutu, sifat, atau keadaan yang menunjukkan kesatuan yang utuh sehingga memiliki potensi da",
-KONSTITUSI,benda,10,undang-undang dasar suatu negara,
-KONTRIBUSI,benda,10,sumbangan,
-ANTIBIOTIK,benda,10,"zat kimia yang dihasilkan oleh berbagai mikroorganisme, bakteri tertentu, fungi, dan aktin",
-ARSITEKTUR,benda,10,metode dan gaya rancangan suatu konstruksi bangunan,
-DISTRIBUSI,benda,10,semua posisi yang ditempati oleh unsur bahasa,
-PUBLISITAS,benda,10,penyiaran tentang sesuatu atau seseorang kepada masyarakat luas (melalui pelbagai media),
-FORMALITAS,benda,10,sekadar mengikuti tata cara; basa-basi,
-MODIFIKASI,benda,10,perubahan,
-PUSTAKAWAN,benda,10,orang yang bekerja dalam bidang perpustakaan; ahli perpustakaan,
-KOMPLIKASI,benda,10,percampuran yang kusut (dari berbagai hal); kerumitan,
-MANIPULASI,benda,10,penggelapan; penyelewengan,
-INTERVENSI,benda,10,upaya untuk meningkatkan kesehatan atau mengubah penyebaran penyakit,
-TEMPERATUR,benda,10,panas dinginnya badan atau hawa; suhu,
-PROSTITUSI,benda,10,pertukaran hubungan seksual dengan uang atau hadiah sebagai suatu transaksi perdagangan; p,
-TERMINATOR,benda,10,garis yang memisahkan cahaya siang dan malam dilihat dari atas permukaan bumi,
-PROPAGANDA,benda,10,"reklame (seperti menawarkan obat, barang dagangan, dan sebagainya)",
-PORNOGRAFI,benda,10,bahan bacaan yang dengan sengaja dan semata-mata dirancang untuk membangkitkan nafsu berah,
-SELONGSONG,benda,10,salut; selubung; ulas; sarung,
-YURISDIKSI,benda,10,kekuasaan mengadili; lingkup kuasa kehakiman; peradilan,
-SINGGASANA,benda,10,kursi kerajaan untuk tempat duduk raja; takhta,
-PERSENTASE,benda,10,bagian yang diperkirakan,
-AUDITORIUM,benda,10,"bangunan atau ruangan besar yang digunakan untuk mengadakan pertemuan umum, pertunjukan, d",
-INFRAMERAH,benda,10,"sinar yang tidak tampak, terletak di luar bagian merah spektrum yang tampak, gelombangnya",
-SINTERKLAS,benda,10,"perayaan memperingati hari ulang tahun Sinterklas, tanggal 6 Desember",
-MENSTRUASI,benda,10,datang bulan; haid,
-STABILITAS,benda,10,kemantapan; kestabilan; keseimbangan,
-KONSTELASI,benda,10,rasi bintang,
-EKSPLORASI,benda,10,"penjelajahan lapangan dengan tujuan memperoleh pengetahuan lebih banyak (tentang keadaan),",
-EKSTRADISI,benda,10,penyerahan orang yang dianggap melakukan kriminalitas oleh suatu negara kepada negara lain,
-REPRODUKSI,benda,10,pengembangbiakan; tiruan; hasil ulang,
-ANTISIPASI,benda,10,penyesuaian mental terhadap peristiwa yang akan terjadi,
-SUPERVISOR,benda,10,pengawas utama; pengontrol utama; penyelia,
-REGENERASI,benda,10,penggantian generasi tua kepada generasi muda; peremajaan,
-ANTUSIASME,benda,10,minat besar terhadap sesuatu; kegairahan; gelora semangat,
-GERILYAWAN,benda,10,orang (pasukan) yang bergerilya,
-PRASEJARAH,benda,10,bagian ilmu sejarah tentang zaman ketika manusia hidup dalam kebudayaan yang belum mengena,
-TEMPERAMEN,benda,10,"sifat batin yang tetap memengaruhi perbuatan, perasaan, dan pikiran (periang, penyedih, da",
-KEMOTERAPI,benda,10,pengobatan dengan menggunakan zat-zat kimiawi,
-VERIFIKASI,benda,10,"pemeriksaan tentang kebenaran laporan, pernyataan, perhitungan uang, dan sebagainya",
-INTIMIDASI,benda,10,tindakan menakut-nakuti (terutama untuk memaksa orang atau pihak lain berbuat sesuatu); ge,
-TURBULENSI,benda,10,turbulens,
-DIAGNOSTIK,benda,10,ilmu untuk menentukan jenis penyakit berdasarkan gejala yang ada,
-MISIONARIS,benda,10,orang yang melakukan misi,
-KOORDINASI,benda,10,kemampuan respons anggota tubuh terkait keseluruhan rancangan fisik,
-NEGOSIATOR,benda,10,orang yang melakukan negosiasi; penegosiasi,
-RITSLETING,benda,10,"alat penutup pakaian (baju, celana, dan sebagainya), tas, dan sebagainya terdiri atas dere",
-KOREOGRAFI,benda,10,seni tari (balet),
-KALKULATOR,benda,10,juru hitung,
-SAPUTANGAN,benda,10,kain (cita) persegi untuk menyapu keringat dan sebagainya; selampai,
-INTENSITAS,benda,10,keadaan tingkatan atau ukuran intensnya,
-REGISTRASI,benda,10,pencatatan; pendaftaran (dalam register),
-DEMONSTRAN,benda,10,orang yang berdemonstrasi; pelaku demonstrasi,
-AFGANISTAN,benda,10,"negara yang terletak di Asia Tengah, beribu kota Kabul",
-EKSISTENSI,benda,10,hal berada; keberadaan,
-JURNALISME,benda,10,pekerjaan mengumpulkan dan menulis berita di media massa cetak atau elektronik; kewartawan,
-KOMENTATOR,benda,10,orang yang (pekerjaannya) mengomentari atau mengulas suatu berita dan sebagainya; juru ula,
-SENTIMETER,benda,10,"satuan ukuran panjang 0,01 m (disingkat cm)",
-SIMPATISAN,benda,10,orang yang bersimpati (kepada partai politik dan sebagainya),
-SURVEILANS,benda,10,pengintaian,
-HIPOTERMIA,benda,10,keadaan suhu tubuh yang turun hingga di bawah 35�C,
-NASIONALIS,benda,10,pencinta nusa dan bangsa sendiri,
-SUPERMODEL,benda,10,adiperagawan; adiperagawati,
-KELINGKING,benda,10,jari tangan yang terkecil,
-KARBURATOR,benda,10,"bagian mesin motor, tempat gas bahan bakar minyak bercampur dengan udara",
-ANTIMATERI,benda,10,materi yang tersusun atas antipartikel,
-KOLESTEROL,benda,10,"lemak yang biasanya terdapat dalam darah, otak, empedu, dan batu empedu",
-UZBEKISTAN,benda,10,"negara yang terletak di Asia Tengah, beribu kota Tashkent",
-PARIWISATA,benda,10,yang berhubungan dengan perjalanan untuk rekreasi; pelancongan; turisme,
-RASULULLAH,benda,10,utusan Allah Swt. (Nabi Muhammad saw.),
-HALILINTAR,benda,10,kilat; mata petir,
-PERSONALIA,benda,10,"yang berkaitan dengan orang atau nama orang (tentang urusan, pengumuman, dan sebagainya)",
-FAHRENHEIT,benda,10,satuan suhu dalam skala termometer yang membagi suhu di antara pembekuan air dan pendidiha,
-MANUFAKTUR,aksi,10,membuat atau menghasilkan dengan tangan atau mesin,
-KOMISIONER,benda,10,orang yang menjadi anggota sebuah komisi,
-INVENTARIS,benda,10,"daftar ternak yang menyebutkan macam, ukurannya, dan sebagainya",
-PERIBAHASA,benda,10,"ungkapan atau kalimat ringkas padat, berisi perbandingan, perumpamaan, nasihat, prinsip hi",
-PORTOFOLIO,benda,10,dompet,
-PROTAGONIS,benda,10,penganjur suatu paham,
-MENTALITAS,benda,10,"keadaan dan aktivitas jiwa (batin), cara berpikir, dan berperasaan",
-PREFERENSI,benda,10,pilihan; kecenderungan; kesukaan,
-ANTROPOLOG,benda,10,ahli antropologi,
-DIREKTORAT,benda,10,"bagian dari departemen yang tugasnya mengurus suatu bidang tertentu, dikepalai oleh seoran",
-SARKOFAGUS,benda,10,"peti mayat yang dibuat dari batu (seperti yang biasa digunakan pada zaman Yunani, Romawi,",
-EMANSIPASI,benda,10,pembebasan dari perbudakan,
-HABIBULLAH,benda,10,kesayangan Allah; kekasih Allah,
-KOLABORASI,benda,10,(perbuatan) kerja sama untuk membuat sesuatu,
-FERMENTASI,benda,10,peragian,
-KOMPETITOR,benda,10,orang yang bersaing,
-VANDALISME,benda,10,perusakan dan penghancuran secara kasar dan ganas,
-LEGITIMASI,benda,10,pernyataan yang sah (menurut undang-undang atau sesuai dengan undang-undang); pengesahan,
-BENTANGKAN,benda,10,denda adat karena berzina atau mengingkari janji perkawinan (pada suku Dayak),
-YOGYAKARTA,benda,10,"ibu kota Provinsi Daerah Istimewa Yogyakarta, dikenal dengan Kota Gudeg",
-PENYISIRAN,benda,10,"proses, cara, perbuatan menyisir",
-KONSORSIUM,benda,10,himpunan sarjana sebidang yang mengurus kepentingan bersama,
-SANATORIUM,benda,10,tempat penyembuhan orang yang berpenyakit kronis,
-AKSELERASI,benda,10,proses mempercepat,
-SALAMANDER,benda,10,"binatang amfibi serupa kadal dengan tubuh ramping, ekor panjang, hidung pendek, kulit lici",
-NUKLEOTIDA,benda,10,"struktur pembentuk inti sel DNA dan RNA yang penting untuk perkembangan sel, fungsi-fungsi",
-NARASUMBER,benda,10,orang yang memberi (mengetahui secara jelas atau menjadi sumber) informasi; informan,
-EKTOPLASMA,benda,10,lapisan luar protoplasma yang bersifat liat dan kaku yang terdapat pada sel tertentu,
-KONSENTRAT,benda,10,mineral berharga yang dipisahkan dari bijih setelah mengalami pengolahan tertentu,
-ANTISOSIAL,benda,10,sikap menutup diri dari masyarakat,
-KONSTITUEN,benda,10,"bagian yang penting, misalnya natrium adalah konstituen garam dapur",
-DEKOMPRESI,benda,10,pengurangan atau peniadaan tekanan,
-SENIORITAS,benda,10,perihal senior,
-SAGITARIUS,benda,10,nama gugus bintang di belahan langit sebelah selatan khatulistiwa (tampak pada waktu malam,
-TERMOMETER,benda,10,alat ukur suhu,
-AKUPUNKTUR,benda,10,pengobatan atau pemeriksaan orang sakit dengan tusuk jarum (cara pengobatan Cina); tusuk j,
-ELEKTROLIT,benda,10,senyawa yang larutannya merupakan penghantar arus listrik,
-METODOLOGI,benda,10,ilmu tentang metode; uraian tentang metode,
-ANTISEPTIK,benda,10,zat yang terdapat pada jaringan hidup untuk menahan atau menghancurkan pertumbuhan jasad r,
-MADAGASKAR,benda,10,"negara yang terletak di Samudra Hindia Barat, beribu kota Antananarivo",
-ANONIMITAS,benda,10,hal tidak ada nama,
-KOMPETENSI,benda,10,kewenangan (kekuasaan) untuk menentukan (memutuskan sesuatu),
-MENINGITIS,benda,10,peradangan pada selaput otak dan sumsum tulang belakang,
-MONOKULTUR,benda,10,penanaman satu jenis tanaman dalam suatu urutan musim pada tanah yang sama (misalnya baik,
-HIDROPONIK,benda,10,"cara bercocok tanam tanpa menggunakan tanah, biasanya dikerjakan dalam kamar kaca dengan m",
-TRANSISTOR,benda,10,pesawat radio yang menggunakan transistor,
-HIPERTENSI,benda,10,tekanan darah atau denyut jantung yang lebih tinggi daripada normal karena penyempitan pem,
-BANGLADESH,benda,10,"negara yang terletak di Asia Selatan, beribu kota Dhaka",
-PREROGATIF,benda,10,hak istimewa yang dipunyai oleh kepala negara mengenai hukum dan undang-undang di luar kek,
-SEMBAHYANG,benda,10,salat,
-TRANSMITER,benda,10,pemancar; bagian (alat) telepon dan sebagainya yang berfungsi mengirimkan pesan,
-MEMORANDUM,benda,10,nota atau surat peringatan tidak resmi,
-INSEMINASI,benda,10,"pengembangan, penyebaran, penangkaran",
-KALIMANTAN,benda,10,suku bangsa di Provinsi Kalimantan Barat,
-SOSIALISME,benda,10,"ajaran atau paham kenegaraan dan ekonomi yang berusaha supaya harta benda, industri, dan p",
-LINGUISTIK,benda,10,ilmu tentang bahasa,
-KONSERVASI,benda,10,"proses menyaput bagian dalam badan mobil, kapal, dan sebagainya untuk mencegah karat",
-VENTILATOR,benda,10,mesin yang membantu pasien untuk bernapas,
-MUSYAWARAH,benda,10,pembahasan bersama dengan maksud mencapai keputusan atas penyelesaian masalah; perundingan,
-ARISTOKRAT,benda,10,orang dari golongan bangsawan; ningrat,
-DEGENERASI,benda,10,kemunduran atau perubahan menjadi sesuatu yang rusak,
-PARTIKULAT,benda,10,"partikel yang sangat kecil atau halus (debu, asap, dan sebagainya)",
-MONTENEGRO,benda,10,bahasa yang dituturkan di Montenegro,
-AFRODISIAK,benda,10,obat perangsang kegiatan seksual,
-IMPERIALIS,benda,10,bangsa (negara) yang menjalankan politik menjajah bangsa (negara) lain; negara yang memper,
-PERSNELING,benda,10,alat untuk mengatur kecepatan kendaraan bermotor (berupa roda gigi),
-SANGKAKALA,benda,10,"trompet (dari kulit kerang, dan sebagainya); trompet berkala atau bunyian berkala",
-REPUBLIKAN,benda,10,penganut ketatanegaraan yang berbentuk republik,
-STRATOSFER,benda,10,lapisan udara di antara 10�60 km di atas permukaan bumi; lapisan udara di atas troposfer,
-MARGASATWA,benda,10,binatang yang hidup liar di hutan (tidak diternakkan atau dipelihara),
-PANSPERMIA,benda,10,teori yang menyatakan bahwa kehidupan di Bumi berasal dari benih-benih kehidupan yang ters,
-KERANGKENG,benda,10,tempat untuk mengurung anak kecil,
-METAFISIKA,benda,10,ilmu pengetahuan yang berhubungan dengan hal-hal yang nonfisik atau tidak kelihatan,
-TENDERLOIN,benda,10,"daging sapi bagian punggung dalam, sangat lunak, tidak berotot, dan tidak berlemak",
-MOBILISASI,benda,10,gerak yang mudah (cepat); perputaran,
-MONITORING,benda,10,pemantauan,
-IKONOGRAFI,benda,10,ilmu tentang seni dan teknik membuat arca,
-PROKLAMASI,benda,10,pemberitahuan resmi kepada seluruh rakyat; pemakluman; pengumuman,
-INFILTRASI,benda,10,penyusupan; perembesan; campur tangan,
-KREDENSIAL,benda,10,"sertifikat, surat, atau pernyataan yang menyatakan kemampuan seseorang melakukan sesuatu",
-KARTOGRAFI,benda,10,ilmu mengenai peta,
-LIKUIDITAS,benda,10,perihal posisi uang kas suatu perusahaan dan kemampuannya untuk memenuhi kewajiban yang ja,
-SUBSTITUSI,benda,10,penggantian,
-ANGKASAWAN,benda,10,astronaut,
-SIMBOLISME,benda,10,"perihal pemakaian simbol (lambang) untuk mengekspresikan ide-ide (misalnya sastra, seni)",
-SEISMOLOGI,benda,10,ilmu tentang gempa bumi,
-ALTERNATOR,benda,10,generator elektris yang digunakan untuk menghasilkan arus bolak-balik; dinamo,
+MALAPETAKA,benda,10,kecelakaan; kesengsaraan; musibah; bencana,Bencana yang menyengsarakan
+INSTRUKTUR,benda,10,orang yang bertugas mengajarkan sesuatu dan sekaligus memberikan latihan dan bimbingannya;,Pelatih dan pembimbing
+GELANGGANG,benda,10,"medan perang (pertempuran, perjuangan)",Arena pertandingan
+KONSULTASI,benda,10,"pertukaran pikiran untuk mendapatkan kesimpulan (nasihat, saran, dan sebagainya) yang seba",Meminta nasihat ahli
+INTEGRITAS,benda,10,"mutu, sifat, atau keadaan yang menunjukkan kesatuan yang utuh sehingga memiliki potensi da",Kejujuran dan keutuhan
+KONSTITUSI,benda,10,undang-undang dasar suatu negara,Hukum dasar negara
+KONTRIBUSI,benda,10,sumbangan,Sumbangan atau andil
+ANTIBIOTIK,benda,10,"zat kimia yang dihasilkan oleh berbagai mikroorganisme, bakteri tertentu, fungi, dan aktin",Obat pembasmi bakteri
+ARSITEKTUR,benda,10,metode dan gaya rancangan suatu konstruksi bangunan,Seni rancang bangunan
+DISTRIBUSI,benda,10,semua posisi yang ditempati oleh unsur bahasa,Penyaluran barang
+PUBLISITAS,benda,10,penyiaran tentang sesuatu atau seseorang kepada masyarakat luas (melalui pelbagai media),Penyebaran ke khalayak luas
+FORMALITAS,benda,10,sekadar mengikuti tata cara; basa-basi,Sekadar basa-basi resmi
+MODIFIKASI,benda,10,perubahan,Perubahan atau penyesuaian
+PUSTAKAWAN,benda,10,orang yang bekerja dalam bidang perpustakaan; ahli perpustakaan,Pengelola koleksi buku
+KOMPLIKASI,benda,10,percampuran yang kusut (dari berbagai hal); kerumitan,Keadaan yang rumit
+MANIPULASI,benda,10,penggelapan; penyelewengan,Pengaturan curang menyeleweng
+INTERVENSI,benda,10,upaya untuk meningkatkan kesehatan atau mengubah penyebaran penyakit,Campur tangan pihak lain
+TEMPERATUR,benda,10,panas dinginnya badan atau hawa; suhu,Ukuran panas dingin
+PROSTITUSI,benda,10,pertukaran hubungan seksual dengan uang atau hadiah sebagai suatu transaksi perdagangan; p,Jual beli seks
+TERMINATOR,benda,10,garis yang memisahkan cahaya siang dan malam dilihat dari atas permukaan bumi,Batas siang dan malam
+PROPAGANDA,benda,10,"reklame (seperti menawarkan obat, barang dagangan, dan sebagainya)",Ajakan memengaruhi massa
+PORNOGRAFI,benda,10,bahan bacaan yang dengan sengaja dan semata-mata dirancang untuk membangkitkan nafsu berah,Bahan pembangkit nafsu
+SELONGSONG,benda,10,salut; selubung; ulas; sarung,Selubung pembungkus
+YURISDIKSI,benda,10,kekuasaan mengadili; lingkup kuasa kehakiman; peradilan,Kekuasaan mengadili perkara
+SINGGASANA,benda,10,kursi kerajaan untuk tempat duduk raja; takhta,Kursi tempat raja
+PERSENTASE,benda,10,bagian yang diperkirakan,Bagian per seratus
+AUDITORIUM,benda,10,"bangunan atau ruangan besar yang digunakan untuk mengadakan pertemuan umum, pertunjukan, d",Ruang pertemuan besar
+INFRAMERAH,benda,10,"sinar yang tidak tampak, terletak di luar bagian merah spektrum yang tampak, gelombangnya",Sinar panas tak kasatmata
+SINTERKLAS,benda,10,"perayaan memperingati hari ulang tahun Sinterklas, tanggal 6 Desember",Kakek berjubah merah Natal
+MENSTRUASI,benda,10,datang bulan; haid,Siklus bulanan wanita
+STABILITAS,benda,10,kemantapan; kestabilan; keseimbangan,Kemantapan dan keseimbangan
+KONSTELASI,benda,10,rasi bintang,Gugusan bintang langit
+EKSPLORASI,benda,10,"penjelajahan lapangan dengan tujuan memperoleh pengetahuan lebih banyak (tentang keadaan),",Penjelajahan mencari pengetahuan
+EKSTRADISI,benda,10,penyerahan orang yang dianggap melakukan kriminalitas oleh suatu negara kepada negara lain,Penyerahan buronan antarnegara
+REPRODUKSI,benda,10,pengembangbiakan; tiruan; hasil ulang,Proses berkembang biak
+ANTISIPASI,benda,10,penyesuaian mental terhadap peristiwa yang akan terjadi,Persiapan menghadapi kemungkinan
+SUPERVISOR,benda,10,pengawas utama; pengontrol utama; penyelia,Pengawas utama pekerjaan
+REGENERASI,benda,10,penggantian generasi tua kepada generasi muda; peremajaan,Peremajaan angkatan muda
+ANTUSIASME,benda,10,minat besar terhadap sesuatu; kegairahan; gelora semangat,Semangat menggebu-gebu
+GERILYAWAN,benda,10,orang (pasukan) yang bergerilya,Pejuang penyergap sembunyi
+PRASEJARAH,benda,10,bagian ilmu sejarah tentang zaman ketika manusia hidup dalam kebudayaan yang belum mengena,Zaman sebelum tulisan
+TEMPERAMEN,benda,10,"sifat batin yang tetap memengaruhi perbuatan, perasaan, dan pikiran (periang, penyedih, da",Watak dasar seseorang
+KEMOTERAPI,benda,10,pengobatan dengan menggunakan zat-zat kimiawi,Pengobatan kimia kanker
+VERIFIKASI,benda,10,"pemeriksaan tentang kebenaran laporan, pernyataan, perhitungan uang, dan sebagainya",Pemeriksaan kebenaran data
+INTIMIDASI,benda,10,tindakan menakut-nakuti (terutama untuk memaksa orang atau pihak lain berbuat sesuatu); ge,Ancaman menekan kehendak
+TURBULENSI,benda,10,turbulens,Guncangan udara pesawat
+DIAGNOSTIK,benda,10,ilmu untuk menentukan jenis penyakit berdasarkan gejala yang ada,Penentuan jenis penyakit
+MISIONARIS,benda,10,orang yang melakukan misi,Penyebar ajaran agama
+KOORDINASI,benda,10,kemampuan respons anggota tubuh terkait keseluruhan rancangan fisik,Penyelarasan gerak bersama
+NEGOSIATOR,benda,10,orang yang melakukan negosiasi; penegosiasi,Juru runding perjanjian
+RITSLETING,benda,10,"alat penutup pakaian (baju, celana, dan sebagainya), tas, dan sebagainya terdiri atas dere",Penutup tarik pakaian
+KOREOGRAFI,benda,10,seni tari (balet),Rancangan gerak tari
+KALKULATOR,benda,10,juru hitung,Mesin penghitung angka
+SAPUTANGAN,benda,10,kain (cita) persegi untuk menyapu keringat dan sebagainya; selampai,Kain pengelap keringat
+INTENSITAS,benda,10,keadaan tingkatan atau ukuran intensnya,Tingkat kekuatan sesuatu
+REGISTRASI,benda,10,pencatatan; pendaftaran (dalam register),Proses pendaftaran resmi
+DEMONSTRAN,benda,10,orang yang berdemonstrasi; pelaku demonstrasi,Peserta unjuk rasa
+AFGANISTAN,benda,10,"negara yang terletak di Asia Tengah, beribu kota Kabul",Negara Asia dikuasai Taliban
+EKSISTENSI,benda,10,hal berada; keberadaan,Hal keberadaan diri
+JURNALISME,benda,10,pekerjaan mengumpulkan dan menulis berita di media massa cetak atau elektronik; kewartawan,Kegiatan meliput berita
+KOMENTATOR,benda,10,orang yang (pekerjaannya) mengomentari atau mengulas suatu berita dan sebagainya; juru ula,Juru ulas pertandingan
+SENTIMETER,benda,10,"satuan ukuran panjang 0,01 m (disingkat cm)",Ukuran panjang penggaris
+SIMPATISAN,benda,10,orang yang bersimpati (kepada partai politik dan sebagainya),Pendukung setia partai
+SURVEILANS,benda,10,pengintaian,Pengintaian diam-diam
+HIPOTERMIA,benda,10,keadaan suhu tubuh yang turun hingga di bawah 35�C,Suhu tubuh anjlok
+NASIONALIS,benda,10,pencinta nusa dan bangsa sendiri,Pencinta tanah air
+SUPERMODEL,benda,10,adiperagawan; adiperagawati,Peragawati papan atas
+KELINGKING,benda,10,jari tangan yang terkecil,Jari tangan terkecil
+KARBURATOR,benda,10,"bagian mesin motor, tempat gas bahan bakar minyak bercampur dengan udara",Pencampur udara bensin
+ANTIMATERI,benda,10,materi yang tersusun atas antipartikel,Kebalikan zat biasa
+KOLESTEROL,benda,10,"lemak yang biasanya terdapat dalam darah, otak, empedu, dan batu empedu",Lemak jahat darah
+PARIWISATA,benda,10,yang berhubungan dengan perjalanan untuk rekreasi; pelancongan; turisme,Perjalanan rekreasi turis
+HALILINTAR,benda,10,kilat; mata petir,Kilatan sambaran petir
+PERSONALIA,benda,10,"yang berkaitan dengan orang atau nama orang (tentang urusan, pengumuman, dan sebagainya)",Urusan kepegawaian kantor
+FAHRENHEIT,benda,10,satuan suhu dalam skala termometer yang membagi suhu di antara pembekuan air dan pendidiha,Satuan suhu ala Amerika
+MANUFAKTUR,aksi,10,membuat atau menghasilkan dengan tangan atau mesin,Proses pembuatan barang
+KOMISIONER,benda,10,orang yang menjadi anggota sebuah komisi,Perantara transaksi dagang
+INVENTARIS,benda,10,"daftar ternak yang menyebutkan macam, ukurannya, dan sebagainya",Daftar barang milik
+PERIBAHASA,benda,10,"ungkapan atau kalimat ringkas padat, berisi perbandingan, perumpamaan, nasihat, prinsip hi",Kalimat kiasan berisi nasihat
+PORTOFOLIO,benda,10,dompet,Kumpulan hasil karya
+PROTAGONIS,benda,10,penganjur suatu paham,Tokoh utama cerita
+MENTALITAS,benda,10,"keadaan dan aktivitas jiwa (batin), cara berpikir, dan berperasaan",Cara berpikir seseorang
+PREFERENSI,benda,10,pilihan; kecenderungan; kesukaan,Kecenderungan memilih sesuatu
+ANTROPOLOG,benda,10,ahli antropologi,Ahli ilmu manusia
+DIREKTORAT,benda,10,"bagian dari departemen yang tugasnya mengurus suatu bidang tertentu, dikepalai oleh seoran",Bagian dari kementerian
+SARKOFAGUS,benda,10,"peti mayat yang dibuat dari batu (seperti yang biasa digunakan pada zaman Yunani, Romawi,",Peti jenazah batu
+EMANSIPASI,benda,10,pembebasan dari perbudakan,Perjuangan persamaan hak
+HABIBULLAH,benda,10,kesayangan Allah; kekasih Allah,Sebutan kekasih Tuhan
+KOLABORASI,benda,10,(perbuatan) kerja sama untuk membuat sesuatu,Kerja sama menghasilkan karya
+FERMENTASI,benda,10,peragian,Proses peragian bahan
+KOMPETITOR,benda,10,orang yang bersaing,Saingan dalam usaha
+VANDALISME,benda,10,perusakan dan penghancuran secara kasar dan ganas,Perusakan fasilitas umum
+LEGITIMASI,benda,10,pernyataan yang sah (menurut undang-undang atau sesuai dengan undang-undang); pengesahan,Pengesahan secara resmi
+BENTANGKAN,benda,10,denda adat karena berzina atau mengingkari janji perkawinan (pada suku Dayak),Menghamparkan hingga terbuka
+PENYISIRAN,benda,10,"proses, cara, perbuatan menyisir",Operasi pencarian menyeluruh
+KONSORSIUM,benda,10,himpunan sarjana sebidang yang mengurus kepentingan bersama,Gabungan beberapa perusahaan
+SANATORIUM,benda,10,tempat penyembuhan orang yang berpenyakit kronis,Tempat perawatan penyakit kronis
+AKSELERASI,benda,10,proses mempercepat,Percepatan suatu gerak
+SALAMANDER,benda,10,"binatang amfibi serupa kadal dengan tubuh ramping, ekor panjang, hidung pendek, kulit lici",Amfibi serupa kadal
+NUKLEOTIDA,benda,10,"struktur pembentuk inti sel DNA dan RNA yang penting untuk perkembangan sel, fungsi-fungsi",Penyusun rantai DNA
+NARASUMBER,benda,10,orang yang memberi (mengetahui secara jelas atau menjadi sumber) informasi; informan,Pemberi informasi terpercaya
+EKTOPLASMA,benda,10,lapisan luar protoplasma yang bersifat liat dan kaku yang terdapat pada sel tertentu,Lapisan luar sel
+KONSENTRAT,benda,10,mineral berharga yang dipisahkan dari bijih setelah mengalami pengolahan tertentu,Sari pati pekat
+ANTISOSIAL,benda,10,sikap menutup diri dari masyarakat,Enggan bergaul dengan masyarakat
+KONSTITUEN,benda,10,"bagian yang penting, misalnya natrium adalah konstituen garam dapur",Unsur pembentuk penting
+DEKOMPRESI,benda,10,pengurangan atau peniadaan tekanan,Pengurangan tekanan udara
+SENIORITAS,benda,10,perihal senior,Kelebihan karena lebih lama
+SAGITARIUS,benda,10,nama gugus bintang di belahan langit sebelah selatan khatulistiwa (tampak pada waktu malam,Zodiak sang pemanah
+TERMOMETER,benda,10,alat ukur suhu,Pengukur suhu badan
+AKUPUNKTUR,benda,10,pengobatan atau pemeriksaan orang sakit dengan tusuk jarum (cara pengobatan Cina); tusuk j,Terapi tusuk jarum
+ELEKTROLIT,benda,10,senyawa yang larutannya merupakan penghantar arus listrik,Larutan penghantar listrik
+METODOLOGI,benda,10,ilmu tentang metode; uraian tentang metode,Ilmu tentang cara kerja
+ANTISEPTIK,benda,10,zat yang terdapat pada jaringan hidup untuk menahan atau menghancurkan pertumbuhan jasad r,Cairan pembunuh kuman
+ANONIMITAS,benda,10,hal tidak ada nama,Keadaan tanpa nama
+KOMPETENSI,benda,10,kewenangan (kekuasaan) untuk menentukan (memutuskan sesuatu),Kemampuan menguasai bidang
+MENINGITIS,benda,10,peradangan pada selaput otak dan sumsum tulang belakang,Radang selaput otak
+MONOKULTUR,benda,10,penanaman satu jenis tanaman dalam suatu urutan musim pada tanah yang sama (misalnya baik,Tanam satu jenis saja
+HIDROPONIK,benda,10,"cara bercocok tanam tanpa menggunakan tanah, biasanya dikerjakan dalam kamar kaca dengan m",Bertanam tanpa media tanah
+TRANSISTOR,benda,10,pesawat radio yang menggunakan transistor,Komponen penguat elektronik
+HIPERTENSI,benda,10,tekanan darah atau denyut jantung yang lebih tinggi daripada normal karena penyempitan pem,Tekanan darah tinggi
+PREROGATIF,benda,10,hak istimewa yang dipunyai oleh kepala negara mengenai hukum dan undang-undang di luar kek,Hak istimewa penguasa
+SEMBAHYANG,benda,10,salat,Beribadah menghadap Tuhan
+TRANSMITER,benda,10,pemancar; bagian (alat) telepon dan sebagainya yang berfungsi mengirimkan pesan,Alat pemancar sinyal
+MEMORANDUM,benda,10,nota atau surat peringatan tidak resmi,Nota peringatan singkat
+INSEMINASI,benda,10,"pengembangan, penyebaran, penangkaran",Pembuahan secara buatan
+SOSIALISME,benda,10,"ajaran atau paham kenegaraan dan ekonomi yang berusaha supaya harta benda, industri, dan p",Paham ekonomi kolektif
+LINGUISTIK,benda,10,ilmu tentang bahasa,Ilmu tentang bahasa
+KONSERVASI,benda,10,"proses menyaput bagian dalam badan mobil, kapal, dan sebagainya untuk mencegah karat",Pelestarian sumber daya
+VENTILATOR,benda,10,mesin yang membantu pasien untuk bernapas,Mesin bantu pernapasan
+MUSYAWARAH,benda,10,pembahasan bersama dengan maksud mencapai keputusan atas penyelesaian masalah; perundingan,Perundingan mencapai mufakat
+ARISTOKRAT,benda,10,orang dari golongan bangsawan; ningrat,Kaum bangsawan ningrat
+DEGENERASI,benda,10,kemunduran atau perubahan menjadi sesuatu yang rusak,Kemunduran mutu fungsi
+PARTIKULAT,benda,10,"partikel yang sangat kecil atau halus (debu, asap, dan sebagainya)",Butiran debu halus
+AFRODISIAK,benda,10,obat perangsang kegiatan seksual,Perangsang gairah seksual
+IMPERIALIS,benda,10,bangsa (negara) yang menjalankan politik menjajah bangsa (negara) lain; negara yang memper,Bangsa penjajah negara
+PERSNELING,benda,10,alat untuk mengatur kecepatan kendaraan bermotor (berupa roda gigi),Pengatur gigi kendaraan
+SANGKAKALA,benda,10,"trompet (dari kulit kerang, dan sebagainya); trompet berkala atau bunyian berkala",Terompet penanda kiamat
+REPUBLIKAN,benda,10,penganut ketatanegaraan yang berbentuk republik,Penganut negara tanpa raja
+STRATOSFER,benda,10,lapisan udara di antara 10�60 km di atas permukaan bumi; lapisan udara di atas troposfer,Lapisan udara atas
+MARGASATWA,benda,10,binatang yang hidup liar di hutan (tidak diternakkan atau dipelihara),Binatang liar hutan
+PANSPERMIA,benda,10,teori yang menyatakan bahwa kehidupan di Bumi berasal dari benih-benih kehidupan yang ters,Asal kehidupan dari antariksa
+KERANGKENG,benda,10,tempat untuk mengurung anak kecil,Kandang jeruji besi
+METAFISIKA,benda,10,ilmu pengetahuan yang berhubungan dengan hal-hal yang nonfisik atau tidak kelihatan,Kajian hal nonfisik
+TENDERLOIN,benda,10,"daging sapi bagian punggung dalam, sangat lunak, tidak berotot, dan tidak berlemak",Daging sapi empuk
+MOBILISASI,benda,10,gerak yang mudah (cepat); perputaran,Pengerahan pasukan massal
+MONITORING,benda,10,pemantauan,Pengawasan berkala berlanjut
+IKONOGRAFI,benda,10,ilmu tentang seni dan teknik membuat arca,Ilmu pembuatan arca
+PROKLAMASI,benda,10,pemberitahuan resmi kepada seluruh rakyat; pemakluman; pengumuman,Pemakluman resmi kemerdekaan
+INFILTRASI,benda,10,penyusupan; perembesan; campur tangan,Penyusupan diam-diam
+KREDENSIAL,benda,10,"sertifikat, surat, atau pernyataan yang menyatakan kemampuan seseorang melakukan sesuatu",Surat bukti kemampuan
+KARTOGRAFI,benda,10,ilmu mengenai peta,Ilmu pembuatan peta
+LIKUIDITAS,benda,10,perihal posisi uang kas suatu perusahaan dan kemampuannya untuk memenuhi kewajiban yang ja,Ketersediaan dana tunai
+SUBSTITUSI,benda,10,penggantian,Proses penggantian unsur
+ANGKASAWAN,benda,10,astronaut,Penjelajah antariksa
+SIMBOLISME,benda,10,"perihal pemakaian simbol (lambang) untuk mengekspresikan ide-ide (misalnya sastra, seni)",Penggunaan lambang bermakna
+SEISMOLOGI,benda,10,ilmu tentang gempa bumi,Ilmu tentang gempa
+ALTERNATOR,benda,10,generator elektris yang digunakan untuk menghasilkan arus bolak-balik; dinamo,Dinamo penghasil listrik
 PROFESIONAL,benda,11,orang yang terlibat atau memenuhi kualifikasi dalam suatu profesi,Ahli di bidangnya
 UNIVERSITAS,benda,11,perguruan tinggi yang terdiri atas sejumlah fakultas yang menyelenggarakan pendidikan ilmi,Kampus banyak fakultas
 INVESTIGASI,benda,11,"penyelidikan dengan mencatat, merekam fakta atau melakukan peninjauan, percobaan, dan seba",Penyelidikan cari fakta
-KONSENTRASI,benda,11,pemusatan perhatian atau pikiran pada suatu hal,
-KONSEKUENSI,benda,11,persesuaian dengan yang dahulu,
+KONSENTRASI,benda,11,pemusatan perhatian atau pikiran pada suatu hal,Pemusatan pikiran penuh
+KONSEKUENSI,benda,11,persesuaian dengan yang dahulu,Akibat suatu perbuatan
 SUKARELAWAN,benda,11,orang yang melakukan sesuatu dengan sukarela (tidak karena diwajibkan atau dipaksakan),Pekerja tanpa bayaran
 REKOMENDASI,benda,11,"saran yang menganjurkan (membenarkan, menguatkan)",Saran yang mendukung
 DEMONSTRASI,benda,11,pernyataan protes yang dikemukakan secara massal; unjuk rasa,Aksi protes ramai-ramai
-INTELEKTUAL,benda,11,orang yang mempunyai kecerdasan tinggi; cendekiawan,
-KUALIFIKASI,benda,11,tingkatan,
-RESEPSIONIS,benda,11,"orang yang bertugas sebagai penerima tamu (di suatu perusahaan, hotel, atau kantor)",
-AKSELERATOR,benda,11,otot atau saraf yang mempercepat gerakan,
-SPESIFIKASI,benda,11,"perincian (tentang rencana, proposal, dan sebagainya)",
-POPULARITAS,benda,11,perihal populer; kepopuleran,
-KONGLOMERAT,benda,11,massa atau campuran yang terjadi dari bermacam-macam unsur,
-REINKARNASI,benda,11,penjelmaan (penitisan) kembali ke dalam tubuh lain setelah mati; kelahiran kembali,
-TELEPORTASI,benda,11,"proses, cara, perbuatan memindahkan orang atau barang dengan psikokinesis",
-KONDOMINIUM,benda,11,kepunyaan bersama,
-IMPROVISASI,benda,11,pembuatan (penyediaan) sesuatu berdasarkan bahan yang ada (seadanya),
-KOMPARTEMEN,benda,11,bagian yang terpisah,
-KONTAMINASI,benda,11,efek distorsi dari fakta eksternal yang tidak terkontrol,
-DOKUMENTASI,benda,11,"pengumpulan, pemilihan, pengolahan, dan penyimpanan informasi dalam bidang pengetahuan",
-KARBOHIDRAT,benda,11,"senyawa organik karbon, hidrogen, dan oksigen, terdiri atas satu atau lebih molekul gula s",
-TRANSPONDER,benda,11,alat dengan kendali pilot otomatis untuk mengendalikan daya mesin dan memandu pesawat udar,
-KONFRONTASI,benda,11,permusuhan; pertentangan,
-SKIZOFRENIA,benda,11,"penyakit jiwa yang ditandai oleh ketidakacuhan, halusinasi, waham untuk menghukum, dan mer",
-KONTROVERSI,benda,11,perdebatan,
-KONFEDERASI,benda,11,"gabungan beberapa organisasi, misalnya organisasi buruh",
-SEMENANJUNG,benda,11,bagian daratan yang menjorok ke laut; jazirah,
-SEKSUALITAS,benda,11,dorongan seks,
-RELATIVITAS,benda,11,hal (keadaan) relatif; kenisbian,
-MEDITERANIA,benda,11,laut di antara Eropa dan Afrika; Laut Tengah,
-PARTISIPASI,benda,11,perihal turut berperan serta dalam suatu kegiatan; keikutsertaan; peran serta,
-ULTRAVIOLET,benda,11,daerah spektrum elektromagnet yang terbentuk sekitar panjang gelombang 10�380 mm,
-KOORDINATOR,benda,11,orang yang melakukan koordinasi; yang mengoordinasi,
-DISTRIBUTOR,benda,11,orang atau badan yang bertugas mendistribusikan barang (dagangan); penyalur,
-EKSPLOITASI,benda,11,pengusahaan; pendayagunaan,
-KREATIVITAS,benda,11,perihal berkreasi; kekreatifan,
-METABOLISME,benda,11,proses perputaran; gerak berputar,
-TELEKINESIS,benda,11,gerak atau perpindahan tempat suatu benda tanpa disentuh atau tanpa penggunaan peralatan,
-KAPITALISME,benda,11,"sistem dan paham ekonomi (perekonomian) yang modalnya (penanaman modalnya, kegiatan indust",
-PATRIOTISME,benda,11,sikap seseorang yang bersedia mengorbankan segala-galanya untuk kejayaan dan kemakmuran ta,
-KONFIGURASI,benda,11,bentuk horizontal dan vertikal bagian bumi,
-KONTRADIKSI,benda,11,pertentangan antara dua hal yang sangat berlawanan atau bertentangan,
-KANIBALISME,benda,11,pembunuhan yang sangat kejam dan sadis,
-FATAMORGANA,benda,11,hal yang bersifat khayal dan tidak mungkin dicapai,
-SOLIDARITAS,benda,11,sifat (perasaan) solider; sifat satu rasa (senasib dan sebagainya); perasaan setia kawan,
-KLASIFIKASI,benda,11,penyusunan bersistem dalam kelompok atau golongan menurut kaidah atau standar yang ditetap,
-PRIVATISASI,benda,11,"penjualan sebagian atau semua saham sebuah perusahaan milik pemerintah kepada publik, baik",
-TESTOSTERON,benda,11,hormon laki-laki yang dihasilkan oleh testis yang menyebabkan timbulnya ciri seks sekunder,
-ANTROPOLOGI,benda,11,"ilmu tentang manusia, khususnya tentang asal-usul, aneka warna bentuk fisik, adat istiadat",
-KONSPIRATOR,benda,11,orang yang berkomplot,
-OLAHRAGAWAN,benda,11,orang yang suka berolahraga (yang banyak melakukan atau mengambil bagian dalam olahraga),
-METEOROLOGI,benda,11,ilmu pengetahuan tentang ciri-ciri fisika dan kimia atmosfer (untuk meramalkan keadaan cua,
-JURNALISTIK,benda,11,seni kejuruan yang bersangkutan dengan pemberitaan dan persuratkabaran,
-CENDEKIAWAN,benda,11,orang cerdik pandai; orang intelek,
-KLARIFIKASI,benda,11,"penjernihan, penjelasan, dan pengembalian kepada apa yang sebenarnya (tentang karya ilmiah",
-ARISTOTELES,benda,11,"filsuf, ilmuwan, kritikus teater Yunani, penulis teori analisis detail beberapa tipe drama",
-ASTROFISIKA,benda,11,"cabang astronomi yang mempelajari tentang perilaku, sifat fisik, serta dinamika benda dan",
-SKANDINAVIA,benda,11,"wilayah di Eropa Utara yang meliputi Denmark, Swedia, dan Norwegia",
-SERTIFIKASI,benda,11,penyertifikatan,
-TOKSIKOLOGI,benda,11,ilmu tentang zat beracun yang berbahaya,
-ABRAKADABRA,benda,11,ucapan pemain sulap dalam pertunjukan sulap,
-TRIANGULASI,benda,11,teknik navigasi yang menggunakan sifat-sifat segitiga trigonometri,
-KOREOGRAFER,benda,11,koreograf,
-KORESPONDEN,benda,11,pelapor atau wartawan yang tinggal dan bertugas di tempat lain yang secara teratur mengiri,
-HALUSINOGEN,benda,11,bahan yang menimbulkan halusinasi,
-KOLABORATOR,benda,11,orang yang bekerja sama (dengan musuh dan sebagainya),
-KONTRASEPSI,benda,11,"cara untuk mencegah kehamilan (dengan menggunakan alat atau obat pencegah kehamilan, seper",
-MANIFESTASI,benda,11,perwujudan atau bentuk dari sesuatu yang tidak kelihatan,
-VISUALISASI,benda,11,proses pengubahan konsep menjadi gambar untuk disajikan lewat televisi oleh produsen,
-INTEROGATOR,benda,11,penginterogasi,
-SEKRETARIAT,benda,11,bagian organisasi yang menangani pekerjaan dan urusan yang menjadi tugas sekretaris; kepan,
-MAHABHARATA,benda,11,"karya sastra kuno yang berasal dari India, ditulis oleh Begawan Byasa, yang menceritakan p",
-PLANETARIUM,benda,11,bangunan berkubah setengah lingkaran untuk memperlihatkan susunan bintang-bintang di langi,
-INTROSPEKSI,benda,11,"peninjauan atau koreksi terhadap (perbuatan, sikap, kelemahan, kesalahan, dan sebagainya)",
-STERILISASI,benda,11,perlakuan untuk meniadakan kesanggupan berkembang biak pada hewan atau manusia dengan meng,
-KONTINGENSI,benda,11,keadaan yang masih diliputi ketidakpastian dan berada di luar jangkauan,
-KONSISTENSI,benda,11,kekentalan,
-TRANSEKSUAL,benda,11,sesuatu yang dapat menimbulkan gairah,
-VISIBILITAS,benda,11,"keadaan dapat dilihat dan diamati (terutama untuk keadaan cuaca, bendanya dapat dilihat de",
-SOSIALISASI,benda,11,usaha untuk mengubah milik perseorangan menjadi milik umum (milik negara),
-DISINFEKTAN,benda,11,"bahan kimia (seperti lisol, kreolin) yang digunakan untuk mencegah terjadinya infeksi atau",
-KONTRIBUTOR,benda,11,penyumbang (karangan kepada majalah),
-ENSEFALITIS,benda,11,"radang otak dengan gejala khas, seperti koma, demam, kejang",
-KRIPTOGRAFI,benda,11,penyelidikan tentang kode rahasia,
-INSINERATOR,benda,11,wadah pembakaran sampah,
-TRANSMUTASI,benda,11,pemindahan,
-KOMUNIKATOR,benda,11,orang atau kelompok orang yang menyampaikan pesan kepada komunikan,
-MANIPULATOR,benda,11,orang yang melakukan manipulasi,
-KREMATORIUM,benda,11,tempat untuk membakar mayat sehingga menjadi abu; perabuan,
-KRIMINOLOGI,benda,11,ilmu atau pengetahuan tentang kejahatan dan tindak pidana,
-DARMAWISATA,benda,11,perjalanan atau kunjungan singkat dengan tujuan bersenang-senang dan sebagainya; perjalana,
-KONSOLIDASI,benda,11,peleburan dua perusahaan atau lebih menjadi satu perusahaan,
-HIBRIDISASI,benda,11,persilangan dari populasi yang berbeda,
-KONVERGENSI,benda,11,keadaan menuju satu titik pertemuan; memusat,
-OTOMATISASI,benda,11,perihal otomatis; pengotomatisan,
-KONDISIONER,benda,11,"cairan yang digunakan untuk meluruskan, memperindah, dan memudahkan pengaturan rambut sete",
-IMPRESIONIS,benda,11,pengikut aliran impresionisme,
-TERMINOLOGI,benda,11,peristilahan (tentang kata-kata),
-DEKOMPOSISI,benda,11,proses perubahan menjadi bentuk yang lebih sederhana; penguraian,
-INSEKTISIDA,benda,11,senyawa kimia yang digunakan untuk membunuh serangga (biasanya dengan mengusapkan atau men,
-FILANTROPIS,benda,11,pelaku filantropi; humanitarian,
-SENSUALITAS,benda,11,segala sesuatu yang mengenai badani bukan rohani,
-TERMONUKLIR,benda,11,keperluan atau hubungan untuk bom termonuklir,
-BINARAGAWAN,benda,11,orang yang melakukan olahraga binaraga; olahragawan binaraga,
-BANJARMASIN,benda,11,ibu kota Provinsi Kalimantan Selatan,
-DETERMINASI,benda,11,"hal menentukan (menetapkan, memastikan)",
-SPONTANITAS,benda,11,kesertamertaan; kespontanan,
-EFEKTIVITAS,benda,11,keefektifan,
-ARGUMENTASI,benda,11,"alasan untuk memperkuat atau menolak suatu pendapat, pendirian, atau gagasan",
+INTELEKTUAL,benda,11,orang yang mempunyai kecerdasan tinggi; cendekiawan,Kaum cendekiawan cerdas
+KUALIFIKASI,benda,11,tingkatan,Syarat kemampuan tertentu
+RESEPSIONIS,benda,11,"orang yang bertugas sebagai penerima tamu (di suatu perusahaan, hotel, atau kantor)",Penerima tamu hotel
+AKSELERATOR,benda,11,otot atau saraf yang mempercepat gerakan,Pedal pemacu laju
+SPESIFIKASI,benda,11,"perincian (tentang rencana, proposal, dan sebagainya)",Perincian detail barang
+POPULARITAS,benda,11,perihal populer; kepopuleran,Tingkat ketenaran seseorang
+KONGLOMERAT,benda,11,massa atau campuran yang terjadi dari bermacam-macam unsur,Pengusaha kaya raya
+REINKARNASI,benda,11,penjelmaan (penitisan) kembali ke dalam tubuh lain setelah mati; kelahiran kembali,Lahir kembali setelah mati
+TELEPORTASI,benda,11,"proses, cara, perbuatan memindahkan orang atau barang dengan psikokinesis",Berpindah tempat seketika
+KONDOMINIUM,benda,11,kepunyaan bersama,Hunian bertingkat mewah
+IMPROVISASI,benda,11,pembuatan (penyediaan) sesuatu berdasarkan bahan yang ada (seadanya),Bertindak spontan tanpa persiapan
+KOMPARTEMEN,benda,11,bagian yang terpisah,Ruang sekat terpisah
+KONTAMINASI,benda,11,efek distorsi dari fakta eksternal yang tidak terkontrol,Pencemaran zat asing
+DOKUMENTASI,benda,11,"pengumpulan, pemilihan, pengolahan, dan penyimpanan informasi dalam bidang pengetahuan",Pengumpulan arsip informasi
+KARBOHIDRAT,benda,11,"senyawa organik karbon, hidrogen, dan oksigen, terdiri atas satu atau lebih molekul gula s",Sumber energi makanan
+TRANSPONDER,benda,11,alat dengan kendali pilot otomatis untuk mengendalikan daya mesin dan memandu pesawat udar,Pemancar penerima sinyal
+KONFRONTASI,benda,11,permusuhan; pertentangan,Pertentangan dua pihak
+SKIZOFRENIA,benda,11,"penyakit jiwa yang ditandai oleh ketidakacuhan, halusinasi, waham untuk menghukum, dan mer",Gangguan jiwa berat
+KONTROVERSI,benda,11,perdebatan,Perdebatan pendapat berlawanan
+KONFEDERASI,benda,11,"gabungan beberapa organisasi, misalnya organisasi buruh",Gabungan beberapa organisasi
+SEMENANJUNG,benda,11,bagian daratan yang menjorok ke laut; jazirah,Daratan menjorok ke laut
+SEKSUALITAS,benda,11,dorongan seks,Perihal dorongan berahi
+RELATIVITAS,benda,11,hal (keadaan) relatif; kenisbian,Keadaan serba nisbi
+MEDITERANIA,benda,11,laut di antara Eropa dan Afrika; Laut Tengah,Laut antara Eropa Afrika
+PARTISIPASI,benda,11,perihal turut berperan serta dalam suatu kegiatan; keikutsertaan; peran serta,Ikut ambil bagian
+ULTRAVIOLET,benda,11,daerah spektrum elektromagnet yang terbentuk sekitar panjang gelombang 10�380 mm,Sinar matahari tak tampak
+KOORDINATOR,benda,11,orang yang melakukan koordinasi; yang mengoordinasi,Pengatur kerja sama tim
+DISTRIBUTOR,benda,11,orang atau badan yang bertugas mendistribusikan barang (dagangan); penyalur,Penyalur barang dagangan
+EKSPLOITASI,benda,11,pengusahaan; pendayagunaan,Pengurasan demi keuntungan
+KREATIVITAS,benda,11,perihal berkreasi; kekreatifan,Daya cipta ide baru
+METABOLISME,benda,11,proses perputaran; gerak berputar,Pembakaran energi tubuh
+TELEKINESIS,benda,11,gerak atau perpindahan tempat suatu benda tanpa disentuh atau tanpa penggunaan peralatan,Menggerakkan benda dengan pikiran
+KAPITALISME,benda,11,"sistem dan paham ekonomi (perekonomian) yang modalnya (penanaman modalnya, kegiatan indust",Sistem ekonomi pemodal besar
+PATRIOTISME,benda,11,sikap seseorang yang bersedia mengorbankan segala-galanya untuk kejayaan dan kemakmuran ta,Cinta tanah air
+KONFIGURASI,benda,11,bentuk horizontal dan vertikal bagian bumi,Susunan pengaturan komponen
+KONTRADIKSI,benda,11,pertentangan antara dua hal yang sangat berlawanan atau bertentangan,Pertentangan dua hal
+KANIBALISME,benda,11,pembunuhan yang sangat kejam dan sadis,Memakan daging sesama
+FATAMORGANA,benda,11,hal yang bersifat khayal dan tidak mungkin dicapai,Ilusi khayalan semu
+SOLIDARITAS,benda,11,sifat (perasaan) solider; sifat satu rasa (senasib dan sebagainya); perasaan setia kawan,Rasa setia kawan
+KLASIFIKASI,benda,11,penyusunan bersistem dalam kelompok atau golongan menurut kaidah atau standar yang ditetap,Penggolongan menurut jenis
+PRIVATISASI,benda,11,"penjualan sebagian atau semua saham sebuah perusahaan milik pemerintah kepada publik, baik",Pengalihan ke swasta
+TESTOSTERON,benda,11,hormon laki-laki yang dihasilkan oleh testis yang menyebabkan timbulnya ciri seks sekunder,Hormon seks pria
+ANTROPOLOGI,benda,11,"ilmu tentang manusia, khususnya tentang asal-usul, aneka warna bentuk fisik, adat istiadat",Ilmu tentang manusia
+KONSPIRATOR,benda,11,orang yang berkomplot,Pelaku persekongkolan jahat
+OLAHRAGAWAN,benda,11,orang yang suka berolahraga (yang banyak melakukan atau mengambil bagian dalam olahraga),Atlet yang bertanding
+METEOROLOGI,benda,11,ilmu pengetahuan tentang ciri-ciri fisika dan kimia atmosfer (untuk meramalkan keadaan cua,Ilmu ramalan cuaca
+JURNALISTIK,benda,11,seni kejuruan yang bersangkutan dengan pemberitaan dan persuratkabaran,Dunia pemberitaan pers
+CENDEKIAWAN,benda,11,orang cerdik pandai; orang intelek,Orang cerdik pandai
+KLARIFIKASI,benda,11,"penjernihan, penjelasan, dan pengembalian kepada apa yang sebenarnya (tentang karya ilmiah",Penjelasan yang sebenarnya
+ASTROFISIKA,benda,11,"cabang astronomi yang mempelajari tentang perilaku, sifat fisik, serta dinamika benda dan",Cabang ilmu bintang
+SERTIFIKASI,benda,11,penyertifikatan,Pemberian surat pengakuan
+TOKSIKOLOGI,benda,11,ilmu tentang zat beracun yang berbahaya,Ilmu tentang racun
+ABRAKADABRA,benda,11,ucapan pemain sulap dalam pertunjukan sulap,Mantra pesulap panggung
+TRIANGULASI,benda,11,teknik navigasi yang menggunakan sifat-sifat segitiga trigonometri,Teknik ukur segitiga
+KOREOGRAFER,benda,11,koreograf,Penata gerak tari
+KORESPONDEN,benda,11,pelapor atau wartawan yang tinggal dan bertugas di tempat lain yang secara teratur mengiri,Wartawan pengirim berita
+HALUSINOGEN,benda,11,bahan yang menimbulkan halusinasi,Zat pemicu khayalan
+KOLABORATOR,benda,11,orang yang bekerja sama (dengan musuh dan sebagainya),Rekan kerja sama
+KONTRASEPSI,benda,11,"cara untuk mencegah kehamilan (dengan menggunakan alat atau obat pencegah kehamilan, seper",Pencegah kehamilan
+MANIFESTASI,benda,11,perwujudan atau bentuk dari sesuatu yang tidak kelihatan,Perwujudan nyata sesuatu
+VISUALISASI,benda,11,proses pengubahan konsep menjadi gambar untuk disajikan lewat televisi oleh produsen,Penggambaran sebuah konsep
+INTEROGATOR,benda,11,penginterogasi,Pengorek keterangan tersangka
+SEKRETARIAT,benda,11,bagian organisasi yang menangani pekerjaan dan urusan yang menjadi tugas sekretaris; kepan,Bagian tata usaha
+PLANETARIUM,benda,11,bangunan berkubah setengah lingkaran untuk memperlihatkan susunan bintang-bintang di langi,Gedung peraga langit
+INTROSPEKSI,benda,11,"peninjauan atau koreksi terhadap (perbuatan, sikap, kelemahan, kesalahan, dan sebagainya)",Mawas diri sendiri
+STERILISASI,benda,11,perlakuan untuk meniadakan kesanggupan berkembang biak pada hewan atau manusia dengan meng,Pembasmian kuman total
+KONTINGENSI,benda,11,keadaan yang masih diliputi ketidakpastian dan berada di luar jangkauan,Keadaan tak menentu
+KONSISTENSI,benda,11,kekentalan,Ketetapan yang ajek
+TRANSEKSUAL,benda,11,sesuatu yang dapat menimbulkan gairah,Ganti jenis kelamin
+VISIBILITAS,benda,11,"keadaan dapat dilihat dan diamati (terutama untuk keadaan cuaca, bendanya dapat dilihat de",Jarak pandang mata
+SOSIALISASI,benda,11,usaha untuk mengubah milik perseorangan menjadi milik umum (milik negara),Penyuluhan ke masyarakat
+DISINFEKTAN,benda,11,"bahan kimia (seperti lisol, kreolin) yang digunakan untuk mencegah terjadinya infeksi atau",Cairan pembasmi kuman
+KONTRIBUTOR,benda,11,penyumbang (karangan kepada majalah),Penyumbang tulisan majalah
+ENSEFALITIS,benda,11,"radang otak dengan gejala khas, seperti koma, demam, kejang",Peradangan pada otak
+KRIPTOGRAFI,benda,11,penyelidikan tentang kode rahasia,Ilmu sandi rahasia
+INSINERATOR,benda,11,wadah pembakaran sampah,Tungku pembakar sampah
+TRANSMUTASI,benda,11,pemindahan,Perubahan bentuk unsur
+KOMUNIKATOR,benda,11,orang atau kelompok orang yang menyampaikan pesan kepada komunikan,Orang penyampai pesan
+MANIPULATOR,benda,11,orang yang melakukan manipulasi,Orang yang memperdaya
+KREMATORIUM,benda,11,tempat untuk membakar mayat sehingga menjadi abu; perabuan,Tempat pembakaran jenazah
+KRIMINOLOGI,benda,11,ilmu atau pengetahuan tentang kejahatan dan tindak pidana,Ilmu tentang kejahatan
+DARMAWISATA,benda,11,perjalanan atau kunjungan singkat dengan tujuan bersenang-senang dan sebagainya; perjalana,Perjalanan tamasya singkat
+KONSOLIDASI,benda,11,peleburan dua perusahaan atau lebih menjadi satu perusahaan,Penggabungan menjadi satu
+HIBRIDISASI,benda,11,persilangan dari populasi yang berbeda,Persilangan dua jenis
+KONVERGENSI,benda,11,keadaan menuju satu titik pertemuan; memusat,Menuju satu titik
+OTOMATISASI,benda,11,perihal otomatis; pengotomatisan,Pengerjaan serba mesin
+KONDISIONER,benda,11,"cairan yang digunakan untuk meluruskan, memperindah, dan memudahkan pengaturan rambut sete",Cairan pelembut rambut
+IMPRESIONIS,benda,11,pengikut aliran impresionisme,Pelukis aliran kesan
+TERMINOLOGI,benda,11,peristilahan (tentang kata-kata),Kumpulan istilah khusus
+DEKOMPOSISI,benda,11,proses perubahan menjadi bentuk yang lebih sederhana; penguraian,Penguraian menjadi sederhana
+INSEKTISIDA,benda,11,senyawa kimia yang digunakan untuk membunuh serangga (biasanya dengan mengusapkan atau men,Racun pembasmi serangga
+FILANTROPIS,benda,11,pelaku filantropi; humanitarian,Dermawan penyantun sesama
+SENSUALITAS,benda,11,segala sesuatu yang mengenai badani bukan rohani,Daya tarik ragawi
+TERMONUKLIR,benda,11,keperluan atau hubungan untuk bom termonuklir,Reaksi nuklir panas
+BINARAGAWAN,benda,11,orang yang melakukan olahraga binaraga; olahragawan binaraga,Atlet pembentuk otot
+DETERMINASI,benda,11,"hal menentukan (menetapkan, memastikan)",Ketetapan hati kuat
+SPONTANITAS,benda,11,kesertamertaan; kespontanan,Reaksi serta-merta
+EFEKTIVITAS,benda,11,keefektifan,Keberhasilan mencapai tujuan
+ARGUMENTASI,benda,11,"alasan untuk memperkuat atau menolak suatu pendapat, pendirian, atau gagasan",Alasan penguat pendapat
 TADAH,benda,5,barang untuk menampung sesuatu,Penampung tetesan air
 DENTANG,benda,7,tiruan bunyi besi dipukul keras-keras,Bunyi logam dipukul
 CELETUK,benda,7,ucapan spontan,Ucapan spontan mendadak
-DETERMINASI,benda,11,"hal menentukan (menetapkan, memastikan)",
+DETERMINASI,benda,11,"hal menentukan (menetapkan, memastikan)",Ketetapan hati kuat
 SOMA,benda,4,tubuh; badan; jasad hidup,Tubuh makhluk hidup
 RUNGU,benda,5,pendengaran,Kemampuan telinga mendengar
 ANUMERTA,benda,8,"penghargaan (gelar, pangkat, dan sebagainya) yang diberikan kepada anggota angkatan bersen",Gelar setelah wafat
@@ -6598,14 +6559,14 @@ NIAGA,benda,5,kegiatan jual beli dan sebagainya untuk memperoleh untung; dagang,
 FILO,benda,4,filodendron,Tanaman hias merambat
 KUTANG,benda,6,"pakaian dalam wanita untuk menutupi payudara, terdiri atas kain berbentuk mangkuk, tali ba",Penutup dada wanita
 RAMI,benda,4,tali rami,Serat pembuat tali
-LIKUIDITAS,benda,10,perihal posisi uang kas suatu perusahaan dan kemampuannya untuk memenuhi kewajiban yang ja,
-ZUS,benda,3,kata sapaan akrab kepada perempuan,
-SPONTANITAS,benda,11,kesertamertaan; kespontanan,
-ILUSIONIS,benda,9,tukang sulap,
+LIKUIDITAS,benda,10,perihal posisi uang kas suatu perusahaan dan kemampuannya untuk memenuhi kewajiban yang ja,Ketersediaan dana tunai
+ZUS,benda,3,kata sapaan akrab kepada perempuan,Panggilan akrab kaum wanita
+SPONTANITAS,benda,11,kesertamertaan; kespontanan,Reaksi serta-merta
+ILUSIONIS,benda,9,tukang sulap,Ahli seni sulap
 TRANSPOR,benda,8,angkutan,Sarana pengangkutan barang
-SUBSTITUSI,benda,10,penggantian,
+SUBSTITUSI,benda,10,penggantian,Proses penggantian unsur
 INTRUSI,benda,7,penerobosan magma ke dalam batuan atau di antara batuan lain; perembesan air laut dan seba,Penyusupan tanpa izin
-EFEKTIVITAS,benda,11,keefektifan,
+EFEKTIVITAS,benda,11,keefektifan,Keberhasilan mencapai tujuan
 KOMUNIKE,benda,8,"pengumuman atau pemberitahuan resmi dari pemerintah (di surat kabar dan sebagainya), biasa",Pernyataan resmi pemerintah
 MULE,benda,4,selop tertutup di bagian depan/ujung sepatu,Sandal tertutup depan
 BASAR,benda,5,"salah satu sifat melihat, sifat yang wajib bagi Allah",Sifat melihat bagi Tuhan
@@ -6613,9 +6574,9 @@ SAPO,benda,4,wadah dari tanah liat atau tembikar,Wadah dari tembikar
 GURI,benda,4,galangan kapal; dok,Tempat membuat kapal
 GANJAL,benda,6,benda yang ditaruh sebagai penghalang (penahan) supaya tidak bergerak turun,Penahan agar tak goyang
 HIPOKRIT,benda,8,orang yang suka berpura-pura,Orang bermuka dua
-ARU,benda,3,gelar bangsawan Bugis,
+ARU,benda,3,gelar bangsawan Bugis,Gelar bangsawan orang Bugis
 TAWANG,benda,6,ruang di antara langit dan bumi; awang-awang,Angkasa luas membentang
-HIN,benda,3,ukuran isi sebesar 1/6 bat atau kurang lebih 6 liter,
+HIN,benda,3,ukuran isi sebesar 1/6 bat atau kurang lebih 6 liter,Satuan ukuran isi kuno
 RELAI,aksi,5,sambung siar,Penyambung siaran ulang
 AMSAL,benda,5,misal; umpama; perumpamaan,Ibarat sebuah perumpamaan
 DEMPUL,benda,6,"bahan penutup lubang pada kayu dan sebagainya, dibuat dari kapur dan minyak cat; gala-gala",Penambal celah kayu
@@ -6630,28 +6591,28 @@ DALEM,benda,5,rumah; istana,Kediaman istana bangsawan
 PIAMA,benda,5,"pakaian, biasanya terdiri atas dua potong, longgar, dan digunakan di rumah atau untuk tidu",Baju tidur longgar
 EMPORIUM,benda,8,pusat perdagangan; pusat perbelanjaan,Pusat perbelanjaan besar
 KORSASE,benda,7,bandana dengan aksentuasi kerut,Hiasan bunga di dada
-OBSTRUKSI,benda,9,penghambatan yang dilakukan oleh golongan politik tertentu untuk menghalangi diterimanya s,
+OBSTRUKSI,benda,9,penghambatan yang dilakukan oleh golongan politik tertentu untuk menghalangi diterimanya s,Penghambatan secara sengaja
 CODET,benda,5,"bekas luka (pada muka, dahi, dan sebagainya)",Bekas luka wajah
 HOYA,benda,4,"liana yang batangnya bulat bergetah putih, daunnya membundar telur dan menjorong, perbunga",Tanaman merambat bergetah
-ANGKASAWAN,benda,10,astronaut,
+ANGKASAWAN,benda,10,astronaut,Penjelajah antariksa
 BONSAI,benda,6,"tumbuhan kerdil, diperoleh dengan menanamnya dalam pot dengan cara tertentu (pot dangkal, ",Pohon kerdil dalam pot
 RUNDING,benda,7,perhitungan; perkiraan,Membahas mencari kesepakatan
 JUJITSU,benda,7,olahraga bela diri dari Jepang yang memerlukan pengetahuan tentang anatomi dan penerapan p,Bela diri asal Jepang
-PURBAKALA,benda,9,zaman dahulu sekali; zaman kuno; dahulu kala,
+PURBAKALA,benda,9,zaman dahulu sekali; zaman kuno; dahulu kala,Zaman dahulu kala
 SOJA,aksi,4,hormat; tunduk,Sikap memberi hormat
 SILABUS,benda,7,ikhtisar suatu pelajaran,Garis besar mata pelajaran
 DM,benda,2,desimeter,
-KONVERTER,benda,9,peranti yang mengubah sinyal listrik atau data komputer dari satu bentuk ke bentuk lainnya,
+KONVERTER,benda,9,peranti yang mengubah sinyal listrik atau data komputer dari satu bentuk ke bentuk lainnya,Pengubah bentuk sinyal
 RESES,benda,5,masa perhentian sidang (parlemen); masa istirahat dari kegiatan bersidang,Jeda istirahat dewan
 INDIGO,benda,6,tarum,Warna biru nila
 TAIGA,benda,5,"daerah hutan pohon jarum-jarum di Siberia, terdapat di antara daerah tundra di utara dan s",Hutan pinus daerah dingin
 KONSEPSI,benda,8,pengertian; pendapat (paham),Gagasan pokok pemikiran
 RUBRIK,benda,6,"kepala karangan (ruangan tetap) dalam surat kabar, majalah, dan sebagainya",Kolom tetap surat kabar
-BIMASAKTI,benda,9,galaksi tempat Bumi berada yang tampak seperti lajur cahaya di langit,
-HIPOFISIS,benda,9,"kelenjar kecil di sebelah bawah otak yang mengeluarkan getah, menghasilkan bermacam-macam ",
+BIMASAKTI,benda,9,galaksi tempat Bumi berada yang tampak seperti lajur cahaya di langit,Galaksi tempat bumi berada
+HIPOFISIS,benda,9,"kelenjar kecil di sebelah bawah otak yang mengeluarkan getah, menghasilkan bermacam-macam ",Kelenjar kecil di otak
 SALIP,aksi,5,dahului,Mendahului dari belakang
 BALAN,benda,5,janda,Wanita tanpa suami lagi
-SIMPOSIUM,benda,9,"kumpulan pendapat tentang sesuatu, terutama yang dihimpun dan diterbitkan",
+SIMPOSIUM,benda,9,"kumpulan pendapat tentang sesuatu, terutama yang dihimpun dan diterbitkan",Pertemuan bertukar pendapat
 KOLUMNIS,benda,8,orang yang secara tetap menulis artikel dalam surat kabar atau majalah,Penulis rubrik koran
 PANGESTU,benda,8,berkah; restu,Doa restu orang tua
 PG,benda,2,pabrik gula,
@@ -6666,16 +6627,16 @@ FIKSASI,benda,7,perasaan terikat atau terpusat pada sesuatu secara berlebihan,Te
 DELIRIUM,benda,8,"gangguan mental yang ditandai oleh ilusi, halusinasi, ketegangan otak, dan kegelisahan fis",Kekacauan mental berhalusinasi
 OBSIDIAN,benda,8,batu kaca berwarna hitam atau hitam keabu-abuan yang berasal dari lahar cair yang terlalu ,Batu kaca vulkanik hitam
 SINAPSIS,benda,8,tempat sinyal berpindah dari satu sel saraf ke sel saraf yang lain,Celah antar sel saraf
-ARGUMENTASI,benda,11,"alasan untuk memperkuat atau menolak suatu pendapat, pendirian, atau gagasan",
+ARGUMENTASI,benda,11,"alasan untuk memperkuat atau menolak suatu pendapat, pendirian, atau gagasan",Alasan penguat pendapat
 FILTRASI,benda,8,penyaringan,Proses menyaring cairan
 BOLPOIN,benda,7,pena yang bermata bulat (tumpul) yang dilengkapi dengan tinta kental dalam tabung; pena bo,Pena bermata bulat
 GERAHAM,benda,7,gigi belakang (untuk mengunyah); geraman,Gigi pengunyah belakang
 FLEK,benda,4,bintik-bintik atau bercak pada permukaan suatu bidang atau benda,Bercak pada kulit
 PLAFON,benda,6,langit-langit rumah,Bidang atas ruangan
-BADMINTON,benda,9,bulu tangkis,
+BADMINTON,benda,9,bulu tangkis,Olahraga raket dan kok
 SALVO,benda,5,tembakan serentak sejumlah senapan atau meriam sebagai tanda penghormatan militer (pada up,Tembakan serentak penghormatan
-IMPOTENSI,benda,9,perihal lemah syahwat,
-SIMBOLISME,benda,10,"perihal pemakaian simbol (lambang) untuk mengekspresikan ide-ide (misalnya sastra, seni)",
+IMPOTENSI,benda,9,perihal lemah syahwat,Lemah syahwat pada pria
+SIMBOLISME,benda,10,"perihal pemakaian simbol (lambang) untuk mengekspresikan ide-ide (misalnya sastra, seni)",Penggunaan lambang bermakna
 TAWAN,aksi,5,menawan,Menangkap musuh perang
 SOLDER,benda,6,patri,Alat patri kabel
 CUPANG,benda,6,tanda merah bekas gigitan atau cubitan pada tubuh,Ikan hias petarung
@@ -6688,40 +6649,40 @@ KANJAR,benda,6,tari persembahan dari Kutai yang dimainkan oleh pria dan wanita u
 OKTAF,benda,5,kumpulan delapan nada berturut-turut,Deret delapan nada
 KIDUNG,benda,6,puisi,Nyanyian syair kuno
 BELUGA,benda,6,paus yang memiliki warna putih di seluruh tubuhnya,Paus putih besar
-TROMBOSIT,benda,9,"keping-keping darah, mempunyai bentuk yang tidak teratur dan tidak mempunyai inti",
+TROMBOSIT,benda,9,"keping-keping darah, mempunyai bentuk yang tidak teratur dan tidak mempunyai inti",Keping pembeku darah
 GEBLEK,benda,6,"penganan goreng, dibuat dari adonan pati ubi kayu, dibentuk seperti cincin berangkai",Camilan goreng dari singkong
 HERBA,benda,5,tumbuhan terna,Tanaman obat berkhasiat
 GASING,benda,6,mainan terbuat dari kayu dan sebagainya yang diberi pasak (paku atau kayu) yang dapat dipu,Mainan kayu berputar
-MES,benda,3,lubang ayakan berbentuk bujur sangkar,
-KARIKATUR,benda,9,"gambar olok-olok yang mengandung pesan, sindiran, dan sebagainya",
+MES,benda,3,lubang ayakan berbentuk bujur sangkar,Asrama tempat tinggal bersama
+KARIKATUR,benda,9,"gambar olok-olok yang mengandung pesan, sindiran, dan sebagainya",Gambar sindiran jenaka
 DRAMATIK,benda,8,unsur karya film yang dapat membuat penonton selalu ingin mengikuti cerita film sampai sel,Penuh ketegangan mengharukan
 BAHARI,aksi,6,bertuah,Berkaitan dengan kelautan
-LAK,benda,3,zat anorganik yang menyerap warna,
+LAK,benda,3,zat anorganik yang menyerap warna,Bahan penyerap zat warna
 DIVIDEN,benda,7,sejumlah uang yang berasal dari hasil keuntungan yang dibayarkan kepada pemegang saham seb,Bagian laba pemegang saham
 NINABOBO,benda,8,nyanyian untuk menidurkan anak,Lagu pengantar tidur bayi
-EKSEKUTOR,benda,9,orang yang melakukan eksekusi,
+EKSEKUTOR,benda,9,orang yang melakukan eksekusi,Pelaksana hukuman mati
 PATOK,benda,5,pancang; tonggak,Tiang penanda batas tanah
 FORMALIN,benda,8,"larutan bening berbau menyengat, mengandung sedikit metanol untuk bahan pengawet dan pembu",Cairan pengawet menyengat
 TERALI,benda,6,pagar pada tepi kapal,Jeruji besi jendela
 TWIT,benda,4,pesan yang dikirim melalui layanan jejaring sosial Twitter; kicau,Kicauan media sosial
-ULI,benda,3,penganan yang dibuat dari ketan dan parutan kelapa (sering dimakan bersama dengan tapai ke,
+ULI,benda,3,penganan yang dibuat dari ketan dan parutan kelapa (sering dimakan bersama dengan tapai ke,Penganan ketan dan kelapa
 PENGIN,aksi,6,"ingin, menginginkan sesuatu",Berhasrat pada sesuatu
 ABSENSI,benda,7,ketidakhadiran,Catatan kehadiran seseorang
 ASAR,benda,4,waktu petang hari,Waktu salat petang
 OLIGARKI,benda,8,pemerintahan yang dijalankan oleh beberapa orang yang berkuasa dari golongan atau kelompok,Kekuasaan segelintir elite
-BIU,benda,3,gelar bagi pemangku adat yang bertugas mempersiapkan bahan-bahan di luar atau halaman ista,
+BIU,benda,3,gelar bagi pemangku adat yang bertugas mempersiapkan bahan-bahan di luar atau halaman ista,Gelar pemangku adat istana
 BELO,benda,4,anak kuda yang berumur kurang dari satu tahun,Anak kuda muda
 PORTO,benda,5,"biaya pengiriman barang (surat, barang cetakan, dan sebagainya)",Ongkos kirim surat
 SINDUR,benda,6,sabuk dari kain merah muda yang tepinya putih,Kain merah upacara adat
 ANGKARA,benda,7,kebengisan,Kejahatan penuh kebengisan
-SEISMOLOGI,benda,10,ilmu tentang gempa bumi,
+SEISMOLOGI,benda,10,ilmu tentang gempa bumi,Ilmu tentang gempa
 CING,benda,4,tiruan bunyi (uang) logam jatuh di batu; dencing,Bunyi uang logam
 JERIT,benda,5,suara yang keras melengking (dari manusia atau binatang); teriak; pekik,Pekik melengking nyaring
-MOBILITAS,benda,9,gerakan berpindah-pindah,
-ALTERNATOR,benda,10,generator elektris yang digunakan untuk menghasilkan arus bolak-balik; dinamo,
-CIT,benda,3,kain cita; encit,
+MOBILITAS,benda,9,gerakan berpindah-pindah,Gerak perpindahan tempat
+ALTERNATOR,benda,10,generator elektris yang digunakan untuk menghasilkan arus bolak-balik; dinamo,Dinamo penghasil listrik
+CIT,benda,3,kain cita; encit,Kain katun bermotif bunga
 SESAR,aksi,5,geser,Patahan bergeser kerak bumi
-AJI,benda,3,baginda; raja,
+AJI,benda,3,baginda; raja,Sebutan bagi seorang raja
 BUYAR,aksi,5,tidak terpusat lagi (tentang pikiran),Pikiran tak fokus lagi
 PUTER,aksi,5,memuter,Mengitari sebuah poros
 MELEK,aksi,5,insaf; mengerti,Sadar serta memahami
