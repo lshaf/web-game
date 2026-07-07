@@ -1,5 +1,6 @@
 import { defineAsyncComponent } from 'vue'
 import Onet from './games/Onet.vue'
+import Takuzu from './games/Takuzu.vue'
 import DinoGame from './games/DinoGame.vue'
 import FlappyBird from './games/FlappyBird.vue'
 import TicTacToe from './games/TicTacToe.vue'
@@ -406,6 +407,13 @@ export const games = [
     tagline: 'Spell as many words as you can from seven letters.',
     component: lazy(() => import('./games/KataLebah.vue')),
     category: 'kata',
+  },
+  {
+    id: 'takuzu',
+    title: 'Takuzu',
+    tagline: 'Fill the grid with two colours by pure logic.',
+    component: Takuzu,
+    category: 'puzzle',
   },
 ]
 
