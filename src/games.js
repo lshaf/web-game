@@ -1,4 +1,5 @@
 import { defineAsyncComponent } from 'vue'
+import Onet from './games/Onet.vue'
 import DinoGame from './games/DinoGame.vue'
 import FlappyBird from './games/FlappyBird.vue'
 import TicTacToe from './games/TicTacToe.vue'
@@ -391,6 +392,13 @@ export const games = [
     tagline: 'Change one letter at a time to climb to the goal word.',
     component: lazy(() => import('./games/TanggaKata.vue')),
     category: 'kata',
+  },
+  {
+    id: 'onet',
+    title: 'Onet',
+    tagline: 'Clear the board by connecting matching tiles.',
+    component: Onet,
+    category: 'puzzle',
   },
 ]
 
