@@ -40,6 +40,9 @@ import Pipa from './games/Pipa.vue'
 import Lompat from './games/Lompat.vue'
 import SortirWarna from './games/SortirWarna.vue'
 import Yatzy from './games/Yatzy.vue'
+import Shikaku from './games/Shikaku.vue'
+import IsiPenuh from './games/IsiPenuh.vue'
+import Aliran from './games/Aliran.vue'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
 // demand so their big dictionaries (kbbi.js, words.js, …) only download when you
@@ -423,6 +426,27 @@ export const games = [
     component: DamTiga,
     category: 'strategi',
     duo: true,
+  },
+  {
+    id: 'shikaku',
+    title: 'Shikaku',
+    tagline: 'Divide the grid into rectangles that match every number.',
+    component: Shikaku,
+    category: 'puzzle',
+  },
+  {
+    id: 'isipenuh',
+    title: 'Isi Penuh',
+    tagline: 'Trace one line to fill every cell — cross the marked cells twice.',
+    component: IsiPenuh,
+    category: 'puzzle',
+  },
+  {
+    id: 'aliran',
+    title: 'Aliran',
+    tagline: 'Connect the matching dots and fill the whole grid. Endless.',
+    component: Aliran,
+    category: 'puzzle',
   },
 ]
 
