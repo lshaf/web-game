@@ -46,7 +46,38 @@ export async function installApp() {
   canInstall.value = false
 }
 
-function markReady(worker) {
+// Ask a worker which build it is (sw.js answers GET_VERSION). Resolves null if
+// it never replies (e.g. an older worker that predates this handshake).
+function workerVersion(worker) {
+  return new Promise((resolve) => {
+    const ch = new MessageChannel()
+    const done = setTimeout(() => resolve(null), 2000)
+    ch.port1.onmessage = (e) => {
+      clearTimeout(done)
+      resolve(e.data)
+    }
+    try {
+      worker.postMessage({ type: 'GET_VERSION' }, [ch.port2])
+    } catch {
+      clearTimeout(done)
+      resolve(null)
+    }
+  })
+}
+
+// A freshly installed worker only means "update available" when it is a
+// DIFFERENT build than the one already running. Navigations are network-first,
+// so an online reload pulls the newest files even under the old worker — which
+// leaves the waiting worker on the SAME version the player already sees. In
+// that case promote it quietly (it cleans old caches on activate, and `updating`
+// stays false so there's no reload) instead of nagging them to "update" to what
+// they're already running.
+async function markReady(worker) {
+  const ver = await workerVersion(worker)
+  if (ver && ver === appVersion) {
+    worker.postMessage({ type: 'SKIP_WAITING' })
+    return
+  }
   waitingWorker = worker
   updateReady.value = true
 }

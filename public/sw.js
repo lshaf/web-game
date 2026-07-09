@@ -3,8 +3,9 @@
 // requested, so Vite's hashed filenames are handled without knowing them ahead
 // of time. CACHE is stamped with the app version at build time (see the
 // stamp-service-worker plugin in vite.config.js): every release names a fresh
-// cache, so the old one is dropped on activate and the byte-changed worker
-// lights up the in-app "Update" button — we never skipWaiting on our own.
+// cache, so the old one is dropped on activate. A byte-changed worker waits
+// (we never skipWaiting on our own) and, if it is genuinely a newer build than
+// the page is running, lights up the in-app "Update" button.
 const CACHE = 'dusk-arcade-v__SW_VERSION__'
 
 // The minimum needed to cold-boot offline. Kept tiny on purpose — everything
@@ -18,7 +19,12 @@ self.addEventListener('install', (event) => {
 })
 
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') self.skipWaiting()
+  const data = event.data
+  if (!data) return
+  if (data.type === 'SKIP_WAITING') self.skipWaiting()
+  // Reply with this build's version so the page can tell whether a waiting
+  // worker is actually newer than what it's already running.
+  else if (data.type === 'GET_VERSION' && event.ports[0]) event.ports[0].postMessage('__SW_VERSION__')
 })
 
 self.addEventListener('activate', (event) => {
