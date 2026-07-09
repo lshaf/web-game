@@ -608,6 +608,42 @@ async function share() {
 .cabinet__art--lompat {
   background: #d3ebff;
 }
+.cabinet__art--teka {
+  background: #ece2cd;
+}
+.cabinet__art--sortir {
+  background: #dde3ee;
+}
+.cabinet__art--yatzy {
+  background: #d9ead0;
+}
+.cabinet__art--sambung {
+  background: #f2dfea;
+}
+.cabinet__art--tangga {
+  background: #dde5f3;
+}
+.cabinet__art--onet {
+  background: #d3ebe4;
+}
+.cabinet__art--lebah {
+  background: #f6e4bd;
+}
+.cabinet__art--takuzu {
+  background: #e6dff0;
+}
+.cabinet__art--damtiga {
+  background: #e8dabf;
+}
+.cabinet__art--shikaku {
+  background: #dfe9de;
+}
+.cabinet__art--isipenuh {
+  background: #d8e9e4;
+}
+.cabinet__art--aliran {
+  background: #d9e7f4;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {
