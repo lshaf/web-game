@@ -43,6 +43,7 @@ import Yatzy from './games/Yatzy.vue'
 import Shikaku from './games/Shikaku.vue'
 import IsiPenuh from './games/IsiPenuh.vue'
 import Aliran from './games/Aliran.vue'
+import gameIcons from './game-icons.js'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
 // demand so their big dictionaries (kbbi.js, words.js, …) only download when you
@@ -449,6 +450,11 @@ export const games = [
     category: 'puzzle',
   },
 ]
+
+// Attach each game's cabinet icon from the central icon file, keyed by id, so
+// GameSelect can render <component :is="game.icon" />. Games without one (dino)
+// fall back to the running dino sprite.
+for (const g of games) g.icon = gameIcons[g.id]
 
 export function findGame(id) {
   return games.find((g) => g.id === id) || null

@@ -406,6 +406,161 @@ button {
   }
 }
 
+/* --- Game cabinet icons (drawn by src/game-icons.js) ---
+   The icons render outside GameSelect's scoped styles, so the shared sizing and
+   the few HTML-based icons (tiles / suit / scramble / warna / flappy) are styled
+   here. Each icon sits inside a .cabinet__art query container, so cqmin scales it
+   to the tile whatever the column count. The dino sprite keeps its own aspect. */
+.cabinet__icon {
+  display: grid;
+  place-items: center;
+}
+.cabinet__icon:not(.cabinet__dino) > svg {
+  display: block;
+  width: 62cqmin;
+  height: 62cqmin;
+  filter: drop-shadow(2px 2px 0 var(--ink));
+}
+.cabinet__dino {
+  height: 58cqmin;
+  color: #43c96b;
+}
+
+/* Word Lock icon: chunky tiles mid-solve. */
+.cabinet__tiles {
+  grid-auto-flow: column;
+  gap: 2.5cqmin;
+}
+.cabinet__tiles i {
+  width: 16cqmin;
+  height: 16cqmin;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 9cqmin;
+  border-radius: 4px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.cabinet__tiles .t-correct {
+  background: var(--aqua);
+}
+.cabinet__tiles .t-present {
+  background: var(--sun);
+}
+.cabinet__tiles .t-plain {
+  background: var(--cream);
+}
+
+/* Suit icon: Batu / Kertas / Gunting tiles. */
+.cabinet__suit {
+  grid-auto-flow: column;
+  gap: 3cqmin;
+}
+.cabinet__suit i {
+  width: 18cqmin;
+  height: 18cqmin;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10cqmin;
+  border-radius: 5px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+.cabinet__suit .s-batu {
+  background: #b6abcf;
+}
+.cabinet__suit .s-kertas {
+  background: var(--cream);
+}
+.cabinet__suit .s-gunting {
+  background: var(--sun);
+}
+
+/* Acak Kata icon: scrambled, tilted letter tiles. */
+.cabinet__scramble {
+  grid-auto-flow: column;
+  gap: 2.5cqmin;
+}
+.cabinet__scramble i {
+  width: 16cqmin;
+  height: 16cqmin;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 9cqmin;
+  border-radius: 4px;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: var(--cream);
+}
+.cabinet__scramble i:nth-child(1) {
+  transform: rotate(-8deg);
+  background: var(--sun);
+}
+.cabinet__scramble i:nth-child(2) {
+  transform: rotate(7deg);
+  background: var(--aqua);
+}
+.cabinet__scramble i:nth-child(3) {
+  transform: rotate(-5deg);
+}
+.cabinet__scramble i:nth-child(4) {
+  transform: rotate(9deg);
+  background: var(--berry);
+  color: var(--cream);
+}
+
+/* Tebak Warna icon: a fan of color swatches. */
+.cabinet__warna {
+  grid-auto-flow: column;
+  gap: 2cqmin;
+}
+.cabinet__warna i {
+  width: 9cqmin;
+  height: 17cqmin;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+}
+
+/* Flappy icon: a bird threading a pipe gap, centered as one unit. */
+.cabinet__flappy {
+  position: relative;
+  width: 62cqmin;
+  height: 40cqmin;
+}
+.cabinet__bird {
+  position: absolute;
+  left: 3cqmin;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30cqmin;
+  height: 22cqmin;
+}
+.cabinet__pipe {
+  position: absolute;
+  right: 4cqmin;
+  width: 15cqmin;
+  background: #57cc5f;
+  border: 2.4px solid var(--ink);
+  border-radius: 4px;
+}
+.cabinet__pipe--top {
+  top: 0;
+  height: 13cqmin;
+}
+.cabinet__pipe--bot {
+  bottom: 0;
+  height: 17cqmin;
+}
+
 /* One global reduced-motion reset replaces the per-component blocks. */
 @media (prefers-reduced-motion: reduce) {
   *,
