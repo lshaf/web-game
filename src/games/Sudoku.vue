@@ -381,7 +381,24 @@ onBeforeUnmount(() => {
   border-bottom: var(--line) solid var(--ink);
 }
 
-/* Highlighting — same row/col/box, then same value, then the selected cell. */
+/* Clue shading + number colors — fixed clues sit on a shaded tile with a bold
+   dark-ink digit; your entries stay on bright paper with a teal digit, so the
+   two are unmistakable at a glance. */
+.cell.is-given {
+  background: color-mix(in srgb, var(--ink) 10%, var(--paper-lit));
+  color: var(--ink);
+  font-weight: 700;
+}
+.cell.is-user {
+  color: var(--aqua-deep);
+  font-weight: 600;
+}
+.cell.is-conflict {
+  color: var(--berry);
+}
+
+/* Highlighting overrides the clue shade — same row/col/box, then same value,
+   then the selected cell, then a mistake flash. */
 .cell.is-peer {
   background: color-mix(in srgb, var(--aqua) 12%, var(--paper-lit));
 }
@@ -393,18 +410,6 @@ onBeforeUnmount(() => {
 }
 .cell.is-flash {
   background: var(--tile-wrong);
-}
-
-/* Number colors. */
-.cell.is-given {
-  color: var(--ink);
-  font-weight: 700;
-}
-.cell.is-user {
-  color: var(--aqua-deep);
-}
-.cell.is-conflict {
-  color: var(--berry);
 }
 
 /* ---- Number pad ---- */
