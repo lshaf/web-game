@@ -17,7 +17,6 @@ const CELLS = Array.from({ length: 81 }, (_, i) => i)
 
 const phase = ref('menu') // menu | play | won
 const diffIndex = ref(0)
-const solution = ref([]) // number[81]
 const puzzle = ref([]) // number[81], 0 = empty
 const given = ref([]) // boolean[81]
 const selected = ref(-1)
@@ -85,7 +84,6 @@ function startGame() {
   solve(sol)
   const pz = [...sol]
   for (const i of shuffle(CELLS).slice(0, diff.value.empty)) pz[i] = 0
-  solution.value = sol
   puzzle.value = pz
   given.value = pz.map((v) => v !== 0)
   selected.value = -1
@@ -143,9 +141,10 @@ function eraseCell() {
 }
 
 function checkWin() {
+  // A fully filled, conflict-free grid is a win — even if it differs from the
+  // generated solution, since easy puzzles can have more than one completion.
   const g = puzzle.value
-  const sol = solution.value
-  for (let i = 0; i < 81; i++) if (g[i] !== sol[i]) return
+  for (let i = 0; i < 81; i++) if (!g[i] || hasConflict(g, i, g[i])) return
   stopTimer()
   phase.value = 'won'
   sfx.win()
