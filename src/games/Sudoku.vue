@@ -373,6 +373,11 @@ onBeforeUnmount(() => {
   cursor: pointer;
   transition: background 0.1s ease;
 }
+/* The yellow selection fill is the focus indicator, so drop the global outline. */
+.cell:focus,
+.cell:focus-visible {
+  outline: none;
+}
 /* Thick 3x3 box separators. */
 .cell.br {
   border-right: var(--line) solid var(--ink);
