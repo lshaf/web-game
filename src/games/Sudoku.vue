@@ -403,7 +403,7 @@ onBeforeUnmount(() => {
   background: color-mix(in srgb, var(--aqua) 12%, var(--paper-lit));
 }
 .cell.is-same {
-  background: color-mix(in srgb, var(--aqua) 26%, var(--paper-lit));
+  background: color-mix(in srgb, var(--grape) 34%, var(--paper-lit));
 }
 .cell.is-sel {
   background: var(--tile-live);
