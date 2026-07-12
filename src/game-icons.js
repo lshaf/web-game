@@ -615,4 +615,27 @@ export default {
       <circle cx="13" cy="33" r="3.6" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.4" />
       <circle cx="33" cy="33" r="3.6" fill="var(--sun)" stroke="var(--ink)" stroke-width="1.4" />
     </svg>`),
+  'kakuro': icon('cabinet__kakuro', `    <svg viewBox="0 0 46 46">
+      <rect x="4" y="4" width="38" height="38" rx="4" fill="var(--ink)" />
+      <g stroke="var(--ink)" stroke-width="1.5">
+        <rect x="20.5" y="4.5" width="12.5" height="12.5" fill="var(--paper-lit)" />
+        <rect x="33" y="4.5" width="8.5" height="12.5" fill="var(--paper-lit)" />
+        <rect x="4.5" y="17" width="12.5" height="12.5" fill="var(--paper-lit)" />
+        <rect x="20.5" y="17" width="12.5" height="12.5" fill="var(--paper-lit)" />
+        <rect x="33" y="29.5" width="8.5" height="8.5" fill="var(--paper-lit)" />
+        <rect x="20.5" y="29.5" width="12.5" height="8.5" fill="var(--paper-lit)" />
+      </g>
+      <line x1="5" y1="5" x2="17" y2="17" stroke="rgba(255,243,223,0.5)" stroke-width="1.6" />
+      <line x1="34" y1="18" x2="42" y2="26" stroke="rgba(255,243,223,0.5)" stroke-width="1.6" />
+      <g font-family="monospace" font-size="6.5" fill="var(--cream)" text-anchor="middle">
+        <text x="13.5" y="10">16</text>
+        <text x="8" y="15.5">9</text>
+        <text x="38.5" y="26">7</text>
+      </g>
+      <g font-family="monospace" font-weight="700" font-size="9" fill="var(--aqua-deep)" text-anchor="middle">
+        <text x="26.75" y="14">7</text>
+        <text x="10.75" y="26.5">4</text>
+        <text x="26.75" y="26.5">5</text>
+      </g>
+    </svg>`),
 }
