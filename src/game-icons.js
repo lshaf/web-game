@@ -638,4 +638,23 @@ export default {
         <text x="26.75" y="26.5">5</text>
       </g>
     </svg>`),
+  'jembatan': icon('cabinet__jembatan', `    <svg viewBox="0 0 46 46">
+      <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+      <g stroke="var(--aqua-deep)" stroke-width="2.2" stroke-linecap="round">
+        <line x1="13" y1="10" x2="13" y2="33" />
+        <line x1="10.5" y1="33" x2="10.5" y2="23" />
+        <line x1="15.5" y1="33" x2="15.5" y2="23" />
+        <line x1="13" y1="13" x2="33" y2="13" />
+      </g>
+      <g stroke="var(--ink)" stroke-width="1.8">
+        <circle cx="13" cy="10" r="4.2" fill="var(--sun)" />
+        <circle cx="33" cy="13" r="4.2" fill="var(--aqua)" />
+        <circle cx="13" cy="35" r="4.2" fill="var(--aqua)" />
+      </g>
+      <g font-family="monospace" font-weight="700" font-size="5.5" fill="var(--ink)" text-anchor="middle" dominant-baseline="central">
+        <text x="13" y="10">3</text>
+        <text x="33" y="13">1</text>
+        <text x="13" y="35">2</text>
+      </g>
+    </svg>`),
 }

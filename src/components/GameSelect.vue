@@ -647,6 +647,9 @@ async function share() {
 .cabinet__art--kakuro {
   background: #e0eae4;
 }
+.cabinet__art--jembatan {
+  background: #cfe3f4;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {

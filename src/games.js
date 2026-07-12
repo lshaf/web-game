@@ -44,6 +44,7 @@ import Shikaku from './games/Shikaku.vue'
 import IsiPenuh from './games/IsiPenuh.vue'
 import Aliran from './games/Aliran.vue'
 import Kakuro from './games/Kakuro.vue'
+import Jembatan from './games/Jembatan.vue'
 import gameIcons from './game-icons.js'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
@@ -455,6 +456,13 @@ export const games = [
     title: 'Kakuro',
     tagline: 'Fill each run with 1–9 so it adds up to the clue, no repeats.',
     component: Kakuro,
+    category: 'puzzle',
+  },
+  {
+    id: 'jembatan',
+    title: 'Jembatan',
+    tagline: 'Link the islands with bridges — match every number, no crossings.',
+    component: Jembatan,
     category: 'puzzle',
   },
 ]
