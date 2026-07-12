@@ -657,4 +657,14 @@ export default {
         <text x="13" y="35">2</text>
       </g>
     </svg>`),
+  'solitaire': icon('cabinet__solitaire', `    <svg viewBox="0 0 46 46">
+      <g transform="rotate(-14 20 24)">
+        <rect x="8" y="12" width="18" height="25" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.2" />
+      </g>
+      <g transform="rotate(6 26 22)">
+        <rect x="18" y="9" width="18" height="25" rx="3" fill="var(--paper-lit)" stroke="var(--ink)" stroke-width="2.2" />
+        <text x="21.5" y="16.5" font-family="monospace" font-weight="700" font-size="6.5" fill="#d3315d">A</text>
+        <text x="30" y="30" font-size="9" fill="#d3315d" text-anchor="middle">♥</text>
+      </g>
+    </svg>`),
 }

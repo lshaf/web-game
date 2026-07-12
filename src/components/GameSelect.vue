@@ -650,6 +650,9 @@ async function share() {
 .cabinet__art--jembatan {
   background: #cfe3f4;
 }
+.cabinet__art--solitaire {
+  background: #d2ead1;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {
