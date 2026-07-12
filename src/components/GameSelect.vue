@@ -644,6 +644,9 @@ async function share() {
 .cabinet__art--aliran {
   background: #d9e7f4;
 }
+.cabinet__art--kakuro {
+  background: #e0eae4;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {

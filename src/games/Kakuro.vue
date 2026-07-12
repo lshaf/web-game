@@ -19,9 +19,9 @@ const BEST_KEY = 'dusk-kakuro-best'
 // side; `maxRun` caps run length; `minWhite` sets the density floor and `quad`
 // the minimum white cells required in each interior quadrant.
 const DIFFS = [
-  { id: 'kecil', label: '5 × 5', S: 6, stamps: 5, maxStamp: 3, maxRun: 5, minWhite: 15, quad: 2 },
-  { id: 'sedang', label: '9 × 9', S: 10, stamps: 15, maxStamp: 3, maxRun: 6, minWhite: 42, quad: 6 },
-  { id: 'besar', label: '13 × 13', S: 14, stamps: 30, maxStamp: 3, maxRun: 7, minWhite: 80, quad: 8 },
+  { id: 'mudah', label: 'Mudah', S: 6, stamps: 5, maxStamp: 3, maxRun: 5, minWhite: 15, quad: 2 },
+  { id: 'sedang', label: 'Sedang', S: 10, stamps: 15, maxStamp: 3, maxRun: 6, minWhite: 42, quad: 6 },
+  { id: 'sulit', label: 'Sulit', S: 14, stamps: 30, maxStamp: 3, maxRun: 7, minWhite: 80, quad: 8 },
 ]
 
 const clamp = (v, a, b) => (v < a ? a : v > b ? b : v)
@@ -554,23 +554,21 @@ onBeforeUnmount(() => {
       <!-- ===== Menu (size picker) ===== -->
       <section v-if="phase === 'menu'" class="screen">
         <p class="brand">KAKU<span class="brand__accent">RO</span></p>
-        <p class="eyebrow">PILIH UKURAN</p>
+        <p class="eyebrow">PILIH TINGKAT</p>
 
-        <div class="field">
-          <span class="field__label">Ukuran papan</span>
-          <div class="picker">
-            <button
-              v-for="(d, i) in DIFFS"
-              :key="d.id"
-              class="pick"
-              :class="{ 'is-on': diffIndex === i }"
-              type="button"
-              @click="diffIndex = i"
-            >
-              {{ d.label }}
-            </button>
-          </div>
+        <div class="picker picker--3 setup__picker">
+          <button
+            v-for="(d, i) in DIFFS"
+            :key="d.id"
+            class="pick"
+            :class="{ 'is-on': diffIndex === i }"
+            type="button"
+            @click="diffIndex = i"
+          >
+            {{ d.label }}
+          </button>
         </div>
+        <p class="setup__info">{{ diff.S - 1 }}×{{ diff.S - 1 }} · SELESAI {{ solvedCount }}</p>
 
         <button class="cta" type="button" @click="startGame(diffIndex)">Mulai ▸</button>
       </section>
@@ -578,8 +576,8 @@ onBeforeUnmount(() => {
       <!-- ===== Play ===== -->
       <section v-else class="screen play">
         <div class="topbar">
-          <button class="mini" type="button" @click="toMenu">← Ukuran</button>
-          <span class="status">{{ diff.label }}</span>
+          <button class="mini" type="button" @click="toMenu">← Tingkat</button>
+          <span class="status">{{ diff.label }} · {{ S - 1 }}×{{ S - 1 }}</span>
           <button class="mini" type="button" @click="skip">Baru</button>
         </div>
 
@@ -662,6 +660,22 @@ onBeforeUnmount(() => {
 }
 .brand--sm {
   font-size: 22px;
+}
+/* Standard setup picker (matches the other puzzles). */
+.picker--3 {
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.setup__picker {
+  margin-bottom: 14px;
+}
+.setup__info {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 20px;
 }
 .hud {
   margin: 12px 0 14px;
