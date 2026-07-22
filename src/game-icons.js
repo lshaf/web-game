@@ -677,6 +677,19 @@ export default {
       </g>
       <path d="M20.4 16.2 q2.6 2.2 5.2 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.55" />
     </svg>`),
+  'mahjong': icon('cabinet__mahjong', `    <svg viewBox="0 0 46 46">
+      <rect x="15" y="6" width="22" height="28" rx="4" fill="#e6d6b2" stroke="var(--ink)" stroke-width="2.4" />
+      <rect x="8" y="12" width="26" height="30" rx="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+      <path d="M11 39.5 h20 a3 3 0 0 0 3 -3 v-2 h-26 v2 a3 3 0 0 0 3 3 z" fill="rgba(44,19,56,0.14)" />
+      <g stroke="var(--ink)" stroke-width="1.6">
+        <circle cx="21" cy="26" r="6.5" fill="var(--berry)" />
+        <circle cx="21" cy="26" r="2.4" fill="var(--cream)" stroke="none" />
+      </g>
+      <g stroke="#3f9b52" stroke-width="2" stroke-linecap="round">
+        <line x1="16.5" y1="17.5" x2="18.5" y2="20.5" />
+        <line x1="25.5" y1="17.5" x2="23.5" y2="20.5" />
+      </g>
+    </svg>`),
   'catur': icon('cabinet__catur', `    <svg viewBox="0 0 46 46">
       <g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
         <rect x="9" y="37.5" width="28" height="5" rx="2.5" fill="var(--aqua)" />

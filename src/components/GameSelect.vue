@@ -659,6 +659,9 @@ async function share() {
 .cabinet__art--skakmat {
   background: #e7ddf3;
 }
+.cabinet__art--mahjong {
+  background: #dde8d4;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {

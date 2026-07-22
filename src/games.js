@@ -488,6 +488,13 @@ export const games = [
     component: lazy(() => import('./games/SkakMat.vue')),
     category: 'strategi',
   },
+  {
+    id: 'mahjong',
+    title: 'Mahjong',
+    tagline: 'Clear the stack — match free pairs of tiles until none remain.',
+    component: lazy(() => import('./games/Mahjong.vue')),
+    category: 'puzzle',
+  },
 ]
 
 // Attach each game's cabinet icon from the central icon file, keyed by id, so
