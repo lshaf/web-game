@@ -2,8 +2,9 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { sfx } from '../sound.js'
 
-// Permata — a solo Match-3. Tap a gem, then an orthogonally adjacent one to
-// swap. A swap is only allowed if it forms a line of 3+ of one colour; matched
+// Permata — a solo Match-3. Swipe a gem toward a neighbour (or tap it then an
+// adjacent one) to swap. A swap is only allowed if it forms a line of 3+ of one
+// colour; matched
 // runs clear, gems above fall, empty cells refill from the top, and any new
 // matches cascade (with a growing bonus) until the board is stable. You get a
 // fixed number of moves; when they run out we tally the score.
@@ -17,7 +18,7 @@ const FALL_MS = 240 // slide/refill settle time
 const bestKey = 'dusk-permata-best'
 
 // Indonesian colour names — for screen readers and extra (non-colour) clarity.
-const NAMES = ['toska', 'merah', 'kuning', 'ungu', 'oranye', 'hijau']
+const NAMES = ['abu', 'merah', 'kuning', 'ungu', 'oranye', 'hijau']
 
 const phase = ref('play') // play | result
 const grid = ref([]) // (gem | null)[64] — gem = { id, type }
@@ -174,8 +175,54 @@ function swapCells(a, b) {
   g[b] = tmp
 }
 
+// Swipe: press a gem, drag past a threshold toward a neighbour, and swap with
+// it. Easier on a touchscreen than the two-tap select. A tap (no drag) still
+// falls through to tapGem for select-then-tap and for desktop.
+let drag = null
+let swiped = false
+const SWIPE_THRESH = 16
+
+function onDown(e, idx) {
+  if (busy.value || phase.value !== 'play') return
+  drag = { idx, x: e.clientX, y: e.clientY, done: false }
+  swiped = false
+}
+function onMove(e) {
+  if (!drag || drag.done) return
+  const dx = e.clientX - drag.x
+  const dy = e.clientY - drag.y
+  const adx = Math.abs(dx)
+  const ady = Math.abs(dy)
+  if (Math.max(adx, ady) < SWIPE_THRESH) return
+  const idx = drag.idx
+  const c = idx % SIZE
+  const r = Math.floor(idx / SIZE)
+  let target = -1
+  if (adx > ady) {
+    if (dx > 0 && c < SIZE - 1) target = idx + 1
+    else if (dx < 0 && c > 0) target = idx - 1
+  } else {
+    if (dy > 0 && r < SIZE - 1) target = idx + SIZE
+    else if (dy < 0 && r > 0) target = idx - SIZE
+  }
+  drag.done = true
+  swiped = true
+  if (target >= 0) {
+    selected.value = -1
+    trySwap(idx, target)
+  }
+}
+function onUp() {
+  drag = null
+}
+
 function tapGem(idx) {
   if (busy.value || phase.value !== 'play') return
+  // A swipe already handled this press — don't also run the tap logic.
+  if (swiped) {
+    swiped = false
+    return
+  }
   if (selected.value === -1) {
     selected.value = idx
     return
@@ -312,7 +359,7 @@ onBeforeUnmount(() => {
       <!-- ===== Play ===== -->
       <section v-if="phase === 'play'" class="screen">
         <p class="brand">PER<span class="brand__accent">MATA</span></p>
-        <p class="eyebrow">TUKAR &amp; COCOKKAN 3</p>
+        <p class="eyebrow">GESER · COCOKKAN 3</p>
 
         <div class="solobar meta">
           <span>SKOR <b>{{ score }}</b></span>
@@ -320,7 +367,13 @@ onBeforeUnmount(() => {
           <span class="solobar__best">TERBAIK {{ best }}</span>
         </div>
 
-        <div class="board" :class="{ shake }">
+        <div
+          class="board"
+          :class="{ shake }"
+          @pointermove="onMove"
+          @pointerup="onUp"
+          @pointercancel="onUp"
+        >
           <button
             v-for="(gem, idx) in grid"
             :key="gem.id"
@@ -330,6 +383,7 @@ onBeforeUnmount(() => {
             type="button"
             :disabled="busy"
             :aria-label="'Permata ' + NAMES[gem.type]"
+            @pointerdown="onDown($event, idx)"
             @click="tapGem(idx)"
           >
             <span class="gem__body" :class="['g' + gem.type, { 'is-pop': isClearing(idx) }]">
@@ -345,7 +399,7 @@ onBeforeUnmount(() => {
       <!-- ===== Result ===== -->
       <section v-else class="screen result">
         <p class="brand">PER<span class="brand__accent">MATA</span></p>
-        <p class="eyebrow">TUKAR &amp; COCOKKAN 3</p>
+        <p class="eyebrow">GESER · COCOKKAN 3</p>
         <p class="result__title">Selesai!</p>
         <p class="result__sub">Skor akhir <b>{{ score }}</b></p>
         <p class="result__streak">
@@ -404,7 +458,8 @@ onBeforeUnmount(() => {
   box-shadow: var(--pop-sm);
   overflow: hidden;
   margin-bottom: 18px;
-  touch-action: manipulation;
+  /* Capture swipes for gem swaps instead of scrolling the page. */
+  touch-action: none;
 }
 .board.shake {
   animation: permata-shake 0.4s ease;
@@ -424,6 +479,7 @@ onBeforeUnmount(() => {
   transform: translate(calc(var(--c) * 100%), calc(var(--r) * 100%));
   transition: transform 0.22s cubic-bezier(0.34, 1.15, 0.64, 1);
   will-change: transform;
+  touch-action: none;
 }
 .gem:disabled {
   cursor: default;
@@ -461,7 +517,7 @@ onBeforeUnmount(() => {
 
 /* Colours (on-palette tokens). */
 .g0 {
-  --gem: var(--aqua);
+  --gem: #9aa0ab;
 }
 .g1 {
   --gem: var(--berry);
