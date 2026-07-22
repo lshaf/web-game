@@ -667,4 +667,14 @@ export default {
         <text x="30" y="30" font-size="9" fill="#d3315d" text-anchor="middle">♥</text>
       </g>
     </svg>`),
+  'skakmat': icon('cabinet__skakmat', `    <svg viewBox="0 0 46 46">
+      <g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="10.5" y="37" width="25" height="5.6" rx="2.6" fill="var(--grape)" />
+        <path d="M14.5 38 C13.8 32 17.5 29 19.5 25.5 C16.5 24 17 19.5 20.5 19 L25.5 19 C29 19.5 29.5 24 26.5 25.5 C28.5 29 32.2 32 31.5 38 Z" fill="var(--grape)" />
+        <rect x="13.3" y="31.2" width="19.4" height="4.3" rx="2.1" fill="var(--grape)" />
+        <ellipse cx="23" cy="15.6" rx="6.1" ry="5.4" fill="var(--grape)" />
+        <path d="M21.4 3.4 H24.6 V6.1 H27.4 V9.1 H24.6 V12.4 H21.4 V9.1 H18.6 V6.1 H21.4 Z" fill="var(--sun)" />
+      </g>
+      <path d="M20.4 16.2 q2.6 2.2 5.2 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.55" />
+    </svg>`),
 }

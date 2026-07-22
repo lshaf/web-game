@@ -473,6 +473,13 @@ export const games = [
     component: Solitaire,
     category: 'strategi',
   },
+  {
+    id: 'skakmat',
+    title: 'Skak Mat',
+    tagline: 'Chess mate puzzles — White to play and checkmate.',
+    component: lazy(() => import('./games/SkakMat.vue')),
+    category: 'strategi',
+  },
 ]
 
 // Attach each game's cabinet icon from the central icon file, keyed by id, so

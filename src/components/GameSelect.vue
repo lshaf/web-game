@@ -653,6 +653,9 @@ async function share() {
 .cabinet__art--solitaire {
   background: #d2ead1;
 }
+.cabinet__art--skakmat {
+  background: #e7ddf3;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {
