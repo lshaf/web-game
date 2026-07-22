@@ -19,6 +19,8 @@ const FILTERS = [
   { key: 'duo', label: 'Duo' },
 ]
 const filter = ref('all')
+const query = ref('')
+const filterOpen = ref(false)
 
 function matches(g, key) {
   if (key === 'all') return true
@@ -26,8 +28,20 @@ function matches(g, key) {
   if (key === 'duo') return !!g.duo
   return g.category === key
 }
+// Free-text search over a game's title and tagline.
+function matchesQuery(g) {
+  const q = query.value.trim().toLowerCase()
+  if (!q) return true
+  return g.title.toLowerCase().includes(q) || (g.tagline || '').toLowerCase().includes(q)
+}
+// Chip counts reflect the active search, so they show what's actually reachable.
 function count(key) {
-  return props.games.reduce((n, g) => n + (matches(g, key) ? 1 : 0), 0)
+  return props.games.reduce((n, g) => n + (matches(g, key) && matchesQuery(g) ? 1 : 0), 0)
+}
+const activeFilter = computed(() => FILTERS.find((f) => f.key === filter.value) || FILTERS[0])
+function pickFilter(key) {
+  filter.value = key
+  filterOpen.value = false
 }
 
 // Favorites live in localStorage; in the "Semua" view they pin to the front.
@@ -55,7 +69,7 @@ function toggleFav(id) {
 }
 
 const shown = computed(() => {
-  const list = props.games.filter((g) => matches(g, filter.value))
+  const list = props.games.filter((g) => matches(g, filter.value) && matchesQuery(g))
   if (filter.value !== 'all') return list
   // Pin favorites to the front; registry order is preserved otherwise
   // (Array.prototype.sort is stable).
@@ -114,18 +128,56 @@ async function share() {
       <div class="hero__runner" aria-hidden="true"><DinoSprite run /></div>
     </header>
 
-    <div class="filters" aria-label="Filter game">
-      <button
-        v-for="f in FILTERS"
-        :key="f.key"
-        class="chip"
-        :class="{ 'is-on': filter === f.key }"
-        type="button"
-        @click="filter = f.key"
-      >
-        {{ f.label }}<span class="chip__n">{{ count(f.key) }}</span>
-      </button>
+    <div class="toolbar">
+      <div class="bar">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+          </svg>
+          <input
+            v-model="query"
+            type="search"
+            inputmode="search"
+            placeholder="Cari game…"
+            aria-label="Cari game"
+          />
+          <button v-if="query" class="search__clear" type="button" aria-label="Hapus pencarian" @click="query = ''">
+            ×
+          </button>
+        </label>
+
+        <button
+          class="filterbtn"
+          :class="{ 'is-active': filter !== 'all', 'is-open': filterOpen }"
+          type="button"
+          aria-haspopup="true"
+          :aria-expanded="filterOpen"
+          @click="filterOpen = !filterOpen"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M7 12h10M10 18h4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+          </svg>
+          <span class="filterbtn__label">{{ activeFilter.label }}</span>
+        </button>
+      </div>
+
+      <div v-if="filterOpen" class="filter-pop" role="menu" aria-label="Filter kategori">
+        <button
+          v-for="f in FILTERS"
+          :key="f.key"
+          class="chip"
+          :class="{ 'is-on': filter === f.key }"
+          type="button"
+          role="menuitemradio"
+          :aria-checked="filter === f.key"
+          @click="pickFilter(f.key)"
+        >
+          {{ f.label }}<span class="chip__n">{{ count(f.key) }}</span>
+        </button>
+      </div>
     </div>
+    <div v-if="filterOpen" class="filter-backdrop" @click="filterOpen = false" />
 
     <ul class="cabinets">
       <li v-for="game in shown" :key="game.id">
@@ -147,7 +199,9 @@ async function share() {
         </button>
       </li>
     </ul>
-    <p v-if="!shown.length" class="empty">Belum ada favorit — ketuk ★ pada game mana pun.</p>
+    <p v-if="!shown.length" class="empty">
+      {{ query.trim() ? 'Tak ada game untuk “' + query.trim() + '”.' : 'Belum ada favorit — ketuk ★ pada game mana pun.' }}
+    </p>
 
     <footer class="foot">
       <div class="foot__actions">
@@ -353,28 +407,167 @@ async function share() {
   }
 }
 
-/* ---- Cabinets ---- */
-/* ---- Filter chips (All / Favorites / categories / Duo) ---- */
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+/* ---- Search + category filter toolbar ---- */
+.toolbar {
   width: 100%;
   margin: 22px 0 0;
+  position: relative;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.chip {
+.bar {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+/* Chunky search pill, in the arcade's outlined / hard-shadow idiom. */
+.search {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  box-shadow: var(--pop-sm);
+  padding: 8px 14px;
+  cursor: text;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+.search:focus-within {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.search svg {
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  flex: none;
+}
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  outline: none;
+  -webkit-appearance: none;
+}
+.search input::placeholder {
+  color: var(--muted);
+  font-weight: 500;
+}
+.search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search__clear {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: var(--sun);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+/* Filter button — shows the active category and toggles the pop-over. */
+.filterbtn {
+  flex: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: var(--pop-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+.filterbtn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+.filterbtn__label {
+  white-space: nowrap;
+}
+.filterbtn:hover,
+.filterbtn:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.filterbtn.is-active {
+  background: var(--sun);
+}
+.filterbtn.is-open {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+/* Backdrop dims the grid so the open pop-over is the focus; tap it to close. */
+.filter-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgba(44, 19, 56, 0.14);
+}
+/* The pop-over card, anchored under the filter button. */
+.filter-pop {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  z-index: 31;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: min(340px, 100%);
+  padding: 12px;
+  background: var(--cream);
+  border: var(--line) solid var(--ink);
+  border-radius: 16px;
+  box-shadow: var(--pop);
+  animation: filter-pop 0.12s ease;
+}
+@keyframes filter-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+.chip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12.5px;
   color: var(--ink);
   background: var(--cream);
   border: 2px solid var(--ink);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 5px 11px;
   box-shadow: var(--pop-sm);
+  white-space: nowrap;
   transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
 .chip:hover,
