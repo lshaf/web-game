@@ -502,6 +502,14 @@ export const games = [
     component: lazy(() => import('./games/Pagar.vue')),
     category: 'puzzle',
   },
+  {
+    id: 'backgammon',
+    title: 'Backgammon',
+    tagline: 'Race your checkers home and bear off. Solo vs CPU or two players.',
+    component: lazy(() => import('./games/Backgammon.vue')),
+    category: 'strategi',
+    duo: true,
+  },
 ]
 
 // Attach each game's cabinet icon from the central icon file, keyed by id, so

@@ -677,6 +677,20 @@ export default {
       </g>
       <path d="M20.4 16.2 q2.6 2.2 5.2 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.55" />
     </svg>`),
+  'backgammon': icon('cabinet__backgammon', `    <svg viewBox="0 0 46 46">
+      <rect x="4" y="5" width="38" height="36" rx="5" fill="#2f7d5b" stroke="var(--ink)" stroke-width="2.6" />
+      <polygon points="8,7 14,7 11,22" fill="#e7cfa0" />
+      <polygon points="14,7 20,7 17,22" fill="#c58a54" />
+      <polygon points="26,7 32,7 29,21" fill="#e7cfa0" />
+      <polygon points="8,39 14,39 11,24" fill="#c58a54" />
+      <polygon points="20,39 26,39 23,25" fill="#e7cfa0" />
+      <circle cx="11" cy="35" r="3.3" fill="#f4ead2" stroke="var(--ink)" stroke-width="1.4" />
+      <circle cx="17" cy="12" r="3.3" fill="#37243f" stroke="var(--ink)" stroke-width="1.4" />
+      <rect x="28" y="26" width="12" height="12" rx="2.6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.8" />
+      <g fill="var(--ink)">
+        <circle cx="31" cy="29" r="1.1" /><circle cx="34" cy="32" r="1.1" /><circle cx="37" cy="35" r="1.1" />
+      </g>
+    </svg>`),
   'pagar': icon('cabinet__pagar', `    <svg viewBox="0 0 46 46">
       <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
       <path d="M13 13 H33 V23 H23 V33 H13 Z" fill="rgba(108,214,192,0.35)" stroke="var(--aqua-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />

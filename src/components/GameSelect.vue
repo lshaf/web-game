@@ -665,6 +665,9 @@ async function share() {
 .cabinet__art--pagar {
   background: #d6e8e4;
 }
+.cabinet__art--backgammon {
+  background: #cfe2d5;
+}
 
 /* Game title, centered under the icon. */
 .cabinet__title {
