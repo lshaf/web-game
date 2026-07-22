@@ -474,6 +474,14 @@ export const games = [
     category: 'strategi',
   },
   {
+    id: 'catur',
+    title: 'Catur',
+    tagline: 'Full chess — play a friend or take White against the CPU.',
+    component: lazy(() => import('./games/Catur.vue')),
+    category: 'strategi',
+    duo: true,
+  },
+  {
     id: 'skakmat',
     title: 'Skak Mat',
     tagline: 'Chess mate puzzles — White to play and checkmate.',

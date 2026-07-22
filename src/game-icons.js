@@ -677,4 +677,14 @@ export default {
       </g>
       <path d="M20.4 16.2 q2.6 2.2 5.2 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.55" />
     </svg>`),
+  'catur': icon('cabinet__catur', `    <svg viewBox="0 0 46 46">
+      <g stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="9" y="37.5" width="28" height="5" rx="2.5" fill="var(--aqua)" />
+        <rect x="12.5" y="32.6" width="21" height="5" rx="2.2" fill="var(--aqua)" />
+        <path d="M16 33 C14.5 29 14 27 14.5 25 L9 23.5 C7.6 22.8 8 21 10 20.3 L17.5 16.5 C18.3 12.8 21 10.8 24 10.3 L25.5 5.8 L29 11 C31.8 16 32 25 30.5 33 Z" fill="var(--aqua)" />
+      </g>
+      <circle cx="20.2" cy="16.4" r="1.5" fill="var(--ink)" />
+      <circle cx="11" cy="21.2" r="1" fill="var(--ink)" />
+      <path d="M25 12 L21.8 15 L25.4 16.6 L22.4 19.6 L26 21.2" fill="none" stroke="var(--aqua-deep)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>`),
 }

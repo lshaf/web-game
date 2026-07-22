@@ -653,6 +653,9 @@ async function share() {
 .cabinet__art--solitaire {
   background: #d2ead1;
 }
+.cabinet__art--catur {
+  background: #ecdcc0;
+}
 .cabinet__art--skakmat {
   background: #e7ddf3;
 }

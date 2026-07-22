@@ -253,6 +253,104 @@ export function findMove(state, from, to, promo) {
   return null
 }
 
+// --- CPU (alpha-beta negamax with material + piece-square eval) -------------
+
+const VALUE = { P: 100, N: 320, B: 330, R: 500, Q: 900, K: 0 }
+// Piece-square tables, white's view, index 0 = a8 (advancing = toward index 0).
+const PST = {
+  P: [
+    0, 0, 0, 0, 0, 0, 0, 0, 50, 50, 50, 50, 50, 50, 50, 50, 10, 10, 20, 30, 30, 20, 10, 10,
+    5, 5, 10, 25, 25, 10, 5, 5, 0, 0, 0, 20, 20, 0, 0, 0, 5, -5, -10, 0, 0, -10, -5, 5,
+    5, 10, 10, -20, -20, 10, 10, 5, 0, 0, 0, 0, 0, 0, 0, 0,
+  ],
+  N: [
+    -50, -40, -30, -30, -30, -30, -40, -50, -40, -20, 0, 0, 0, 0, -20, -40, -30, 0, 10, 15, 15, 10, 0, -30,
+    -30, 5, 15, 20, 20, 15, 5, -30, -30, 0, 15, 20, 20, 15, 0, -30, -30, 5, 10, 15, 15, 10, 5, -30,
+    -40, -20, 0, 5, 5, 0, -20, -40, -50, -40, -30, -30, -30, -30, -40, -50,
+  ],
+  B: [
+    -20, -10, -10, -10, -10, -10, -10, -20, -10, 0, 0, 0, 0, 0, 0, -10, -10, 0, 5, 10, 10, 5, 0, -10,
+    -10, 5, 5, 10, 10, 5, 5, -10, -10, 0, 10, 10, 10, 10, 0, -10, -10, 10, 10, 10, 10, 10, 10, -10,
+    -10, 5, 0, 0, 0, 0, 5, -10, -20, -10, -10, -10, -10, -10, -10, -20,
+  ],
+  R: [
+    0, 0, 0, 0, 0, 0, 0, 0, 5, 10, 10, 10, 10, 10, 10, 5, -5, 0, 0, 0, 0, 0, 0, -5,
+    -5, 0, 0, 0, 0, 0, 0, -5, -5, 0, 0, 0, 0, 0, 0, -5, -5, 0, 0, 0, 0, 0, 0, -5,
+    -5, 0, 0, 0, 0, 0, 0, -5, 0, 0, 0, 5, 5, 0, 0, 0,
+  ],
+  Q: [
+    -20, -10, -10, -5, -5, -10, -10, -20, -10, 0, 0, 0, 0, 0, 0, -10, -10, 0, 5, 5, 5, 5, 0, -10,
+    -5, 0, 5, 5, 5, 5, 0, -5, 0, 0, 5, 5, 5, 5, 0, -5, -10, 5, 5, 5, 5, 5, 0, -10,
+    -10, 0, 5, 0, 0, 0, 0, -10, -20, -10, -10, -5, -5, -10, -10, -20,
+  ],
+  K: [
+    -30, -40, -40, -50, -50, -40, -40, -30, -30, -40, -40, -50, -50, -40, -40, -30, -30, -40, -40, -50, -50, -40, -40, -30,
+    -30, -40, -40, -50, -50, -40, -40, -30, -20, -30, -30, -40, -40, -30, -30, -20, -10, -20, -20, -20, -20, -20, -20, -10,
+    20, 20, 0, 0, 0, 0, 20, 20, 20, 30, 10, 0, 0, 10, 30, 20,
+  ],
+}
+const MATE = 100000
+
+// Static evaluation from the side-to-move's point of view.
+export function evaluate(state) {
+  let s = 0
+  const b = state.board
+  for (let i = 0; i < 64; i++) {
+    const p = b[i]
+    if (p === '') continue
+    const white = p <= 'Z'
+    const t = white ? p : p.toUpperCase()
+    const sc = VALUE[t] + PST[t][white ? i : i ^ 56]
+    s += white ? sc : -sc
+  }
+  return state.white ? s : -s
+}
+
+// Captures first (MVV-style) to make alpha-beta prune hard.
+function orderMoves(state, moves) {
+  const b = state.board
+  return moves
+    .map((m) => {
+      const cap = b[m.to]
+      const score = (cap ? 10 * VALUE[cap.toUpperCase()] : 0) + (m.promo ? VALUE[m.promo.toUpperCase()] : 0)
+      return { m, score }
+    })
+    .sort((a, z) => z.score - a.score)
+    .map((x) => x.m)
+}
+
+function negamax(state, depth, alpha, beta, ply) {
+  if (depth <= 0) return evaluate(state)
+  const moves = generateLegalMoves(state)
+  if (moves.length === 0) return isCheck(state) ? -(MATE - ply) : 0
+  let best = -Infinity
+  for (const m of orderMoves(state, moves)) {
+    const v = -negamax(applyMove(state, m), depth - 1, -beta, -alpha, ply + 1)
+    if (v > best) best = v
+    if (v > alpha) alpha = v
+    if (alpha >= beta) break
+  }
+  return best
+}
+
+// Best move for the side to move at the given search depth. Ties are broken
+// randomly (within a small margin) so the CPU isn't perfectly repetitive.
+export function searchBestMove(state, depth) {
+  const moves = orderMoves(state, generateLegalMoves(state))
+  if (!moves.length) return null
+  let bestVal = -Infinity
+  const scored = []
+  let alpha = -Infinity
+  for (const m of moves) {
+    const v = -negamax(applyMove(state, m), depth - 1, -Infinity, -alpha, 1)
+    scored.push({ m, v })
+    if (v > bestVal) bestVal = v
+    if (v > alpha) alpha = v
+  }
+  const top = scored.filter((s) => s.v >= bestVal - 12).map((s) => s.m)
+  return top[(Math.random() * top.length) | 0]
+}
+
 // Verified puzzle library. mudah = mate in 1; sedang/sulit = forced mate in 2.
 // White is always to move ("Putih melangkah dan skakmat").
 export const PUZZLES = {
