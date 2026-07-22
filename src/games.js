@@ -495,6 +495,13 @@ export const games = [
     component: lazy(() => import('./games/Mahjong.vue')),
     category: 'puzzle',
   },
+  {
+    id: 'pagar',
+    title: 'Pagar',
+    tagline: 'Slitherlink — draw one loop so every number counts its edges.',
+    component: lazy(() => import('./games/Pagar.vue')),
+    category: 'puzzle',
+  },
 ]
 
 // Attach each game's cabinet icon from the central icon file, keyed by id, so

@@ -677,6 +677,19 @@ export default {
       </g>
       <path d="M20.4 16.2 q2.6 2.2 5.2 0" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity="0.55" />
     </svg>`),
+  'pagar': icon('cabinet__pagar', `    <svg viewBox="0 0 46 46">
+      <rect x="4" y="4" width="38" height="38" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
+      <path d="M13 13 H33 V23 H23 V33 H13 Z" fill="rgba(108,214,192,0.35)" stroke="var(--aqua-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <g fill="var(--ink)">
+        <circle cx="13" cy="13" r="1.6" /><circle cx="23" cy="13" r="1.6" /><circle cx="33" cy="13" r="1.6" />
+        <circle cx="13" cy="23" r="1.6" /><circle cx="23" cy="23" r="1.6" /><circle cx="33" cy="23" r="1.6" />
+        <circle cx="13" cy="33" r="1.6" /><circle cx="23" cy="33" r="1.6" /><circle cx="33" cy="33" r="1.6" />
+      </g>
+      <g font-family="monospace" font-weight="700" font-size="7" text-anchor="middle" dominant-baseline="central">
+        <text x="18" y="18" fill="var(--aqua-deep)">3</text>
+        <text x="28" y="28" fill="var(--muted)">1</text>
+      </g>
+    </svg>`),
   'mahjong': icon('cabinet__mahjong', `    <svg viewBox="0 0 46 46">
       <rect x="15" y="6" width="22" height="28" rx="4" fill="#e6d6b2" stroke="var(--ink)" stroke-width="2.4" />
       <rect x="8" y="12" width="26" height="30" rx="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="2.6" />
