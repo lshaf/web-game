@@ -179,6 +179,7 @@ export const sfx = {
   },
   // A neutral click for a placed tile / move.
   tick: () => blip(0, { type: 'square', from: 320, to: 380, dur: 0.05, gain: 0.09 }),
+  whistle: () => blip(0, { type: 'triangle', from: 1150, to: 320, dur: 0.8, gain: 0.07 }),
 }
 
 export function toggleMute() {

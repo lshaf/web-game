@@ -727,4 +727,27 @@ export default {
       <circle cx="11" cy="21.2" r="1" fill="var(--ink)" />
       <path d="M25 12 L21.8 15 L25.4 16.6 L22.4 19.6 L26 21.2" fill="none" stroke="var(--aqua-deep)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
     </svg>`),
+  'kucing': icon('cabinet__kucing', `    <svg viewBox="0 0 46 46">
+      <path d="M8 30 q15 -24 30 0" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-dasharray="2.5 3.5" stroke-linecap="round" />
+      <g>
+        <circle cx="19.5" cy="9" r="2.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" />
+        <circle cx="19.5" cy="13" r="2.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" />
+        <circle cx="27.5" cy="9" r="2.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" />
+        <circle cx="27.5" cy="13" r="2.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" />
+        <rect x="19.5" y="9.6" width="8" height="2.8" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.4" />
+      </g>
+      <polygon points="4,29 6.5,22 11,27" fill="#cbbcf2" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round" />
+      <polygon points="13,27 17.5,22 20,29" fill="#cbbcf2" stroke="var(--ink)" stroke-width="1.8" stroke-linejoin="round" />
+      <circle cx="12" cy="34" r="8.5" fill="#cbbcf2" stroke="var(--ink)" stroke-width="2.2" />
+      <circle cx="9.5" cy="32.5" r="1.4" fill="var(--ink)" />
+      <circle cx="15" cy="32.5" r="1.4" fill="var(--ink)" />
+      <path d="M10.5 36.5 q1.5 1.6 3 0" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" />
+      <circle cx="34" cy="34" r="8.5" fill="#c9895a" stroke="var(--ink)" stroke-width="2.2" />
+      <ellipse cx="27" cy="32" rx="2.6" ry="5" fill="#9b5b3a" stroke="var(--ink)" stroke-width="1.6" />
+      <ellipse cx="41" cy="32" rx="2.6" ry="5" fill="#9b5b3a" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="31.5" cy="32.5" r="1.4" fill="var(--ink)" />
+      <circle cx="37" cy="32.5" r="1.4" fill="var(--ink)" />
+      <ellipse cx="34" cy="37" rx="3.6" ry="2.6" fill="#f3d9b8" stroke="var(--ink)" stroke-width="1.4" />
+      <ellipse cx="34" cy="36" rx="1.5" ry="1.2" fill="var(--ink)" />
+    </svg>`),
 }

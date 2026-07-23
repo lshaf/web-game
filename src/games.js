@@ -46,6 +46,7 @@ import Aliran from './games/Aliran.vue'
 import Kakuro from './games/Kakuro.vue'
 import Jembatan from './games/Jembatan.vue'
 import Solitaire from './games/Solitaire.vue'
+import KucingAnjing from './games/KucingAnjing.vue'
 import gameIcons from './game-icons.js'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
@@ -508,6 +509,14 @@ export const games = [
     tagline: 'Race your checkers home and bear off. Solo vs CPU or two players.',
     component: lazy(() => import('./games/Backgammon.vue')),
     category: 'strategi',
+    duo: true,
+  },
+  {
+    id: 'kucing',
+    title: 'Kucing vs Anjing',
+    tagline: 'Drag to hurl, ride the wind, drain their HP. Solo vs CPU or two players.',
+    component: KucingAnjing,
+    category: 'aksi',
     duo: true,
   },
 ]
