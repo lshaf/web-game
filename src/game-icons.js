@@ -764,4 +764,16 @@ export default {
       <circle cx="20.8" cy="20.8" r="1.3" fill="var(--ink)" />
       <circle cx="25.2" cy="25.2" r="1.3" fill="var(--ink)" />
     </svg>`),
+  'karambol': icon('cabinet__karambol', `    <svg viewBox="0 0 46 46">
+      <rect x="3" y="3" width="40" height="40" rx="6" fill="#f7dfb2" stroke="var(--ink)" stroke-width="2.4" />
+      <rect x="7.5" y="7.5" width="31" height="31" rx="3" fill="#fdf0d5" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="10.5" cy="10.5" r="3.2" fill="#4a3355" stroke="var(--ink)" stroke-width="1.3" />
+      <circle cx="35.5" cy="10.5" r="3.2" fill="#4a3355" stroke="var(--ink)" stroke-width="1.3" />
+      <circle cx="10.5" cy="35.5" r="3.2" fill="#4a3355" stroke="var(--ink)" stroke-width="1.3" />
+      <circle cx="35.5" cy="35.5" r="3.2" fill="#4a3355" stroke="var(--ink)" stroke-width="1.3" />
+      <circle cx="23" cy="18.5" r="3.8" fill="var(--aqua)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="18.5" cy="24.5" r="3.8" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="27.5" cy="24.5" r="3.8" fill="var(--aqua)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="23" cy="32.5" r="4.4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.8" />
+    </svg>`),
 }
