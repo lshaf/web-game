@@ -8,13 +8,15 @@ const props = defineProps({
 })
 defineEmits(['select'])
 
-// Filter chips: All / Favorites / the four categories / Duo. One active at a time.
+// Filter chips: All / Favorites / the six categories / Duo. One active at a time.
 const FILTERS = [
   { key: 'all', label: 'Semua' },
   { key: 'fav', label: '★ Favorit' },
   { key: 'aksi', label: 'Aksi' },
   { key: 'kata', label: 'Kata' },
-  { key: 'strategi', label: 'Strategi' },
+  { key: 'papan', label: 'Papan' },
+  { key: 'santai', label: 'Santai' },
+  { key: 'logika', label: 'Logika' },
   { key: 'puzzle', label: 'Puzzle' },
   { key: 'duo', label: 'Duo' },
 ]

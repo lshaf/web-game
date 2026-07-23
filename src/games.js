@@ -57,7 +57,7 @@ import gameIcons from './game-icons.js'
 const lazy = (loader) => defineAsyncComponent(loader)
 // Registry of playable games. Add a new entry here (id + component) to expand;
 // the menu and the router both read from this list, and each id is its route.
-// `category` (aksi | kata | strategi | puzzle) drives the menu filter chips;
+// `category` (aksi | kata | papan | santai | logika | puzzle) drives the menu filter chips;
 // `duo` marks games with a two-player mode.
 export const games = [
   {
@@ -101,7 +101,7 @@ export const games = [
     title: 'Tic Tac Toe',
     tagline: 'Endless three-in-a-row. Solo vs CPU or two players.',
     component: TicTacToe,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -109,7 +109,7 @@ export const games = [
     title: 'Tebak Warna',
     tagline: 'Crack the secret color code. Solo or two players.',
     component: TebakWarna,
-    category: 'puzzle',
+    category: 'logika',
     duo: true,
   },
   {
@@ -117,7 +117,7 @@ export const games = [
     title: 'Connect 4',
     tagline: 'Drop discs, line up four. Solo vs CPU or two players.',
     component: ConnectFour,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -133,7 +133,7 @@ export const games = [
     title: 'Armada',
     tagline: 'Place your fleet, sink theirs. Solo vs CPU or two players.',
     component: Armada,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -148,7 +148,7 @@ export const games = [
     title: 'Sudoku',
     tagline: 'Fill the 9×9 so every row, column and box holds 1–9.',
     component: Sudoku,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'breaker',
@@ -162,7 +162,7 @@ export const games = [
     title: 'Ranjau',
     tagline: 'Clear the field without hitting a mine.',
     component: Minesweeper,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'tetris',
@@ -176,7 +176,7 @@ export const games = [
     title: 'Ular Tangga',
     tagline: 'Roll the die, ride ladders, dodge snakes. Solo vs CPU or two players.',
     component: UlarTangga,
-    category: 'strategi',
+    category: 'santai',
     duo: true,
   },
   {
@@ -191,7 +191,7 @@ export const games = [
     title: 'Otello',
     tagline: 'Flip discs to own the board. Solo vs CPU or two players.',
     component: Otello,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -199,7 +199,7 @@ export const games = [
     title: 'Dakon',
     tagline: 'Sow seeds, fill your store. Solo vs CPU or two players.',
     component: Dakon,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -207,7 +207,7 @@ export const games = [
     title: 'Dam',
     tagline: 'Jump and capture on the diagonals. Solo vs CPU or two players.',
     component: Dam,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -215,7 +215,7 @@ export const games = [
     title: 'Lima Sejajar',
     tagline: 'Line up five in a row. Solo vs CPU or two players.',
     component: LimaSejajar,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -223,7 +223,7 @@ export const games = [
     title: 'Gaple',
     tagline: 'Match the dominoes, empty your hand. Solo vs CPU or two players.',
     component: Gaple,
-    category: 'strategi',
+    category: 'santai',
     duo: true,
   },
   {
@@ -294,7 +294,7 @@ export const games = [
     title: 'Suit',
     tagline: 'Batu, gunting, kertas. Solo vs CPU or two players.',
     component: Suit,
-    category: 'strategi',
+    category: 'santai',
     duo: true,
   },
   {
@@ -323,14 +323,14 @@ export const games = [
     title: 'Piktogram',
     tagline: 'Fill the grid from the number clues to reveal a picture.',
     component: Piktogram,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'titikkotak',
     title: 'Titik & Kotak',
     tagline: 'Claim the most boxes. Solo vs CPU or two players.',
     component: TitikKotak,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -387,7 +387,7 @@ export const games = [
     title: 'Yatzy',
     tagline: 'Roll five dice, chase the scorecard. Solo or two players.',
     component: Yatzy,
-    category: 'strategi',
+    category: 'santai',
     duo: true,
   },
   {
@@ -424,14 +424,14 @@ export const games = [
     title: 'Takuzu',
     tagline: 'Fill the grid with two colours by pure logic.',
     component: Takuzu,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'damtiga',
     title: 'Dam Tiga',
     tagline: 'Form mills to capture pieces. Solo vs CPU or two players.',
     component: DamTiga,
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -439,49 +439,49 @@ export const games = [
     title: 'Shikaku',
     tagline: 'Divide the grid into rectangles that match every number.',
     component: Shikaku,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'isipenuh',
     title: 'Isi Penuh',
     tagline: 'Trace one line to fill every cell — cross the marked cells twice.',
     component: IsiPenuh,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'aliran',
     title: 'Aliran',
     tagline: 'Connect the matching dots and fill the whole grid. Endless.',
     component: Aliran,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'kakuro',
     title: 'Kakuro',
     tagline: 'Fill each run with 1–9 so it adds up to the clue, no repeats.',
     component: Kakuro,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'jembatan',
     title: 'Jembatan',
     tagline: 'Link the islands with bridges — match every number, no crossings.',
     component: Jembatan,
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'solitaire',
     title: 'Solitaire',
     tagline: 'Klondike patience — build the four suits up from Ace to King.',
     component: Solitaire,
-    category: 'strategi',
+    category: 'santai',
   },
   {
     id: 'catur',
     title: 'Catur',
     tagline: 'Full chess — play a friend or take White against the CPU.',
     component: lazy(() => import('./games/Catur.vue')),
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -489,7 +489,7 @@ export const games = [
     title: 'Skak Mat',
     tagline: 'Chess mate puzzles — White to play and checkmate.',
     component: lazy(() => import('./games/SkakMat.vue')),
-    category: 'strategi',
+    category: 'logika',
   },
   {
     id: 'mahjong',
@@ -503,14 +503,14 @@ export const games = [
     title: 'Pagar',
     tagline: 'Slitherlink — draw one loop so every number counts its edges.',
     component: lazy(() => import('./games/Pagar.vue')),
-    category: 'puzzle',
+    category: 'logika',
   },
   {
     id: 'backgammon',
     title: 'Backgammon',
     tagline: 'Race your checkers home and bear off. Solo vs CPU or two players.',
     component: lazy(() => import('./games/Backgammon.vue')),
-    category: 'strategi',
+    category: 'papan',
     duo: true,
   },
   {
@@ -526,7 +526,7 @@ export const games = [
     title: 'Ludo',
     tagline: 'Roll sixes, race four tokens home, send rivals back. Solo vs CPU or up to four.',
     component: Ludo,
-    category: 'strategi',
+    category: 'santai',
     duo: true,
   },
   {
