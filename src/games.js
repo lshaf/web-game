@@ -47,6 +47,7 @@ import Kakuro from './games/Kakuro.vue'
 import Jembatan from './games/Jembatan.vue'
 import Solitaire from './games/Solitaire.vue'
 import KucingAnjing from './games/KucingAnjing.vue'
+import Ludo from './games/Ludo.vue'
 import gameIcons from './game-icons.js'
 
 // Small games are bundled with the app; the data-heavy word games are loaded on
@@ -517,6 +518,14 @@ export const games = [
     tagline: 'Drag to hurl, ride the wind, drain their HP. Solo vs CPU or two players.',
     component: KucingAnjing,
     category: 'aksi',
+    duo: true,
+  },
+  {
+    id: 'ludo',
+    title: 'Ludo',
+    tagline: 'Roll sixes, race four tokens home, send rivals back. Solo vs CPU or up to four.',
+    component: Ludo,
+    category: 'strategi',
     duo: true,
   },
 ]

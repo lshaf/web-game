@@ -750,4 +750,18 @@ export default {
       <ellipse cx="34" cy="37" rx="3.6" ry="2.6" fill="#f3d9b8" stroke="var(--ink)" stroke-width="1.4" />
       <ellipse cx="34" cy="36" rx="1.5" ry="1.2" fill="var(--ink)" />
     </svg>`),
+  'ludo': icon('cabinet__ludo', `    <svg viewBox="0 0 46 46">
+      <rect x="3" y="3" width="40" height="40" rx="7" fill="var(--paper-lit)" stroke="var(--ink)" stroke-width="2.4" />
+      <rect x="6.5" y="6.5" width="14" height="14" rx="4" fill="#ffd9e4" stroke="var(--ink)" stroke-width="1.8" />
+      <rect x="25.5" y="6.5" width="14" height="14" rx="4" fill="#ffe6c9" stroke="var(--ink)" stroke-width="1.8" />
+      <rect x="25.5" y="25.5" width="14" height="14" rx="4" fill="#c9f0e7" stroke="var(--ink)" stroke-width="1.8" />
+      <rect x="6.5" y="25.5" width="14" height="14" rx="4" fill="#e2daf8" stroke="var(--ink)" stroke-width="1.8" />
+      <circle cx="13.5" cy="13.5" r="3.4" fill="var(--berry)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="32.5" cy="13.5" r="3.4" fill="var(--sun-core)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="32.5" cy="32.5" r="3.4" fill="var(--aqua-deep)" stroke="var(--ink)" stroke-width="1.6" />
+      <circle cx="13.5" cy="32.5" r="3.4" fill="var(--grape)" stroke="var(--ink)" stroke-width="1.6" />
+      <rect x="17.5" y="17.5" width="11" height="11" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.8" />
+      <circle cx="20.8" cy="20.8" r="1.3" fill="var(--ink)" />
+      <circle cx="25.2" cy="25.2" r="1.3" fill="var(--ink)" />
+    </svg>`),
 }
