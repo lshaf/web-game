@@ -11,8 +11,8 @@ import { sfx } from '../sound.js'
 //   B[r][c] boxes owned by 0 (none) / 1 / 2 — r,c in 0..N-1
 
 const MODES = [
-  { id: 'cpu', label: 'Vs CPU' },
-  { id: 'duo', label: '2 Pemain' },
+  { id: 'cpu', label: 'Solo' },
+  { id: 'duo', label: 'Duo' },
 ]
 const SIZES = [3, 4, 5]
 

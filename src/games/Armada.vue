@@ -412,8 +412,8 @@ onBeforeUnmount(() => {
       <section v-if="phase === 'mode'" class="screen">
         <p class="brand">ARMA<span class="brand__accent">DA</span></p>
         <p class="eyebrow">PILIH MODE</p>
-        <button class="cta" type="button" @click="chooseMode('solo')">Lawan Komputer ▸</button>
-        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+        <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">Duo ▸</button>
       </section>
 
       <!-- Placement (drag ships from the tray onto the board) -->

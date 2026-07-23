@@ -230,8 +230,8 @@ onBeforeUnmount(() => {
       <section v-if="!mode" class="screen">
         <p class="brand">LIMA<span class="brand__accent">SEJAJAR</span></p>
         <p class="eyebrow">PILIH MODE</p>
-        <button class="cta" type="button" @click="chooseMode('cpu')">Lawan Komputer ▸</button>
-        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+        <button class="cta" type="button" @click="chooseMode('cpu')">Solo ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">Duo ▸</button>
       </section>
 
       <!-- Game -->

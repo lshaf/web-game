@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
         <p class="brand">INGA<span class="brand__accent">TAN</span></p>
         <p class="eyebrow">PILIH MODE</p>
         <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
-        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">Duo ▸</button>
       </section>
 
       <!-- Solo config -->

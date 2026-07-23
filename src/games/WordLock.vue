@@ -272,7 +272,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         <p class="brand"><span>WORD</span><span class="brand__accent">LOCK</span></p>
         <p class="eyebrow">PILIH MODE</p>
         <button class="cta" type="button" @click="chooseMode('solo')">Solo ▸</button>
-        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">Duo ▸</button>
       </section>
 
       <!-- ===== Setup: Player 1 sets the word ===== -->

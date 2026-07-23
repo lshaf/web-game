@@ -137,8 +137,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <section v-if="!mode" class="screen">
         <p class="brand">SUIT</p>
         <p class="eyebrow">BATU · GUNTING · KERTAS</p>
-        <button class="cta" type="button" @click="chooseMode('cpu')">Lawan Komputer ▸</button>
-        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">2 Pemain ▸</button>
+        <button class="cta" type="button" @click="chooseMode('cpu')">Solo ▸</button>
+        <button class="cta cta--alt" type="button" @click="chooseMode('duo')">Duo ▸</button>
       </section>
 
       <!-- Game -->
