@@ -1,19 +1,22 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { sfx } from '../sound.js'
 
-// Sortir Warna — a ball-sort puzzle. Pick a difficulty (7 / 14 / 21 tubes), then
-// tap a tube to lift its top run and tap another to pour it onto a matching
-// colour or into an empty tube. Sort every colour into its own tube to win.
-// Levels are built by scrambling a solved board with moves that are the exact
-// inverse of a legal pour, so every board is solvable by construction — no
-// solver, and it scales to the big boards. Undo never traps you.
+// Sortir Warna — a liquid-sort puzzle. Each bottle holds 8 pours; tap a bottle
+// to lift its top liquid run, tap another to pour it onto a matching colour or
+// into an empty bottle. Sort every colour into its own bottle to clear the
+// round. It never ends: every clear ramps one more colour (and bottle) up to a
+// cap, and the difficulty just picks how far ahead you start. Boards are built
+// by scrambling a solved layout with the exact inverse of a legal pour, so every
+// one is solvable by construction.
 
-const H = 4 // balls per full tube
-const EMPTIES = 2 // spare tubes every board keeps
+const CAP = 8 // pours per full bottle
+const EMPTIES = 2 // spare bottles every board keeps
+const MIN_COLORS = 3
+const MAX_COLORS = 22 // top of the endless ramp — 24 bottles with the 2 empties
 const SOLVED_KEY = 'dusk-sortir-solved'
 
-// Twenty distinct balls; the first (tubes − 2) are used, most-distinct first.
+// Distinct liquids; the first `colors` are used, most-distinct first.
 const COLORS = [
   '#e6483d',
   '#f6921e',
@@ -35,26 +38,48 @@ const COLORS = [
   '#2b5f8f',
   '#8a94a6',
   '#c94a6b',
+  '#0e7c86',
+  '#c46210',
+  '#5b8c00',
+  '#b03060',
 ]
 
+// Difficulty is a head start: how many colours the endless run opens with.
 const LEVELS = [
-  { key: 'mudah', label: 'Mudah', tubes: 7 },
-  { key: 'sedang', label: 'Sedang', tubes: 14 },
-  { key: 'sulit', label: 'Sulit', tubes: 21 },
+  { key: 'mudah', label: 'Mudah', start: 3 },
+  { key: 'sedang', label: 'Sedang', start: 7 },
+  { key: 'sulit', label: 'Sulit', start: 10 },
 ]
 
 const phase = ref('setup') // setup | play | won
 const sel = ref(LEVELS[0]) // difficulty chosen on the setup screen
-const level = ref(LEVELS[0]) // the difficulty in play
+const colors = ref(MIN_COLORS) // colours in the current board
+const round = ref(1) // rounds cleared this run + 1
 const tubes = ref([]) // array of arrays, bottom -> top, holding colour indices
-const picked = ref(-1) // the tube whose top run is lifted, or -1
+const picked = ref(-1) // the bottle whose top run is lifted, or -1
 const moves = ref(0)
 const history = ref([]) // snapshots for Undo
 const solvedCount = ref(0)
 
+let advanceTimer = 0
+
+const bottleCount = computed(() => colors.value + EMPTIES)
+const nextColors = computed(() => Math.min(colors.value + 1, MAX_COLORS))
+const atMax = computed(() => colors.value >= MAX_COLORS)
+
+// Liquid shrinks as the board grows so a full 24-bottle set still fits a phone.
+const dims = computed(() => {
+  const n = bottleCount.value
+  if (n <= 7) return { seg: 19, tw: 36 }
+  if (n <= 9) return { seg: 16, tw: 31 }
+  if (n <= 12) return { seg: 14, tw: 27 }
+  if (n <= 16) return { seg: 13, tw: 24 }
+  if (n <= 20) return { seg: 12, tw: 21 }
+  return { seg: 11, tw: 19 }
+})
+
 // --- Pour rules -------------------------------------------------------------
 
-// The maximal same-colour run at the top of a tube: { c, n } or null if empty.
 function topRun(t) {
   if (!t.length) return null
   const c = t[t.length - 1]
@@ -63,18 +88,17 @@ function topRun(t) {
   return { c, n }
 }
 
-// How many balls a pour from a->b would move (0 = illegal / pointless).
 function pourCount(a, b) {
-  if (a === b || !a.length || b.length >= H) return 0
+  if (a === b || !a.length || b.length >= CAP) return 0
   const { c, n } = topRun(a)
   const bt = b.length ? b[b.length - 1] : null
   if (bt !== null && bt !== c) return 0
-  if (b.length === 0 && n === a.length) return 0 // relocating a whole tube: no progress
-  return Math.min(n, H - b.length)
+  if (b.length === 0 && n === a.length) return 0 // relocating a whole bottle: no progress
+  return Math.min(n, CAP - b.length)
 }
 
 function isSolved(ts) {
-  return ts.every((t) => t.length === 0 || (t.length === H && t.every((x) => x === t[0])))
+  return ts.every((t) => t.length === 0 || (t.length === CAP && t.every((x) => x === t[0])))
 }
 
 // --- Level generation (constructive: solvable by construction) --------------
@@ -90,10 +114,7 @@ function shuffledIdx(n) {
   return a
 }
 
-// One scramble step is the exact inverse of a legal pour: move k balls of the
-// top-run colour c from B to A, where A is empty or its top ≠ c (so the added
-// run is exactly k), and removing k from B leaves it empty or still c-topped.
-// Then the forward pour A→B is legal and undoes it — so the whole scramble
+// One scramble step is the exact inverse of a legal pour, so the whole scramble
 // reverses into a valid solution.
 function scrambleStep(ts) {
   for (const b of shuffledIdx(ts.length)) {
@@ -106,7 +127,7 @@ function scrambleStep(ts) {
     for (const a of shuffledIdx(ts.length)) {
       if (a === b) continue
       const A = ts[a]
-      if (A.length + k > H) continue
+      if (A.length + k > CAP) continue
       if (A.length && A[A.length - 1] === c) continue
       for (let i = 0; i < k; i++) A.push(B.pop())
       return true
@@ -115,37 +136,43 @@ function scrambleStep(ts) {
   return false
 }
 
-function generate(cfg) {
-  const colors = cfg.tubes - EMPTIES
+function generate(nColors) {
   const ts = []
-  for (let c = 0; c < colors; c++) ts.push(Array(H).fill(c))
+  for (let c = 0; c < nColors; c++) ts.push(Array(CAP).fill(c))
   for (let e = 0; e < EMPTIES; e++) ts.push([])
-  const target = colors * 10
+  const target = nColors * 12
   let done = 0
   let guard = 0
   while (done < target && guard < target * 30) {
     guard++
     if (scrambleStep(ts)) done++
   }
-  if (isSolved(ts)) return generate(cfg) // scramble somehow undid itself
+  if (isSolved(ts)) return generate(nColors) // scramble somehow undid itself
   return ts
 }
 
 // --- Game actions -----------------------------------------------------------
 
 function deal() {
-  tubes.value = generate(level.value)
+  tubes.value = generate(colors.value)
   picked.value = -1
   moves.value = 0
   history.value = []
   phase.value = 'play'
 }
+
 function start() {
-  level.value = sel.value
+  clearTimeout(advanceTimer)
+  colors.value = sel.value.start
+  round.value = 1
   deal()
 }
-function newGame() {
-  deal() // re-deal the same difficulty
+
+function nextRound() {
+  clearTimeout(advanceTimer)
+  colors.value = nextColors.value
+  round.value += 1
+  deal()
 }
 
 function snapshot() {
@@ -163,7 +190,7 @@ function tapTube(i) {
     return
   }
   if (picked.value === i) {
-    picked.value = -1 // tap the lifted tube again to set it down
+    picked.value = -1
     return
   }
   const from = tubes.value[picked.value]
@@ -199,27 +226,39 @@ function win() {
   } catch (e) {
     /* storage may be blocked; keep in-memory */
   }
+  clearTimeout(advanceTimer)
+  advanceTimer = setTimeout(nextRound, 1300)
 }
 
 function toSetup() {
+  clearTimeout(advanceTimer)
   phase.value = 'setup'
   picked.value = -1
 }
 
 // --- Presentation -----------------------------------------------------------
 
-// Balls shrink as the board grows, so 21 tubes still fit a phone.
-const ballPx = computed(() => (level.value.tubes <= 7 ? 34 : level.value.tubes <= 14 ? 27 : 21))
-
-function ballsOf(i) {
+// Merge each run of one colour into a single band, so a multi-pour rises (and
+// drains) as one continuous body of liquid rather than stacked blocks.
+function bandsOf(i) {
   const t = tubes.value[i]
-  const run = picked.value === i ? topRun(t) : null
-  const liftFrom = run ? t.length - run.n : Infinity
-  return t.map((c, idx) => ({ color: COLORS[c], lifted: idx >= liftFrom }))
+  const out = []
+  for (let idx = 0; idx < t.length; idx++) {
+    const c = t[idx]
+    const last = out[out.length - 1]
+    if (last && last.c === c) last.n++
+    else out.push({ c, n: 1 })
+  }
+  return out.map((b, bi) => ({
+    color: COLORS[b.c],
+    n: b.n,
+    surface: bi === out.length - 1,
+    edge: bi > 0,
+  }))
 }
 function tubeDone(i) {
   const t = tubes.value[i]
-  return t.length === H && t.every((x) => x === t[0])
+  return t.length === CAP && t.every((x) => x === t[0])
 }
 
 onMounted(() => {
@@ -229,13 +268,14 @@ onMounted(() => {
     solvedCount.value = 0
   }
 })
+onBeforeUnmount(() => clearTimeout(advanceTimer))
 </script>
 
 <template>
   <div class="sortir">
     <div class="panel">
       <section class="screen">
-        <!-- Setup: pick a difficulty before playing. -->
+        <!-- Setup: pick a head start before playing. -->
         <template v-if="phase === 'setup'">
           <p class="brand">SORTIR<span class="brand__accent"> WARNA</span></p>
           <p class="eyebrow">PILIH TINGKAT</p>
@@ -253,7 +293,7 @@ onMounted(() => {
             </button>
           </div>
           <p class="setup__info">
-            {{ sel.tubes }} tabung · {{ sel.tubes - EMPTIES }} warna · SELESAI {{ solvedCount }}
+            MULAI {{ sel.start }} WARNA · TANPA BATAS s/d {{ MAX_COLORS }} · SELESAI {{ solvedCount }}
           </p>
           <button class="cta" type="button" @click="start">Mulai ▸</button>
         </template>
@@ -266,12 +306,12 @@ onMounted(() => {
           <p class="brand brand--sm">SORTIR<span class="brand__accent"> WARNA</span></p>
 
           <div class="solobar hud">
-            <span>LANGKAH <b>{{ moves }}</b></span>
-            <span>TINGKAT <b>{{ level.label }}</b></span>
+            <span>BABAK <b>{{ round }}</b></span>
+            <span>WARNA <b>{{ colors }}</b></span>
             <span class="solobar__best">SELESAI {{ solvedCount }}</span>
           </div>
 
-          <div class="rack" :style="{ '--ball': ballPx + 'px' }">
+          <div class="rack" :style="{ '--seg': dims.seg + 'px', '--tw': dims.tw + 'px' }">
             <button
               v-for="(t, i) in tubes"
               :key="i"
@@ -280,30 +320,35 @@ onMounted(() => {
               :class="{ 'is-picked': picked === i, 'is-done': tubeDone(i) }"
               @click="tapTube(i)"
             >
-              <span
-                v-for="(ball, bi) in ballsOf(i)"
-                :key="bi"
-                class="ball"
-                :class="{ 'is-lifted': ball.lifted }"
-                :style="{ background: ball.color }"
-              />
+              <span class="glass">
+                <span
+                  v-for="(band, bi) in bandsOf(i)"
+                  :key="bi"
+                  class="liquid"
+                  :class="{ 'is-surface': band.surface, 'is-edge': band.edge }"
+                  :style="{ background: band.color, height: `calc(var(--seg) * ${band.n})` }"
+                />
+              </span>
             </button>
           </div>
 
           <template v-if="phase === 'play'">
-            <p class="tip">Ketuk tabung untuk angkat, ketuk lagi untuk menuang.</p>
+            <p class="tip">Ketuk botol untuk mengangkat cairan, ketuk botol lain untuk menuang.</p>
             <div class="tools">
               <button class="mini" type="button" :disabled="!history.length" @click="undo">
                 ↶ Undo
               </button>
-              <button class="mini" type="button" @click="newGame">Acak ulang</button>
+              <button class="mini" type="button" @click="deal">Acak ulang</button>
             </div>
           </template>
 
           <div v-else class="result">
-            <p class="result__title">Tersortir!</p>
-            <p class="result__streak">{{ moves }} LANGKAH · SELESAI {{ solvedCount }}</p>
-            <button class="cta" type="button" @click="newGame">Main lagi ▸</button>
+            <p class="result__title">Babak {{ round }} beres!</p>
+            <p class="result__streak">
+              {{ moves }} LANGKAH ·
+              {{ atMax ? 'WARNA MAKS' : nextColors + ' WARNA BERIKUTNYA' }}
+            </p>
+            <button class="cta" type="button" @click="nextRound">Lanjut ▸</button>
           </div>
         </template>
       </section>
@@ -356,52 +401,88 @@ onMounted(() => {
   color: var(--aqua-deep);
 }
 
-/* ---- Tube rack ---- */
+/* ---- Bottle rack ---- */
 .rack {
-  --ball: 34px;
+  --seg: 19px;
+  --tw: 36px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  gap: 12px 12px;
-  min-height: 140px;
-  margin: 30px 0 16px;
+  gap: 14px 12px;
+  min-height: 150px;
+  margin: 28px 0 16px;
 }
 .tube {
   position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: 3px;
-  width: calc(var(--ball) + 10px);
-  height: calc(var(--ball) * 4 + 18px);
-  padding: 5px;
-  background: var(--paper-lit);
-  border: 3px solid var(--ink);
-  border-top: none;
-  border-radius: 6px 6px 16px 16px / 6px 6px 22px 22px;
-  box-shadow: var(--pop-sm);
+  padding: 4px 4px 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.tube.is-picked {
-  transform: translateY(-10px);
-  box-shadow: 4px 8px 0 var(--ink);
-}
-.tube.is-done {
-  border-color: var(--aqua-deep);
-}
-.ball {
-  width: var(--ball);
-  height: var(--ball);
-  border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.28);
-  box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.35);
   transition: transform 0.12s ease;
 }
-/* The lifted top run of the picked tube rises above the rim. */
-.ball.is-lifted {
-  transform: translateY(calc(var(--ball) * -0.9 - 4px));
+.tube.is-picked {
+  transform: translateY(-14px);
+}
+
+/* The glass bottle: open mouth, rounded belly, liquid clipped inside. */
+.glass {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  width: var(--tw);
+  height: calc(var(--seg) * 8);
+  background: var(--paper-lit);
+  border: 3px solid var(--ink);
+  border-top: 0;
+  border-radius: 6px 6px 15px 15px / 5px 5px 22px 22px;
+  overflow: hidden;
+  box-shadow: var(--pop-sm);
+}
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 6px;
+  left: 20%;
+  width: 15%;
+  background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1));
+  border-radius: 999px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tube.is-picked .glass {
+  box-shadow: 4px 10px 0 var(--ink);
+}
+.tube.is-done .glass {
+  border-color: var(--aqua-deep);
+  box-shadow: 0 0 0 2px var(--aqua-deep), var(--pop-sm);
+}
+
+.liquid {
+  width: 100%;
+  transform-origin: bottom;
+  transition: height 0.26s cubic-bezier(0.45, 0.05, 0.3, 1);
+  animation: sortir-pour 0.26s ease-out;
+}
+.liquid.is-edge {
+  box-shadow: inset 0 -2px 0 rgba(44, 19, 56, 0.16);
+}
+.liquid.is-surface {
+  box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.28);
+}
+.liquid.is-surface.is-edge {
+  box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.28), inset 0 -2px 0 rgba(44, 19, 56, 0.16);
+}
+
+@keyframes sortir-pour {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 /* ---- Tip + tools ---- */
